@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: shineon_db_user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: shineon@1234
+    url: mysql://127:0:0:1:3306/shineon_base_uauth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+
+mybatis:
+  mapper-locations: classpath:com/shineon/coder/db/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:81/eureka
+
+
+server:
+  port: 121
+
