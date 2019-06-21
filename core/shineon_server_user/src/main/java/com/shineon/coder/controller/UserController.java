@@ -15,7 +15,11 @@ public class UserController {
     @RequestMapping("/get")
     public ShineonUser get(int id)
     {
-        return mapper.selectByPrimaryKey(id);
+
+        ShineonUser user = mapper.selectByPrimaryKey(id);
+        System.out.println(user.getUsername());
+
+        return user;
     }
 
 }
