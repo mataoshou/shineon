@@ -11,7 +11,6 @@ public class UserServer implements BaseServer<ShineonUser> {
     @Autowired
     ShineonUserMapper userMapper;
 
-
     @Override
     public ShineonUser getItem(int id) {
         return userMapper.selectByPrimaryKey(id);
