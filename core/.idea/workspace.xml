@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc13d754-644d-4798-a823-4bc65a9188d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/server/BaseServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/server/UserServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/server/UserServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/db/dao/ShineonUserAttachedMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/db/dao/ShineonUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserAttachedMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/db/pojo/ShineonUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/db/pojo/ShineonUserAttached.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/server/BaseServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/java/com/shineon/coder/server/UserServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_user/src/test/java/com/shineon/coder/CoderApplicationTests.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/core.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -93,8 +104,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561105593165" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561105727953" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shineon_db_user" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -120,12 +131,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561103306648</updated>
-      <workItem from="1561103313364" duration="1034000" />
+      <workItem from="1561103313364" duration="1049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1034000" />
+    <option name="totallyTimeSpent" value="1049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -180,7 +191,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/core.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
