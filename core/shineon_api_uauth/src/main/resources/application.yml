@@ -1,0 +1,23 @@
+spring:
+  session:
+    store-type: redis
+    timeout: 3600s
+    redis:
+      flush-mode: on_save
+      namespace:
+        spring: session
+
+  redis:
+    host: 10.0.192.104
+    port: 6379
+
+  application:
+    name: shineon_api_uauth
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.0.192.104:81/eureka
+server:
+  port: 129

@@ -1,0 +1,32 @@
+server:
+  port: 182
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.0.192.104:81/eureka
+
+
+zuul:
+  routes:
+    uauth-api:
+      path: /uauth/**
+      service-id : shineon_api_uauth
+      sensitiveHeaders: "*"
+
+
+spring:
+  application:
+    name: shineon_zuul
+  session:
+    store-type: redis
+    timeout: 3600s
+    redis:
+      flush-mode: immediate
+      namespace:
+        spring: session
+
+  redis:
+    host: 10.0.192.104
+    port: 6379

@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: shineon_server_uauth
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+
+mybatis:
+  mapper-locations: classpath:com/shineon/coder/db/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:81/eureka
+
+
+server:
+  port: 122
+
+
