@@ -9,6 +9,8 @@ public class ConvertTools {
     {
         for(PropertyItem ci:items)
         {
+            if(ci.status)continue;;
+
             if(ci.name.equals(item.name)&&ci.type.equals(item.type)) {
 
                 return ci;
@@ -22,8 +24,10 @@ public class ConvertTools {
 
     public PropertyItem getFirstType(PropertyItem item, List<PropertyItem> items)
     {
+
         for(PropertyItem ci:items)
         {
+            if(ci.status)continue;;
             if(ci.type.equals(item.type)) {
 
                 return ci;
@@ -39,6 +43,7 @@ public class ConvertTools {
         PropertyItem result =null;
         for(PropertyItem ci:items)
         {
+            if(ci.status)continue;;
             if(ci.type.equals(item.type)) {
 
                int count = getScore(item.name,ci.name);

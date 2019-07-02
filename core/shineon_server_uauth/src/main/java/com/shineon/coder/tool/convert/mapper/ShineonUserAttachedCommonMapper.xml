@@ -5,4 +5,5 @@
   <item pojoName="userid" commonName="parent" type="java.lang.Integer"/>
   <item pojoName="timelastlogin" commonName="createTime" type="java.util.Date"/>
   <item pojoName="iplastlogin" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="state" commonName="" type="java.lang.Byte"/>
 </root>

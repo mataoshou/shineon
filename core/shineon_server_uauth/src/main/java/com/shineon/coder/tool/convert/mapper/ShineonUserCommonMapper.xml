@@ -10,8 +10,12 @@
   <item pojoName="timecreated" commonName="createTime" type="java.util.Date"/>
   <item pojoName="timemodified" commonName="beginTime" type="java.util.Date"/>
   <item pojoName="timedeleted" commonName="endTime" type="java.util.Date"/>
-  <item pojoName="password" commonName="content" type="java.lang.String"/>
-  <item pojoName="telephone" commonName="ptitle" type="java.lang.String"/>
-  <item pojoName="usermark" commonName="thumb" type="java.lang.String"/>
-  <item pojoName="timelimit" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="password" commonName="" type="java.lang.String"/>
+  <item pojoName="telephone" commonName="" type="java.lang.String"/>
+  <item pojoName="usermark" commonName="" type="java.lang.String"/>
+  <item pojoName="usertype" commonName="" type="java.lang.Byte"/>
+  <item pojoName="admin" commonName="" type="java.lang.Byte"/>
+  <item pojoName="flagdeleted" commonName="" type="java.lang.Byte"/>
+  <item pojoName="timelimit" commonName="" type="java.util.Date"/>
+  <item pojoName="countlimit" commonName="" type="java.lang.Byte"/>
 </root>

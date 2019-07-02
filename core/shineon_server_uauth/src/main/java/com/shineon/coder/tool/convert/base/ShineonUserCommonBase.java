@@ -17,10 +17,6 @@ public class ShineonUserCommonBase {
 		result.setCreateTime(item.getTimecreated());
 		result.setBeginTime(item.getTimemodified());
 		result.setEndTime(item.getTimedeleted());
-		result.setContent(item.getPassword());
-		result.setPtitle(item.getTelephone());
-		result.setThumb(item.getUsermark());
-		result.setCreateTime(item.getTimelimit());
 		return result;
 	}
 	public ShineonUser commonToShineonUser( CommonItem item) {
@@ -34,10 +30,6 @@ public class ShineonUserCommonBase {
 		result.setTimecreated(item.getCreateTime());
 		result.setTimemodified(item.getBeginTime());
 		result.setTimedeleted(item.getEndTime());
-		result.setPassword(item.getContent());
-		result.setTelephone(item.getPtitle());
-		result.setUsermark(item.getThumb());
-		result.setTimelimit(item.getCreateTime());
 		return result;
 	}
 

@@ -24,7 +24,7 @@ public class ConvertBuild {
 
     ConvertTools tools = new ConvertTools();
 
-    BuildApi buildApi = new BuildApi();
+    BuildClass buildApi = new BuildClass();
 
 
     File mapper;
@@ -135,6 +135,14 @@ public class ConvertBuild {
                 if(mitem.pojoName.equals(ci.name)&&mitem.type.equals(ci.type))
                 {
                    ci.status =true;
+
+                   for(PropertyItem citem : common)
+                   {
+                       if(citem.name.equals(mitem.commonName)&&(citem.type.equals(mitem.type)))
+                       {
+                           citem.status= true;
+                       }
+                   }
                    break;
                 }
             }
@@ -155,7 +163,7 @@ public class ConvertBuild {
                 temp.add(ci);
                 continue;
             }
-            common.remove(citem);
+            citem.status = true;
 
             MapperItem mitem = new MapperItem();
             mitem.pojoName =ci.name;
@@ -175,7 +183,9 @@ public class ConvertBuild {
             if(citem ==null)
             {
                 logger.debug("未匹配上属性映射：" + ci.name);
-                continue;
+                citem = new PropertyItem();
+                citem.name ="";
+                citem.type =ci.type;
             }
 
             common.remove(citem);

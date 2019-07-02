@@ -1,12 +1,14 @@
 package com.shineon.coder.tool.convert;
 
+import com.shineon.coder.tool.convert.util.ShineonUserCommonUtil;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-public class BuildApi {
+public class BuildClass {
 
 	String tab ="	";
 
@@ -93,11 +95,13 @@ public class BuildApi {
 
 		for(MapperItem item:items)
 		{
-			String getMehod = getGetMethodName(item.pojoName);
-			String setMethod = getSetMethodName(item.commonName);
+			if(item.commonName.length()>0) {
+				String getMehod = getGetMethodName(item.pojoName);
+				String setMethod = getSetMethodName(item.commonName);
 
-			String str = String.format("result.%s(item.%s());",setMethod,getMehod);
-			content +=getContent(tab_no,tab,str);
+				String str = String.format("result.%s(item.%s());", setMethod, getMehod);
+				content += getContent(tab_no, tab, str);
+			}
 		}
 
 		content +=getContent(tab_no,tab,"return result;");
@@ -124,11 +128,13 @@ public class BuildApi {
 
 		for(MapperItem item:items)
 		{
-			String getMehod = getGetMethodName(item.commonName);
-			String setMethod = getSetMethodName(item.pojoName);
+			if(item.commonName.length()>0) {
+				String getMehod = getGetMethodName(item.commonName);
+				String setMethod = getSetMethodName(item.pojoName);
 
-			String str = String.format("result.%s(item.%s());",setMethod,getMehod);
-			content +=getContent(tab_no,tab,str);
+				String str = String.format("result.%s(item.%s());", setMethod, getMehod);
+				content += getContent(tab_no, tab, str);
+			}
 		}
 
 		content +=getContent(tab_no,tab,"return result;");
