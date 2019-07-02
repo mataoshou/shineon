@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <item pojoName="id" commonName="id" type="java.lang.Integer"/>
+  <item pojoName="username" commonName="content" type="java.lang.String"/>
+  <item pojoName="displayname" commonName="title" type="java.lang.String"/>
+  <item pojoName="parent" commonName="parent" type="java.lang.Integer"/>
+  <item pojoName="usercode" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="userthumb" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="timecreated" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="timemodified" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="timedeleted" commonName="endTime" type="java.util.Date"/>
+  <item pojoName="password" commonName="content" type="java.lang.String"/>
+  <item pojoName="telephone" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="usermark" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="timelimit" commonName="createTime" type="java.util.Date"/>
+</root>

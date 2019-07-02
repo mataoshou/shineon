@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <item pojoName="id" commonName="id" type="java.lang.Integer"/>
+  <item pojoName="userid" commonName="parent" type="java.lang.Integer"/>
+  <item pojoName="timelastlogin" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="iplastlogin" commonName="beginTime" type="java.util.Date"/>
+</root>
