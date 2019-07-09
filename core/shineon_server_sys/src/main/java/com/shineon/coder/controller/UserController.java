@@ -20,7 +20,7 @@ public class UserController {
     @RequestMapping("/getUser")
     public String getUser()
     {
-        client.output().send(MessageBuilder.withPayload("Hello World  AAAAA").build());
+//        client.output().send(MessageBuilder.withPayload("Hello World  AAAAA").build());
 
 //        client.input().send(MessageBuilder.withPayload("Hello World  BBBB").build());
 

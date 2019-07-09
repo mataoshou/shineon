@@ -1,7 +1,8 @@
 
+
 spring:
   application:
-    name: shineon_server_uauth
+    name: shineon_server_privilege
   redis:
     host: 127.0.0.1
     port: 6379
@@ -11,22 +12,15 @@ spring:
     addresses: 127.0.0.1
     password: matao
     username: matao
-    publisher-confirms: true
 
   cloud:
     stream:
       bindings:
         userinput:
-#          group: user
+#          group: user2
           destination : user
-        useroutput:
-#          group: user
-          destination : user
-#      instance-count: 10
 
 
-mybatis:
-  mapper-locations: classpath:com/shineon/coder/db/mapper/*.xml
 eureka:
   client:
     service-url:
@@ -34,9 +28,4 @@ eureka:
 
 
 server:
-  port: 122
-
-
-
-
-
+  port: 126

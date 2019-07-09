@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Iterator;
+import java.util.Set;
 
 @RestController
 public class UserController {
@@ -29,6 +31,15 @@ public class UserController {
         System.out.println(user.getUsername());
 
         redisTemplate.opsForValue().set("user", JSON.toJSONString(user) );
+
+        Set<String> set =  redisTemplate.keys("u*");
+
+        Iterator<String> iter = set.iterator();
+
+        while (iter.hasNext())
+        {
+            System.out.println(".............."+iter.next());
+        }
 
         System.out.println( redisTemplate.opsForValue().get("user").toString());
 
