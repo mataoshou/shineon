@@ -1,4 +1,4 @@
-package com.shineon.coder.common.cache;
+package com.shineon.coder.cache;
 
 
 //@Component

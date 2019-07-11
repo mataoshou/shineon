@@ -8,8 +8,11 @@ spring:
         spring: session
 
   redis:
+#    cluster:
+#      nodes: 10.0.192.104:6379
     host: 10.0.192.104
     port: 6379
+    database: 0
 
   application:
     name: shineon_api_uauth

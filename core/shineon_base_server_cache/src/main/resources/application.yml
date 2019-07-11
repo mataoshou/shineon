@@ -1,0 +1,19 @@
+
+spring:
+  redis:
+    #    cluster:
+    #      nodes: 10.0.192.104:6379
+    host: 10.0.192.104
+    port: 6379
+    database: 0
+
+  application:
+    name: shineon_base_server_cache
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.0.192.104:81/eureka
+server:
+  port: 132

@@ -30,7 +30,7 @@ public class MessageItem
     //目的地
     private String dst;
     //重试次数
-    private Integer retry =3;
+    private Integer retry = 3;
     //内容
     private String content;
     //是否广播

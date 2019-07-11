@@ -26,6 +26,8 @@ public class MessageUtil {
     {
         MessageItem item = SpringUtil.getBean(MessageItem.class);
 
+        item.setCode(getCode());
+
         return item;
     }
 
@@ -64,6 +66,14 @@ public class MessageUtil {
         System.out.println(json.toJSONString());
 
         return  json;
+    }
+
+    public MessageItem toMessage(JSONObject json)
+    {
+        MessageItem item = new MessageItem();
+
+        item.setCode(json.getString("code"));
+        return item;
     }
 
     public static void main(String[] args)

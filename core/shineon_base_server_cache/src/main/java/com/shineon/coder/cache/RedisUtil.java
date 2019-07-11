@@ -1,4 +1,4 @@
-package com.shineon.coder.common.cache;
+package com.shineon.coder.cache;
 
 import com.alibaba.fastjson.JSONObject;
 import com.shineon.coder.common.constant.RedisConstant;
@@ -15,7 +15,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 
 /**
  * redis缓存辅助工具类
