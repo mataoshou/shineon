@@ -151,11 +151,6 @@ public class MessageItem
         this.status = status;
     }
 
-
-
-
-
-
     public MessageItem()
     {
 

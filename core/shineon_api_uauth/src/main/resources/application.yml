@@ -17,6 +17,24 @@ spring:
   application:
     name: shineon_api_uauth
 
+  rabbitmq:
+    port: 5672
+    addresses: 127.0.0.1
+    password: matao
+    username: matao
+    publisher-confirms: true
+    listener:
+
+  cloud:
+    stream:
+      bindings:
+        userinput:
+          #          group: user
+          destination : user
+        useroutput:
+          #          group: user
+          destination : user
+#      instance-count: 10
 
 eureka:
   client:

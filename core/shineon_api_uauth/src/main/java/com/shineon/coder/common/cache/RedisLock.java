@@ -20,7 +20,7 @@ public class RedisLock {
     private Integer lockCount;//读锁个数
     private Integer lockMax;//读锁最大个数
 
-    //锁状态   100加锁并使用中  -1失败状态
+    //锁状态  0未加锁   1正在获取锁   100加锁并使用中  -1失败状态
     private Short lockState;
 
 

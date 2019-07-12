@@ -42,8 +42,14 @@ public class MessageUtil {
 
         GuidUtil guidUtil = SpringUtil.getBean(GuidUtil.class);
 
-        String code = String.format("%s_MESSAGE_%s",sys, guidUtil.gen());
+        String code = String.format("%s_MESSAGE_ITEM_%s",sys, guidUtil.gen());
         return  code;
+    }
+
+
+    public String getLockName()
+    {
+        return String.format("%s_MESSAGE_LOCK");
     }
 
     /**
@@ -53,7 +59,7 @@ public class MessageUtil {
     {
         String sys = env.getProperty("spring.application.name");
 
-        String code = String.format("%s_MESSAGE_*",sys);
+        String code = String.format("%s_MESSAGE_ITEM_*",sys);
 
         return code;
     }

@@ -2,28 +2,23 @@ package com.shineon.coder.common.message;
 
 import com.shineon.coder.common.cache.RedisLock;
 import com.shineon.coder.common.cache.RedisUtil;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
+import com.shineon.coder.common.constant.RedisConstant;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.data.redis.connection.RedisConnection;
-import org.springframework.data.redis.core.RedisCallback;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.locks.Lock;
 
 
 @Component
 public class MessageClient implements Runnable {
 
-    @Autowired
-    RedisTemplate redisTemplate;
 
     @Autowired
     RedisUtil redisUtil;
+
+    @Autowired
+    MessageUtil messageUtil;
 
     List messageList = new LinkedList<MessageItem>();
 
@@ -36,7 +31,14 @@ public class MessageClient implements Runnable {
     @Override
     public void run()
     {
+        String key = messageUtil.getLockName();
+        RedisLock redisLock = redisUtil.buildLock(key,RedisConstant.CACHE_KEY_LOCK_SYC);
+        if(redisUtil.lock(key, redisLock))
+        {
+            String pattern = messageUtil.likeCode();
 
+            List<String> srtMessage = redisUtil.likeValue(pattern);
+        }
     }
 
     //发送消息

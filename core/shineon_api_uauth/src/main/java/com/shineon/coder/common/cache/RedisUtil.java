@@ -14,6 +14,9 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 
@@ -35,7 +38,22 @@ public class RedisUtil implements ApplicationListener<ContextRefreshedEvent> {
     {
         RedisLock lock = new RedisLock();
 
+        lock.setLockState((short) 0);
+        lock.setKeepInterval(RedisConstant.LOCK_KEEP_INTERVAL);
+        lock.setOverTime(RedisConstant.LOCK_HOLD_TIME);
+        lock.setLockCount(0);
+
         return lock;
+    }
+
+
+    public RedisLock buildLock(String key,String lockType)
+    {
+        RedisLock lock = emptyLock();
+        lock.setKey(key);
+        lock.setLockType(lockType);
+
+        return  lock;
     }
 
     /**
@@ -151,9 +169,25 @@ public class RedisUtil implements ApplicationListener<ContextRefreshedEvent> {
      * 获取符合条件的所有缓存key
      * @param pattern
      */
-    public void like(String pattern)
+    public List<String> likeKey(String pattern)
     {
-        redisTemplate.keys(pattern);
+        Set<String> set = redisTemplate.keys(pattern);
+
+        List keys = new ArrayList<>(set);
+
+        return keys;
+    }
+
+
+    public List<String> likeValue(String pattern)
+    {
+        List<String> values = new ArrayList<>();
+
+        List<String> keys = likeKey(pattern);
+
+        values = redisTemplate.opsForValue().multiGet(keys);
+
+        return values;
     }
 
     public String buildKey()
