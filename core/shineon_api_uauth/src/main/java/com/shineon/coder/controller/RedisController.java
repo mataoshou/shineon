@@ -28,7 +28,7 @@ public class RedisController {
 
         lock.setLockType(RedisConstant.CACHE_KEY_LOCK_SYC);
 
-        client.getLock(lock);
+        util.lock(key,lock);
 
         System.out.println(util.get(key));
 

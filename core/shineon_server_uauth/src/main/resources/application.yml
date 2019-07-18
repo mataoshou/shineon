@@ -18,10 +18,10 @@ spring:
       bindings:
         userinput:
 #          group: user
-          destination : user
+          destination : usermatao
         useroutput:
 #          group: user
-          destination : user
+          destination : usermatao
 #      instance-count: 10
 
 
@@ -35,6 +35,7 @@ eureka:
 
 server:
   port: 122
+
 
 
 

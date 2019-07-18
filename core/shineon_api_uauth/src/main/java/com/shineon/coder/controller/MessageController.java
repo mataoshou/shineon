@@ -1,27 +1,33 @@
 package com.shineon.coder.controller;
 
-import com.shineon.coder.common.message.MessageItem;
-import com.shineon.coder.common.message.MessageUtil;
-import com.shineon.coder.common.util.SpringUtil;
+import com.shineon.coder.service.mq.client.MataoMessageClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.integration.support.MessageBuilder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.swing.*;
 
 @RestController
 public class MessageController {
 
 
+
+    @Autowired
+    MataoMessageClient mataoMessageClient;
+
     @RequestMapping("/send")
     public String sendMessage()
     {
+        mataoMessageClient.output().send(MessageBuilder.withPayload("Hello World  AAAAA").build());
 
-        MessageUtil util  = SpringUtil.getBean(MessageUtil.class);
+//        MessageUtil util  = SpringUtil.getBean(MessageUtil.class);
+//
+//        MessageItem item = util.empty();
+//
+//        System.out.println(item.getCode());
 
-        MessageItem item = util.empty();
 
-        System.out.println(item.getCode());
 
+//        client.input().send(MessageBuilder.withPayload("Hello World  BBBBB").build());
 
         return  "success";
     }

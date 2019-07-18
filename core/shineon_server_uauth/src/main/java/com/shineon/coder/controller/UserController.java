@@ -1,5 +1,6 @@
 package com.shineon.coder.controller;
 
+import com.rabbitmq.client.Return;
 import com.shineon.coder.stream.mclinet.UserMqClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -26,6 +27,7 @@ public class UserController {
 
         System.out.println(".......................................................................................");
 
-        return redisTemplate.opsForValue().get("user").toString();
+        return "success";
+//        return redisTemplate.opsForValue().get("user").toString();
     }
 }

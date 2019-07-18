@@ -1,44 +1,33 @@
-spring:
-  session:
-    store-type: redis
+spring: 
+  cloud: 
+    stream: 
+      bindings:
+        MataoMessageOutput: 
+          destination: MataoMessage
+        MataoMessageInput: 
+          destination: MataoMessage
+  application: 
+    name: shineon_api_uauth
+  rabbitmq: 
+    addresses: 127.0.0.1
+    password: matao
+    publisherconfirms: true
+    port: 5672
+    username: matao
+  session: 
     timeout: 3600s
-    redis:
-      flush-mode: on_save
-      namespace:
+    redis: 
+      namespace: 
         spring: session
-
-  redis:
-#    cluster:
-#      nodes: 10.0.192.104:6379
+      flushmode: on_save
+    storetype: redis
+  redis: 
     host: 10.0.192.104
     port: 6379
     database: 0
-
-  application:
-    name: shineon_api_uauth
-
-  rabbitmq:
-    port: 5672
-    addresses: 127.0.0.1
-    password: matao
-    username: matao
-    publisher-confirms: true
-    listener:
-
-  cloud:
-    stream:
-      bindings:
-        userinput:
-          #          group: user
-          destination : user
-        useroutput:
-          #          group: user
-          destination : user
-#      instance-count: 10
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://10.0.192.104:81/eureka
-server:
+server: 
   port: 129
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://10.0.192.104:81/eureka"

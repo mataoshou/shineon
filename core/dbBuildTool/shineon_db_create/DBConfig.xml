@@ -34,7 +34,14 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!-- 指定数据库表 根据表名，有多个表就写多条数据 -->
-        <table tableName="shineon_user"></table>
+        <table tableName="shineon_user" 
+			enableSelectById= "true" 
+			enableSelect= "true" 
+			enableCountByExample="false" 
+        	enableUpdateByExample="false"
+            enableDeleteByExample="false" 
+            enableSelectByExample="false"
+            selectByExampleQueryId="false"></table>
         <table tableName="shineon_user_attached"></table>
 
     </context>
