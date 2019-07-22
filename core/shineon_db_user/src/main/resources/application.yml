@@ -10,6 +10,11 @@ spring:
     username: root
     password: shineon@1234
     url: jdbc:mysql://127.0.0.1:3306/shineon_base_uauth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: matao_test
 
 
 mybatis:
@@ -22,5 +27,6 @@ eureka:
 
 server:
   port: 121
+
 
 
