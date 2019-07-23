@@ -232,10 +232,6 @@ public class MessageBuild {
         return fileConent;
     }
 
-//    public File buildMessageFilePath()
-//    {
-//
-//    }
 
 
     public String buildBaseContent()

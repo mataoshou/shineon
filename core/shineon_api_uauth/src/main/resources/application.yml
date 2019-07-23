@@ -25,9 +25,20 @@ spring:
     host: 10.0.192.104
     port: 6379
     database: 0
+  servlet:
+    multipart:
+      max-file-size: 6000MB
+      max-request-size: 6000MB
+      resolve-lazily: true
+      location: c:/tmp
+      file-size-threshold: 2000
+
+
 server: 
   port: 129
 eureka: 
   client: 
     serviceurl: 
       defaultZone: "http://10.0.192.104:81/eureka"
+
+
