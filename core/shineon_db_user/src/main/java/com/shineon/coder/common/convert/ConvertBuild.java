@@ -37,9 +37,9 @@ public class ConvertBuild {
         String sys = System.getProperty("user.dir");
         File root = new File(sys,"src\\main\\java\\com\\shineon\\coder");
 
-        File pojo = new File(root,"db\\pojo");
+        File pojo = new File(root,"pojo");
 
-        File buildRoot = new File(root,"tool\\convert");
+        File buildRoot = new File(root,"convert");
 
         mapper = new File(buildRoot,"mapper");
 
@@ -62,36 +62,7 @@ public class ConvertBuild {
         }
     }
 
-    public boolean buildMapper(List<MapperItem> items,File mapperFile) throws IOException, DocumentException {
 
-        if(!mapperFile.exists())
-        {
-            FileStore store = new FileStore();
-            String content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <root></root>";
-            store.putString(mapperFile,content,"UTF-8");
-        }
-
-        Document doc = dom.getDocument(mapperFile);
-
-        Element root =  doc.getRootElement();
-        List<Element> eles = root.elements();
-
-        for(Element ele:eles) {
-            root.remove(ele);
-        }
-
-
-        for(MapperItem mitem :items) {
-            Element ele = root.addElement("item");
-            ele.addAttribute("pojoName",mitem.pojoName);
-            ele.addAttribute("commonName",mitem.commonName);
-            ele.addAttribute("type",mitem.type);
-        }
-
-        dom.writeDocument(doc,mapperFile);
-
-        return  true;
-    }
 
 
     public void eachPojo(File pf) throws Exception {
@@ -103,7 +74,7 @@ public class ConvertBuild {
 
         String fname = tools.getFileName(pf.getName());
 
-        String clPath = "com.shineon.coder.db.pojo." + fname;
+        String clPath = "com.shineon.coder.pojo." + fname;
 
         logger.debug("构建类对象"+clPath);
 
@@ -208,17 +179,55 @@ public class ConvertBuild {
         ////////////////////////////////////////////////////////////////
         //构建base文件
 
-        buildApi.buildBase("com.shineon.coder.tool.convert.base",baseName,base,fname,mapperList);
+        buildApi.buildBase(baseName,base,fname,mapperList);
         ///////////////////////////////////////////////////
         //构建util文件  已存在不替换
         File utilFile = new File(util,utilName);
         if(!utilFile.exists())
         {
             logger.debug("生成util文件");
-            buildApi.buildUtil("com.shineon.coder.tool.convert.util",utilName,util,baseName);
+            buildApi.buildUtil(utilName,util,baseName);
         }
     }
 
+    /**
+     * 构建映射文件
+     * @param items
+     * @param mapperFile
+     * @return
+     * @throws IOException
+     * @throws DocumentException
+     */
+    public boolean buildMapper(List<MapperItem> items,File mapperFile) throws IOException, DocumentException {
+
+        if(!mapperFile.exists())
+        {
+            FileStore store = new FileStore();
+            String content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <root></root>";
+            store.putString(mapperFile,content,"UTF-8");
+        }
+
+        Document doc = dom.getDocument(mapperFile);
+
+        Element root =  doc.getRootElement();
+        List<Element> eles = root.elements();
+
+        for(Element ele:eles) {
+            root.remove(ele);
+        }
+
+
+        for(MapperItem mitem :items) {
+            Element ele = root.addElement("item");
+            ele.addAttribute("pojoName",mitem.pojoName);
+            ele.addAttribute("commonName",mitem.commonName);
+            ele.addAttribute("type",mitem.type);
+        }
+
+        dom.writeDocument(doc,mapperFile);
+
+        return  true;
+    }
 
     //获取原来的映射关系
     public List<MapperItem> getMapper(File file) throws IOException, DocumentException {

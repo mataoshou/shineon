@@ -21,9 +21,11 @@ public class BuildEmptyProject {
         BuildEmptyProject buildEmptyProject = new BuildEmptyProject();
 //        buildEmptyProject.initPath();
 
-        buildEmptyProject.buildNewSys("matao");
+        buildEmptyProject.buildNewSys("shineon_base_empty");
     }
 
+
+    String baseName = "shineon_api_uauth";
     private  File root =  new File("E:\\IdeaProjects\\shineon\\core\\");
 
     public void buildNewSys(String sysName) throws Exception {
@@ -31,8 +33,6 @@ public class BuildEmptyProject {
         {
             throw new Exception(root.getPath() + "根路径不存在，请检查！！");
         }
-
-        String baseName = "shineon_base_empty";
 
         File base = new File(root,baseName);
 
