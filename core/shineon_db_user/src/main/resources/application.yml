@@ -1,6 +1,6 @@
 spring:
   application:
-    name: shineon_db_user
+    name: shineon-db-user
   redis:
     host: 127.0.0.1
     port: 6379

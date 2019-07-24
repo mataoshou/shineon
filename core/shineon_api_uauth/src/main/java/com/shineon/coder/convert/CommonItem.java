@@ -1,6 +1,5 @@
 package com.shineon.coder.convert;
 
-import com.shineon.coder.common.convert.AttachItem;
 
 import java.util.ArrayList;
 import java.util.Date;

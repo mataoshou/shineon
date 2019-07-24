@@ -1,134 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2f8cb5b-7d44-48eb-87c4-51cc674c95e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/cache/BaseCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/constant/PoolConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/convert/AttachItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/service/feign/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/service/feign/UserServiceFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/cache/BaseCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/service/MataoBuild.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/service/controller/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/service/feign/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/service/feign/UserServiceFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/service/mq/BaseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/service/controller/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/service/feign/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/service/feign/UserServiceFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/service/mq/BaseMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/service/mq/client/MataoMessageClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/service/mq/service/MataoMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shineon_SysBuild/build/alt/MinNo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shineon_SysBuild/build/alt/MinNo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shineon_SysBuild/build/empty/BuildEmptyProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shineon_SysBuild/build/empty/BuildEmptyProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build/empty/BuildEmptyProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/empty/BuildEmptyProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/CoderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/ProjectInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/BuildClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/BuildClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/message/MessageClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/message/base/MessageClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/message/MessageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/message/base/MessageItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/message/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/message/base/MessageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/task/pool/PoolBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/common/task/pool/PoolBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/service/MataoBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/service/MataoBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/service/mq/ChannelType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/service/mq/MessageBuild.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_empty/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_base_empty/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_empty/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_base_empty/src/main/java/com/shineon/coder/CoderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_empty/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/main/java/com/shineon/coder/ProjectInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/main/java/com/shineon/coder/cache/RedisClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/main/java/com/shineon/coder/cache/RedisLock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/main/java/com/shineon/coder/cache/RedisUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_base_server_cache/src/test/java/com/shineon/coder/CoderApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/convert/BuildClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/convert/BuildClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/message/MessageClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/message/MessageItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/message/MessageUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/task/pool/PoolUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonUserAttachedMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserAttachedMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonUserAttached.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonUserAttachedExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonUserExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/nodb/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/nodb/dao/BaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/nodb/dao/GeneralDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/nodb/dao/GeneralDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/nodb/pojo/GenerallItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/nodb/pojo/GeneralItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/server/BaseServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/server/UserServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/resources/DBConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/resources/DBConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/main/java/com/shineon/coder/ProjectInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/main/java/com/shineon/coder/stream/mclinet/UserMqClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/main/java/com/shineon/coder/stream/mreceiver/UserReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_privilege/src/test/java/com/shineon/coder/CoderApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/main/java/com/shineon/coder/ProjectInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/main/java/com/shineon/coder/stream/mclinet/UserMqClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/main/java/com/shineon/coder/stream/mreceiver/UserReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_sys/src/test/java/com/shineon/coder/CoderApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/db/pojo/ShineonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/pojo/ShineonUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/db/pojo/ShineonUserAttached.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/stream/common/RabbitTemplateConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/stream/mclinet/UserMqClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/stream/mreceiver/UserReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/common/DomUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/common/FileStore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/AttachItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/AttachItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/BuildClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/CommonItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/convert/CommonItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/ConvertBuild.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/ConvertTools.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/MapperItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/PropertyItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/base/ShineonUserAttachedCommonBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/base/ShineonUserCommonBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/mapper/ShineonUserAttachedCommonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/mapper/ShineonUserCommonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/util/ShineonUserAttachedCommonUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_server_uauth/src/main/java/com/shineon/coder/tool/convert/util/ShineonUserCommonUtil.java" beforeDir="false" />
-    </list>
+    <list default="true" id="c2f8cb5b-7d44-48eb-87c4-51cc674c95e2" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563959195098" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563959398928" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../shineon_db_empty" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -350,12 +223,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562914400416</updated>
       <workItem from="1562914406361" duration="11174000" />
-      <workItem from="1563956894842" duration="1668000" />
+      <workItem from="1563956894842" duration="1875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12842000" />
+    <option name="totallyTimeSpent" value="13049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="434" y="57" width="1400" height="996" extended-state="1" />
@@ -370,7 +243,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19235227" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19235227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

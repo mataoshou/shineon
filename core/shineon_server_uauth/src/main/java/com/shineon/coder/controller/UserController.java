@@ -1,10 +1,10 @@
 package com.shineon.coder.controller;
 
-import com.rabbitmq.client.Return;
-import com.shineon.coder.stream.mclinet.UserMqClient;
+
+import com.shineon.coder.convert.CommonItem;
+import com.shineon.coder.service.feign.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.integration.support.MessageBuilder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,18 +16,12 @@ public class UserController {
 
 
     @Autowired
-    UserMqClient client;
+    UserService userService;
 
     @RequestMapping("/getUser")
-    public String getUser()
+    public CommonItem getUser()
     {
-        client.output().send(MessageBuilder.withPayload("Hello World  AAAAA").build());
-
-//        client.input().send(MessageBuilder.withPayload("Hello World  BBBB").build());
-
-        System.out.println(".......................................................................................");
-
-        return "success";
-//        return redisTemplate.opsForValue().get("user").toString();
+        System.out.println("....................begin");
+       return userService.getUser(1);
     }
 }

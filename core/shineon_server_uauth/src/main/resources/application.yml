@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: shineon_server_uauth
+    name: shineon-server-uauth
   redis:
     host: 127.0.0.1
     port: 6379

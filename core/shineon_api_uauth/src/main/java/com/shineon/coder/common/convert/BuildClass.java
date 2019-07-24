@@ -29,9 +29,10 @@ public class BuildClass {
 
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-		String fileConent = classBuildUtil.classInit(className,baseName,utilPackage,null,true,
-				String.format("%s.%s;",basePackage,baseName));
+		String[] annos =new String[]{"Component"};
 
+		String fileConent = classBuildUtil.classInit(className,baseName,utilPackage,annos,true,
+				String.format("%s.%s;",basePackage,baseName),"org.springframework.stereotype.Component");
 		String content ="";
 		fileConent = fileConent.replace("##1",content);
 
