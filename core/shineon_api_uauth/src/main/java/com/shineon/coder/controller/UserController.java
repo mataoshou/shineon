@@ -1,6 +1,7 @@
 package com.shineon.coder.controller;
 
 //import com.shineon.coder.service.MataoBuild;
+import com.shineon.coder.convert.CommonItem;
 import com.shineon.coder.service.feign.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,12 +28,12 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/getUser")
-    public String getUser(HttpServletRequest request)
+    public CommonItem getUser(HttpServletRequest request)
     {
 
 
         System.out.println("....................begin");
-        return userService.getUser(1).toString();
+        return userService.getUser(1);
 //        logger.info(Thread.currentThread().getName() + "....................getUser");
 //        System.out.println(request.getSession().getId());
 //

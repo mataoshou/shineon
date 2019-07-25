@@ -37,6 +37,11 @@ server:
   port: 122
 
 
+feign:
+  hystrix:
+    enabled: true
+
+
 
 
 

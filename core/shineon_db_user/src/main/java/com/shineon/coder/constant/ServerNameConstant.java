@@ -1,4 +1,4 @@
-package com.shineon.coder.common.constant;
+package com.shineon.coder.constant;
 
 /**
  * 用来存放系统服务名称的常量

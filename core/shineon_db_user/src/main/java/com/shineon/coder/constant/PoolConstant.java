@@ -1,4 +1,4 @@
-package com.shineon.coder.common.constant;
+package com.shineon.coder.constant;
 
 public class PoolConstant {
 

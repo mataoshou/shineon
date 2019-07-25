@@ -2,6 +2,7 @@ package com.shineon.coder.common.convert;
 
 import com.shineon.coder.common.util.DomUtil;
 import com.shineon.coder.common.util.FileStore;
+import com.shineon.coder.constant.ConvertsConstant;
 import com.shineon.coder.convert.CommonItem;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -64,8 +65,6 @@ public class ConvertBuild {
     }
 
 
-    String pojoPackage = "com.shineon.coder.db.pojo";
-
     public void eachPojo(File pf) throws Exception {
         ////////////////////变量初始化
         logger.debug("初始化commonItem属性");
@@ -75,7 +74,7 @@ public class ConvertBuild {
 
         String fname = tools.getFileName(pf.getName());
 
-        String clPath = pojoPackage+"." + fname;
+        String clPath = ConvertsConstant.POJO_PACKAGE +"." + fname;
 
         logger.debug("构建类对象"+clPath);
 
