@@ -41,6 +41,11 @@ feign:
   hystrix:
     enabled: true
 
+logging:
+  file: log/shineon-api-uauth.log
+  level:
+    root : info
+
 
 
 

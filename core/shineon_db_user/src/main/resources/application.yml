@@ -31,5 +31,8 @@ server:
 shineon:
   version: 20190724
 
-
+logging:
+  file: log/shineon-api-uauth.log
+  level:
+    root : info
 

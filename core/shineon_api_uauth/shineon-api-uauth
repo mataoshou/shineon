@@ -1,0 +1,451 @@
+$d{yyyy/MM/dd-HH:mm} [main] ERROR org.springframework.boot.SpringApplication- Application run failed
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:172) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:328) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:304) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:255) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:219) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:196) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:340) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.shineon.coder.CoderApplication.main(CoderApplication.java:19) [classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:293) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:372) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:293) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:254) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	... 18 common frames omitted
+2019-07-25 16:19:07.674 ERROR [shineon-api-uauth,,,] 9924 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:172) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:328) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:304) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:255) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:219) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:196) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:340) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.shineon.coder.CoderApplication.main(CoderApplication.java:19) [classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:293) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:372) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:293) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:254) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	... 18 common frames omitted
+
+2019-07-25 16:21:48.394 ERROR [shineon-api-uauth,,,] 10800 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, java.lang.String>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:172) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:328) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:304) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:255) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:219) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:196) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:340) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.shineon.coder.CoderApplication.main(CoderApplication.java:19) [classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, java.lang.String>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:293) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:372) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:293) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:254) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	... 18 common frames omitted
+
+2019-07-25 16:22:54.467  INFO [shineon-api-uauth,,,] 5148 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-07-25 16:22:55.369  INFO [shineon-api-uauth,,,] 5148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-25 16:22:55.371  INFO [shineon-api-uauth,,,] 5148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-25 16:22:55.388  INFO [shineon-api-uauth,,,] 5148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-07-25 16:22:55.455  WARN [shineon-api-uauth,,,] 5148 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-07-25 16:22:55.685  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=760a29b3-8835-3c3e-88f3-12e46a84b459
+2019-07-25 16:22:55.695  INFO [shineon-api-uauth,,,] 5148 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-07-25 16:22:55.699  INFO [shineon-api-uauth,,,] 5148 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-07-25 16:22:55.702  INFO [shineon-api-uauth,,,] 5148 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-07-25 16:22:55.938  INFO [shineon-api-uauth,,,] 5148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:22:55.967  INFO [shineon-api-uauth,,,] 5148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$ffc286a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:22:55.980  INFO [shineon-api-uauth,,,] 5148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$db5491c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:22:55.987  INFO [shineon-api-uauth,,,] 5148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$143c3a8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:22:55.992  INFO [shineon-api-uauth,,,] 5148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:22:56.024  INFO [shineon-api-uauth,,,] 5148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b0eace6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:22:56.371  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 129 (http)
+2019-07-25 16:22:56.385  INFO [shineon-api-uauth,,,] 5148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-25 16:22:56.385  INFO [shineon-api-uauth,,,] 5148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-25 16:22:56.474  INFO [shineon-api-uauth,,,] 5148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-25 16:22:56.474  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1995 ms
+2019-07-25 16:22:56.600  WARN [shineon-api-uauth,,,] 5148 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:22:56.600  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:22:56.608  INFO [shineon-api-uauth,,,] 5148 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4c4c7d6c
+2019-07-25 16:22:57.807  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-07-25 16:22:58.564  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-07-25 16:22:58.565  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-07-25 16:22:58.654  WARN [shineon-api-uauth,,,] 5148 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:22:58.654  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:22:59.264  INFO [shineon-api-uauth,,,] 5148 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-25 16:22:59.265  INFO [shineon-api-uauth,,,] 5148 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-25 16:22:59.900  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-25 16:23:00.004  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageInput' has 1 subscriber(s).
+2019-07-25 16:23:00.172  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageOutput
+2019-07-25 16:23:00.210  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2019-07-25 16:23:00.222  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2019-07-25 16:23:00.244  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageInput
+2019-07-25 16:23:00.253  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2019-07-25 16:23:00.264  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@7164e28a
+2019-07-25 16:23:00.318  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-07-25 16:23:00.318  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-07-25 16:23:00.318  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-07-25 16:23:00.623  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2019-07-25 16:23:00.719  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#18e6b72b:0/SimpleConnection@5bc40f5d [delegate=amqp://matao@127.0.0.1:5672/, localPort= 62284]
+2019-07-25 16:23:00.761  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageOutput' has 1 subscriber(s).
+2019-07-25 16:23:00.773  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-25 16:23:00.801  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-25 16:23:00.926  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-25 16:23:00.926  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-25 16:23:00.999  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-25 16:23:00.999  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-25 16:23:01.130  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-25 16:23:01.172  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-25 16:23:01.173  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-25 16:23:01.173  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-25 16:23:01.173  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-25 16:23:01.173  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-25 16:23:01.173  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-25 16:23:01.173  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-25 16:23:01.263  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-25 16:23:01.264  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-25 16:23:01.266  INFO [shineon-api-uauth,,,] 5148 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-25 16:23:01.268  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1564042981268 with initial instances count: 3
+2019-07-25 16:23:01.273  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON-API-UAUTH with eureka with status UP
+2019-07-25 16:23:01.273  INFO [shineon-api-uauth,,,] 5148 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1564042981273, current=UP, previous=STARTING]
+2019-07-25 16:23:01.275  INFO [shineon-api-uauth,,,] 5148 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129: registering service...
+2019-07-25 16:23:01.292  INFO [shineon-api-uauth,,,] 5148 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: MataoMessage.anonymous.xf7GyngkT_i8OC3XEW0n1w, bound to: MataoMessage
+2019-07-25 16:23:01.317  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessage.anonymous.xf7GyngkT_i8OC3XEW0n1w.errors
+2019-07-25 16:23:01.329  INFO [shineon-api-uauth,,,] 5148 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129 - registration status: 204
+2019-07-25 16:23:01.374  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.xf7GyngkT_i8OC3XEW0n1w.errors' has 1 subscriber(s).
+2019-07-25 16:23:01.374  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.xf7GyngkT_i8OC3XEW0n1w.errors' has 2 subscriber(s).
+2019-07-25 16:23:01.400  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.MataoMessage.anonymous.xf7GyngkT_i8OC3XEW0n1w
+2019-07-25 16:23:01.987  INFO [shineon-api-uauth,,,] 5148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 129 (http) with context path ''
+2019-07-25 16:23:01.988  INFO [shineon-api-uauth,,,] 5148 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 129
+2019-07-25 16:23:01.989  INFO [shineon-api-uauth,,,] 5148 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 8.364 seconds (JVM running for 8.829)
+2019-07-25 16:23:51.406  INFO [shineon-api-uauth,,,] 14420 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-07-25 16:23:52.013  INFO [shineon-api-uauth,,,] 14420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-25 16:23:52.014  INFO [shineon-api-uauth,,,] 14420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-25 16:23:52.031  INFO [shineon-api-uauth,,,] 14420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-07-25 16:23:52.094  WARN [shineon-api-uauth,,,] 14420 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-07-25 16:23:52.327  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=760a29b3-8835-3c3e-88f3-12e46a84b459
+2019-07-25 16:23:52.337  INFO [shineon-api-uauth,,,] 14420 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-07-25 16:23:52.341  INFO [shineon-api-uauth,,,] 14420 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-07-25 16:23:52.345  INFO [shineon-api-uauth,,,] 14420 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-07-25 16:23:52.575  INFO [shineon-api-uauth,,,] 14420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:23:52.603  INFO [shineon-api-uauth,,,] 14420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$42fa0dc5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:23:52.615  INFO [shineon-api-uauth,,,] 14420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$1e8c18e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:23:52.622  INFO [shineon-api-uauth,,,] 14420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$5773c1b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:23:52.627  INFO [shineon-api-uauth,,,] 14420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:23:52.659  INFO [shineon-api-uauth,,,] 14420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f4225593] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:23:53.014  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 129 (http)
+2019-07-25 16:23:53.028  INFO [shineon-api-uauth,,,] 14420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-25 16:23:53.028  INFO [shineon-api-uauth,,,] 14420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-25 16:23:53.117  INFO [shineon-api-uauth,,,] 14420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-25 16:23:53.118  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1700 ms
+2019-07-25 16:23:53.234  WARN [shineon-api-uauth,,,] 14420 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:23:53.234  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:23:53.240  INFO [shineon-api-uauth,,,] 14420 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1e495414
+2019-07-25 16:23:54.345  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-07-25 16:23:55.038  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-07-25 16:23:55.039  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-07-25 16:23:55.112  WARN [shineon-api-uauth,,,] 14420 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:23:55.112  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:23:55.671  INFO [shineon-api-uauth,,,] 14420 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-25 16:23:55.672  INFO [shineon-api-uauth,,,] 14420 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-25 16:23:56.266  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-25 16:23:56.362  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageInput' has 1 subscriber(s).
+2019-07-25 16:23:56.471  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2019-07-25 16:23:56.519  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageOutput
+2019-07-25 16:23:56.545  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageInput
+2019-07-25 16:23:56.551  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2019-07-25 16:23:56.566  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@7fdabb3b
+2019-07-25 16:23:56.610  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2019-07-25 16:23:56.796  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-07-25 16:23:56.796  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-07-25 16:23:56.796  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-07-25 16:23:56.952  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2019-07-25 16:23:56.975  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1f39269d:0/SimpleConnection@6520625f [delegate=amqp://matao@127.0.0.1:5672/, localPort= 62833]
+2019-07-25 16:23:57.004  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageOutput' has 1 subscriber(s).
+2019-07-25 16:23:57.016  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-25 16:23:57.038  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-25 16:23:57.120  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-25 16:23:57.120  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-25 16:23:57.178  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-25 16:23:57.178  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-25 16:23:57.317  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-25 16:23:57.357  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-25 16:23:57.357  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-25 16:23:57.357  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-25 16:23:57.357  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-25 16:23:57.357  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-25 16:23:57.357  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-25 16:23:57.358  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-25 16:23:57.448  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-25 16:23:57.449  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-25 16:23:57.450  INFO [shineon-api-uauth,,,] 14420 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-25 16:23:57.452  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1564043037452 with initial instances count: 4
+2019-07-25 16:23:57.458  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON-API-UAUTH with eureka with status UP
+2019-07-25 16:23:57.458  INFO [shineon-api-uauth,,,] 14420 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1564043037458, current=UP, previous=STARTING]
+2019-07-25 16:23:57.459  INFO [shineon-api-uauth,,,] 14420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129: registering service...
+2019-07-25 16:23:57.477  INFO [shineon-api-uauth,,,] 14420 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: MataoMessage.anonymous.dpwsqmAnQgOopC4gDJRa0A, bound to: MataoMessage
+2019-07-25 16:23:57.484  INFO [shineon-api-uauth,,,] 14420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129 - registration status: 204
+2019-07-25 16:23:57.498  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessage.anonymous.dpwsqmAnQgOopC4gDJRa0A.errors
+2019-07-25 16:23:57.553  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.dpwsqmAnQgOopC4gDJRa0A.errors' has 1 subscriber(s).
+2019-07-25 16:23:57.553  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.dpwsqmAnQgOopC4gDJRa0A.errors' has 2 subscriber(s).
+2019-07-25 16:23:57.576  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.MataoMessage.anonymous.dpwsqmAnQgOopC4gDJRa0A
+2019-07-25 16:23:58.164  INFO [shineon-api-uauth,,,] 14420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 129 (http) with context path ''
+2019-07-25 16:23:58.165  INFO [shineon-api-uauth,,,] 14420 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 129
+2019-07-25 16:23:58.166  INFO [shineon-api-uauth,,,] 14420 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 7.657 seconds (JVM running for 8.146)
+2019-07-25 16:28:44.795  INFO [shineon-api-uauth,,,] 14420 --- [http-nio-129-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-25 16:28:44.796  INFO [shineon-api-uauth,,,] 14420 --- [http-nio-129-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-25 16:28:44.809  INFO [shineon-api-uauth,,,] 14420 --- [http-nio-129-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-07-25 16:28:45.063  INFO [shineon-api-uauth,5a18c10e903a02dd,715a964ebc34059f,false] 14420 --- [hystrix-shineon-server-uauth-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:28:45.091  INFO [shineon-api-uauth,5a18c10e903a02dd,715a964ebc34059f,false] 14420 --- [hystrix-shineon-server-uauth-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon-server-uauth
+2019-07-25 16:28:45.091  INFO [shineon-api-uauth,5a18c10e903a02dd,715a964ebc34059f,false] 14420 --- [hystrix-shineon-server-uauth-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon-server-uauth instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon-server-uauth,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-07-25 16:28:45.096  INFO [shineon-api-uauth,5a18c10e903a02dd,715a964ebc34059f,false] 14420 --- [hystrix-shineon-server-uauth-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-07-25 16:28:45.120  INFO [shineon-api-uauth,5a18c10e903a02dd,715a964ebc34059f,false] 14420 --- [hystrix-shineon-server-uauth-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:28:45.121  INFO [shineon-api-uauth,5a18c10e903a02dd,715a964ebc34059f,false] 14420 --- [hystrix-shineon-server-uauth-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon-server-uauth initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon-server-uauth,current list of Servers=[fh18829-2:122],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:fh18829-2:122;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@84249fd
+2019-07-25 16:28:46.099  INFO [shineon-api-uauth,,,] 14420 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:28:57.362  INFO [shineon-api-uauth,,,] 14420 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-25 16:30:43.072  INFO [shineon-api-uauth,,,] 4044 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-07-25 16:30:43.664  INFO [shineon-api-uauth,,,] 4044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-25 16:30:43.666  INFO [shineon-api-uauth,,,] 4044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-25 16:30:43.681  INFO [shineon-api-uauth,,,] 4044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2019-07-25 16:30:43.738  WARN [shineon-api-uauth,,,] 4044 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-07-25 16:30:43.955  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=760a29b3-8835-3c3e-88f3-12e46a84b459
+2019-07-25 16:30:43.968  INFO [shineon-api-uauth,,,] 4044 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-07-25 16:30:43.973  INFO [shineon-api-uauth,,,] 4044 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-07-25 16:30:43.976  INFO [shineon-api-uauth,,,] 4044 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-07-25 16:30:44.224  INFO [shineon-api-uauth,,,] 4044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:30:44.252  INFO [shineon-api-uauth,,,] 4044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$7a4cb20] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:30:44.264  INFO [shineon-api-uauth,,,] 4044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$e336d640] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:30:44.271  INFO [shineon-api-uauth,,,] 4044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$1c1e7f0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:30:44.276  INFO [shineon-api-uauth,,,] 4044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:30:44.308  INFO [shineon-api-uauth,,,] 4044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b8cd12ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:30:44.658  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 129 (http)
+2019-07-25 16:30:44.672  INFO [shineon-api-uauth,,,] 4044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-25 16:30:44.672  INFO [shineon-api-uauth,,,] 4044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-25 16:30:44.769  INFO [shineon-api-uauth,,,] 4044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-25 16:30:44.770  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1686 ms
+2019-07-25 16:30:44.892  WARN [shineon-api-uauth,,,] 4044 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:30:44.892  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:30:44.897  INFO [shineon-api-uauth,,,] 4044 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@403364e9
+2019-07-25 16:30:45.988  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-07-25 16:30:46.682  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-07-25 16:30:46.682  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-07-25 16:30:46.755  WARN [shineon-api-uauth,,,] 4044 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:30:46.755  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:30:47.311  INFO [shineon-api-uauth,,,] 4044 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-25 16:30:47.312  INFO [shineon-api-uauth,,,] 4044 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-25 16:30:47.988  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-25 16:30:48.078  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageInput' has 1 subscriber(s).
+2019-07-25 16:30:48.175  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2019-07-25 16:30:48.186  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageOutput
+2019-07-25 16:30:48.243  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageInput
+2019-07-25 16:30:48.248  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2019-07-25 16:30:48.274  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@74ee97cb
+2019-07-25 16:30:48.312  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2019-07-25 16:30:48.467  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-07-25 16:30:48.467  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-07-25 16:30:48.467  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-07-25 16:30:48.624  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2019-07-25 16:30:48.645  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4597e6e3:0/SimpleConnection@2643ed03 [delegate=amqp://matao@127.0.0.1:5672/, localPort= 50304]
+2019-07-25 16:30:48.673  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageOutput' has 1 subscriber(s).
+2019-07-25 16:30:48.684  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-25 16:30:48.707  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-25 16:30:48.787  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-25 16:30:48.788  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-25 16:30:48.846  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-25 16:30:48.846  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-25 16:30:48.977  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-25 16:30:49.020  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-25 16:30:49.021  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-25 16:30:49.021  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-25 16:30:49.021  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-25 16:30:49.021  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-25 16:30:49.021  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-25 16:30:49.021  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-25 16:30:49.110  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-25 16:30:49.112  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-25 16:30:49.113  INFO [shineon-api-uauth,,,] 4044 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-25 16:30:49.115  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1564043449115 with initial instances count: 4
+2019-07-25 16:30:49.120  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON-API-UAUTH with eureka with status UP
+2019-07-25 16:30:49.120  INFO [shineon-api-uauth,,,] 4044 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1564043449120, current=UP, previous=STARTING]
+2019-07-25 16:30:49.122  INFO [shineon-api-uauth,,,] 4044 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129: registering service...
+2019-07-25 16:30:49.140  INFO [shineon-api-uauth,,,] 4044 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: MataoMessage.anonymous.Cz00PlzgRbuk97O4esTp7Q, bound to: MataoMessage
+2019-07-25 16:30:49.149  INFO [shineon-api-uauth,,,] 4044 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129 - registration status: 204
+2019-07-25 16:30:49.161  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessage.anonymous.Cz00PlzgRbuk97O4esTp7Q.errors
+2019-07-25 16:30:49.215  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.Cz00PlzgRbuk97O4esTp7Q.errors' has 1 subscriber(s).
+2019-07-25 16:30:49.216  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.Cz00PlzgRbuk97O4esTp7Q.errors' has 2 subscriber(s).
+2019-07-25 16:30:49.239  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.MataoMessage.anonymous.Cz00PlzgRbuk97O4esTp7Q
+2019-07-25 16:30:49.825  INFO [shineon-api-uauth,,,] 4044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 129 (http) with context path ''
+2019-07-25 16:30:49.825  INFO [shineon-api-uauth,,,] 4044 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 129
+2019-07-25 16:30:49.827  INFO [shineon-api-uauth,,,] 4044 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 7.587 seconds (JVM running for 8.08)
+2019-07-25 16:34:34.743  INFO [shineon-api-uauth,,,] 4044 --- [http-nio-129-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-25 16:34:34.743  INFO [shineon-api-uauth,,,] 4044 --- [http-nio-129-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-25 16:34:34.757  INFO [shineon-api-uauth,,,] 4044 --- [http-nio-129-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-07-25 16:34:34.784  INFO [shineon-api-uauth,48ce8f6f778fc07a,48ce8f6f778fc07a,false] 4044 --- [http-nio-129-exec-1] c.s.coder.controller.UserController      : ...........................begin
+2019-07-25 16:34:34.976  INFO [shineon-api-uauth,48ce8f6f778fc07a,d09d25bdc5d84b5a,false] 4044 --- [hystrix-shineon-server-uauth-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:34:34.999  INFO [shineon-api-uauth,48ce8f6f778fc07a,d09d25bdc5d84b5a,false] 4044 --- [hystrix-shineon-server-uauth-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon-server-uauth
+2019-07-25 16:34:34.999  INFO [shineon-api-uauth,48ce8f6f778fc07a,d09d25bdc5d84b5a,false] 4044 --- [hystrix-shineon-server-uauth-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon-server-uauth instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon-server-uauth,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-07-25 16:34:35.003  INFO [shineon-api-uauth,48ce8f6f778fc07a,d09d25bdc5d84b5a,false] 4044 --- [hystrix-shineon-server-uauth-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-07-25 16:34:35.016  INFO [shineon-api-uauth,48ce8f6f778fc07a,d09d25bdc5d84b5a,false] 4044 --- [hystrix-shineon-server-uauth-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:34:35.017  INFO [shineon-api-uauth,48ce8f6f778fc07a,d09d25bdc5d84b5a,false] 4044 --- [hystrix-shineon-server-uauth-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon-server-uauth initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon-server-uauth,current list of Servers=[fh18829-2:122],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:fh18829-2:122;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@e64e4a1
+2019-07-25 16:34:36.005  INFO [shineon-api-uauth,,,] 4044 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:43:27.703  INFO [shineon-api-uauth,,,] 12232 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-07-25 16:43:28.306  INFO [shineon-api-uauth,,,] 12232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-25 16:43:28.308  INFO [shineon-api-uauth,,,] 12232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-25 16:43:28.325  INFO [shineon-api-uauth,,,] 12232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-07-25 16:43:28.390  WARN [shineon-api-uauth,,,] 12232 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-07-25 16:43:28.623  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=760a29b3-8835-3c3e-88f3-12e46a84b459
+2019-07-25 16:43:28.634  INFO [shineon-api-uauth,,,] 12232 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-07-25 16:43:28.638  INFO [shineon-api-uauth,,,] 12232 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-07-25 16:43:28.642  INFO [shineon-api-uauth,,,] 12232 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-07-25 16:43:28.879  INFO [shineon-api-uauth,,,] 12232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:43:28.908  INFO [shineon-api-uauth,,,] 12232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$bbc5278a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:43:28.920  INFO [shineon-api-uauth,,,] 12232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$975732aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:43:28.928  INFO [shineon-api-uauth,,,] 12232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$d03edb77] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:43:28.933  INFO [shineon-api-uauth,,,] 12232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:43:28.966  INFO [shineon-api-uauth,,,] 12232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6ced6f58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 16:43:29.325  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 129 (http)
+2019-07-25 16:43:29.340  INFO [shineon-api-uauth,,,] 12232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-25 16:43:29.341  INFO [shineon-api-uauth,,,] 12232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-25 16:43:29.439  INFO [shineon-api-uauth,,,] 12232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-25 16:43:29.439  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1726 ms
+2019-07-25 16:43:29.560  WARN [shineon-api-uauth,,,] 12232 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:43:29.560  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:43:29.565  INFO [shineon-api-uauth,,,] 12232 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5329f6b3
+2019-07-25 16:43:30.718  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-07-25 16:43:31.424  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-07-25 16:43:31.424  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-07-25 16:43:31.501  WARN [shineon-api-uauth,,,] 12232 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 16:43:31.501  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 16:43:32.074  INFO [shineon-api-uauth,,,] 12232 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-07-25 16:43:32.075  INFO [shineon-api-uauth,,,] 12232 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-07-25 16:43:32.707  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-07-25 16:43:32.807  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageInput' has 1 subscriber(s).
+2019-07-25 16:43:32.906  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageOutput
+2019-07-25 16:43:32.953  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2019-07-25 16:43:32.962  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2019-07-25 16:43:32.987  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessageInput
+2019-07-25 16:43:32.998  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@29bf90fc
+2019-07-25 16:43:33.062  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2019-07-25 16:43:33.245  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-07-25 16:43:33.245  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-07-25 16:43:33.245  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-07-25 16:43:33.404  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2019-07-25 16:43:33.427  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#674184d:0/SimpleConnection@6c9b6332 [delegate=amqp://matao@127.0.0.1:5672/, localPort= 55525]
+2019-07-25 16:43:33.457  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.MataoMessageOutput' has 1 subscriber(s).
+2019-07-25 16:43:33.468  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-07-25 16:43:33.492  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-25 16:43:33.577  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-25 16:43:33.577  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-25 16:43:33.636  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-25 16:43:33.636  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-25 16:43:33.773  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-25 16:43:33.810  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-25 16:43:33.903  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-25 16:43:33.907  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-25 16:43:33.909  INFO [shineon-api-uauth,,,] 12232 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-25 16:43:33.912  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1564044213911 with initial instances count: 4
+2019-07-25 16:43:33.917  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON-API-UAUTH with eureka with status UP
+2019-07-25 16:43:33.917  INFO [shineon-api-uauth,,,] 12232 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1564044213917, current=UP, previous=STARTING]
+2019-07-25 16:43:33.919  INFO [shineon-api-uauth,,,] 12232 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129: registering service...
+2019-07-25 16:43:33.937  INFO [shineon-api-uauth,,,] 12232 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: MataoMessage.anonymous.7KGW2fD4RBCEOMg5DtITKQ, bound to: MataoMessage
+2019-07-25 16:43:33.941  INFO [shineon-api-uauth,,,] 12232 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-API-UAUTH/fh18829-2:shineon-api-uauth:129 - registration status: 204
+2019-07-25 16:43:33.957  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel MataoMessage.anonymous.7KGW2fD4RBCEOMg5DtITKQ.errors
+2019-07-25 16:43:34.016  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.7KGW2fD4RBCEOMg5DtITKQ.errors' has 1 subscriber(s).
+2019-07-25 16:43:34.017  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.MataoMessage.anonymous.7KGW2fD4RBCEOMg5DtITKQ.errors' has 2 subscriber(s).
+2019-07-25 16:43:34.043  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.MataoMessage.anonymous.7KGW2fD4RBCEOMg5DtITKQ
+2019-07-25 16:43:34.628  INFO [shineon-api-uauth,,,] 12232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 129 (http) with context path ''
+2019-07-25 16:43:34.628  INFO [shineon-api-uauth,,,] 12232 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 129
+2019-07-25 16:43:34.630  INFO [shineon-api-uauth,,,] 12232 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 7.714 seconds (JVM running for 8.31)
+2019-07-25 16:43:44.748  INFO [shineon-api-uauth,,,] 12232 --- [http-nio-129-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-25 16:43:44.749  INFO [shineon-api-uauth,,,] 12232 --- [http-nio-129-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-25 16:43:44.761  INFO [shineon-api-uauth,,,] 12232 --- [http-nio-129-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-07-25 16:43:44.788  INFO [shineon-api-uauth,78d488c81bbe4f1e,78d488c81bbe4f1e,false] 12232 --- [http-nio-129-exec-1] c.s.coder.controller.UserController      : ...........................begin
+2019-07-25 16:43:44.988  INFO [shineon-api-uauth,78d488c81bbe4f1e,88634ca5804c9183,false] 12232 --- [hystrix-shineon-server-uauth-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:43:45.007  INFO [shineon-api-uauth,78d488c81bbe4f1e,88634ca5804c9183,false] 12232 --- [hystrix-shineon-server-uauth-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon-server-uauth
+2019-07-25 16:43:45.007  INFO [shineon-api-uauth,78d488c81bbe4f1e,88634ca5804c9183,false] 12232 --- [hystrix-shineon-server-uauth-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon-server-uauth instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon-server-uauth,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-07-25 16:43:45.011  INFO [shineon-api-uauth,78d488c81bbe4f1e,88634ca5804c9183,false] 12232 --- [hystrix-shineon-server-uauth-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-07-25 16:43:45.024  INFO [shineon-api-uauth,78d488c81bbe4f1e,88634ca5804c9183,false] 12232 --- [hystrix-shineon-server-uauth-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:43:45.026  INFO [shineon-api-uauth,78d488c81bbe4f1e,88634ca5804c9183,false] 12232 --- [hystrix-shineon-server-uauth-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon-server-uauth initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon-server-uauth,current list of Servers=[fh18829-2:122],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:fh18829-2:122;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@37863cd9
+2019-07-25 16:43:46.014  INFO [shineon-api-uauth,,,] 12232 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-server-uauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-07-25 16:48:33.814  INFO [shineon-api-uauth,,,] 12232 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

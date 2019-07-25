@@ -27,11 +27,13 @@ public class UserController {
     @Autowired
     UserService userService;
 
+
     @RequestMapping("/getUser")
     public CommonItem getUser(HttpServletRequest request)
     {
 
 
+        logger.info("...........................begin");
         System.out.println("....................begin");
         return userService.getUser(1);
 //        logger.info(Thread.currentThread().getName() + "....................getUser");
