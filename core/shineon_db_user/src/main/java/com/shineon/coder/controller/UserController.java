@@ -2,6 +2,7 @@ package com.shineon.coder.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.shineon.coder.convert.CommonItem;
+import com.shineon.coder.convert.CommonItemUtils;
 import com.shineon.coder.convert.util.ShineonUserCommonUtil;
 import com.shineon.coder.db.dao.ShineonUserMapper;
 import com.shineon.coder.db.pojo.ShineonUser;
@@ -34,6 +35,9 @@ public class UserController {
     @Autowired
     ShineonUserCommonUtil commonUtil;
 
+    @Autowired
+    CommonItemUtils commonItemUtils;
+
     @RequestMapping("/getUser")
     public CommonItem get(@RequestParam("id")int id)
     {
@@ -42,7 +46,7 @@ public class UserController {
         ShineonUser user = shineonUserMapper.selectByPrimaryKey(id);
         System.out.println(user.getUsername());
 
-        return commonUtil.shineonUserToCommon(user);
+        return commonItemUtils.success(commonUtil.shineonUserToCommon(user));
 
 //        ShineonUser shineonUser = new ShineonUser();
 //        shineonUser.setUsername("2");

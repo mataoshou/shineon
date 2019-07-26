@@ -4,7 +4,6 @@ import com.shineon.coder.common.util.DomUtil;
 import com.shineon.coder.common.util.FileStore;
 import com.shineon.coder.constant.ConvertsConstant;
 import com.shineon.coder.convert.CommonData;
-import com.shineon.coder.convert.CommonItem;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -38,11 +37,11 @@ public class ConvertBuild {
      */
     public void buildConvert() throws Exception {
         String sys = System.getProperty("user.dir");
-        File root = new File(sys,"src\\main\\java\\com\\shineon\\coder");
+        File root = new File(sys,"src\\main\\java\\");
 
-        File pojo = new File(root,"pojo");
+        File pojo = new File(root, ConvertsConstant.POJO_PACKAGE.replace(".","\\"));
 
-        File buildRoot = new File(root,"convert");
+        File buildRoot = new File(root, ConvertsConstant.CONVERT_PACKAGE.replace(".","\\"));
 
         mapper = new File(buildRoot,"mapper");
 
@@ -200,7 +199,7 @@ public class ConvertBuild {
      * @throws IOException
      * @throws DocumentException
      */
-    public boolean buildMapper(List<MapperItem> items,File mapperFile) throws IOException, DocumentException {
+    public boolean buildMapper(List<MapperItem> items, File mapperFile) throws IOException, DocumentException {
 
         if(!mapperFile.exists())
         {

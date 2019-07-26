@@ -37,11 +37,11 @@ public class ConvertBuild {
      */
     public void buildConvert() throws Exception {
         String sys = System.getProperty("user.dir");
-        File root = new File(sys,"src\\main\\java\\com\\shineon\\coder");
+        File root = new File(sys,"src\\main\\java\\");
 
-        File pojo = new File(root,"pojo");
+        File pojo = new File(root, ConvertsConstant.POJO_PACKAGE.replace(".","\\"));
 
-        File buildRoot = new File(root,"convert");
+        File buildRoot = new File(root, ConvertsConstant.CONVERT_PACKAGE.replace(".","\\"));
 
         mapper = new File(buildRoot,"mapper");
 

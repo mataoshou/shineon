@@ -2,18 +2,18 @@ package com.shineon.coder.convert.base ;
 
 import java.util.Date;;
 import com.shineon.coder.db.pojo.ShineonUserAttached;;
-import com.shineon.coder.convert.CommonItem;;
+import com.shineon.coder.convert.CommonData;;
 
 public class ShineonUserAttachedCommonBase {
-		public CommonItem shineonUserAttachedToCommon( ShineonUserAttached item) {
-			CommonItem result = new CommonItem();
+		public CommonData shineonUserAttachedToCommon( ShineonUserAttached item) {
+			CommonData result = new CommonData();
 			result.setId(item.getId());
 			result.setParent(item.getUserid());
 			result.setCreateTime(item.getTimelastlogin());
 			result.setBeginTime(item.getIplastlogin());
 			return result;
 		}
-		public ShineonUserAttached commonToShineonUserAttached( CommonItem item) {
+		public ShineonUserAttached commonToShineonUserAttached( CommonData item) {
 			ShineonUserAttached result = new ShineonUserAttached();
 			result.setId(item.getId());
 			result.setUserid(item.getParent());

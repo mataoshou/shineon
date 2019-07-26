@@ -2,11 +2,11 @@ package com.shineon.coder.convert.base ;
 
 import java.util.Date;;
 import com.shineon.coder.db.pojo.ShineonUser;;
-import com.shineon.coder.convert.CommonItem;;
+import com.shineon.coder.convert.CommonData;;
 
 public class ShineonUserCommonBase {
-		public CommonItem shineonUserToCommon( ShineonUser item) {
-			CommonItem result = new CommonItem();
+		public CommonData shineonUserToCommon( ShineonUser item) {
+			CommonData result = new CommonData();
 			result.setId(item.getId());
 			result.setContent(item.getUsername());
 			result.setTitle(item.getDisplayname());
@@ -18,7 +18,7 @@ public class ShineonUserCommonBase {
 			result.setEndTime(item.getTimedeleted());
 			return result;
 		}
-		public ShineonUser commonToShineonUser( CommonItem item) {
+		public ShineonUser commonToShineonUser( CommonData item) {
 			ShineonUser result = new ShineonUser();
 			result.setId(item.getId());
 			result.setUsername(item.getContent());

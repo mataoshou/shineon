@@ -1,7 +1,9 @@
 package com.shineon.coder.convert;
 
 import com.shineon.coder.constant.CommonItemConstant;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CommonItemUtils {
 
     ///////////////////////////////////////////////////////////////////////////////////////////
