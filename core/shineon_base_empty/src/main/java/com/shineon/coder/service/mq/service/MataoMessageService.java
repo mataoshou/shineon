@@ -1,11 +1,11 @@
-package com.shineon.coder.service.mq.service ;
+package com.shineon.coder.service.mq.service;
 
+import com.shineon.coder.service.mq.client.MataoMessageClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.stereotype.Component;
-import com.shineon.coder.service.mq.client.MataoMessageClient;
 
 @Component
 @EnableBinding(MataoMessageClient.class)

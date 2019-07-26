@@ -1,7 +1,7 @@
 package com.shineon.coder.common.cache;
 
 import com.alibaba.fastjson.JSONObject;
-import com.shineon.coder.common.constant.RedisConstant;
+import com.shineon.coder.constant.RedisConstant;
 import com.shineon.coder.common.util.SpringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

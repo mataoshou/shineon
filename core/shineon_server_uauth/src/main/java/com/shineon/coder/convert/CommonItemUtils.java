@@ -23,6 +23,13 @@ public class CommonItemUtils {
         return  item;
     }
 
+    public CommonItem success(CommonData data)
+    {
+        CommonItem item = new CommonItem();
+        item.setData(data);
+        return success(item);
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////
     ///  失败
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -35,12 +42,12 @@ public class CommonItemUtils {
 
     public CommonItem fail(CommonItem item)
     {
-        return fail(item,CommonItemConstant.STATUS_FAIL,CommonItemConstant.REASON_FAIL);
+        return fail(item, CommonItemConstant.STATUS_FAIL, CommonItemConstant.REASON_FAIL);
     }
 
     public CommonItem fail(CommonItem item , String reason)
     {
-        return fail(item,CommonItemConstant.STATUS_FAIL,reason);
+        return fail(item, CommonItemConstant.STATUS_FAIL,reason);
     }
 
     public CommonItem fail(CommonItem item, int errorStatus, String reason)

@@ -3,7 +3,7 @@ package com.shineon.coder.controller;
 import com.shineon.coder.common.cache.RedisClient;
 import com.shineon.coder.common.cache.RedisLock;
 import com.shineon.coder.common.cache.RedisUtil;
-import com.shineon.coder.common.constant.RedisConstant;
+import com.shineon.coder.constant.RedisConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.web.bind.annotation.RequestMapping;

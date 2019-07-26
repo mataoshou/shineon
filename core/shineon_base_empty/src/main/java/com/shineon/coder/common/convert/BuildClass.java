@@ -1,6 +1,7 @@
 package com.shineon.coder.common.convert;
 
 import com.shineon.coder.common.util.ClassBuildUtil;
+import com.shineon.coder.constant.ConvertsConstant;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,13 +14,6 @@ public class BuildClass {
 	ClassBuildUtil buildUtil = new ClassBuildUtil();
 
 
-	String basePackage ="com.shineon.coder.convert.base";
-
-	String utilPackage ="com.shineon.coder.convert.util";
-
-	String pojoPackage = "com.shineon.coder.pojo";
-
-	String convertPackage ="com.shineon.coder.convert";
 
 	public void buildUtil(String className,File root,String baseName) throws Exception
 	{
@@ -29,9 +23,10 @@ public class BuildClass {
 
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-		String fileConent = classBuildUtil.classInit(className,baseName,utilPackage,null,true,
-				String.format("%s.%s;",basePackage,baseName));
+		String[] annos =new String[]{"Component"};
 
+		String fileConent = classBuildUtil.classInit(className,baseName, ConvertsConstant.UTIL_PACKAGE ,annos,true,
+				String.format("%s.%s;", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Component");
 		String content ="";
 		fileConent = fileConent.replace("##1",content);
 
@@ -53,8 +48,8 @@ public class BuildClass {
 
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-		String fileConent = classBuildUtil.classInit(className,null,basePackage,null,true,
-				"java.util.Date;", String.format("%s.%s;",pojoPackage,pojo),convertPackage+".CommonItem;");
+		String fileConent = classBuildUtil.classInit(className,null, ConvertsConstant.BASE_PACKAGE,null,true,
+				"java.util.Date;", String.format("%s.%s;", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData;");
 
 		////////添加packagename;
 
@@ -83,11 +78,11 @@ public class BuildClass {
 
 		String methodName = buildUtil.getLName(pojoName) +"ToCommon";
 
-		content += buildUtil.getContent(tab_no,tab, String.format("public CommonItem %s( %s item) {" ,methodName,pojoName));
+		content += buildUtil.getContent(tab_no,tab, String.format("public CommonData %s( %s item) {" ,methodName,pojoName));
 
 		tab_no++;
 
-		content += buildUtil.getContent(tab_no,tab, String.format("CommonItem result = new CommonItem();" ));
+		content += buildUtil.getContent(tab_no,tab, String.format("CommonData result = new CommonData();" ));
 
 		for(MapperItem item:items)
 		{
@@ -116,7 +111,7 @@ public class BuildClass {
 
 		String methodName = "commonTo"+pojoName;
 
-		content += buildUtil.getContent(tab_no,tab, String.format("public %s %s( CommonItem item) {" ,pojoName,methodName));
+		content += buildUtil.getContent(tab_no,tab, String.format("public %s %s( CommonData item) {" ,pojoName,methodName));
 
 		tab_no++;
 

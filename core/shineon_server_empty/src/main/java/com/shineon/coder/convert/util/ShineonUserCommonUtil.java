@@ -1,4 +1,4 @@
-package com.shineon.coder.convert.util ;
+package com.shineon.coder.convert.util;
 
 import com.shineon.coder.convert.base.ShineonUserCommonBase;;
 

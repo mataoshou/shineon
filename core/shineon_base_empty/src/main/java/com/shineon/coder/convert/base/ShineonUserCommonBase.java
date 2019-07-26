@@ -1,4 +1,4 @@
-package com.shineon.coder.convert.base ;
+package com.shineon.coder.convert.base;
 
 import java.util.Date;;
 import com.shineon.coder.pojo.ShineonUser;;

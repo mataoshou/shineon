@@ -1,6 +1,6 @@
 spring:
   application:
-    name: shineon_db_empty
+    name: shineon-db-user
   redis:
     host: 127.0.0.1
     port: 6379
@@ -31,5 +31,8 @@ server:
 shineon:
   version: 20190724
 
-
+logging:
+  file: log/shineon-api-uauth.log
+  level:
+    root : info
 

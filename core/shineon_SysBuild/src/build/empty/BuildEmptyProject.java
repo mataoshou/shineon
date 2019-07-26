@@ -21,11 +21,11 @@ public class BuildEmptyProject {
         BuildEmptyProject buildEmptyProject = new BuildEmptyProject();
 //        buildEmptyProject.initPath();
 
-        buildEmptyProject.buildNewSys("shineon_base_empty");
+        buildEmptyProject.buildNewSys("shineon_server_empty");
     }
 
 
-    String baseName = "shineon_api_uauth";
+    String baseName = "shineon_server_uauth";
     private  File root =  new File("E:\\IdeaProjects\\shineon\\core\\");
 
     public void buildNewSys(String sysName) throws Exception {

@@ -1,10 +1,10 @@
-package com.shineon.coder.service.mq.client ;
+package com.shineon.coder.service.mq.client;
 
+import com.shineon.coder.service.mq.BaseMessage;
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
-import com.shineon.coder.service.mq.BaseMessage;
 
 public interface MataoMessageClient extends BaseMessage {
 	String  INPUTNAME = "MataoMessageInput";

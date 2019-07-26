@@ -1,4 +1,4 @@
-package com.shineon.coder.service.mq ;
+package com.shineon.coder.service.mq;
 
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;

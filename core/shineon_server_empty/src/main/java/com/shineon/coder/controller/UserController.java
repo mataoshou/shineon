@@ -1,40 +1,27 @@
 package com.shineon.coder.controller;
 
-import com.shineon.coder.service.MataoBuild;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import com.shineon.coder.convert.CommonItem;
+import com.shineon.coder.service.feign.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 @RestController
 public class UserController {
 
-    Logger logger = LoggerFactory.getLogger(UserController.class);
+    @Autowired
+    RedisTemplate redisTemplate;
+
 
     @Autowired
-    MataoBuild build;
+    UserService userService;
 
-//    @Async("intervalExecutor")
     @RequestMapping("/getUser")
-    public String getUser(HttpServletRequest request)
+    public CommonItem getUser()
     {
-        logger.info(Thread.currentThread().getName() + "....................getUser");
-        System.out.println(request.getSession().getId());
-
-        HttpSession session = request.getSession();
-        System.out.println(session.getAttribute("user"));
-
-        session.setAttribute("user","qwas");
-
-        build.build();
-
-        System.out.println("....................."+"finish");
-
-        return "success";
+        System.out.println("....................begin");
+       return userService.getUser(1);
     }
 }

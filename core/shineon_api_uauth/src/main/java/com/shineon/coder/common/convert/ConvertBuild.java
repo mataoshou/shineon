@@ -3,6 +3,7 @@ package com.shineon.coder.common.convert;
 import com.shineon.coder.common.util.DomUtil;
 import com.shineon.coder.common.util.FileStore;
 import com.shineon.coder.constant.ConvertsConstant;
+import com.shineon.coder.convert.CommonData;
 import com.shineon.coder.convert.CommonItem;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -68,8 +69,8 @@ public class ConvertBuild {
 
     public void eachPojo(File pf) throws Exception {
         ////////////////////变量初始化
-        logger.debug("初始化commonItem属性");
-        List<PropertyItem> common = getItems(CommonItem.class);
+        logger.debug("初始化commonData属性");
+        List<PropertyItem> common = getItems(CommonData.class);
 
         logger.debug("开始处理文件转换" + pf.getPath());
 
