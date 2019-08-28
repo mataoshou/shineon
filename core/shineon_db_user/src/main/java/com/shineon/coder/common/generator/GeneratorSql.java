@@ -20,7 +20,7 @@ public class GeneratorSql {
         List<String> warnings = new ArrayList<>();
 
         File sys =  new File(System.getProperty("user.dir"));
-        File configFile = new File(sys,"src\\main\\resources\\DBConfig1.xml");
+        File configFile = new File(sys,"src\\main\\resources\\DBConfig.xml");
 
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);

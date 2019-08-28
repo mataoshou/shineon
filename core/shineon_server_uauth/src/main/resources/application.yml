@@ -1,53 +1,39 @@
-
-spring:
-  application:
-    name: shineon-server-uauth
-  redis:
+spring: 
+  cloud: 
+    stream: 
+      bindings: 
+        useroutput: 
+          destination: usermatao
+        userinput: 
+          destination: usermatao
+        Matao2MessageOutput: 
+          destination: Matao2Message
+        Matao2MessageInput: 
+          destination: Matao2Message
+  application: 
+    name: shineonserveruauth
+  rabbitmq: 
+    addresses: 127.0.0.1
+    password: matao
+    publisherconfirms: true
+    port: 5672
+    username: matao
+  redis: 
     host: 127.0.0.1
     port: 6379
     database: 0
-  rabbitmq:
-    port: 5672
-    addresses: 127.0.0.1
-    password: matao
-    username: matao
-    publisher-confirms: true
-
-  cloud:
-    stream:
-      bindings:
-        userinput:
-#          group: user
-          destination : usermatao
-        useroutput:
-#          group: user
-          destination : usermatao
-#      instance-count: 10
-
-
-mybatis:
-  mapper-locations: classpath:com/shineon/coder/db/mapper/*.xml
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:81/eureka
-
-
-server:
+server: 
   port: 122
-
-
-feign:
-  hystrix:
+logging: 
+  level: 
+    root: info
+  file: log/shineonapiuauth.log
+feign: 
+  hystrix: 
     enabled: true
-
-logging:
-  file: log/shineon-api-uauth.log
-  level:
-    root : info
-
-
-
-
-
-
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"
+mybatis: 
+  mapperlocations: "classpath:com/shineon/coder/db/mapper/*.xml"

@@ -12,8 +12,17 @@ zuul:
   routes:
     uauth-api:
       path: /uauth/**
-      service-id : shineon_api_uauth
+      service-id :  shineon-api-uauth
       sensitiveHeaders: "*"
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+ribbon:
+  ReadTimeout: 3000   #负载均衡超时时间，默认值5000
+  ConnectTimeout: 1000 #ribbon请求连接的超时时间，默认值2000
+  MaxAutoRetries: 0     #对当前实例的重试次数，默认0
+  MaxAutoRetriesNextServer: 1 #对切换实例的重试次数，默认1
+
 
 
 spring:
@@ -28,5 +37,5 @@ spring:
         spring: session
 
   redis:
-    host: 10.0.192.104
+    host: 127.0.0.1
     port: 6379

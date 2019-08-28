@@ -21,11 +21,11 @@ public class BuildEmptyProject {
         BuildEmptyProject buildEmptyProject = new BuildEmptyProject();
 //        buildEmptyProject.initPath();
 
-        buildEmptyProject.buildNewSys("shineon_server_empty");
+        buildEmptyProject.buildNewSys("mg_db_user");
     }
 
 
-    String baseName = "shineon_server_uauth";
+    String baseName = "shineon_db_user";
     private  File root =  new File("E:\\IdeaProjects\\shineon\\core\\");
 
     public void buildNewSys(String sysName) throws Exception {
@@ -62,11 +62,9 @@ public class BuildEmptyProject {
             System.out.println("修改iml文件！！");
         }
 
-
         String [] fileNames = new String[]{"compiler.xml","modules.xml","workspace.xml"};
 
         File idea = new File(dst,".idea");
-
 
         for(String str : fileNames)
         {
@@ -79,9 +77,7 @@ public class BuildEmptyProject {
                 FileStore.putString(file,content,"UTF-8");
 
             }
-
         }
-
     }
 
     public void initPath()
