@@ -40,9 +40,6 @@ public class GeneratorSql {
         MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
         myBatisGenerator.generate(null);
         System.out.println("基础文件生成成功");
-
-
-
     }
 
     public String getFileName(String name)
