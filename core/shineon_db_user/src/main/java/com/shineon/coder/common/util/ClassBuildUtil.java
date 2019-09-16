@@ -28,8 +28,10 @@ public class ClassBuildUtil {
         content += getContent(tab_no,tab, String.format("package %s ;",packageName));
         content += getContent(tab_no,tab, String.format(""));
         /////////添加import
-        for(String importName :imports) {
-            content += getContent(tab_no, tab, String.format("import %s;", importName));
+        if(imports!=null&&imports.length>0) {
+            for (String importName : imports) {
+                content += getContent(tab_no, tab, String.format("import %s;", importName));
+            }
         }
 
         content += getContent(tab_no,tab, String.format(""));

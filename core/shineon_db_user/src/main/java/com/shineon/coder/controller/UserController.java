@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.shineon.coder.convert.CommonItem;
 import com.shineon.coder.convert.CommonItemUtils;
 import com.shineon.coder.convert.util.ShineonUserCommonUtil;
-import com.shineon.coder.db.dao.ShineonUserMapper;
+import com.shineon.coder.db.mergedao.IShineonUserMapper;
 import com.shineon.coder.db.pojo.ShineonUser;
 import com.shineon.coder.nodb.dao.GeneralDao;
 import com.shineon.coder.nodb.pojo.GeneralItem;
@@ -27,7 +27,7 @@ public class UserController {
     RedisTemplate redisTemplate;
 
     @Autowired
-    ShineonUserMapper shineonUserMapper;
+    IShineonUserMapper shineonUserMapper;
 
     @Autowired
     GeneralDao generalDao;
@@ -45,6 +45,17 @@ public class UserController {
         System.out.println(".....................begin" +id);
         ShineonUser user = shineonUserMapper.selectByPrimaryKey(id);
         System.out.println(user.getUsername());
+
+        ShineonUser user2 = shineonUserMapper.selectById(id);
+
+        System.out.println(".........................."+user2.getUsername());
+
+
+        ShineonUser user1 = new ShineonUser();
+        user1.setUsername("matao");
+        user1.setParent(0);
+        shineonUserMapper.insert(user1);
+
 
         return commonItemUtils.success(commonUtil.shineonUserToCommon(user));
 

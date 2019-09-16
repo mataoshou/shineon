@@ -6,7 +6,9 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/shineon_api_uauth/pom.xml" />
+        <option value="$PROJECT_DIR$/shineon_db_user/pom.xml" />
+        <option value="$PROJECT_DIR$/shineon_api_empty/pom.xml" />
+        <option value="$PROJECT_DIR$/shineon_eurake/pom.xml" />
       </list>
     </option>
   </component>
