@@ -11,6 +11,7 @@ public class ShineonUserCommonBase {
 			result.setContent(item.getUsername());
 			result.setTitle(item.getDisplayname());
 			result.setParent(item.getParent());
+			result.setGroup(item.getRegion());
 			result.setPtitle(item.getUsercode());
 			result.setThumb(item.getUserthumb());
 			result.setCreateTime(item.getTimecreated());
@@ -24,6 +25,7 @@ public class ShineonUserCommonBase {
 			result.setUsername(item.getContent());
 			result.setDisplayname(item.getTitle());
 			result.setParent(item.getParent());
+			result.setRegion(item.getGroup());
 			result.setUsercode(item.getPtitle());
 			result.setUserthumb(item.getThumb());
 			result.setTimecreated(item.getCreateTime());

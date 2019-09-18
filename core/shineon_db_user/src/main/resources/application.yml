@@ -2,7 +2,7 @@ spring:
   application:
     name: shineon-db-user
   redis:
-    host: 127.0.0.1
+    host: 10.0.127.235
     port: 6379
     database: 0
   datasource:
@@ -12,7 +12,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/shineon_base_uauth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
   data:
     mongodb:
-      host: 127.0.0.1
+      host: 10.0.127.235
       port: 27017
       database: matao_test
 
@@ -34,5 +34,5 @@ shineon:
 logging:
   file: log/shineon-api-uauth.log
   level:
-    root : info
+    root : debug
 

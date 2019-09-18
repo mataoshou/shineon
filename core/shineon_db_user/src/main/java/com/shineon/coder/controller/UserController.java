@@ -8,6 +8,7 @@ import com.shineon.coder.db.mergedao.IShineonUserMapper;
 import com.shineon.coder.db.pojo.ShineonUser;
 import com.shineon.coder.nodb.dao.GeneralDao;
 import com.shineon.coder.nodb.pojo.GeneralItem;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -38,84 +39,28 @@ public class UserController {
     @Autowired
     CommonItemUtils commonItemUtils;
 
+    Logger logger = LoggerFactory.getLogger(getClass());
+
     @RequestMapping("/getUser")
     public CommonItem get(@RequestParam("id")int id)
     {
-
-        System.out.println(".....................begin" +id);
+        logger.debug("getUser : ["+id+"]");
         ShineonUser user = shineonUserMapper.selectByPrimaryKey(id);
-        System.out.println(user.getUsername());
-
-        ShineonUser user2 = shineonUserMapper.selectById(id);
-
-        System.out.println(".........................."+user2.getUsername());
-
-
-        ShineonUser user1 = new ShineonUser();
-        user1.setUsername("matao");
-        user1.setParent(0);
-        shineonUserMapper.insert(user1);
-
 
         return commonItemUtils.success(commonUtil.shineonUserToCommon(user));
-
-//        ShineonUser shineonUser = new ShineonUser();
-//        shineonUser.setUsername("2");
-//        shineonUser.setPassword("2");
-//
-//        shineonUserMapper.insertSelective(shineonUser);
-//
-//        redisTemplate.opsForValue().set("user", JSON.toJSONString(user) );
-//
-//        Set<String> set =  redisTemplate.keys("u*");
-//
-//        Iterator<String> iter = set.iterator();
-//
-//        while (iter.hasNext())
-//        {
-//            System.out.println(".............."+iter.next());
-//        }
-//
-//        System.out.println( redisTemplate.opsForValue().get("user").toString());
-//
-//
-//        GeneralItem item = new GeneralItem();
-//        item.setContent("111111111111111" +"aaaaa22222");
-//
-//        item.setType(100);
-//        generalDao.insert(item);
-//
-//
-//        System.out.println(item.getId());
-//
-//        List<GeneralItem> list = generalDao.findall(GeneralItem.class);
-//
-//        for(GeneralItem item1: list)
-//        {
-//            System.out.println("........"+item1.getId() +"....." +item1.getType() +"...." +item1.getContent());
-//        }
-//
-//
-//
-//        List<GeneralItem> list1 = generalDao.findall("2222");
-//
-//        for(GeneralItem item1: list1)
-//        {
-//            System.out.println("111111111........"+item1.getId() +"....." +item1.getType()+"...." +item1.getContent());
-//        }
-//
-//
-//        List<GeneralItem> list2 = generalDao.findall(0);
-//
-//
-//        for(GeneralItem item1: list2)
-//        {
-//            System.out.println("2222222........"+item1.getId() +"....." +item1.getType()+"...." +item1.getContent());
-//        }
-
-
-
-//        return null;
     }
+
+
+    @RequestMapping("/listUser")
+    public List<ShineonUser> list()
+    {
+        logger.debug(".........................listUser");
+        List<ShineonUser> users = shineonUserMapper.list("id in(1,2,3)",null);
+
+        return users;
+    }
+
+
+
 
 }

@@ -1,8 +1,8 @@
 package com.shineon.coder.db.dao ;
 
-
-import com.shineon.coder.db.pojo.ShineonUser;
+import com.shineon.coder.db.pojo.ShineonUser;;
+import java.util.List;;
 
 public interface ShineonUserMapperExtern {
-    ShineonUser selectById(Integer id);
+    List<ShineonUser> list(String where,String order);
 }

@@ -36,7 +36,7 @@ public class ConvertBuild {
      * 批量生成转换类
      */
     public void buildConvert() throws Exception {
-        String sys = System.getProperty("user.dir");
+        File sys =  new File(this.getClass().getResource("/").getPath()).getParentFile().getParentFile();
         File root = new File(sys,"src\\main\\java\\");
 
         File pojo = new File(root,ConvertsConstant.POJO_PACKAGE.replace(".","\\"));

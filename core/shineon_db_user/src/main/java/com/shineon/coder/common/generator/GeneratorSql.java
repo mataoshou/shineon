@@ -69,6 +69,10 @@ public class GeneratorSql {
         {
             String fileName = getFileName(pojo.getName());
 
+            String tableName = getTableName(fileName);
+
+            System.out.println("................................."+tableName);
+
             System.out.println("开始生成文件："+fileName);
 
             String mapperFileName = fileName + "Mapper";
@@ -104,9 +108,10 @@ public class GeneratorSql {
             if(!externDaoFile.exists())
             {
                 ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-                String content = classBuildUtil.classInit(mapperExternFileName,"","com.shineon.coder.db.dao",null,false,null);
+                String content = classBuildUtil.classInit(mapperExternFileName,"","com.shineon.coder.db.dao",null,false,
+                        String.format("com.shineon.coder.db.pojo.%s;",fileName),"java.util.List;");
 
-                content = content.replace("##1","");
+                content = content.replace("##1",String.format("    List<%s> list(String where,String order);",fileName));
                 FileStore.putString(externDaoFile,content,"UTF-8");
             }
 
@@ -135,11 +140,20 @@ public class GeneratorSql {
                 String content = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
                         "<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >\n" +
                         "<mapper namespace=\"com.shineon.coder.db.mergedao.##1\" >\n" +
-                        "\n" +
-                        "\n" +
+                        "    <select id=\"list\" resultMap=\"BaseResultMap\" >\n" +
+                        "        select\n" +
+                        "        <include refid=\"Base_Column_List\" />\n" +
+                        "        from ##2\n" +
+                        "        <if test=\"where != null\">\n" +
+                        "         where ${where}\n" +
+                        "        </if>\n" +
+                        "        <if test=\"order != null\">\n" +
+                        "            order by ${order}\n" +
+                        "        </if>\n"+
+                        "    </select>\n" +
                         "</mapper>";
 
-                content = content.replace("##1",mergeFileName);
+                content = content.replace("##1",mergeFileName).replace("##2",tableName);
                 FileStore.putString(externMapperFile,content,"UTF-8");
             }
 
@@ -159,6 +173,29 @@ public class GeneratorSql {
 
             }
         }
+    }
+
+
+    public String getTableName(String pojoName)
+    {
+        String tableName = pojoName.toLowerCase();
+
+        char[] temp = new char[tableName.length()*2];
+
+        int count =0;
+        for(int i=0;i<tableName.length();i++)
+        {
+            if(pojoName.charAt(i)!=tableName.charAt(i)&&i!=0)
+            {
+                temp[count] ='_';
+                count++;
+            }
+
+            temp[count] = tableName.charAt(i);
+            count++;
+        }
+
+        return new String(temp).trim();
     }
 
 
