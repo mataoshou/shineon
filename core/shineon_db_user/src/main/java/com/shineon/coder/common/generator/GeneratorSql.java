@@ -204,6 +204,10 @@ public class GeneratorSql {
 
 
                     classBuildUtil.addTabContent("\r");
+
+                    classBuildUtil.addTabContent(String.format("static String tableName = \"%s\";",tableName));
+                    classBuildUtil.addTabContent("\r");
+
                     for (Element ele : eles) {
                         System.out.println(ele.attribute("column"));
                         String itemName = ele.attributeValue("column");

@@ -9,6 +9,7 @@
         <module name="coder" />
         <module name="coder (1)" />
         <module name="coder (2)" />
+        <module name="coder (3)" />
         <module name="demo" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="coder" target="1.8" />
       <module name="coder (1)" target="1.8" />
       <module name="coder (2)" target="1.8" />
+      <module name="coder (3)" target="1.8" />
       <module name="demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -24,6 +26,7 @@
       <module name="coder" options="-parameters" />
       <module name="coder (1)" options="-parameters" />
       <module name="coder (2)" options="-parameters" />
+      <module name="coder (3)" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>

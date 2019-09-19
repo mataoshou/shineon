@@ -37,7 +37,7 @@ public class WebFileController {
 
         OutputStream out = response.getOutputStream();
 
-        ///////////////////////////////用户验证
+        ///////////////////////////////文件是否可用验证
         if(!file.exists())
         {
             response.sendError(404,"no this page ,please check the url !!!");
@@ -53,11 +53,10 @@ public class WebFileController {
 
 
 
+        ///////////////////////文件类型判断
         String suffix = BaseFileUtil.getSuffix(fileName);
 
         String fileType = FileType.getType(suffix);
-
-        logger.info(suffix +"..................."+fileType);
 
         String contentType =FileType.getContentBySuffix(suffix);
 
@@ -65,6 +64,7 @@ public class WebFileController {
 
         response.setContentType(contentType);
 
+        /////////////////////////媒体文件
         if(fileType.equals(FileType.JPG)||fileType.equals(FileType.GIF)||fileType.equals(FileType.PNG)||fileType.equals(FileType.VIDEO))
         {
             logger.info("处理媒体文件");
@@ -74,6 +74,7 @@ public class WebFileController {
             sendFile(file,r,out);
 
         }
+        ///////////////////文本文件
         else{
             logger.info("处理文本文件");
             String content = FileStore.getContent(file,"utf-8");
