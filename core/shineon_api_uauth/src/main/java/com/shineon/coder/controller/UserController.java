@@ -18,12 +18,6 @@ public class UserController {
 
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
-//    @Autowired
-//    MataoBuild build;
-
-//    @Async("intervalExecutor")
-
-
     @Autowired
     UserService userService;
 
@@ -31,23 +25,8 @@ public class UserController {
     @RequestMapping("/getUser")
     public CommonItem getUser(HttpServletRequest request)
     {
-
-
         logger.info("...........................begin");
         System.out.println("....................begin");
         return userService.getUser(1);
-//        logger.info(Thread.currentThread().getName() + "....................getUser");
-//        System.out.println(request.getSession().getId());
-//
-//        HttpSession session = request.getSession();
-//        System.out.println(session.getAttribute("user"));
-//
-//        session.setAttribute("user","qwas");
-//
-//        build.build();
-//
-//        System.out.println("....................."+"finish");
-//
-//        return "success";
     }
 }
