@@ -12,9 +12,21 @@ public class ClassBuildUtil {
 
     Logger logger = LoggerFactory.getLogger(ClassBuildUtil.class);
 
+    int tab_no=0;
     String tab ="	";
 
-    public String classInit(String className,String baseName,String packageName,String[] annotation,boolean isclass,String... imports)
+    String classConetent;
+
+    /**
+     * 初始化class类
+     * @param className  类名
+     * @param baseName 接口和父类
+     * @param packageName 包名
+     * @param annotation 注解
+     * @param isclass 是否为class  false 为接口
+     * @param imports  import内容
+     */
+    public void classInit(String className,String baseName,String packageName,String[] annotation,boolean isclass,String... imports)
     {
         String classStr ="";
 
@@ -22,7 +34,7 @@ public class ClassBuildUtil {
         logger.info(String.format("开始构建类文件 %s 的 文件内容",className));
 
         String content = "";
-        int tab_no=0;
+
 
         ////////添加packagename;
         content += getContent(tab_no,tab, String.format("package %s ;",packageName));
@@ -57,42 +69,72 @@ public class ClassBuildUtil {
             content += getContent(tab_no, tab, String.format("public %s %s {", classType,className));
         }
 
-        content += "##1\r\n";
+        content += "##1\r";
 
-        content += getContent(--tab_no,tab, String.format("}"));
+        content += getContent(tab_no,tab, String.format("}"));
 
-        return content;
+        classConetent = content;
+
+        tab_no++;
     }
 
 
-    public void createFile(File file,String content) throws IOException {
+    String innerContent = "";
+
+
+    /**
+     * 完成 并返回class文本内容
+     * @return
+     */
+    public String finish()
+    {
+        classConetent = classConetent.replace("##1",innerContent);
+        return classConetent;
+    }
+    /**
+     * 完成 并将内容写入文件
+     * @return
+     */
+    public void finish(File file) throws IOException {
+        finish();
         logger.info("开始生成文件：" + file.getPath());
+        file.getParentFile().mkdirs();
         FileOutputStream out = new FileOutputStream(file);
-        out.write(content.getBytes("UTF-8"));
+        out.write(classConetent.getBytes("UTF-8"));
         out.close();
         logger.info("文件生成成功！！");
     }
 
-    int tab_no = 1;
 
-    public String addContent(String content,String line)
+    /**
+     * tab 间隔不变  增加类内容
+     * @param line
+     */
+    public void  addTabContent(String line)
     {
-        content += getContent(tab_no,tab,line);
-
-        return content;
+        innerContent += getContent(tab_no,tab,line);
     }
-    public String addTabConent(String content,String line)
+
+
+    /**
+     * tab 间隔加1  增加类内容
+     * @param line
+     */
+    public void addTabRightContent(String line)
     {
         tab_no++;
 
-        return addContent(content,line);
+        addTabContent(line);
     }
-
-    public String subTabConent(String content,String line)
+    /**
+     * tab 间隔减1  增加类内容
+     * @param line
+     */
+    public void addTabLeftContent(String line)
     {
         tab_no--;
 
-        return addContent(content,line);
+        addTabContent(line);
     }
 
 
@@ -123,13 +165,13 @@ public class ClassBuildUtil {
         return  rName.toString();
     }
 
-    public String getContent(int tab_no,String tab,String content)
+    private String getContent(int tab_no,String tab,String content)
     {
         String tabs="";
         for(int i=0;i<tab_no;i++)
         {
             tabs+=tab;
         }
-        return tabs+content+"\r\n";
+        return tabs+content+"\r";
     }
 }

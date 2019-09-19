@@ -1,0 +1,1 @@
+package com.shineon.coder.db.property ;public class ShineonUserAttachedProperty {		static String idProperty = "id";		static String userIdProperty = "userId";		static String timeLastLoginProperty = "timeLastLogin";		static String ipLastLoginProperty = "ipLastLogin";		static String stateProperty = "state";	}

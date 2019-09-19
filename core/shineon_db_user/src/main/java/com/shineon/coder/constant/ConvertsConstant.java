@@ -8,5 +8,6 @@ public class ConvertsConstant {
 
     static public final String POJO_PACKAGE = "com.shineon.coder.db.pojo";
 
+
     static public final String CONVERT_PACKAGE ="com.shineon.coder.convert";
 }

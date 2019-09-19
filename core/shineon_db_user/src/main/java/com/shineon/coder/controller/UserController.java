@@ -4,8 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.shineon.coder.convert.CommonItem;
 import com.shineon.coder.convert.CommonItemUtils;
 import com.shineon.coder.convert.util.ShineonUserCommonUtil;
+import com.shineon.coder.db.SqlWhere;
 import com.shineon.coder.db.mergedao.IShineonUserMapper;
 import com.shineon.coder.db.pojo.ShineonUser;
+import com.shineon.coder.db.service.UserService;
 import com.shineon.coder.nodb.dao.GeneralDao;
 import com.shineon.coder.nodb.pojo.GeneralItem;
 import org.slf4j.Logger;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -28,7 +31,7 @@ public class UserController {
     RedisTemplate redisTemplate;
 
     @Autowired
-    IShineonUserMapper shineonUserMapper;
+    UserService userService;
 
     @Autowired
     GeneralDao generalDao;
@@ -45,7 +48,7 @@ public class UserController {
     public CommonItem get(@RequestParam("id")int id)
     {
         logger.debug("getUser : ["+id+"]");
-        ShineonUser user = shineonUserMapper.selectByPrimaryKey(id);
+        ShineonUser user = userService.getUser(id);
 
         return commonItemUtils.success(commonUtil.shineonUserToCommon(user));
     }
@@ -55,7 +58,16 @@ public class UserController {
     public List<ShineonUser> list()
     {
         logger.debug(".........................listUser");
-        List<ShineonUser> users = shineonUserMapper.list("id in(1,2,3)",null);
+
+        List list = new ArrayList(){
+            {
+                add(1);
+                add(2);
+                add(3);
+            }
+        };
+
+        List<ShineonUser> users = userService.listUserByIds(list);
 
         return users;
     }
