@@ -1,0 +1,1 @@
+..\jre8\bin\java -jar eurake-1.0.jar

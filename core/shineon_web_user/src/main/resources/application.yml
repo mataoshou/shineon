@@ -1,0 +1,41 @@
+spring:
+  application: 
+    name: shineon-web-usr
+  rabbitmq: 
+    addresses: 127.0.0.1
+    password: matao
+    publisherconfirms: true
+    port: 5672
+    username: matao
+  session: 
+    timeout: 3600s
+    redis: 
+      namespace: 
+        spring: session
+      flushmode: on_save
+    storetype: redis
+  servlet: 
+    multipart: 
+      resolvelazily: true
+      maxrequestsize: 6000MB
+      location: "c:/tmp"
+      filesizethreshold: 2000
+      maxfilesize: 6000MB
+  redis: 
+    host: 10.0.127.235
+    port: 6379
+    database: 0
+server: 
+  port: 132
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"
+
+feign:
+  hystrix:
+    enabled: true
+logging:
+  file: log/shineon-api-uauth.log
+  level:
+    root : info

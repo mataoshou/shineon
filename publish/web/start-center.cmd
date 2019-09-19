@@ -1,0 +1,1 @@
+..\jre8\bin\java -jar web-1.0.jar
