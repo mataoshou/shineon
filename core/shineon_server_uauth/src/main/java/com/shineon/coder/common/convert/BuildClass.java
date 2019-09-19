@@ -11,9 +11,6 @@ public class BuildClass {
 
 	String tab ="	";
 
-	ClassBuildUtil buildUtil = new ClassBuildUtil();
-
-
 
 	public void buildUtil(String className,File root,String baseName) throws Exception
 	{
@@ -25,15 +22,13 @@ public class BuildClass {
 
 		String[] annos =new String[]{"Component"};
 
-		String fileConent = classBuildUtil.classInit(className,baseName, ConvertsConstant.UTIL_PACKAGE ,annos,true,
+		classBuildUtil.classInit(className,baseName, ConvertsConstant.UTIL_PACKAGE ,annos,true,
 				String.format("%s.%s;", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Component");
-		String content ="";
-		fileConent = fileConent.replace("##1",content);
+
 
 		File classFile = new File(root,fileName);
-		FileOutputStream out = new FileOutputStream(classFile);
-		out.write(fileConent.getBytes("UTF-8"));
-		out.close();
+
+		classBuildUtil.finish(classFile);
 		System.out.println("构建完成");
 	}
 
@@ -48,93 +43,78 @@ public class BuildClass {
 
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-		String fileConent = classBuildUtil.classInit(className,null, ConvertsConstant.BASE_PACKAGE,null,true,
+		classBuildUtil.classInit(className,null, ConvertsConstant.BASE_PACKAGE,null,true,
 				"java.util.Date;", String.format("%s.%s;", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData;");
 
 		////////添加packagename;
 
 
-        String content = "";
-        int tab_no=1;
-		tab_no++;
-		content+=baseToCommon(pojo,items,tab_no);
+		baseToCommon(pojo,items,classBuildUtil);
 
-		content+=commonToBase(pojo,items,tab_no);
-		tab_no--;
+		commonToBase(pojo,items,classBuildUtil);
 
 
-		fileConent = fileConent.replace("##1",content);
 		File classFile = new File(root,fileName);
 		classFile.getParentFile().mkdirs();
-		FileOutputStream out = new FileOutputStream(classFile);
-		out.write(fileConent.getBytes("UTF-8"));
-		out.close();
+		classBuildUtil.finish(classFile);
+
 		System.out.println("构建完成");
 	}
 	
-	public String baseToCommon(String pojoName, List<MapperItem> items , int tab_no)
+	public void baseToCommon(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
 	{
 		String content ="";
 
-		String methodName = buildUtil.getLName(pojoName) +"ToCommon";
+		String methodName = classBuildUtil.getLName(pojoName) +"ToCommon";
 
-		content += buildUtil.getContent(tab_no,tab, String.format("public CommonData %s( %s item) {" ,methodName,pojoName));
+		classBuildUtil.addTabContent(String.format("public CommonData %s( %s item) {" ,methodName,pojoName));
 
-		tab_no++;
-
-		content += buildUtil.getContent(tab_no,tab, String.format("CommonData result = new CommonData();" ));
+		classBuildUtil.addTabRightContent(String.format("CommonData result = new CommonData();" ));
 
 		for(MapperItem item:items)
 		{
 			if(item.commonName.length()>0) {
-				String getMehod = buildUtil.getGetMethodName(item.pojoName);
-				String setMethod = buildUtil.getSetMethodName(item.commonName);
+				String getMehod = classBuildUtil.getGetMethodName(item.pojoName);
+				String setMethod = classBuildUtil.getSetMethodName(item.commonName);
 
 				String str = String.format("result.%s(item.%s());", setMethod, getMehod);
-				content += buildUtil.getContent(tab_no, tab, str);
+				classBuildUtil.addTabContent(str);
 			}
 		}
 
-		content +=buildUtil.getContent(tab_no,tab,"return result;");
+		classBuildUtil.addTabContent("return result;");
 
-		tab_no--;
 
-		content += buildUtil.getContent(tab_no,tab, String.format("}"));
+		classBuildUtil.addTabLeftContent(String.format("}"));
 
-		return  content;
 	}
 
 
-	public String commonToBase(String pojoName, List<MapperItem> items , int tab_no)
+	public void commonToBase(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
 	{
 		String content ="";
 
 		String methodName = "commonTo"+pojoName;
 
-		content += buildUtil.getContent(tab_no,tab, String.format("public %s %s( CommonData item) {" ,pojoName,methodName));
+		classBuildUtil.addTabContent(String.format("public %s %s( CommonData item) {" ,pojoName,methodName));
 
-		tab_no++;
-
-		content += buildUtil.getContent(tab_no,tab, String.format("%s result = new %s();",pojoName,pojoName ));
+		classBuildUtil.addTabRightContent(String.format("%s result = new %s();",pojoName,pojoName ));
 
 		for(MapperItem item:items)
 		{
 			if(item.commonName.length()>0) {
-				String getMehod = buildUtil.getGetMethodName(item.commonName);
-				String setMethod = buildUtil.getSetMethodName(item.pojoName);
+				String getMehod = classBuildUtil.getGetMethodName(item.commonName);
+				String setMethod = classBuildUtil.getSetMethodName(item.pojoName);
 
 				String str = String.format("result.%s(item.%s());", setMethod, getMehod);
-				content += buildUtil.getContent(tab_no, tab, str);
+				classBuildUtil.addTabContent( str);
 			}
 		}
 
-		content +=buildUtil.getContent(tab_no,tab,"return result;");
+		classBuildUtil.addTabContent("return result;");
 
-		tab_no--;
 
-		content += buildUtil.getContent(tab_no,tab, String.format("}"));
-
-		return  content;
+		classBuildUtil.addTabLeftContent(String.format("}"));
 	}
 
 

@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc13d754-644d-4798-a823-4bc65a9188d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shineon_SysBuild/src/build/rewrite/CommonWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shineon_SysBuild/src/build/tool/BaseFileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shineon_SysBuild/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_SysBuild/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/common/generator/GeneratorSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/common/generator/GeneratorSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_web_user/src/main/java/com/shineon/coder/controller/WebFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_web_user/src/main/java/com/shineon/coder/controller/WebFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_zuul_uauth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_zuul_uauth/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_SysBuild/src/build/rewrite/CommonWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_SysBuild/src/build/rewrite/CommonWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/BuildClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/BuildClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/convert/BuildClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/convert/BuildClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/convert/ConvertBuild.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/shineon_api_uauth/target/" />
     <ignored path="$PROJECT_DIR$/shineon_db_user/target/" />
@@ -41,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/shineon_zuul_uauth/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -69,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/shineon_zuul_uauth/src/main/java/com/shineon/coder/CoderApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -296,7 +292,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568884380043" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568884688304" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/shineon_zuul_uauth/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -426,15 +422,15 @@
       <workItem from="1568598374405" duration="4146000" />
       <workItem from="1568684695626" duration="8936000" />
       <workItem from="1568772412072" duration="4486000" />
-      <workItem from="1568856237059" duration="12332000" />
+      <workItem from="1568856237059" duration="12632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56256000" />
+    <option name="totallyTimeSpent" value="56556000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.2739872" />
@@ -813,14 +809,14 @@
     <entry file="file://$PROJECT_DIR$/shineon_zuul_uauth/src/main/java/com/shineon/coder/CoderApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shineon_zuul_uauth/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
         </state>
       </provider>
     </entry>

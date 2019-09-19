@@ -11,10 +11,10 @@ import java.util.List;
 public class CommonWrite {
 
 
-    String sourcePath = "\"E:\\\\IdeaProjects\\\\shineon\\\\core\\\\shineon_db_user\"";
+    String sourcePath = "E:\\IdeaProjects\\shineon\\core\\shineon_db_user";
 
 
-    List<String> m_list =new ArrayList<>(){
+    List<String> m_list =new ArrayList(){
         {
             add("E:\\IdeaProjects\\shineon\\core\\shineon_api_uauth");
             add("E:\\IdeaProjects\\shineon\\core\\shineon_db_user");
@@ -23,7 +23,7 @@ public class CommonWrite {
         }
     };
 
-    String replacePath = "src\\main\\java\\com\\shineon\\coder\\common\\convert";
+    String replacePath = "src\\main\\java\\com\\shineon\\coder\\common\\util";
 
     public void replace() throws IOException {
 
@@ -35,15 +35,22 @@ public class CommonWrite {
                 File dst = new File(root,replacePath);
                 BaseFileUtil.delete(dst);
 
-                if(dst.isDirectory()) {
+                if(source.isDirectory()) {
                     FileUtils.copyDirectory(source,dst);
                 }
                 else {
                     FileUtils.copyFile(source,dst);
                 }
+                System.out.println("完成替换" + dst.getParent());
             }
 
         }
 
+    }
+
+
+    public static  void  main(String[] args) throws IOException {
+        CommonWrite write = new CommonWrite();
+        write.replace();;
     }
 }
