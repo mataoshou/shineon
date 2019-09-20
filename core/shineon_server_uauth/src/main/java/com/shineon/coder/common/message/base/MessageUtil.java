@@ -63,7 +63,7 @@ public class MessageUtil {
     }
 
 
-    public JSONObject toJSON(MessageItem item)
+    public  JSONObject toJSON(MessageItem item)
     {
         JSONObject json = (JSONObject) JSONObject.toJSON(item);
 

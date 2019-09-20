@@ -1,12 +1,11 @@
 package com.shineon.coder.convert;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CommonItem {
 
-    CommonData data;
+    List<CommonData> datas;
 
     private Integer errorStatus;
 
@@ -28,11 +27,19 @@ public class CommonItem {
         this.errorReason = errorReason;
     }
 
-    public CommonData getData() {
-        return data;
+
+    public List<CommonData> getDatas() {
+        return datas;
     }
 
-    public void setData(CommonData data) {
-        this.data = data;
+    public void setDatas(List<CommonData> datas) {
+        this.datas = datas;
+    }
+
+    public void addData(CommonData data) {
+        if(datas ==null){
+            datas = new ArrayList();
+        }
+        this.datas.add(data);
     }
 }

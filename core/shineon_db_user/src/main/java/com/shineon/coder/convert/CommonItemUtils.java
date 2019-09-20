@@ -29,7 +29,7 @@ public class CommonItemUtils {
     public CommonItem success(CommonData data)
     {
         CommonItem item = new CommonItem();
-        item.setDatas(data);
+        item.addData(data);
         return success(item);
     }
 

@@ -1,6 +1,7 @@
 package com.shineon.coder.controller;
 
 import com.shineon.coder.convert.CommonItem;
+import com.shineon.coder.convert.CommonItemUtils;
 import com.shineon.coder.convert.util.ShineonUserCommonUtil;
 import com.shineon.coder.db.pojo.ShineonUser;
 import com.shineon.coder.db.service.UserService;
@@ -32,15 +33,18 @@ public class UserController {
     @Autowired
     ShineonUserCommonUtil commonUtil;
 
+    @Autowired
+    CommonItemUtils itemUtils;
+
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @RequestMapping("/getUser")
     public CommonItem get(@RequestParam("id")int id)
     {
-        logger.debug("getUser : ["+id+"]");
+        logger.info("getUser : ["+id+"]");
         ShineonUser user = userService.getUser(id);
 
-        return commonUtil.toCommon(user);
+        return  commonUtil.toCommon(user);
     }
 
 

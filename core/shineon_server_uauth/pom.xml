@@ -11,7 +11,7 @@
     <groupId>com.shineon</groupId>
     <artifactId>coder</artifactId>
     <version>-1.0</version>
-    <name>coder</name>
+    <name>server-uauth</name>
     <description>server for uauth</description>
 
     <properties>

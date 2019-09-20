@@ -1,6 +1,6 @@
 spring: 
   application: 
-    name: shineondbuser
+    name: shineon-db-user
   data: 
     mongodb: 
       host: 10.0.127.235
@@ -19,7 +19,7 @@ server:
   port: 121
 logging: 
   level: 
-    root: debug
+    root: info
   file: log/shineonapiuauth.log
 shineon: 
   version: 20190724

@@ -1,35 +1,8 @@
-package com.shineon.coder.convert.base ;
-
-import java.util.Date;;
-import com.shineon.coder.pojo.ShineonUser;;
-import com.shineon.coder.convert.CommonData;;
-
-public class ShineonUserCommonBase {
-		public CommonData shineonUserToCommon( ShineonUser item) {
-			CommonData result = new CommonData();
-			result.setId(item.getId());
-			result.setContent(item.getUsername());
-			result.setTitle(item.getDisplayname());
-			result.setParent(item.getParent());
-			result.setPtitle(item.getUsercode());
-			result.setThumb(item.getUserthumb());
-			result.setCreateTime(item.getTimecreated());
-			result.setBeginTime(item.getTimemodified());
-			result.setEndTime(item.getTimedeleted());
-			return result;
-		}
-		public ShineonUser commonToShineonUser( CommonData item) {
-			ShineonUser result = new ShineonUser();
-			result.setId(item.getId());
-			result.setUsername(item.getContent());
-			result.setDisplayname(item.getTitle());
-			result.setParent(item.getParent());
-			result.setUsercode(item.getPtitle());
-			result.setUserthumb(item.getThumb());
-			result.setTimecreated(item.getCreateTime());
-			result.setTimemodified(item.getBeginTime());
-			result.setTimedeleted(item.getEndTime());
-			return result;
-		}
-
-}
+package com.shineon.coder.convert.base ;import java.util.Date;;import com.shineon.coder.pojo.ShineonUser;;import com.shineon.coder.convert.CommonData;import java.util.ArrayList;import java.util.List;import org.springframework.beans.factory.annotation.Autowired;import com.shineon.coder.convert.CommonItemUtils;import com.shineon.coder.convert.CommonItem;import org.slf4j.Logger;import org.slf4j.LoggerFactory;public class ShineonUserCommonBase {	@Autowired	CommonItemUtils utils;	Logger logger = LoggerFactory.getLogger(getClass());	
+	private CommonData toCommonData( ShineonUser pojo) {		CommonData data = new CommonData();		data.setId(pojo.getId());		data.setContent(pojo.getUsername());		data.setTitle(pojo.getDisplayname());		data.setParent(pojo.getParent());		data.setPtitle(pojo.getUsercode());		data.setThumb(pojo.getUserthumb());		data.setCreateTime(pojo.getTimecreated());		data.setBeginTime(pojo.getTimemodified());		data.setEndTime(pojo.getTimedeleted());		return data;	}	
+	private ShineonUser toPojoData( CommonData data) {		ShineonUser pojo = new ShineonUser();		pojo.setId(data.getId());		pojo.setUsername(data.getContent());		pojo.setDisplayname(data.getTitle());		pojo.setParent(data.getParent());		pojo.setUsercode(data.getPtitle());		pojo.setUserthumb(data.getThumb());		pojo.setTimecreated(data.getCreateTime());		pojo.setTimemodified(data.getBeginTime());		pojo.setTimedeleted(data.getEndTime());		return pojo;	}	
+	public CommonItem toCommon( ShineonUser pojo) {		return utils.success(toCommonData(pojo));	}	
+	public  CommonItem toCommon( List<ShineonUser> pojos) {		List<CommonData> result = new ArrayList();		for(ShineonUser item : pojos){			result.add(toCommonData(item));		}		return utils.success(result);	}	
+	public ShineonUser toPojo( CommonItem item) {		List<CommonData> datas = item.getDatas();		if(datas ==null||datas.size()==0){logger.debug("CommonItem 中data数据为空!!"); return null;}		if(datas.size()>1){logger.debug("CommonItem 中data数据不止一条数据!!"); }		return toPojoData(datas.get(0));	}	
+	public List<ShineonUser> toPojoList(  CommonItem item) {		List<ShineonUser> result = new ArrayList();			List<CommonData> datas = item.getDatas();			for(CommonData data : datas){				result.add(toPojoData(data));			}			return result;		}		
+}

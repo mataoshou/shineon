@@ -29,7 +29,7 @@ spring:
       filesizethreshold: 2000
       maxfilesize: 6000MB
   redis: 
-    host: 127.0.0.1
+    host: 10.0.127.235
     port: 6379
     database: 0
 server: 

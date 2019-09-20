@@ -2,7 +2,7 @@ package com.shineon.coder.common.message.base;
 
 import com.shineon.coder.common.cache.RedisLock;
 import com.shineon.coder.common.cache.RedisUtil;
-import com.shineon.coder.common.constant.RedisConstant;
+import com.shineon.coder.constant.RedisConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

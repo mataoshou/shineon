@@ -1,8 +1,16 @@
 package com.shineon.coder.convert;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
+@Scope("prototype")
 public class CommonItem {
 
-    CommonData data;
+    private List<CommonData> datas;
 
     private Integer errorStatus;
 
@@ -24,11 +32,19 @@ public class CommonItem {
         this.errorReason = errorReason;
     }
 
-    public CommonData getData() {
-        return data;
+
+    public List<CommonData> getDatas() {
+        return datas;
     }
 
-    public void setData(CommonData data) {
-        this.data = data;
+    public void setDatas(List<CommonData> datas) {
+        this.datas = datas;
+    }
+
+    public void addData(CommonData data) {
+        if(datas ==null){
+            datas = new ArrayList();
+        }
+        this.datas.add(data);
     }
 }

@@ -1,8 +1,13 @@
 package com.shineon.coder.convert;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
+@Scope("prototype")
 public class CommonItem {
 
     List<CommonData> datas;
@@ -36,7 +41,7 @@ public class CommonItem {
         this.datas = datas;
     }
 
-    public void setDatas(CommonData data) {
+    public void addData(CommonData data) {
         if(datas ==null){
             datas = new ArrayList();
         }

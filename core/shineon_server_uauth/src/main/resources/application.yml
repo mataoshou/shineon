@@ -11,7 +11,7 @@ spring:
         Matao2MessageInput: 
           destination: Matao2Message
   application: 
-    name: shineonserveruauth
+    name: shineon-server-uauth
   rabbitmq: 
     addresses: 127.0.0.1
     password: matao
@@ -37,3 +37,9 @@ eureka:
       defaultZone: "http://127.0.0.1:81/eureka"
 mybatis: 
   mapperlocations: "classpath:com/shineon/coder/db/mapper/*.xml"
+
+ribbon:
+  ReadTimeout: 8000   #负载均衡超时时间，默认值5000
+  ConnectTimeout: 4000 #ribbon请求连接的超时时间，默认值2000
+  MaxAutoRetries: 0     #对当前实例的重试次数，默认0
+  MaxAutoRetriesNextServer: 1 #对切换实例的重试次数，默认1

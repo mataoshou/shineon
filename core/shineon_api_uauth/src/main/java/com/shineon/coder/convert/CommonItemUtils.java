@@ -1,7 +1,11 @@
 package com.shineon.coder.convert;
 
 import com.shineon.coder.constant.CommonItemConstant;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+@Component
 public class CommonItemUtils {
 
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -19,14 +23,21 @@ public class CommonItemUtils {
         item.setErrorStatus(CommonItemConstant.STATUS_SUCCESS);
         item.setErrorReason(CommonItemConstant.REASON_SUCCESS);
 
-
         return  item;
     }
 
     public CommonItem success(CommonData data)
     {
         CommonItem item = new CommonItem();
-        item.setData(data);
+        item.addData(data);
+        return success(item);
+    }
+
+
+    public CommonItem success(List<CommonData> data)
+    {
+        CommonItem item = new CommonItem();
+        item.setDatas(data);
         return success(item);
     }
 
@@ -57,6 +68,17 @@ public class CommonItemUtils {
         item.setErrorReason(reason);
 
         return item;
+    }
+
+
+    public boolean check(CommonItem item)
+    {
+        if(item.getErrorStatus().equals(CommonItemConstant.STATUS_SUCCESS))
+        {
+            return true;
+        }
+
+        return  false;
     }
 
 }
