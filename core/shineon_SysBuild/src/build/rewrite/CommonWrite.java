@@ -23,7 +23,7 @@ public class CommonWrite {
         }
     };
 
-    String replacePath = "src\\main\\java\\com\\shineon\\coder\\common\\util";
+    String replacePath = "src\\main\\java\\com\\shineon\\coder\\common\\convert";
 
     public void replace() throws IOException {
 

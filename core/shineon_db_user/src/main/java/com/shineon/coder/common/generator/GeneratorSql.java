@@ -205,16 +205,13 @@ public class GeneratorSql {
 
                     classBuildUtil.addTabContent("\r");
 
-                    classBuildUtil.addTabContent(String.format("static String tableName = \"%s\";",tableName));
-                    classBuildUtil.addTabContent("\r");
-
                     for (Element ele : eles) {
                         System.out.println(ele.attribute("column"));
                         String itemName = ele.attributeValue("column");
                         String propertyItem = itemName +"Property";
 
 
-                        classBuildUtil.addTabContent(String.format("static String %s = \"%s\";",propertyItem,itemName));
+                        classBuildUtil.addTabContent(String.format("static String %s = \"%s\";",propertyItem,tableName +"." +itemName));
                         classBuildUtil.addTabContent("\r");
 
                     }

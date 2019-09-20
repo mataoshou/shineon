@@ -4,8 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/shineon_web_user/coder.iml" filepath="$PROJECT_DIR$/shineon_web_user/coder.iml" />
       <module fileurl="file://$PROJECT_DIR$/shineon_db_user/coder (1).iml" filepath="$PROJECT_DIR$/shineon_db_user/coder (1).iml" />
-      <module fileurl="file://$PROJECT_DIR$/shineon_api_empty/coder (2).iml" filepath="$PROJECT_DIR$/shineon_api_empty/coder (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/shineon_api_uauth/coder (2).iml" filepath="$PROJECT_DIR$/shineon_api_uauth/coder (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/shineon_zuul_uauth/coder (3).iml" filepath="$PROJECT_DIR$/shineon_zuul_uauth/coder (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/shineon_server_uauth/coder (4).iml" filepath="$PROJECT_DIR$/shineon_server_uauth/coder (4).iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/core.iml" filepath="$PROJECT_DIR$/.idea/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/shineon_eurake/demo.iml" filepath="$PROJECT_DIR$/shineon_eurake/demo.iml" />
     </modules>

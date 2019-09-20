@@ -3,7 +3,52 @@
   <component name="ChangeListManager">
     <list default="true" id="c2f8cb5b-7d44-48eb-87c4-51cc674c95e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_api_uauth/src/main/java/com/shineon/coder/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/CoderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/CoderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/convert/BuildClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/convert/BuildClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/generator/GeneratorSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/common/generator/GeneratorSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonBaseRegionCommonBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonBaseZoneCommonBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonUserAttachedCommonBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonUserCommonBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/mapper/ShineonBaseRegionCommonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/mapper/ShineonBaseZoneCommonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/mapper/ShineonUserAttachedCommonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/mapper/ShineonUserCommonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/util/ShineonBaseRegionCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/util/ShineonBaseZoneCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/util/ShineonUserAttachedCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/convert/util/ShineonUserCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonBaseRegionMapperBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonBaseRegionMapperExtern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonBaseZoneMapperBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonBaseZoneMapperExtern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonUserAttachedMapperBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonUserAttachedMapperExtern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonUserMapperBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/dao/ShineonUserMapperExtern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonBaseRegionMapperBase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonBaseRegionMapperExtern.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonBaseZoneMapperBase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonBaseZoneMapperExtern.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserAttachedMapperBase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserAttachedMapperExtern.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserMapperBase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mapper/ShineonUserMapperExtern.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mergedao/IShineonBaseRegionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mergedao/IShineonBaseZoneMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mergedao/IShineonUserAttachedMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/mergedao/IShineonUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonBaseRegion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonBaseZone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/pojo/ShineonUserAttached.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/property/ShineonBaseRegionProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/property/ShineonBaseZoneProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/property/ShineonUserAttachedProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon_db_user/src/main/java/com/shineon/coder/db/property/ShineonUserProperty.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/build/empty/BuildEmptyProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="361">
               <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/build/rewrite/CommonWrite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="317">
+              <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/io/PrintStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="14288">
               <caret line="803" column="16" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
             </state>
           </provider>
@@ -139,7 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="53" />
     <option name="y" value="214" />
     <option name="width" value="1936" />
@@ -187,7 +232,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568889144819" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568961422246" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -278,17 +323,18 @@
       <workItem from="1564108655723" duration="1669000" />
       <workItem from="1566957484130" duration="2506000" />
       <workItem from="1568864491810" duration="2698000" />
+      <workItem from="1568961379722" duration="28000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19922000" />
+    <option name="totallyTimeSpent" value="19950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18976545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -349,6 +395,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/empty/BuildEmptyProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/tool/BaseFileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14288">
+          <caret line="803" column="16" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1539">
@@ -384,34 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/empty/BuildEmptyProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="803" column="16" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/tool/BaseFileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/build/rewrite/CommonWrite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="317">
+          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
