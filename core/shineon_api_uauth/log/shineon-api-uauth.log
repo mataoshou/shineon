@@ -480,3 +480,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2019-09-20 17:15:26.326  INFO [shineon-api-uauth,2dd998fc1667454c,2dd998fc1667454c,false] 15804 --- [http-nio-129-exec-4] c.s.coder.controller.UserController      : ...........................begin
 2019-09-20 17:15:27.158  INFO [shineon-api-uauth,f84bf1005b1886e5,f84bf1005b1886e5,false] 15804 --- [http-nio-129-exec-5] c.s.coder.controller.UserController      : ...........................begin
 2019-09-20 17:15:27.756  INFO [shineon-api-uauth,1b1c7a6bb909dcfa,1b1c7a6bb909dcfa,false] 15804 --- [http-nio-129-exec-6] c.s.coder.controller.UserController      : ...........................begin
+2019-09-20 17:16:57.893  INFO [shineon-api-uauth,,,] 15804 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:21:57.896  INFO [shineon-api-uauth,,,] 15804 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:22:18.347  INFO [shineon-api-uauth,56a1aa9f54e183f9,56a1aa9f54e183f9,false] 15804 --- [http-nio-129-exec-8] c.s.coder.controller.UserController      : ...........................begin
+2019-09-20 17:26:57.898  INFO [shineon-api-uauth,,,] 15804 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

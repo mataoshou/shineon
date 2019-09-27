@@ -19917,3 +19917,7 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 2019-09-20 17:15:26.331  INFO [shineon-db-user,2dd998fc1667454c,3f6edb3c70c1947e,false] 11608 --- [http-nio-121-exec-5] c.s.coder.controller.UserController      : getUser : [1]
 2019-09-20 17:15:27.163  INFO [shineon-db-user,f84bf1005b1886e5,a6985ba705abc651,false] 11608 --- [http-nio-121-exec-6] c.s.coder.controller.UserController      : getUser : [1]
 2019-09-20 17:15:27.760  INFO [shineon-db-user,1b1c7a6bb909dcfa,5d026e6b75d09359,false] 11608 --- [http-nio-121-exec-7] c.s.coder.controller.UserController      : getUser : [1]
+2019-09-20 17:18:04.938  INFO [shineon-db-user,,,] 11608 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:22:18.355  INFO [shineon-db-user,56a1aa9f54e183f9,30423d090cc58dc4,false] 11608 --- [http-nio-121-exec-9] c.s.coder.controller.UserController      : getUser : [1]
+2019-09-20 17:23:04.941  INFO [shineon-db-user,,,] 11608 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:28:04.943  INFO [shineon-db-user,,,] 11608 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

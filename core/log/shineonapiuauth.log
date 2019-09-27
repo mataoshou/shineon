@@ -15438,3 +15438,6 @@ java.lang.IllegalStateException: Shutdown in progress
 2019-09-20 17:05:50.712  INFO [shineon-server-uauth,,,] 14668 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon-db-user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
 2019-09-20 17:10:32.968  INFO [shineon-server-uauth,,,] 14668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-09-20 17:15:32.981  INFO [shineon-server-uauth,,,] 14668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:20:32.994  INFO [shineon-server-uauth,,,] 14668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:25:32.996  INFO [shineon-server-uauth,,,] 14668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-09-20 17:30:32.999  INFO [shineon-server-uauth,,,] 14668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

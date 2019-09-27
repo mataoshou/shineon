@@ -2,42 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc13d754-644d-4798-a823-4bc65a9188d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/config/FeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/service/feign/fservice/FeignUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/shineonapiuauth.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/shineonapiuauth.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shineon_SysBuild/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_SysBuild/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_SysBuild/out/production/shineon_SysBuild/build/rewrite/CommonWrite.class" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_SysBuild/out/production/shineon_SysBuild/build/rewrite/CommonWrite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_SysBuild/src/build/rewrite/CommonWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_SysBuild/src/build/rewrite/CommonWrite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shineon_api_uauth/log/shineon-api-uauth.log" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/log/shineon-api-uauth.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/common/message/base/MessageClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/common/message/base/MessageClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/CommonItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/CommonItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/base/ShineonUserCommonBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/mapper/ShineonUserCommonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/java/com/shineon/coder/convert/util/ShineonUserCommonUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_api_uauth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_api_uauth/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shineon_db_user/log/shineonapiuauth.log" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/log/shineonapiuauth.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/CommonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/CommonData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonBaseRegionCommonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonBaseRegionCommonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonUserCommonBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/java/com/shineon/coder/convert/base/ShineonUserCommonBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_db_user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_db_user/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/message/base/MessageClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/message/base/MessageClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/message/base/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/common/message/base/MessageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/CommonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/CommonData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/CommonItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/CommonItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/CommonItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/base/ShineonUserCommonBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/mapper/ShineonUserCommonMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/convert/util/ShineonUserCommonUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/service/feign/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/java/com/shineon/coder/service/feign/UserServiceFallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shineon_server_uauth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shineon_server_uauth/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/shineon_api_uauth/target/" />
     <ignored path="$PROJECT_DIR$/shineon_db_user/target/" />
@@ -326,7 +294,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568970885649" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568974421356" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/shineon_api_uauth" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -459,16 +427,15 @@
       <workItem from="1568772412072" duration="4486000" />
       <workItem from="1568856237059" duration="15088000" />
       <workItem from="1568943142393" duration="3191000" />
-      <workItem from="1568962471328" duration="8262000" />
+      <workItem from="1568962471328" duration="9074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70465000" />
+    <option name="totallyTimeSpent" value="71277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.2739872" />
@@ -480,7 +447,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41603467" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41603467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32394367" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
