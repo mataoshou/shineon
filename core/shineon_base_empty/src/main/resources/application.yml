@@ -1,0 +1,53 @@
+
+spring:
+  application:
+    name: shineon-server-uauth
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+  rabbitmq:
+    port: 5672
+    addresses: 127.0.0.1
+    password: matao
+    username: matao
+    publisher-confirms: true
+
+  cloud:
+    stream:
+      bindings:
+        userinput:
+#          group: user
+          destination : usermatao
+        useroutput:
+#          group: user
+          destination : usermatao
+#      instance-count: 10
+
+
+mybatis:
+  mapper-locations: classpath:com/shineon/coder/db/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:81/eureka
+
+
+server:
+  port: 122
+
+
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  file: log/shineon-api-uauth.log
+  level:
+    root : info
+
+
+
+
+
+

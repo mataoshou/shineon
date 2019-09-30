@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/shineon_api_empty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shineon_api_uauth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shineon_db_user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shineon_eurake" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shineon_server_uauth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shineon_web_user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shineon_zuul_uauth" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,1146 @@
+2019-09-18 17:38:25.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7e5189cc shut down
+2019-09-18 17:38:25.622 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:38:25.622 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:25.622 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7e5189cc closed
+2019-09-18 17:38:25.622 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:38:25.622 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP GET http://127.0.0.1:81/eureka//apps/?; statusCode=N/A
+2019-09-18 17:38:25.622 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2019-09-18 17:38:25.622  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:38:25.623 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:25.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Completed cache refresh task for discovery. All Apps hash code is Local region apps hashcode: null, is fetching remote regions? false 
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@3715cb53 closed
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@3715cb53 shut down
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@3715cb53 closed
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:38:26.602 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP POST http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER with instance fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:38:26.603 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2019-09-18 17:38:26.603  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:38:26.603  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:26.603  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:29.749 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:38:29.749 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 94 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:29.750 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 94 completed successfully in 0.76 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:29.750 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=10.0 ms, state=CONNECTED}]
+2019-09-18 17:38:39.751 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:38:39.751 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 95 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:39.751 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 95 completed successfully in 0.58 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:39.751 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=8.2 ms, state=CONNECTED}]
+2019-09-18 17:38:43.434 DEBUG [shineon-db-user,,,] 7484 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-09-18 17:38:49.753 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:38:49.753 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 96 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:49.753 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 96 completed successfully in 0.71 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:49.754 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=6.7 ms, state=CONNECTED}]
+2019-09-18 17:38:55.222 DEBUG [shineon-db-user,,,] 7484 --- [Eureka-JerseyClient-Conn-Cleaner2] c.n.d.shared.MonitoredConnectionManager  : Closing connections idle longer than 30000 SECONDS
+2019-09-18 17:38:55.222 DEBUG [shineon-db-user,,,] 7484 --- [Eureka-JerseyClient-Conn-Cleaner2] c.n.d.shared.NamedConnectionPool         : Closing connections idle longer than 30000 SECONDS
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Clearing quarantined list of size 1
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 50 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:38:55.613 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-09-18 17:38:55.624  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Clearing quarantined list of size 1
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 1, total allocated: 1 out of 200
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 49 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:38:55.624 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:38:56.605  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121: registering service...
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 2, total allocated: 2 out of 200
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 48 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:38:56.605 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@1da5c38 closed
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@1da5c38 shut down
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@1da5c38 closed
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:38:56.623 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP PUT http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER/fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:38:56.623 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 common frames omitted
+
+2019-09-18 17:38:56.623  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:38:56.623 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@6bfbef5 closed
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@6bfbef5 shut down
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@6bfbef5 closed
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP GET http://127.0.0.1:81/eureka//apps/?; statusCode=N/A
+2019-09-18 17:38:56.641 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2019-09-18 17:38:56.641  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:38:56.641 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:56.641 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Completed cache refresh task for discovery. All Apps hash code is Local region apps hashcode: null, is fetching remote regions? false 
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7c358968 closed
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7c358968 shut down
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7c358968 closed
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:38:57.615 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP POST http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER with instance fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:38:57.615 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2019-09-18 17:38:57.615  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:38:57.615  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:57.616  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:38:59.755 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:38:59.755 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 97 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:59.756 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 97 completed successfully in 0.66 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:38:59.756 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=5.6 ms, state=CONNECTED}]
+2019-09-18 17:39:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.s.d.r.RedisSessionExpirationPolicy   : Cleaning up sessions expiring at Wed Sep 18 17:39:00 CST 2019
+2019-09-18 17:39:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Opening RedisConnection
+2019-09-18 17:39:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] io.lettuce.core.RedisChannelHandler      : dispatching command AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:39:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:39:00.001 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] write(ctx, AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+2019-09-18 17:39:00.002 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandEncoder  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379] writing command AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Stack contains: 1 commands
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decode LatencyMeteredCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.AsyncCommand]
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decoded LatencyMeteredCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.AsyncCommand], empty stack: true
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() done
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+2019-09-18 17:39:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Opening RedisConnection
+2019-09-18 17:39:00.004 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] io.lettuce.core.RedisChannelHandler      : dispatching command AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:39:00.004 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:39:00.004 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() done
+2019-09-18 17:39:00.004 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] write(ctx, AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+2019-09-18 17:39:00.004 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandEncoder  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379] writing command AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:39:00.030 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+2019-09-18 17:39:00.030 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Stack contains: 1 commands
+2019-09-18 17:39:00.030 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decode LatencyMeteredCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.AsyncCommand]
+2019-09-18 17:39:00.030 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decoded LatencyMeteredCommand [type=DEL, output=IntegerOutput [output=0, error='null'], commandType=io.lettuce.core.protocol.AsyncCommand], empty stack: true
+2019-09-18 17:39:00.030 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+2019-09-18 17:39:09.757 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:39:09.757 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 98 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:09.757 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 98 completed successfully in 0.66 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:09.758 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=4.6 ms, state=CONNECTED}]
+2019-09-18 17:39:13.478 DEBUG [shineon-db-user,,,] 7484 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-09-18 17:39:19.759 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:39:19.759 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 99 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:19.760 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 99 completed successfully in 0.77 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:19.760 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=3.9 ms, state=CONNECTED}]
+2019-09-18 17:39:22.209 DEBUG [shineon-db-user,,,] 7484 --- [Catalina-utility-1] org.apache.catalina.session.ManagerBase  : Start expire sessions StandardManager at 1568799562209 sessioncount 0
+2019-09-18 17:39:22.209 DEBUG [shineon-db-user,,,] 7484 --- [Catalina-utility-1] org.apache.catalina.session.ManagerBase  : End expire sessions StandardManager processingTime 0 expired sessions: 0
+2019-09-18 17:39:25.223 DEBUG [shineon-db-user,,,] 7484 --- [Eureka-JerseyClient-Conn-Cleaner2] c.n.d.shared.MonitoredConnectionManager  : Closing connections idle longer than 30000 SECONDS
+2019-09-18 17:39:25.223 DEBUG [shineon-db-user,,,] 7484 --- [Eureka-JerseyClient-Conn-Cleaner2] c.n.d.shared.NamedConnectionPool         : Closing connections idle longer than 30000 SECONDS
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Clearing quarantined list of size 1
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 50 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:39:26.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-09-18 17:39:26.643  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Clearing quarantined list of size 1
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 1, total allocated: 1 out of 200
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 49 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:39:26.643 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:39:27.617  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121: registering service...
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 2, total allocated: 2 out of 200
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 48 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:39:27.617 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@5b08d26c closed
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@5b08d26c shut down
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@5b08d26c closed
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:39:27.635 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP PUT http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER/fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:39:27.635 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 common frames omitted
+
+2019-09-18 17:39:27.635  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:39:27.635 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@127416a1 closed
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@127416a1 shut down
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@127416a1 closed
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP GET http://127.0.0.1:81/eureka//apps/?; statusCode=N/A
+2019-09-18 17:39:27.645 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2019-09-18 17:39:27.645  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:39:27.645 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:27.645 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Completed cache refresh task for discovery. All Apps hash code is Local region apps hashcode: null, is fetching remote regions? false 
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7d5c284b closed
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7d5c284b shut down
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@7d5c284b closed
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:39:28.625 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP POST http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER with instance fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:39:28.625 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2019-09-18 17:39:28.625  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:39:28.625  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:28.625  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:29.761 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:39:29.761 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 100 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:29.762 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 100 completed successfully in 0.82 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:29.762 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=3.3 ms, state=CONNECTED}]
+2019-09-18 17:39:39.763 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:39:39.763 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 101 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:39.763 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 101 completed successfully in 0.71 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:39.764 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=2.9 ms, state=CONNECTED}]
+2019-09-18 17:39:43.480 DEBUG [shineon-db-user,,,] 7484 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-09-18 17:39:49.765 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:39:49.765 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 102 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:49.766 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 102 completed successfully in 0.79 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:49.766 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2019-09-18 17:39:55.224 DEBUG [shineon-db-user,,,] 7484 --- [Eureka-JerseyClient-Conn-Cleaner2] c.n.d.shared.MonitoredConnectionManager  : Closing connections idle longer than 30000 SECONDS
+2019-09-18 17:39:55.224 DEBUG [shineon-db-user,,,] 7484 --- [Eureka-JerseyClient-Conn-Cleaner2] c.n.d.shared.NamedConnectionPool         : Closing connections idle longer than 30000 SECONDS
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Clearing quarantined list of size 1
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 50 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:39:57.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-09-18 17:39:57.647  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Clearing quarantined list of size 1
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 1, total allocated: 1 out of 200
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 49 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:39:57.647 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:39:58.627  INFO [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121: registering service...
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Created client for url: http://127.0.0.1:81/eureka/
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Get connection: {}->http://127.0.0.1:81, timeout = 5000
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : [{}->http://127.0.0.1:81] total kept alive: 0, total issued: 2, total allocated: 2 out of 200
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : No free connections [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Available capacity: 48 out of 50 [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Creating new connection [{}->http://127.0.0.1:81]
+2019-09-18 17:39:58.627 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] .a.h.i.c.DefaultClientConnectionOperator : Connecting to 127.0.0.1:81
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@11e0f299 closed
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@5847985e closed
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@11e0f299 shut down
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@5847985e shut down
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@11e0f299 closed
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP PUT http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER/fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@5847985e closed
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:39:58.653 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP GET http://127.0.0.1:81/eureka//apps/?; statusCode=N/A
+2019-09-18 17:39:58.653 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 common frames omitted
+
+2019-09-18 17:39:58.653 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2019-09-18 17:39:58.654  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:39:58.654  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:39:58.654 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:58.654 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1479) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1446) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:58.654 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Completed cache refresh task for discovery. All Apps hash code is Local region apps hashcode: null, is fetching remote regions? false 
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@ef41fac closed
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@ef41fac shut down
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.MonitoredConnectionManager  : Released connection is not reusable.
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Releasing connection [{}->http://127.0.0.1:81][null]
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] o.a.h.impl.conn.DefaultClientConnection  : Connection org.apache.http.impl.conn.DefaultClientConnection@ef41fac closed
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.shared.NamedConnectionPool         : Notifying no-one, there are no waiting threads
+2019-09-18 17:39:59.637 DEBUG [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] n.d.s.t.j.AbstractJerseyEurekaHttpClient : Jersey HTTP POST http://127.0.0.1:81/eureka//apps/SHINEON-DB-USER with instance fh18829-2:shineon-db-user:121; statusCode=N/A
+2019-09-18 17:39:59.637 ERROR [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2019-09-18 17:39:59.637  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-09-18 17:39:59.638  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON-DB-USER/fh18829-2:shineon-db-user:121 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:59.638  WARN [shineon-db-user,,,] 7484 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-09-18 17:39:59.767 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:39:59.767 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 103 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:59.767 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 103 completed successfully in 0.65 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:39:59.768 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2019-09-18 17:40:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.s.d.r.RedisSessionExpirationPolicy   : Cleaning up sessions expiring at Wed Sep 18 17:40:00 CST 2019
+2019-09-18 17:40:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Opening RedisConnection
+2019-09-18 17:40:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] io.lettuce.core.RedisChannelHandler      : dispatching command AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:40:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:40:00.001 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() done
+2019-09-18 17:40:00.001 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] write(ctx, AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+2019-09-18 17:40:00.002 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandEncoder  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379] writing command AsyncCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:40:00.002 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+2019-09-18 17:40:00.002 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Stack contains: 1 commands
+2019-09-18 17:40:00.002 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decode LatencyMeteredCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.AsyncCommand]
+2019-09-18 17:40:00.002 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decoded LatencyMeteredCommand [type=SMEMBERS, output=ValueSetOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.AsyncCommand], empty stack: true
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Opening RedisConnection
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] io.lettuce.core.RedisChannelHandler      : dispatching command AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] i.lettuce.core.protocol.DefaultEndpoint  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, epid=0x1] write() done
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] write(ctx, AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+2019-09-18 17:40:00.003 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandEncoder  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379] writing command AsyncCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+2019-09-18 17:40:00.004 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+2019-09-18 17:40:00.004 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : [channel=0x6b21d222, /10.0.192.104:57918 -> /10.0.127.235:6379, chid=0x1] Stack contains: 1 commands
+2019-09-18 17:40:00.004 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decode LatencyMeteredCommand [type=DEL, output=IntegerOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.AsyncCommand]
+2019-09-18 17:40:00.004 DEBUG [shineon-db-user,,,] 7484 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.RedisStateMachine      : Decoded LatencyMeteredCommand [type=DEL, output=IntegerOutput [output=0, error='null'], commandType=io.lettuce.core.protocol.AsyncCommand], empty stack: true
+2019-09-18 17:40:00.004 DEBUG [shineon-db-user,,,] 7484 --- [task-scheduler-3] o.s.d.redis.core.RedisConnectionUtils    : Closing Redis Connection
+2019-09-18 17:40:09.769 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:40:09.769 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 104 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:40:09.770 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 104 completed successfully in 0.85 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:40:09.770 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=1.9 ms, state=CONNECTED}]
+2019-09-18 17:40:13.481 DEBUG [shineon-db-user,,,] 7484 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2019-09-18 17:40:19.771 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Checking status of 10.0.127.235:27017
+2019-09-18 17:40:19.771 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Sending command '{ "ismaster" : 1 }' with request id 105 to database admin on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:40:19.772 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.protocol.command      : Execution of command with request id 105 completed successfully in 0.70 ms on connection [connectionId{localValue:1, serverValue:28}] to server 10.0.127.235:27017
+2019-09-18 17:40:19.772 DEBUG [shineon-db-user,,,] 7484 --- [cluster-ClusterId{value='5d81f789e7f68e1d3ce8dfe9', description='null'}-10.0.127.235:27017] org.mongodb.driver.cluster               : Updating cluster description to  {type=STANDALONE, servers=[{address=10.0.127.235:27017, type=STANDALONE, roundTripTime=1.7 ms, state=CONNECTED}]
