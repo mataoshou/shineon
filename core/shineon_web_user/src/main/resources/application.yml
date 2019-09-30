@@ -1,12 +1,6 @@
 spring:
   application: 
     name: shineon-web-usr
-  rabbitmq: 
-    addresses: 127.0.0.1
-    password: matao
-    publisherconfirms: true
-    port: 5672
-    username: matao
   session: 
     timeout: 3600s
     redis: 
@@ -14,15 +8,8 @@ spring:
         spring: session
       flushmode: on_save
     storetype: redis
-  servlet: 
-    multipart: 
-      resolvelazily: true
-      maxrequestsize: 6000MB
-      location: "c:/tmp"
-      filesizethreshold: 2000
-      maxfilesize: 6000MB
   redis: 
-    host: 10.0.127.235
+    host: 127.0.0.1
     port: 6379
     database: 0
 server: 

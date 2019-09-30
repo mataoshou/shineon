@@ -11,7 +11,7 @@
     <groupId>com.shineon</groupId>
     <artifactId>web</artifactId>
     <version>1.0</version>
-    <name>coder</name>
+    <name>web-user</name>
     <description>api for uauth</description>
 
     <properties>
