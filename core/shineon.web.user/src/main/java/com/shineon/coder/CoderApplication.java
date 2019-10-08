@@ -1,7 +1,5 @@
 package com.shineon.coder;
 
-import com.shineon.coder.common.util.SpringUtil;
-import com.shineon.coder.common.util.SysServiceUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
