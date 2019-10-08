@@ -1,12 +1,13 @@
 package com.shineon.coder;
 
+import com.shineon.coder.kernel.constant.DBConstant;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@MapperScan("com.shineon.coder.db.sql.mergedao")
+@MapperScan(DBConstant.DB_MERGEDAO_PACKAGE)
 @EnableEurekaClient
 public class CoderApplication {
 

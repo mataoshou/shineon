@@ -1,0 +1,1 @@
+package com.shineon.coder.service.convert.util;import com.shineon.coder.service.convert.base.ShineonBaseZoneCommonBase;;import org.springframework.stereotype.Component;@Componentpublic class ShineonBaseZoneCommonUtil extends ShineonBaseZoneCommonBase {}

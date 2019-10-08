@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="znname" commonName="name" type="java.lang.String"/>
+  <item pojoName="timecreated" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="timemodified" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="flagdeleted" commonName="status" type="java.lang.Short"/>
+  <item pojoName="timedeleted" commonName="endTime" type="java.util.Date"/>
+  <item pojoName="znid" commonName="" type="java.lang.Long"/>
+  <item pojoName="parent" commonName="" type="java.lang.Long"/>
+</root>
