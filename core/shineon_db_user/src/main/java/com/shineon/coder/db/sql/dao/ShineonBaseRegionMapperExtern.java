@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.ShineonBaseRegion;;import java.util.List;;public interface ShineonBaseRegionMapperExtern {	 List<ShineonBaseRegion> list(String where,String order);}

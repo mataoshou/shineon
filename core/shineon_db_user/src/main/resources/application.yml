@@ -1,8 +1,8 @@
 spring: 
   application: 
-    name: shineon-db-user
-  data: 
-    mongodb: 
+    name: shineon.db.user
+  data:
+    mongodb:
       host: 10.0.127.235
       port: 27017
       database: matao_test
@@ -28,4 +28,4 @@ eureka:
     serviceurl: 
       defaultZone: "http://127.0.0.1:81/eureka"
 mybatis: 
-  mapperlocations: "classpath:com/shineon/coder/db/mapper/*.xml"
+  mapperlocations: "classpath:com/shineon/coder/db/sql/mapper/*.xml"

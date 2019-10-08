@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@MapperScan("com.shineon.coder.db.mergedao")
+@MapperScan("com.shineon.coder.db.sql.mergedao")
 @EnableEurekaClient
 public class CoderApplication {
 
