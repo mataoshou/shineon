@@ -29,4 +29,14 @@ public class UserBO {
         return userMapper.list(where.toString(),null);
     }
 
+    public void add(ShineonUser user)
+    {
+        userMapper.insert(user);
+    }
+
+    public void update(ShineonUser user)
+    {
+        userMapper.updateByPrimaryKey(user);
+    }
+
 }

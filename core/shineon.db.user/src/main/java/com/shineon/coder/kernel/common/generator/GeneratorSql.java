@@ -123,7 +123,7 @@ public class GeneratorSql {
 
                 if (!externDaoFile.exists()||isOverride) {
                     ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-                    classBuildUtil.classInit(mapperExternFileName, "", DBConstant.DB_DAO_PACKAGE, null, false,
+                    classBuildUtil.classInit(mapperExternFileName, "",null, DBConstant.DB_DAO_PACKAGE, null, false,
                             String.format("%s.%s;",DBConstant.DB_POJO_PACKAGE, fileName), "java.util.List;");
                     classBuildUtil.addTabContent( String.format(" List<%s> list(String where,String order);", fileName));
                     classBuildUtil.finish(externDaoFile);
@@ -176,7 +176,7 @@ public class GeneratorSql {
                 if (!mergeFile.exists()||isOverride) {
 
                     ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-                    classBuildUtil.classInit(mergeFileName, mapperBaseFileName + "," + mapperExternFileName, DBConstant.DB_MERGEDAO_PACKAGE, null, false,
+                    classBuildUtil.classInit(mergeFileName, mapperBaseFileName + "," + mapperExternFileName,null, DBConstant.DB_MERGEDAO_PACKAGE, null, false,
                             DBConstant.DB_DAO_PACKAGE+"." + mapperBaseFileName, DBConstant.DB_DAO_PACKAGE+"." + mapperExternFileName);
 
                     classBuildUtil.finish(mergeFile);
@@ -198,7 +198,7 @@ public class GeneratorSql {
 
                     ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-                    classBuildUtil.classInit(propertyName, null, DBConstant.DB_PROPERTY_PACKAGE, null, true, null);
+                    classBuildUtil.classInit(propertyName, null,null, DBConstant.DB_PROPERTY_PACKAGE, null, true, null);
 
 
                     classBuildUtil.addTabContent("\r");

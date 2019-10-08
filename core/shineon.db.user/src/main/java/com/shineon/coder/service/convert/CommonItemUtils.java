@@ -1,24 +1,22 @@
 package com.shineon.coder.service.convert;
 
 import com.shineon.coder.kernel.constant.CommonItemConstant;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
-public class CommonItemUtils {
+public interface CommonItemUtils {
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     ///  成功
     //////////////////////////////////////////////////////////////////////////////////////////
-    public CommonItem successEmpty()
+    default CommonItem success()
     {
         CommonItem item = new CommonItem();
 
         return success(item);
     }
 
-    public CommonItem success(CommonItem item)
+    default CommonItem success(CommonItem item)
     {
         item.setErrorStatus(CommonItemConstant.STATUS_SUCCESS);
         item.setErrorReason(CommonItemConstant.REASON_SUCCESS);
@@ -26,7 +24,7 @@ public class CommonItemUtils {
         return  item;
     }
 
-    public CommonItem success(CommonData data)
+    default CommonItem success(CommonData data)
     {
         CommonItem item = new CommonItem();
         item.addData(data);
@@ -34,7 +32,7 @@ public class CommonItemUtils {
     }
 
 
-    public CommonItem success(List<CommonData> data)
+    default CommonItem success(List<CommonData> data)
     {
         CommonItem item = new CommonItem();
         item.setDatas(data);
@@ -44,24 +42,31 @@ public class CommonItemUtils {
     ///////////////////////////////////////////////////////////////////////////////////////////
     ///  失败
     //////////////////////////////////////////////////////////////////////////////////////////
-    public CommonItem fail()
+    default CommonItem fail()
     {
         CommonItem item = new CommonItem();
 
         return fail(item);
     }
 
-    public CommonItem fail(CommonItem item)
+    default CommonItem fail(String reason)
+    {
+        CommonItem item = new CommonItem();
+
+        return fail(item, CommonItemConstant.STATUS_FAIL,reason);
+    }
+
+    default CommonItem fail(CommonItem item)
     {
         return fail(item, CommonItemConstant.STATUS_FAIL, CommonItemConstant.REASON_FAIL);
     }
 
-    public CommonItem fail(CommonItem item , String reason)
+    default CommonItem fail(CommonItem item , String reason)
     {
         return fail(item, CommonItemConstant.STATUS_FAIL,reason);
     }
 
-    public CommonItem fail(CommonItem item, int errorStatus, String reason)
+    default CommonItem fail(CommonItem item, int errorStatus, String reason)
     {
         item.setErrorStatus(errorStatus);
 
@@ -70,8 +75,19 @@ public class CommonItemUtils {
         return item;
     }
 
+    default CommonItem fail(int errorStatus, String reason)
+    {
+        CommonItem item = new CommonItem();
 
-    public boolean check(CommonItem item)
+        item.setErrorStatus(errorStatus);
+
+        item.setErrorReason(reason);
+
+        return item;
+    }
+
+
+    default boolean check(CommonItem item)
     {
         if(item.getErrorStatus().equals(CommonItemConstant.STATUS_SUCCESS))
         {

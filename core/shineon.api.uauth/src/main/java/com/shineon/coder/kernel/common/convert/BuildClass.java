@@ -19,10 +19,9 @@ public class BuildClass {
 
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-		String[] annos =new String[]{"Component"};
 
-		classBuildUtil.classInit(className,baseName, ConvertsConstant.UTIL_PACKAGE ,annos,true,
-				String.format("%s.%s;", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Component");
+		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,null,true,
+				String.format("%s.%s;", ConvertsConstant.BASE_PACKAGE,baseName));
 
 
 		File classFile = new File(root,fileName);
@@ -42,16 +41,16 @@ public class BuildClass {
 
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-		classBuildUtil.classInit(className,null, ConvertsConstant.BASE_PACKAGE,null,true,
+		classBuildUtil.classInit(className,null,
+				new String[]{"CommonItemUtils"},ConvertsConstant.BASE_PACKAGE,null,true,
 				"java.util.Date;", String.format("%s.%s;", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
 				"java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
 				ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
-				ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.slf4j.Logger","org.slf4j.LoggerFactory");
+				ConvertsConstant.CONVERT_PACKAGE+".CommonItem",
+				ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
+				"org.slf4j.Logger","org.slf4j.LoggerFactory");
 
 		////////添加packagename;
-
-		classBuildUtil.addTabContent("@Autowired" );
-		classBuildUtil.addTabContent("CommonItemUtils utils;");
 
 		classBuildUtil.addTabContent("Logger logger = LoggerFactory.getLogger(getClass());");
 		classBuildUtil.addTabContent("\r\n");
@@ -139,7 +138,7 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("public CommonItem %s( %s pojo) {" ,methodName,pojoName));
 
-		classBuildUtil.addTabRightContent("return utils.success(toCommonData(pojo));");
+		classBuildUtil.addTabRightContent("return success(toCommonData(pojo));");
 
 
 		classBuildUtil.addTabLeftContent(String.format("}"));
@@ -160,7 +159,7 @@ public class BuildClass {
 		classBuildUtil.addTabLeftContent(String.format("}"));
 
 
-		classBuildUtil.addTabContent("return utils.success(result);");
+		classBuildUtil.addTabContent("return success(result);");
 
 
 		classBuildUtil.addTabLeftContent(String.format("}"));

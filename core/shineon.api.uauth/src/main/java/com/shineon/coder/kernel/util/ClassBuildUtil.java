@@ -26,7 +26,7 @@ public class ClassBuildUtil {
      * @param isclass 是否为class  false 为接口
      * @param imports  import内容
      */
-    public void classInit(String className,String baseName,String packageName,String[] annotation,boolean isclass,String... imports)
+    public void classInit(String className,String baseName,String[] imps,String packageName,String[] annotation,boolean isclass,String... imports)
     {
         String classStr ="";
 
@@ -62,14 +62,29 @@ public class ClassBuildUtil {
         {
             classType = "interface";
         }
+        String classLine ="";
         if(baseName!=null&&baseName.length()>0) {
-            content += getContent(tab_no, tab, String.format("public %s %s extends %s {",classType, className, baseName));
+            classLine = String.format("public %s %s extends %s ",classType, className, baseName);
         }
         else{
-            content += getContent(tab_no, tab, String.format("public %s %s {", classType,className));
+            classLine = String.format("public %s %s ", classType,className);
         }
 
-        content += "##1\r";
+        if(imps!=null&&imps.length>0)
+        {
+            classLine +="implements ";
+            for(int i=0;i< imps.length;i++)
+            {
+                if(i!=0) {
+                    classLine += ",";
+                }
+                classLine+=imps[i];
+            }
+        }
+        classLine +="{";
+        content += getContent(tab_no, tab,classLine);
+
+                content += "##1\r";
 
         content += getContent(tab_no,tab, String.format("}"));
 

@@ -183,7 +183,7 @@ public class ConvertBuild {
         buildApi.buildBase(baseName,base,fname,mapperList);
         ///////////////////////////////////////////////////
         //构建util文件  已存在不替换
-        File utilFile = new File(util,utilName);
+        File utilFile = new File(util,utilName+".java");
         if(!utilFile.exists())
         {
             logger.debug("生成util文件");

@@ -1,5 +1,6 @@
 package com.shineon.coder.action;
 
+import com.shineon.coder.db.sql.pojo.ShineonUser;
 import com.shineon.coder.service.convert.CommonData;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.dto.UserDTO;
@@ -30,17 +31,25 @@ public class UserController {
 
     }
     @RequestMapping("/edit")
-//    @CrossOrigin(origins = "*")
-    public void editUser(@RequestBody CommonItem item)
+    public CommonItem editUser(@RequestBody CommonItem item)
     {
-        System.out.println(item.getErrorStatus() +"............." +item.getErrorReason());
+        ShineonUser user = userDTO.toPojo(item);
 
+        try {
+            userDTO.check(user);
+        } catch (Exception e) {
+            return userDTO.fail(e.getMessage());
+        }
+        userDTO.editUser(user);
+
+        System.out.println(item.getErrorStatus() +"............." +item.getErrorReason());
 
         for(CommonData data : item.getDatas())
         {
             System.out.println(data.getId() +"................." +data.getTitle());
-
         }
+
+        return userDTO.success();
     }
 
 }
