@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root> 
+<root>
   <item pojoName="id" commonName="id" type="java.lang.Integer"/>
   <item pojoName="username" commonName="name" type="java.lang.String"/>
   <item pojoName="password" commonName="content" type="java.lang.String"/>
@@ -10,14 +10,14 @@
   <item pojoName="usercode" commonName="ptitle" type="java.lang.String"/>
   <item pojoName="userthumb" commonName="thumb" type="java.lang.String"/>
   <item pojoName="timecreated" commonName="createTime" type="java.util.Date"/>
-  <item pojoName="timemodified" commonName="beginTime" type="java.util.Date"/>
-  <item pojoName="timedeleted" commonName="endTime" type="java.util.Date"/>
+  <item pojoName="timemodified" commonName="modifiedTime" type="java.util.Date"/>
+  <item pojoName="timedeleted" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="timelimit" commonName="endTime" type="java.util.Date"/>
   <item pojoName="zone" commonName="" type="java.lang.Integer"/>
   <item pojoName="telephone" commonName="" type="java.lang.String"/>
   <item pojoName="usermark" commonName="" type="java.lang.String"/>
   <item pojoName="usertype" commonName="" type="java.lang.Byte"/>
   <item pojoName="admin" commonName="" type="java.lang.Byte"/>
   <item pojoName="flagdeleted" commonName="" type="java.lang.Byte"/>
-  <item pojoName="timelimit" commonName="" type="java.util.Date"/>
   <item pojoName="countlimit" commonName="" type="java.lang.Byte"/>
 </root>

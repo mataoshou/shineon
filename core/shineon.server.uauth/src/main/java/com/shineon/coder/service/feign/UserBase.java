@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "shineon.db.user",fallback = UserBaseFallback.class)
 public interface UserBase {
 
-    @RequestMapping("/user/getUser")
+    @RequestMapping("/getUser")
     CommonItem getUser(@RequestParam("id") int id);
 
 
-    @RequestMapping("/user/listUser")
+    @RequestMapping("/listUser")
     CommonItem listUser();
 
 

@@ -1,1 +1,1 @@
-..\jre8\bin\java -jar coder--1.0.jar
+..\jre8\bin\java -jar shineon.db.user-1.0.jar

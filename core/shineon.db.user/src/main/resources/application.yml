@@ -1,24 +1,31 @@
 spring: 
+  cloud: 
+    stream: 
+      bindings: 
+        UserNoticeMessageOutput: 
+          destination: UserNoticeMessage
+        UserNoticeMessageInput: 
+          destination: UserNoticeMessage
   application: 
     name: shineon.db.user
   data: 
     mongodb: 
-      host: 10.0.127.235
+      host: 127.0.0.1
       port: 27017
       database: shineonUser
-  stream: 
-    bindings: 
-      Matao3MessageInput: 
-        destination: Matao3Message
-      Matao3MessageOutput: 
-        destination: Matao3Message
+  rabbitmq: 
+    addresses: 127.0.0.1
+    password: matao
+    publisherconfirms: true
+    port: 5672
+    username: matao
   datasource: 
     password: shineon@1234
     driverclassname: com.mysql.jdbc.Driver
     url: "jdbc:mysql://127.0.0.1:3306/shineon_base_uauth?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai"
     username: root
   redis: 
-    host: 10.0.127.235
+    host: 127.0.0.1
     port: 6379
     database: 0
 server: 

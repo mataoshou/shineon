@@ -28,6 +28,12 @@ public class ConvertBuild {
 
     BuildClass buildApi = new BuildClass();
 
+    boolean isOverride = false;
+
+    public void overrideBuild() throws Exception {
+        isOverride = true;
+        buildConvert();
+    }
 
     File mapper;
     File util;
@@ -184,7 +190,7 @@ public class ConvertBuild {
         ///////////////////////////////////////////////////
         //构建util文件  已存在不替换
         File utilFile = new File(util,utilName+".java");
-        if(!utilFile.exists())
+        if(!utilFile.exists()||isOverride)
         {
             logger.debug("生成util文件");
             buildApi.buildUtil(utilName,util,baseName);
@@ -201,7 +207,7 @@ public class ConvertBuild {
      */
     public boolean buildMapper(List<MapperItem> items, File mapperFile) throws IOException, DocumentException {
 
-        if(!mapperFile.exists())
+        if(!mapperFile.exists()||isOverride)
         {
             FileStore store = new FileStore();
             String content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <root></root>";

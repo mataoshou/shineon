@@ -18,7 +18,11 @@ public class CommonData {
 
     private Integer group;
 
-    private Short status;
+    private Short initStatus;
+
+    private Short currentStatus1;
+
+    private Short currentStatus2;
 
     private String title ;
 
@@ -32,12 +36,46 @@ public class CommonData {
 
     private Date createTime;
 
+    private Date modifiedTime;
+
     private  Date beginTime;
 
     private Date endTime;
 
     private long interval;
 
+
+    public Short getInitStatus() {
+        return initStatus;
+    }
+
+    public void setInitStatus(Short initStatus) {
+        this.initStatus = initStatus;
+    }
+
+    public Short getCurrentStatus1() {
+        return currentStatus1;
+    }
+
+    public void setCurrentStatus1(Short currentStatus1) {
+        this.currentStatus1 = currentStatus1;
+    }
+
+    public Short getCurrentStatus2() {
+        return currentStatus2;
+    }
+
+    public void setCurrentStatus2(Short currentStatus2) {
+        this.currentStatus2 = currentStatus2;
+    }
+
+    public Date getModifiedTime() {
+        return modifiedTime;
+    }
+
+    public void setModifiedTime(Date modifiedTime) {
+        this.modifiedTime = modifiedTime;
+    }
 
     private List<AttachItem> attachItems = new ArrayList<>();
 
@@ -81,13 +119,6 @@ public class CommonData {
         this.group = group;
     }
 
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
 
     public String getTitle() {
         return title;

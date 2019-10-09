@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shineon</groupId>
-    <artifactId>coder</artifactId>
-    <version>-1.0</version>
-    <name>coder</name>
+    <artifactId>shineon.db.user</artifactId>
+    <version>1.0</version>
+    <name>shineon.db.user</name>
     <description>server for user</description>
 
     <properties>

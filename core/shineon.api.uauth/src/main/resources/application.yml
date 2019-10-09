@@ -7,12 +7,13 @@ spring:
     publisherconfirms: true
     port: 5672
     username: matao
-  stream: 
-    bindings: 
-      Matao1MessageOutput: 
-        destination: Matao1Message
-      Matao1MessageInput: 
-        destination: Matao1Message
+  cloud:
+    stream:
+      bindings:
+        Matao1MessageOutput:
+          destination: Matao1Message
+        Matao1MessageInput:
+          destination: Matao1Message
   session: 
     timeout: 3600s
     redis: 

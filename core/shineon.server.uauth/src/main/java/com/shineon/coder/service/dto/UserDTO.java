@@ -10,25 +10,23 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserDTO {
+public class UserDTO extends  ShineonUserCommonUtil {
+
 
     @Autowired
     UserBase base;
 
-    @Autowired
-    ShineonUserCommonUtil commonUtil;
-
     public ShineonUser get(int id)
     {
         CommonItem item = base.getUser(id);
-        return  commonUtil.toPojo(item);
+        return  toPojo(item);
     }
 
 
     public List<ShineonUser> list()
     {
         CommonItem item = base.listUser();
-        return  commonUtil.toPojoList(item);
+        return  toPojoList(item);
     }
 
 

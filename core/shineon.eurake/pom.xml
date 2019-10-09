@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shineon</groupId>
-    <artifactId>demo</artifactId>
-    <version>-1.0</version>
-    <name>coder</name>
+    <artifactId>shineon.eurake</artifactId>
+    <version>1.0</version>
+    <name>eurake</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
