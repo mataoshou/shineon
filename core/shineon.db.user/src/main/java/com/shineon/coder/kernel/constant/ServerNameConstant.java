@@ -6,6 +6,9 @@ package com.shineon.coder.kernel.constant;
  */
 public class ServerNameConstant {
 
+
+    public static final  String CURRENT_SYS = "shineon.db.user";
+
     public static final String SHINEON_DB_USER = "shineon.db.user";
 
     public static final String SHINEON_SERVER_UAUTH = "shineon.server.uauth";
