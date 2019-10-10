@@ -26,21 +26,21 @@ public class UserCache {
         return util.createCacheKey(UserCacheConstant.USER_LIST_CACHE_PRVIEW,UserCacheConstant.USER_LIST_CACHE_LAST,item);
     }
 
-    public void commitListCache(CommonItem item) throws Exception {
-       util.set(getListKey(item),item);
+    public void commitListCache(CommonItem key,CommonItem data) throws Exception {
+       util.set(getListKey(key),data);
     }
 
-    public List<ShineonUser> getListCache(CommonItem item) throws Exception {
-        return commonUtil.toPojoList(util.get(getListKey(item)));
+    public List<ShineonUser> getListCache(CommonItem key) throws Exception {
+        return commonUtil.toPojoList(util.get(getListKey(key)));
     }
 
 
-    public void commitSingleCache(CommonItem item) throws Exception {
-        util.set(getSingleKey(item),item);
+    public void commitSingleCache(CommonItem key,CommonItem data) throws Exception {
+        util.set(getSingleKey(key),data);
     }
 
-    public List<ShineonUser> getSingleCache(CommonItem item) throws Exception {
-        return commonUtil.toPojoList(util.get(getSingleKey(item)));
+    public List<ShineonUser> getSingleCache(CommonItem key) throws Exception {
+        return commonUtil.toPojoList(util.get(getSingleKey(key)));
     }
 
 }
