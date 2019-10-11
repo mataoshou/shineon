@@ -1,8 +1,8 @@
 package com.shineon.coder.action;
 
-import com.shineon.coder.kernel.constant.ServerNameConstant;
+import com.shineon.coder.kernel.constant.ServerConstant;
+import com.shineon.coder.kernel.constant.SysConstant;
 import com.shineon.coder.service.convert.CommonItem;
-import com.shineon.coder.service.convert.CommonItemUtils;
 import com.shineon.coder.service.dto.BaseDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,14 +17,14 @@ public class ActionExceptionHandler {
     @Autowired
     BaseDTO baseDTO;
 
-    Logger logger = LoggerFactory.getLogger( ServerNameConstant.CURRENT_SYS);
+    Logger logger = LoggerFactory.getLogger(SysConstant.CURRENT_SYS_NAME);
     @ResponseBody
     @ExceptionHandler
     public CommonItem processEx(Exception ex){
 
-        String errorReason =String.format("[%s]服务异常：%s", ServerNameConstant.CURRENT_SYS,ex.getMessage());
+        String errorReason =String.format("[%s]服务异常：%s", SysConstant.CURRENT_SYS_NAME,ex.getMessage());
 
-        logger.info(String.format("[%s]服务异常：%s (%s)", ServerNameConstant.CURRENT_SYS,ex.getMessage(), ex.getStackTrace()[0]));
+        logger.info(String.format("[%s]服务异常：%s (%s)", SysConstant.CURRENT_SYS_NAME,ex.getMessage(), ex.getStackTrace()[0]));
         ex.printStackTrace();
 
         return baseDTO.fail(errorReason);

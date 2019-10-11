@@ -77,13 +77,13 @@ public class CommonData {
         this.modifiedTime = modifiedTime;
     }
 
-    private List<AttachItem> attachItems = new ArrayList<>();
+    private List<CommonData> attachItems;
 
-    public List<AttachItem> getAttachItems() {
+    public List<CommonData> getAttachItems() {
         return attachItems;
     }
 
-    public void setAttachItems(List<AttachItem> attachItems) {
+    public void setAttachItems(List<CommonData> attachItems) {
         this.attachItems = attachItems;
     }
 

@@ -4,9 +4,9 @@ package com.shineon.coder.kernel.constant;
  * 用来存放系统服务名称的常量
  *
  */
-public class ServerNameConstant {
+public class ServerConstant {
 
-    public static final  String CURRENT_SYS = "shineon.base.user";
+
 
     public static final String SHINEON_DB_USER = "shineon.db.user";
 

@@ -1,11 +1,12 @@
 package com.shineon.coder.action;
 
 
+import com.esotericsoftware.minlog.Log;
 import com.shineon.coder.db.pojo.ShineonUser;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.util.ShineonUserCommonUtil;
 import com.shineon.coder.service.dto.UserDTO;
-import com.shineon.coder.service.task.UserTask;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@Slf4j
 public class UserController {
 
     @Autowired
@@ -30,7 +32,7 @@ public class UserController {
     @RequestMapping("/getUser")
     public CommonItem getUser()
     {
-
+        log.info(".......................................");
         System.out.println("....................begin");
         ShineonUser user = userDTO.get(1);
 

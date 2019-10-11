@@ -6,6 +6,7 @@ import com.shineon.coder.kernel.constant.RedisConstant;
 import com.shineon.coder.kernel.util.Md5Util;
 import com.shineon.coder.kernel.util.SpringUtil;
 import com.shineon.coder.service.convert.CommonItem;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,15 +27,12 @@ import java.util.concurrent.TimeUnit;
  * redis缓存辅助工具类
  */
 @Component
-public class CacheUtil
-//        implements ApplicationListener<ContextRefreshedEvent>
+@Slf4j
+public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
 {
 
     @Autowired
     private RedisTemplate redisTemplate;
-
-
-    Logger logger = LoggerFactory.getLogger(CacheUtil.class);
 
 
     /**
@@ -81,19 +79,19 @@ public class CacheUtil
      * @param redisLock
      * @return
      */
-//    public boolean lock(String key,RedisLock redisLock)
-//    {
-//
-//        logger.debug("[尝试获取redis锁]"+ key);
-//
-//        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,lockToJSON(redisLock).toJSONString(), RedisConstant.LOCK_HOLD_TIME, TimeUnit.MILLISECONDS);
-//
-////        System.out.println(isSuccess);
-//
-//        if(isSuccess=null)return false;
-//
-//        return isSuccess;
-//    }
+    public boolean lock(String key)
+    {
+
+        log.debug("[尝试获取redis锁]"+ key);
+
+        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,1, RedisConstant.LOCK_HOLD_TIME, TimeUnit.MILLISECONDS);
+
+//        System.out.println(isSuccess);
+
+        if(isSuccess=null)return false;
+
+        return isSuccess;
+    }
 
 //    /**
 //     * 进行已知次数  连续获取锁
@@ -121,11 +119,8 @@ public class CacheUtil
      */
     public void unlock(String key)
     {
-        RedisClient redisClient = SpringUtil.getBean(RedisClient.class);
 
         redisTemplate.delete(key);
-
-        redisClient.removeKey(key);
     }
 
     /**
@@ -215,12 +210,12 @@ public class CacheUtil
 
 
 
-//    @Override
-//    public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-//        RedisSerializer stringSerializer = new StringRedisSerializer();
-//        redisTemplate.setKeySerializer(stringSerializer);
-//        redisTemplate.setValueSerializer(stringSerializer);
-//        redisTemplate.setHashKeySerializer(stringSerializer);
-//        redisTemplate.setHashValueSerializer(stringSerializer);
-//    }
+    @Override
+    public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
+        RedisSerializer stringSerializer = new StringRedisSerializer();
+        redisTemplate.setKeySerializer(stringSerializer);
+        redisTemplate.setValueSerializer(stringSerializer);
+        redisTemplate.setHashKeySerializer(stringSerializer);
+        redisTemplate.setHashValueSerializer(stringSerializer);
+    }
 }

@@ -67,7 +67,7 @@ public class SysCache {
         item.setInitStatus(initStatus);
         item.setStatus(initStatus);
 
-        item.setInterval(CacheConstant.CAHCE_SYS_INTERVAL);
+        item.setInterval(CacheConstant.CACHE_SYS_INTERVAL);
 
         mg_cache.put(cacheKey,commonUtil.toCommon(item));
 
