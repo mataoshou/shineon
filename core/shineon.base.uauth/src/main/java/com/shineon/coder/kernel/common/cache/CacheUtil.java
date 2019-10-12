@@ -84,11 +84,11 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
 
         log.debug("[尝试获取redis锁]"+ key);
 
-        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,1, RedisConstant.LOCK_HOLD_TIME, TimeUnit.MILLISECONDS);
+        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,"1", RedisConstant.LOCK_HOLD_TIME, TimeUnit.MILLISECONDS);
 
 //        System.out.println(isSuccess);
 
-        if(isSuccess=null)return false;
+        if(isSuccess==null)return false;
 
         return isSuccess;
     }
