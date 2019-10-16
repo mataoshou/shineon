@@ -50,28 +50,8 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     }
 
 
-//    @Bean
-//    public RedisLock emptyLock()
-//    {
-//        RedisLock lock = new RedisLock();
-//
-//        lock.setLockState((short) 0);
-//        lock.setKeepInterval(RedisConstant.LOCK_KEEP_INTERVAL);
-//        lock.setOverTime(RedisConstant.LOCK_HOLD_TIME);
-//        lock.setLockCount(0);
-//
-//        return lock;
-//    }
 
 
-//    public RedisLock buildLock(String key,String lockType)
-//    {
-//        RedisLock lock = emptyLock();
-//        lock.setKey(key);
-//        lock.setLockType(lockType);
-//
-//        return  lock;
-//    }
 
     /**
      * 加锁
@@ -86,33 +66,11 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
 
         Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,"1", RedisConstant.LOCK_HOLD_TIME, TimeUnit.MILLISECONDS);
 
-//        System.out.println(isSuccess);
-
         if(isSuccess==null)return false;
 
         return isSuccess;
     }
 
-//    /**
-//     * 进行已知次数  连续获取锁
-//     */
-//    public boolean tryLock(int count,long interval,String key,RedisLock redisLock)
-//    {
-//        int no =0;
-//
-//        while(no<count)
-//        {
-//            if(lock(key,redisLock))return true;
-//
-//            try {
-//                Thread.sleep(interval);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
-//        return false;
-//    }
 
     /**
      *  解锁

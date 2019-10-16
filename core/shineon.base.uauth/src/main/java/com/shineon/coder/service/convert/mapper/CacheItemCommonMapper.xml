@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="name" commonName="name" type="java.lang.String"/>
   <item pojoName="createTime" commonName="interval" type="long"/>
   <item pojoName="lastModified" commonName="" type="long"/>

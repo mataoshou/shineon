@@ -58,6 +58,9 @@ public class UserCache {
 
         try {
             if (util.lock(keyLock)) {
+
+
+
                 Log.info("添加缓存数据：" + keyData);
 
                 util.set(keyData, data);
@@ -77,6 +80,30 @@ public class UserCache {
             e.printStackTrace();
         }
         return false;
+
+    }
+
+    /**
+     * 添加数据到缓存队列中
+     */
+    public void addCache()
+    {
+
+    }
+    /**
+     * 重新加载缓存数据
+     * 先加锁，重新添加
+     */
+    public void reloadCache(String key,CommonItem data)
+    {
+
+    }
+
+    /**
+     * 删除缓存
+     */
+    public void delCache(String key)
+    {
 
     }
 

@@ -189,4 +189,21 @@ public class ClassBuildUtil {
         }
         return tabs+content+"\r";
     }
+
+    public static String getFileName(String fn)
+    {
+        if(fn.lastIndexOf(".")<=0)return fn;
+        String name =  fn.substring(0,fn.lastIndexOf("."));
+
+        return name;
+    }
+
+    public static String firstUpper(String str)
+    {
+        StringUtil stringUtil = new StringUtil();
+
+        String baseName = stringUtil.firstUpper(str);
+
+        return baseName;
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="rgname" commonName="name" type="java.lang.String"/>
   <item pojoName="timecreated" commonName="createTime" type="java.util.Date"/>
   <item pojoName="timemodified" commonName="modifiedTime" type="java.util.Date"/>

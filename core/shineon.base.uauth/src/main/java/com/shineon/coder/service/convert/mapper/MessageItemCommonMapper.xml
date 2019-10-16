@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="name" commonName="name" type="java.lang.String"/>
   <item pojoName="interval" commonName="interval" type="long"/>
   <item pojoName="status" commonName="" type="short"/>
