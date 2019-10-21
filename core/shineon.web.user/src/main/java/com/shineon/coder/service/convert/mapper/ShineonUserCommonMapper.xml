@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="id" commonName="id" type="java.lang.Integer"/>
   <item pojoName="username" commonName="name" type="java.lang.String"/>
   <item pojoName="password" commonName="content" type="java.lang.String"/>

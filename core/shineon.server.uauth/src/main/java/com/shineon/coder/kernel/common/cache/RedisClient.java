@@ -14,7 +14,7 @@ import java.util.List;
 public class RedisClient implements Runnable {
 
     @Autowired
-    public RedisUtil redisUtil;
+    public CacheUtil redisUtil;
     @Autowired
     RedisTemplate redisTemplate;
 

@@ -3,7 +3,6 @@ package com.shineon.coder.service.convert;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +17,11 @@ public class CommonData {
 
     private Integer group;
 
-    private Short status;
+    private Short initStatus;
+
+    private Short currentStatus1;
+
+    private Short currentStatus2;
 
     private String title ;
 
@@ -32,6 +35,8 @@ public class CommonData {
 
     private Date createTime;
 
+    private Date modifiedTime;
+
     private  Date beginTime;
 
     private Date endTime;
@@ -39,13 +44,45 @@ public class CommonData {
     private long interval;
 
 
-    private List<AttachItem> attachItems = new ArrayList<>();
+    public Short getInitStatus() {
+        return initStatus;
+    }
 
-    public List<AttachItem> getAttachItems() {
+    public void setInitStatus(Short initStatus) {
+        this.initStatus = initStatus;
+    }
+
+    public Short getCurrentStatus1() {
+        return currentStatus1;
+    }
+
+    public void setCurrentStatus1(Short currentStatus1) {
+        this.currentStatus1 = currentStatus1;
+    }
+
+    public Short getCurrentStatus2() {
+        return currentStatus2;
+    }
+
+    public void setCurrentStatus2(Short currentStatus2) {
+        this.currentStatus2 = currentStatus2;
+    }
+
+    public Date getModifiedTime() {
+        return modifiedTime;
+    }
+
+    public void setModifiedTime(Date modifiedTime) {
+        this.modifiedTime = modifiedTime;
+    }
+
+    private List<CommonData> attachItems;
+
+    public List<CommonData> getAttachItems() {
         return attachItems;
     }
 
-    public void setAttachItems(List<AttachItem> attachItems) {
+    public void setAttachItems(List<CommonData> attachItems) {
         this.attachItems = attachItems;
     }
 
@@ -81,13 +118,6 @@ public class CommonData {
         this.group = group;
     }
 
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
 
     public String getTitle() {
         return title;

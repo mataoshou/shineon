@@ -29,14 +29,4 @@ public class UserDTO extends ShineonUserCommonUtil {
         return  toPojoList(item);
     }
 
-
-    public CommonItem toCommon(ShineonUser user)
-    {
-        return toCommon(user);
-    }
-
-
-
-
-
 }

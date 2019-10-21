@@ -1,1 +1,0 @@
-..\jre8\bin\java -jar coder--1.0.jar

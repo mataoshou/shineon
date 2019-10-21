@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shineon</groupId>
-    <artifactId>coder</artifactId>
+    <artifactId>shineon.zuul</artifactId>
     <version>1.0</version>
-    <name>coder</name>
+    <name>shineon.zuul</name>
     <description>zuul for shineon</description>
 
     <properties>

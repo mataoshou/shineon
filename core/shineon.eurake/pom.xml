@@ -11,7 +11,7 @@
     <groupId>com.shineon</groupId>
     <artifactId>shineon.eurake</artifactId>
     <version>1.0</version>
-    <name>eurake</name>
+    <name>shineon.eurake</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

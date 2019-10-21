@@ -7,6 +7,8 @@ package com.shineon.coder.kernel.constant;
 public class RedisConstant {
 
 
+
+
     public static  final String CACHE_KEY_LOCK_READ = "READ";
     public static  final String CACHE_KEY_LOCK_WRITE = "WRITE";
     public static  final String CACHE_KEY_LOCK_SYC = "SYC";

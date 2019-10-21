@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shineon</groupId>
-    <artifactId>coder</artifactId>
-    <version>-1.0</version>
-    <name>server-uauth</name>
-    <description>server for uauth</description>
+    <artifactId>shineon.base.user</artifactId>
+    <version>1.0</version>
+    <name>shineon.base.user</name>
+    <description>base for user</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -102,6 +102,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>2.5.0</version>
+        </dependency>
 
     </dependencies>
 

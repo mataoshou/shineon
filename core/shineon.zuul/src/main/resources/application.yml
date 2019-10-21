@@ -16,7 +16,7 @@ zuul:
       sensitiveHeaders: "*"
     web-page:
       path: /page/**
-      service-id:  shineon.web.usr
+      service-id:  shineon.web
       sensitiveHeaders: "*"
   host:
     connect-timeout-millis: 15000
@@ -41,5 +41,5 @@ spring:
         spring: session
 
   redis:
-    host: 10.0.127.235
+    host: 127.0.0.1
     port: 6379
