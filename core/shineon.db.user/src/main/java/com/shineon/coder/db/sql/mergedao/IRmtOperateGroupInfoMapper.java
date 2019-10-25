@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtOperateGroupInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtOperateGroupInfoMapperExtern;public interface IRmtOperateGroupInfoMapper extends RmtOperateGroupInfoMapperBase,RmtOperateGroupInfoMapperExtern {}

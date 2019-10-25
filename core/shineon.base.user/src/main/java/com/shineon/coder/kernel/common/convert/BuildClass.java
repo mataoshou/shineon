@@ -42,7 +42,7 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 		classBuildUtil.classInit(className,null,
-				new String[]{"CommonItemUtils"},ConvertsConstant.BASE_PACKAGE,null,true,
+				new String[]{String.format("CommonItemUtils<%s>",pojo)},ConvertsConstant.BASE_PACKAGE,null,true,
 				"java.util.Date;", String.format("%s.%s;", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
 				"java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
 				ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",

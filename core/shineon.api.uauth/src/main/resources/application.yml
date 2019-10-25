@@ -58,7 +58,7 @@ ribbon:
 logging: 
   level: 
     root: info
-  file: log/shineonapiuauth.log
+  file: ../shineon.log/shineon.api.uauth.log
 feign: 
   hystrix: 
     enabled: true

@@ -1,6 +1,5 @@
 package com.shineon.coder;
 
-import com.shineon.coder.service.cache.UserCache;
 import com.shineon.coder.service.convert.CommonData;
 import com.shineon.coder.service.convert.CommonItem;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +18,7 @@ import java.util.List;
 public class CoderApplicationTests {
 
     @Autowired
-    UserCache cache;
+//    UserCache cache;
 
     @Test
     public void contextLoads() throws Exception {
@@ -30,7 +29,7 @@ public class CoderApplicationTests {
 
         CommonData data = new CommonData();
 
-        data.setName("matao");
+//        data.setName("matao");
 
         data.setContent("11111111111111111111111111111111111111");
 
@@ -38,7 +37,7 @@ public class CoderApplicationTests {
 
         item.setDatas(list);
 
-       log.info("..................................." + cache.getSingleKey(item));
+//       log.info("..................................." + cache.getSingleKey(item));
     }
 
 
@@ -46,7 +45,7 @@ public class CoderApplicationTests {
     @Test
     public void loadCache() throws Exception {
         CommonItem item = new CommonItem();
-        cache.setCache(item);
+//        cache.setCache(item);
 
     }
 }

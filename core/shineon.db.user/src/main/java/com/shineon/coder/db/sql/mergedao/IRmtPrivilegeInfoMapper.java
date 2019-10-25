@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtPrivilegeInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtPrivilegeInfoMapperExtern;public interface IRmtPrivilegeInfoMapper extends RmtPrivilegeInfoMapperBase,RmtPrivilegeInfoMapperExtern {}

@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtDepartmentInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtDepartmentInfoMapperExtern;public interface IRmtDepartmentInfoMapper extends RmtDepartmentInfoMapperBase,RmtDepartmentInfoMapperExtern {}

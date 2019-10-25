@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtTenantChartInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtTenantChartInfoMapperExtern;public interface IRmtTenantChartInfoMapper extends RmtTenantChartInfoMapperBase,RmtTenantChartInfoMapperExtern {}

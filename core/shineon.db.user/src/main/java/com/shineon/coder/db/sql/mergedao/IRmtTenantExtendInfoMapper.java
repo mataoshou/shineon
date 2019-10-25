@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtTenantExtendInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtTenantExtendInfoMapperExtern;public interface IRmtTenantExtendInfoMapper extends RmtTenantExtendInfoMapperBase,RmtTenantExtendInfoMapperExtern {}

@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtTenantInfo;;import java.util.List;;public interface RmtTenantInfoMapperExtern {	 List<RmtTenantInfo> list(String where,String order);}

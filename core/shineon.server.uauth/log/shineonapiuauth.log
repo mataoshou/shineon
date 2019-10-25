@@ -241,5 +241,3 @@ java.lang.NullPointerException: null
 2019-10-21 15:13:55.389  INFO [shineon.server.uauth,,,] 5952 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-10-21 15:18:55.393  INFO [shineon.server.uauth,,,] 5952 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-10-21 15:23:55.397  INFO [shineon.server.uauth,,,] 5952 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-10-21 15:28:55.401  INFO [shineon.server.uauth,,,] 5952 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-10-21 15:33:55.405  INFO [shineon.server.uauth,,,] 5952 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

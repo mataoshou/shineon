@@ -1,19 +1,14 @@
 package com.shineon.coder.service.cache;
 
 import com.shineon.coder.db.pojo.CacheItem;
-import com.shineon.coder.db.pojo.MessageItem;
 import com.shineon.coder.kernel.constant.cache.CacheConstant;
 import com.shineon.coder.kernel.util.TypeConvert;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.util.CacheItemCommonUtil;
-import com.shineon.coder.service.convert.util.MessageItemCommonUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 
@@ -28,10 +23,10 @@ public class SysCache {
 
     CacheItemCommonUtil commonUtil = new CacheItemCommonUtil();
 
-    public SysCache()
-    {
-        addCache(CacheConstant.CACHE_SYS_USER);
-    }
+//    public SysCache()
+//    {
+//        addCache(CacheConstant.CACHE_SYS_USER);
+//    }
 
     ConcurrentHashMap<String, CacheItem> mg_cache = new  ConcurrentHashMap<String, CacheItem>();
 

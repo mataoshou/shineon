@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="userid" commonName="parent" type="java.lang.String"/>
+  <item pojoName="realname" commonName="creator" type="java.lang.String"/>
+  <item pojoName="spellname" commonName="title" type="java.lang.String"/>
+  <item pojoName="postname" commonName="content" type="java.lang.String"/>
+  <item pojoName="dutiesname" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="officeaddress" commonName="group" type="java.lang.String"/>
+  <item pojoName="mobilephone" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="officetelephone" commonName="" type="java.lang.String"/>
+  <item pojoName="email" commonName="" type="java.lang.String"/>
+  <item pojoName="officecode" commonName="" type="java.lang.String"/>
+  <item pojoName="description" commonName="" type="java.lang.String"/>
+</root>

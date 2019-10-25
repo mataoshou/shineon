@@ -61,7 +61,7 @@ public interface CommonItemUtils {
         return fail(item, CommonItemConstant.STATUS_FAIL, CommonItemConstant.REASON_FAIL);
     }
 
-    default CommonItem fail(CommonItem item , String reason)
+    default CommonItem fail(CommonItem item, String reason)
     {
         return fail(item, CommonItemConstant.STATUS_FAIL,reason);
     }

@@ -1,11 +1,9 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.db.sql.pojo.ShineonUser;
 import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
-import com.shineon.coder.service.convert.util.ShineonUserCommonUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -105,7 +103,7 @@ public class ActionBuild {
                 true,convertClass.getName(),"lombok.extern.slf4j.Slf4j",
                 "org.springframework.web.bind.annotation.RestController","org.springframework.web.bind.annotation.RequestMapping",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.beans.factory.annotation.Autowired",
-                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName,ActionConstant.ACTION_CONSTANT_PACKAGE+"." +constantName);
+                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, ActionConstant.ACTION_CONSTANT_PACKAGE+"." +constantName);
 
 
         actionClassBuild.addTabContent("\r\n");
@@ -129,6 +127,6 @@ public class ActionBuild {
         System.out.println(ActionBuild.class.getSimpleName());
 
         ActionBuild build = new ActionBuild();
-        build.build("matao", ShineonUserCommonUtil.class, ShineonUser.class);
+//        build.build("matao", ShineonUserCommonUtil.class, ShineonUser.class);
     }
 }

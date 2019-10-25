@@ -1,5 +1,6 @@
 package com.shineon.coder.service.convert;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -46,5 +47,15 @@ public class CommonItem {
             datas = new ArrayList();
         }
         this.datas.add(data);
+    }
+
+    public String toJsonString ()
+    {
+        return JSONObject.toJSONString(this);
+    }
+
+    public JSONObject toJson()
+    {
+        return (JSONObject) JSONObject.toJSON(this);
     }
 }

@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtUserLogin;;import java.util.List;;public interface RmtUserLoginMapperExtern {	 List<RmtUserLogin> list(String where,String order);}

@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtDepartmentExtendInfo;;import java.util.List;;public interface RmtDepartmentExtendInfoMapperExtern {	 List<RmtDepartmentExtendInfo> list(String where,String order);}

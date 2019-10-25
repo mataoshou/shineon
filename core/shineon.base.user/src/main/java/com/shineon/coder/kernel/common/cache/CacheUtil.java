@@ -2,6 +2,7 @@ package com.shineon.coder.kernel.common.cache;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.shineon.coder.db.pojo.QueryItem;
 import com.shineon.coder.kernel.constant.RedisConstant;
 import com.shineon.coder.kernel.util.Md5Util;
 import com.shineon.coder.kernel.util.SpringUtil;
@@ -43,10 +44,16 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      * @return
      * @throws Exception
      */
-    public String createCacheKey(String prev, String last, CommonItem item) throws Exception {
-        String cacheKey = prev + "." + Md5Util.digest(item.toJsonString())+"." +last;
+    public String createCacheKey(String prev, String last, String id) throws Exception {
+        String cacheKey = prev + "." + id+"." +last;
+
 
         return cacheKey;
+    }
+
+
+    public String createCacheKey(String prev, String last, QueryItem item) throws Exception {
+        return createCacheKey(prev,last, item.toCode());
     }
 
 
@@ -76,6 +83,15 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      *  解锁
      */
     public void unlock(String key)
+    {
+
+        redisTemplate.delete(key);
+    }
+
+    /**
+     *  解锁
+     */
+    public void delete(String key)
     {
 
         redisTemplate.delete(key);
@@ -165,10 +181,6 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
 
         return values;
     }
-
-
-
-
 
 
     @Override

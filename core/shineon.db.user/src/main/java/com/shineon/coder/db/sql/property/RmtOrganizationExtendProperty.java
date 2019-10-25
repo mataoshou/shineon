@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.property ;public class RmtOrganizationExtendProperty {		public static String idProperty = "rmt_organization_extend.id";		public static String organizationIDProperty = "rmt_organization_extend.organizationID";		public static String organizationAddressProperty = "rmt_organization_extend.organizationAddress";	}

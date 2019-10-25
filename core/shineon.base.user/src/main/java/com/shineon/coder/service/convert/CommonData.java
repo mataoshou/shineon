@@ -12,23 +12,21 @@ import java.util.List;
 @Scope("prototype")
 public class CommonData {
 
-    private Integer id;
+    private String id;
 
-    private Integer parent;
+    private String parent;
 
-    private Integer group;
+    private String group;
 
-    private Short initStatus;
+    private Short status1;
 
-    private Short currentStatus1;
+    private Short status2;
 
-    private Short currentStatus2;
+    private Short status3;
 
     private String title ;
 
     private String ptitle;
-
-    private String name;
 
     private String thumb;
 
@@ -36,89 +34,65 @@ public class CommonData {
 
     private Date createTime;
 
-    private Date modifiedTime;
+    private String creator;
 
     private  Date beginTime;
 
     private Date endTime;
 
-    private long interval;
+
+    private  long begin;
+
+    private long end;
 
 
-    public Short getInitStatus() {
-        return initStatus;
-    }
-
-    public void setInitStatus(Short initStatus) {
-        this.initStatus = initStatus;
-    }
-
-    public Short getCurrentStatus1() {
-        return currentStatus1;
-    }
-
-    public void setCurrentStatus1(Short currentStatus1) {
-        this.currentStatus1 = currentStatus1;
-    }
-
-    public Short getCurrentStatus2() {
-        return currentStatus2;
-    }
-
-    public void setCurrentStatus2(Short currentStatus2) {
-        this.currentStatus2 = currentStatus2;
-    }
-
-    public Date getModifiedTime() {
-        return modifiedTime;
-    }
-
-    public void setModifiedTime(Date modifiedTime) {
-        this.modifiedTime = modifiedTime;
-    }
-
-    private List<CommonData> attachItems;
-
-    public List<CommonData> getAttachItems() {
-        return attachItems;
-    }
-
-    public void setAttachItems(List<CommonData> attachItems) {
-        this.attachItems = attachItems;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Integer getParent() {
+    public String getParent() {
         return parent;
     }
 
-    public void setParent(Integer parent) {
+    public void setParent(String parent) {
         this.parent = parent;
     }
 
-    public Integer getGroup() {
+    public String getGroup() {
         return group;
     }
 
-    public void setGroup(Integer group) {
+    public void setGroup(String group) {
         this.group = group;
     }
 
+    public Short getStatus1() {
+        return status1;
+    }
+
+    public void setStatus1(Short status1) {
+        this.status1 = status1;
+    }
+
+    public Short getStatus2() {
+        return status2;
+    }
+
+    public void setStatus2(Short status2) {
+        this.status2 = status2;
+    }
+
+    public Short getStatus3() {
+        return status3;
+    }
+
+    public void setStatus3(Short status3) {
+        this.status3 = status3;
+    }
 
     public String getTitle() {
         return title;
@@ -160,6 +134,14 @@ public class CommonData {
         this.createTime = createTime;
     }
 
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
     public Date getBeginTime() {
         return beginTime;
     }
@@ -176,11 +158,19 @@ public class CommonData {
         this.endTime = endTime;
     }
 
-    public long getInterval() {
-        return interval;
+    public long getBegin() {
+        return begin;
     }
 
-    public void setInterval(long interval) {
-        this.interval = interval;
+    public void setBegin(long begin) {
+        this.begin = begin;
+    }
+
+    public long getEnd() {
+        return end;
+    }
+
+    public void setEnd(long end) {
+        this.end = end;
     }
 }

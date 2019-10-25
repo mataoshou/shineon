@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="departementid" commonName="parent" type="java.lang.String"/>
+  <item pojoName="organizationid" commonName="creator" type="java.lang.String"/>
+  <item pojoName="reserved2" commonName="title" type="java.lang.String"/>
+  <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
+</root>

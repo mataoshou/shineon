@@ -1,19 +1,19 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.db.pojo.ShineonUser;
 import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
-import com.shineon.coder.kernel.util.StringUtil;
-import com.shineon.coder.service.convert.util.ShineonUserCommonUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 
-@Slf4j
 public class ActionBuild {
+
+    Logger log = LoggerFactory.getLogger(getClass());
 
     public void build(String actionName,Class convertClass,Class pojoClass) throws IOException {
         if(actionName.endsWith(".java"))
@@ -83,7 +83,8 @@ public class ActionBuild {
         dtoClassBuild.classInit(dtoName,convertClass.getSimpleName(),null, ActionConstant.ACTION_DTO_PACKAGE,
                 new String[]{"Service","Slf4j"},true,"org.springframework.stereotype.Service",convertClass.getName(),
                 "lombok.extern.slf4j.Slf4j",pojoClass.getName(),"org.springframework.beans.factory.annotation.Autowired",
-                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign");
+                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
+                "com.shineon.coder.db.pojo.QueryItem");
 
         dtoClassBuild.addTabContent("\r\n");
         dtoClassBuild.addTabContent("@Autowired");
@@ -92,7 +93,7 @@ public class ActionBuild {
         for(String method: ActionConstant.ACTION_METHOD)
         {
             dtoClassBuild.addTabContent("\r\n");
-            dtoClassBuild.addTabContent(String.format("public %s %s(){return null;}",pojoClass.getSimpleName(),method.toLowerCase()));
+            dtoClassBuild.addTabContent(String.format("public %s %s(QueryItem item){return null;}",pojoClass.getSimpleName(),method.toLowerCase()));
         }
 
         dtoClassBuild.finish(dtoFile);
@@ -117,7 +118,7 @@ public class ActionBuild {
         {
             actionClassBuild.addTabContent("\r\n");
             actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",constantName,method.toUpperCase()));
-            actionClassBuild.addTabContent(String.format("public CommonItem %s(){return null;}",method.toLowerCase()));
+            actionClassBuild.addTabContent(String.format("public CommonItem %s(CommonItem item){return null;}",method.toLowerCase()));
         }
         actionClassBuild.finish(actionFile);
 
@@ -130,6 +131,6 @@ public class ActionBuild {
         System.out.println(ActionBuild.class.getSimpleName());
 
         ActionBuild build = new ActionBuild();
-        build.build("matao", ShineonUserCommonUtil.class, ShineonUser.class);
+//        build.build("matao", ShineonUserCommonUtil.class, ShineonUser.class);
     }
 }

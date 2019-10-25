@@ -6,13 +6,15 @@ import com.shineon.coder.kernel.constant.action.ActionConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 
-@Slf4j
 public class FeignBuild {
 
+    Logger log = LoggerFactory.getLogger(getClass());
     public void build(String feignName,String serverName) throws IOException {
         feignName = ClassBuildUtil.getFileName(feignName);
 
@@ -83,7 +85,7 @@ public class FeignBuild {
         {
             feignClassBuild.addTabContent("\r\n");
             feignClassBuild.addTabContent(String.format("@RequestMapping(%s. FEIGN_%s)",constantName,method.toUpperCase()));
-            feignClassBuild.addTabContent(String.format("CommonItem %s();",method.toLowerCase()));
+            feignClassBuild.addTabContent(String.format("CommonItem %s(CommonItem item);",method.toLowerCase()));
         }
         feignClassBuild.finish(feignFile);
 
@@ -103,7 +105,7 @@ public class FeignBuild {
         {
             backClassBuild.addTabContent("\r\n");
             backClassBuild.addTabContent(String.format("@Override"));
-            backClassBuild.addTabContent(String.format("public CommonItem %s(){return fail(%s.FEIGN_SERVER_NAME);}",method.toLowerCase(),constantName));
+            backClassBuild.addTabContent(String.format("public CommonItem %s(CommonItem item){return fail(%s.FEIGN_SERVER_NAME);}",method.toLowerCase(),constantName));
         }
         backClassBuild.finish(fallBackFile);
     }

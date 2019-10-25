@@ -1,0 +1,1 @@
+package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtDepartmentInfoCommonBase;public class RmtDepartmentInfoCommonUtil extends RmtDepartmentInfoCommonBase {}

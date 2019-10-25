@@ -1,0 +1,1 @@
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtPrivilegeGroupInfo;;import java.util.List;;public interface RmtPrivilegeGroupInfoMapperExtern {	 List<RmtPrivilegeGroupInfo> list(String where,String order);}

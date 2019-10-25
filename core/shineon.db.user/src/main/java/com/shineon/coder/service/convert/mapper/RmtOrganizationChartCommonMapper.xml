@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="organizationid" commonName="parent" type="java.lang.String"/>
+  <item pojoName="organizationname" commonName="creator" type="java.lang.String"/>
+  <item pojoName="levelinfo" commonName="title" type="java.lang.String"/>
+  <item pojoName="parentid" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="createdtime" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="createuserid" commonName="content" type="java.lang.String"/>
+  <item pojoName="modifiedtime" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="modifyuserid" commonName="group" type="java.lang.String"/>
+  <item pojoName="deletedtime" commonName="endTime" type="java.util.Date"/>
+  <item pojoName="deleteduserid" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
+  <item pojoName="deletedflag" commonName="" type="java.lang.Byte"/>
+</root>

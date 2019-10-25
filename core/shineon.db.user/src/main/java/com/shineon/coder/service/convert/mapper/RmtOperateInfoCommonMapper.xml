@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="operatename" commonName="parent" type="java.lang.String"/>
+  <item pojoName="belongsystem" commonName="content" type="java.lang.String"/>
+  <item pojoName="pagelocation" commonName="creator" type="java.lang.String"/>
+  <item pojoName="arealocation" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="applicationkey" commonName="title" type="java.lang.String"/>
+  <item pojoName="description" commonName="group" type="java.lang.String"/>
+  <item pojoName="operatetype" commonName="" type="java.lang.Integer"/>
+  <item pojoName="visibility" commonName="" type="java.lang.Integer"/>
+  <item pojoName="operability" commonName="" type="java.lang.Integer"/>
+  <item pojoName="isrequiredfield" commonName="" type="java.lang.Integer"/>
+  <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
+  <item pojoName="reserved2" commonName="thumb" type="java.lang.String"/>
+</root>
