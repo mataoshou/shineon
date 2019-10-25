@@ -23,10 +23,6 @@ public class SysCache {
 
     CacheItemCommonUtil commonUtil = new CacheItemCommonUtil();
 
-//    public SysCache()
-//    {
-//        addCache(CacheConstant.CACHE_SYS_USER);
-//    }
 
     ConcurrentHashMap<String, CacheItem> mg_cache = new  ConcurrentHashMap<String, CacheItem>();
 
@@ -89,30 +85,9 @@ public class SysCache {
     }
 
 
-    public void addCache(CommonItem commonItem)
-    {
-        String cacheKey =commonUtil.toPojo(commonItem).getName();
-        CacheItem item = mg_cache.get(cacheKey);
-
-        if(item==null)
-        {
-            addCache(cacheKey);
-            log.info("添加缓存："+cacheKey);
-        }
-
-
-        item.setLastModified(System.currentTimeMillis());
-
-        log.info("更新缓存时间："+cacheKey);
-
-        mg_cache.put(cacheKey,item);
-
-    }
-
 
     public void cleanOverTime()
     {
-
         TypeConvert convert =new TypeConvert();
         List<String> keys = convert.keytoList(mg_cache);
 

@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClassBuildUtil {
 
@@ -16,6 +18,14 @@ public class ClassBuildUtil {
     String tab ="	";
 
     String classConetent;
+
+    List<MethodUtil> method_list = new ArrayList();
+
+
+    public void classInit(String className,String packageName,boolean isclass,String... imports)
+    {
+        classInit(className,null,null,packageName,null,isclass,imports);
+    }
 
     /**
      * 初始化class类
@@ -84,13 +94,27 @@ public class ClassBuildUtil {
         classLine +="{";
         content += getContent(tab_no, tab,classLine);
 
-                content += "##1\r";
+                content += "##1";
 
         content += getContent(tab_no,tab, String.format("}"));
 
         classConetent = content;
 
         tab_no++;
+    }
+
+
+
+    public void addMehod(MethodUtil methodUtil)
+    {
+        if(method_list==null)
+        {
+            method_list = new ArrayList();
+        }
+        if(methodUtil!=null)
+        {
+            method_list.add(methodUtil);
+        }
     }
 
 
@@ -103,6 +127,20 @@ public class ClassBuildUtil {
      */
     public String finish()
     {
+        if(innerContent==null||innerContent.length()==0)
+        {
+            innerContent ="";
+
+            if(method_list.size()>0)
+            {
+                for(MethodUtil method : method_list)
+                {
+                    innerContent += method.methodToString();
+                }
+            }
+
+        }
+
         classConetent = classConetent.replace("##1",innerContent);
         return classConetent;
     }
