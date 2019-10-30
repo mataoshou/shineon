@@ -41,9 +41,9 @@ public class CommonData {
     private Date endTime;
 
 
-    private  long begin;
+    private  Long begin;
 
-    private long end;
+    private Long end;
 
 
     public String getId() {
@@ -158,19 +158,19 @@ public class CommonData {
         this.endTime = endTime;
     }
 
-    public long getBegin() {
+    public Long getBegin() {
         return begin;
     }
 
-    public void setBegin(long begin) {
+    public void setBegin(Long begin) {
         this.begin = begin;
     }
 
-    public long getEnd() {
+    public Long getEnd() {
         return end;
     }
 
-    public void setEnd(long end) {
+    public void setEnd(Long end) {
         this.end = end;
     }
 }

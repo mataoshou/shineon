@@ -1,4 +1,9 @@
 
-document.write('<script src="./config/config.sys.js"></script>');
+if(rootPath==null||rootPath==undefined)
+{
+	 rootPath ="";
+}
+
+document.write('<script src="'+rootPath+'/config/config.sys.js"></script>');
 
 

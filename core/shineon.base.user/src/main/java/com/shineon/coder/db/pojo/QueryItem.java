@@ -1,6 +1,7 @@
 package com.shineon.coder.db.pojo;
 
 import com.alibaba.fastjson.JSONObject;
+import com.shineon.coder.kernel.constant.cache.CacheConstant;
 import com.shineon.coder.kernel.util.Md5Util;
 
 import java.util.Date;
@@ -89,7 +90,7 @@ public class QueryItem {
     }
 
     public String toCode() throws Exception {
-        return  Md5Util.digest(this.toJsonString());
+        return  CacheConstant.CACHE_LIST_PRE + "." + Md5Util.digest(this.toJsonString());
     }
 
 

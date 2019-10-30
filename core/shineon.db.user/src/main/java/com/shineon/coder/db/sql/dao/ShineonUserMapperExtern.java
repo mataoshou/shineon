@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.ShineonUser;;import java.util.List;;public interface ShineonUserMapperExtern {	 List<ShineonUser> list(String where,String order);}

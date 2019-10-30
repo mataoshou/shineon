@@ -20,8 +20,8 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 
-		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,null,true,
-				String.format("%s.%s;", ConvertsConstant.BASE_PACKAGE,baseName));
+		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,new String[]{"Service"},true,
+				String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Service");
 
 
 		File classFile = new File(root,fileName);

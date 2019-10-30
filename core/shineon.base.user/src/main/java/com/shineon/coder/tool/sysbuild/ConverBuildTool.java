@@ -12,10 +12,10 @@ public class ConverBuildTool {
      */
     public static void main(String[] args) throws Exception {
         ConvertBuild tool = new ConvertBuild();
-        tool.buildConvert();
+//        tool.buildConvert();
 
 
         //全部重新生成
-//        tool.overrideBuild();
+        tool.overrideBuild();
     }
 }

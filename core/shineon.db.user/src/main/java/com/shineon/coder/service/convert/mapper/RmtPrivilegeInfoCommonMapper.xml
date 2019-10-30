@@ -4,8 +4,8 @@
   <item pojoName="id" commonName="id" type="java.lang.String"/>
   <item pojoName="privilegename" commonName="parent" type="java.lang.String"/>
   <item pojoName="description" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="showorder" commonName="sortIndex" type="java.lang.Integer"/>
   <item pojoName="reserved2" commonName="creator" type="java.lang.String"/>
   <item pojoName="operategroup" commonName="group" type="java.lang.String"/>
-  <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
 </root>

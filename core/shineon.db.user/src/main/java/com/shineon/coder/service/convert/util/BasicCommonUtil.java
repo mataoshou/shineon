@@ -11,7 +11,7 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class BasicCommonUtil implements CommonItemUtils {
+public class BasicCommonUtil implements CommonItemUtils<String> {
 
     private CommonData toCommonData(String pojo) {
         CommonData data = new CommonData();

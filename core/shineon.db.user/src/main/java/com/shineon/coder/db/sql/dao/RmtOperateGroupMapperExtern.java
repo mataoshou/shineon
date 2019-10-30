@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtOperateGroup;;import java.util.List;;public interface RmtOperateGroupMapperExtern {	 List<RmtOperateGroup> list(String where,String order);}

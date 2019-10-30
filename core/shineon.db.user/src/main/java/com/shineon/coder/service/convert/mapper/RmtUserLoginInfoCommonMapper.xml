@@ -5,7 +5,7 @@
   <item pojoName="userid" commonName="parent" type="java.lang.String"/>
   <item pojoName="loginip" commonName="title" type="java.lang.String"/>
   <item pojoName="lasttimelogin" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="lasttimelogout" commonName="sortIndex" type="java.lang.Integer"/>
   <item pojoName="reserved2" commonName="creator" type="java.lang.String"/>
-  <item pojoName="lasttimelogout" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
 </root>

@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtDepartmentChart;;import java.util.List;;public interface RmtDepartmentChartMapperExtern {	 List<RmtDepartmentChart> list(String where,String order);}

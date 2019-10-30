@@ -22,6 +22,10 @@ public class CommonData {
 
     private Short status3;
 
+    private Short status4;
+
+    private Integer sortIndex;
+
     private String title ;
 
     private String ptitle;
@@ -170,5 +174,21 @@ public class CommonData {
 
     public void setEnd(long end) {
         this.end = end;
+    }
+
+    public Short getStatus4() {
+        return status4;
+    }
+
+    public void setStatus4(Short status4) {
+        this.status4 = status4;
+    }
+
+    public Integer getSortIndex() {
+        return sortIndex;
+    }
+
+    public void setSortIndex(Integer sortIndex) {
+        this.sortIndex = sortIndex;
     }
 }

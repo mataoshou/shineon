@@ -5,4 +5,4 @@ package com.shineon.coder.service.convert.base ;import java.util.Date;import 
 	public  CommonItem toCommon( List<CacheItem> pojos) {		List<CommonData> result = new ArrayList();		for(CacheItem item : pojos){			result.add(toCommonData(item));		}		return success(result);	}	
 	public CacheItem toPojo( CommonItem item) {		List<CommonData> datas = item.getDatas();		if(datas ==null||datas.size()==0){logger.debug("CommonItem 中data数据为空!!"); return null;}		if(datas.size()>1){logger.debug("CommonItem 中data数据不止一条数据!!"); }		return toPojoData(datas.get(0));	}	
 	public List<CacheItem> toPojoList(  CommonItem item) {		List<CacheItem> result = new ArrayList();			List<CommonData> datas = item.getDatas();			for(CommonData data : datas){				result.add(toPojoData(data));			}			return result;		}		
-}
+}

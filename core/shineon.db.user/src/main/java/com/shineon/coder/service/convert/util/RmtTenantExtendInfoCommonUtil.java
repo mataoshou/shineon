@@ -1,1 +1,1 @@
-package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtTenantExtendInfoCommonBase;public class RmtTenantExtendInfoCommonUtil extends RmtTenantExtendInfoCommonBase {}
+package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtTenantExtendInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtTenantExtendInfoCommonUtil extends RmtTenantExtendInfoCommonBase {}

@@ -3,6 +3,7 @@
 <root>
   <item pojoName="id" commonName="id" type="java.lang.String"/>
   <item pojoName="departmentid" commonName="parent" type="java.lang.String"/>
+  <item pojoName="departmentcode" commonName="sortIndex" type="java.lang.Integer"/>
   <item pojoName="departmentname" commonName="creator" type="java.lang.String"/>
   <item pojoName="organizationid" commonName="content" type="java.lang.String"/>
   <item pojoName="levelinfo" commonName="title" type="java.lang.String"/>
@@ -11,7 +12,6 @@
   <item pojoName="createuserid" commonName="group" type="java.lang.String"/>
   <item pojoName="modifytime" commonName="beginTime" type="java.util.Date"/>
   <item pojoName="modifyuserid" commonName="thumb" type="java.lang.String"/>
-  <item pojoName="departmentcode" commonName="" type="java.lang.Integer"/>
   <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved2" commonName="" type="java.lang.String"/>

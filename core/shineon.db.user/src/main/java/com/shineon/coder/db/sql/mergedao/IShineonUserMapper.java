@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.ShineonUserMapperBase;import com.shineon.coder.db.sql.dao.ShineonUserMapperExtern;public interface IShineonUserMapper extends ShineonUserMapperBase,ShineonUserMapperExtern {}

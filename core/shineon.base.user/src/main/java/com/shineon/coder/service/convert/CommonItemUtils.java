@@ -1,6 +1,5 @@
 package com.shineon.coder.service.convert;
 
-import com.shineon.coder.db.pojo.RmtUserInfo;
 import com.shineon.coder.kernel.constant.CommonItemConstant;
 
 import java.util.List;

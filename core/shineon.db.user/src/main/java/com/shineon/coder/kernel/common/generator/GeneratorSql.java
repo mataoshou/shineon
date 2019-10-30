@@ -124,7 +124,7 @@ public class GeneratorSql {
                 if (!externDaoFile.exists()||isOverride) {
                     ClassBuildUtil classBuildUtil = new ClassBuildUtil();
                     classBuildUtil.classInit(mapperExternFileName, "",null, DBConstant.DB_DAO_PACKAGE, null, false,
-                            String.format("%s.%s;",DBConstant.DB_POJO_PACKAGE, fileName), "java.util.List;");
+                            String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, fileName), "java.util.List");
                     classBuildUtil.addTabContent( String.format(" List<%s> list(String where,String order);", fileName));
                     classBuildUtil.finish(externDaoFile);
                 }

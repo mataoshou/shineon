@@ -21,7 +21,7 @@ public class FeignBuild {
         String className = ClassBuildUtil.firstUpper(feignName) +"Feign";
         String fallbackName = ClassBuildUtil.firstUpper(feignName) +"FeignFallBack";
 
-        String constantName = ClassBuildUtil.firstUpper(feignName) +"Constant";
+        String constantName = ClassBuildUtil.firstUpper(feignName) +"FeignConstant";
 
         String sys = System.getProperty("user.dir");
         File coder = new File(sys, "src\\main\\java\\");

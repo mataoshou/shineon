@@ -9,10 +9,10 @@
   <item pojoName="dutiesname" commonName="ptitle" type="java.lang.String"/>
   <item pojoName="officeaddress" commonName="group" type="java.lang.String"/>
   <item pojoName="mobilephone" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="reserved1" commonName="sortIndex" type="java.lang.Integer"/>
   <item pojoName="officetelephone" commonName="" type="java.lang.String"/>
   <item pojoName="email" commonName="" type="java.lang.String"/>
   <item pojoName="officecode" commonName="" type="java.lang.String"/>
   <item pojoName="description" commonName="" type="java.lang.String"/>
-  <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved2" commonName="" type="java.lang.String"/>
 </root>

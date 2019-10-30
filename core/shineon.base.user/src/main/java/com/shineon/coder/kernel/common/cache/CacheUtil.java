@@ -1,18 +1,13 @@
 package com.shineon.coder.kernel.common.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.shineon.coder.db.pojo.QueryItem;
 import com.shineon.coder.kernel.constant.RedisConstant;
-import com.shineon.coder.kernel.util.Md5Util;
-import com.shineon.coder.kernel.util.SpringUtil;
+import com.shineon.coder.kernel.constant.cache.CacheConstant;
 import com.shineon.coder.service.convert.CommonItem;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
@@ -37,23 +32,22 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
 
 
     /**
-     * 创建 缓存key
-     * @param prev
-     * @param last
-     * @param item
-     * @return
+     * 创建 单个数据的缓存 缓存key
      * @throws Exception
      */
     public String createCacheKey(String prev, String last, String id) throws Exception {
-        String cacheKey = prev + "." + id+"." +last;
-
+        String cacheKey = prev + "." + CacheConstant.CACHE_POJO_PRE +"." + id+"." +last;
 
         return cacheKey;
     }
 
-
+    /**
+     * 创建 列表数据的缓存 缓存key
+     * @throws Exception
+     */
     public String createCacheKey(String prev, String last, QueryItem item) throws Exception {
-        return createCacheKey(prev,last, item.toCode());
+        String cacheKey = prev + "." + item.toCode()+"." +last;
+        return cacheKey;
     }
 
 
@@ -63,7 +57,6 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     /**
      * 加锁
      * @param key
-     * @param redisLock
      * @return
      */
     public boolean lock(String key)
@@ -100,7 +93,7 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     /**
      * 设置缓存数据 没有过期时间
      * @param key
-     * @param value
+     * @param item
      */
     public void set(String key,CommonItem item)
     {
@@ -119,18 +112,6 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     }
 
 
-//    public void set()
-
-    /**
-     * 删除缓存数据
-     * @param key
-     * @return
-     */
-    public boolean remove(Object key)
-    {
-        return redisTemplate.delete(key);
-
-    }
 
     /**
      * 延长存活时间
@@ -151,8 +132,10 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     public CommonItem get(String key)
     {
         System.out.println(key);
-        String tmp = redisTemplate.opsForValue().get(key).toString();
-        CommonItem item = JSON.parseObject(tmp,CommonItem.class);
+        Object value = redisTemplate.opsForValue().get(key);
+
+        if(value==null)return null;
+        CommonItem item = JSON.parseObject(value.toString(),CommonItem.class);
 
         return item;
     }
@@ -168,6 +151,15 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
         List keys = new ArrayList<>(set);
 
         return keys;
+    }
+
+    /**
+     * 获取符合条件的所有缓存key
+     * @param pattern
+     */
+    public void deleteKeys(String pattern)
+    {
+       redisTemplate.delete(redisTemplate.keys(pattern));
     }
 
 

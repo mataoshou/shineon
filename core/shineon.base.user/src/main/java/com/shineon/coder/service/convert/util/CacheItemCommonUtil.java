@@ -1,1 +1,1 @@
-package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.CacheItemCommonBase;;public class CacheItemCommonUtil extends CacheItemCommonBase {}
+package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.CacheItemCommonBase;import org.springframework.stereotype.Service;@Servicepublic class CacheItemCommonUtil extends CacheItemCommonBase {}

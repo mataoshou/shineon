@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtOrganizationChart;;import java.util.List;;public interface RmtOrganizationChartMapperExtern {	 List<RmtOrganizationChart> list(String where,String order);}

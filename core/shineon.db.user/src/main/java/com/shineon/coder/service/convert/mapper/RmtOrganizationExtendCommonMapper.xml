@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<root>
-  <item pojoName="id" commonName="id" type="java.lang.String"/>
-  <item pojoName="organizationid" commonName="parent" type="java.lang.String"/>
-  <item pojoName="organizationaddress" commonName="creator" type="java.lang.String"/>
-</root>

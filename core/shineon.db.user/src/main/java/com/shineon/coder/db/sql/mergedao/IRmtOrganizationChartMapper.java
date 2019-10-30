@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtOrganizationChartMapperBase;import com.shineon.coder.db.sql.dao.RmtOrganizationChartMapperExtern;public interface IRmtOrganizationChartMapper extends RmtOrganizationChartMapperBase,RmtOrganizationChartMapperExtern {}

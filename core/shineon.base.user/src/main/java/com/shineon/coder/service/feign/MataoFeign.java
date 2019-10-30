@@ -1,4 +1,4 @@
-package com.shineon.coder.service.feign ;import lombok.extern.slf4j.Slf4j;import com.shineon.coder.service.convert.CommonItem;import org.springframework.cloud.openfeign.FeignClient;import org.springframework.web.bind.annotation.RequestMapping;import com.shineon.coder.kernel.constant.feign.MataoConstant;@FeignClient(name = MataoConstant.FEIGN_SERVER_NAME,fallback = MataoFeignFallBack.class)public interface MataoFeign {	
-	@RequestMapping(MataoConstant. FEIGN_GET)	CommonItem get();	
-	@RequestMapping(MataoConstant. FEIGN_EDIT)	CommonItem edit();	
-	@RequestMapping(MataoConstant. FEIGN_LIST)	CommonItem list();}
+package com.shineon.coder.service.feign ;import lombok.extern.slf4j.Slf4j;import com.shineon.coder.service.convert.CommonItem;import org.springframework.cloud.openfeign.FeignClient;import org.springframework.web.bind.annotation.RequestMapping;import com.shineon.coder.kernel.constant.feign.MataoFeignConstant;@FeignClient(name = MataoFeignConstant.FEIGN_SERVER_NAME,fallback = MataoFeignFallBack.class)public interface MataoFeign {	
+	@RequestMapping(MataoFeignConstant. FEIGN_GET)	CommonItem get(CommonItem item);	
+	@RequestMapping(MataoFeignConstant. FEIGN_EDIT)	CommonItem edit(CommonItem item);	
+	@RequestMapping(MataoFeignConstant. FEIGN_LIST)	CommonItem list(CommonItem item);}

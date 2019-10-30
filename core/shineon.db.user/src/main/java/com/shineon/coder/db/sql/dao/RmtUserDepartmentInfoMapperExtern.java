@@ -1,1 +1,1 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtUserDepartmentInfo;;import java.util.List;;public interface RmtUserDepartmentInfoMapperExtern {	 List<RmtUserDepartmentInfo> list(String where,String order);}
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtUserDepartmentInfo;import java.util.List;public interface RmtUserDepartmentInfoMapperExtern {	 List<RmtUserDepartmentInfo> list(String where,String order);}

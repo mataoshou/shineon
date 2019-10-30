@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.ShineonBaseZoneMapperBase;import com.shineon.coder.db.sql.dao.ShineonBaseZoneMapperExtern;public interface IShineonBaseZoneMapper extends ShineonBaseZoneMapperBase,ShineonBaseZoneMapperExtern {}

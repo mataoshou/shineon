@@ -20,8 +20,8 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 
-		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,null,true,
-				String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName));
+		classBuildUtil.classInit(className,baseName, null, ConvertsConstant.UTIL_PACKAGE ,new String[]{"Service"},true,
+				String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Service");
 
 
 		File classFile = new File(root,fileName);
@@ -42,7 +42,7 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 		classBuildUtil.classInit(className,null,
-				new String[]{"CommonItemUtils"},ConvertsConstant.BASE_PACKAGE,null,true,
+				new String[]{String.format("CommonItemUtils<%s>",pojo)}, ConvertsConstant.BASE_PACKAGE,null,true,
 				"java.util.Date", String.format("%s.%s", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
 				"java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
 				ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
@@ -131,7 +131,7 @@ public class BuildClass {
 		classBuildUtil.addTabLeftContent(String.format("}"));
 	}
 
-	public void toCommon(String pojoName ,ClassBuildUtil classBuildUtil)
+	public void toCommon(String pojoName , ClassBuildUtil classBuildUtil)
 	{
 
 		String methodName = "toCommon";

@@ -1,1 +1,1 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtActiorInfo;;import java.util.List;;public interface RmtActiorInfoMapperExtern {	 List<RmtActiorInfo> list(String where,String order);}
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtActiorInfo;import java.util.List;public interface RmtActiorInfoMapperExtern {	 List<RmtActiorInfo> list(String where,String order);}

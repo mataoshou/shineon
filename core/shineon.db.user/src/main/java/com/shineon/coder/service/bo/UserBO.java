@@ -26,7 +26,7 @@ public class UserBO {
     {
         SqlWhere where =new SqlWhere();
         where.add2(RmtUserInfoProperty.deletedFlagProperty,0);
-        return userMapper.list(where.toString(),null);
+        return userMapper.list(null,null);
     }
 
     public void add(RmtUserInfo user)

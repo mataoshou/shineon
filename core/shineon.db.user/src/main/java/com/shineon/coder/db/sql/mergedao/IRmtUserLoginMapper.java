@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtUserLoginMapperBase;import com.shineon.coder.db.sql.dao.RmtUserLoginMapperExtern;public interface IRmtUserLoginMapper extends RmtUserLoginMapperBase,RmtUserLoginMapperExtern {}

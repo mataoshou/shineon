@@ -4,7 +4,7 @@
   <item pojoName="id" commonName="id" type="java.lang.String"/>
   <item pojoName="userid" commonName="parent" type="java.lang.String"/>
   <item pojoName="departmentid" commonName="creator" type="java.lang.String"/>
+  <item pojoName="showorder" commonName="sortIndex" type="java.lang.Integer"/>
   <item pojoName="reserved2" commonName="title" type="java.lang.String"/>
-  <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
 </root>

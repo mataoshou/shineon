@@ -1,1 +1,1 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtOrganizationExtendInfo;;import java.util.List;;public interface RmtOrganizationExtendInfoMapperExtern {	 List<RmtOrganizationExtendInfo> list(String where,String order);}
+package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtOrganizationExtendInfo;import java.util.List;public interface RmtOrganizationExtendInfoMapperExtern {	 List<RmtOrganizationExtendInfo> list(String where,String order);}

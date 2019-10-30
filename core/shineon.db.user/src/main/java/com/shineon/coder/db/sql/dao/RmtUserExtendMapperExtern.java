@@ -1,1 +1,0 @@
-package com.shineon.coder.db.sql.dao ;import com.shineon.coder.db.sql.pojo.RmtUserExtend;;import java.util.List;;public interface RmtUserExtendMapperExtern {	 List<RmtUserExtend> list(String where,String order);}
