@@ -46,12 +46,12 @@ public class UserTask {
     }
 
 
-    @Scheduled(fixedRate = 500)
-    @Async(PoolConstant.POOL_SCHEDULE)
-    public void sendMessage() throws Exception {
-        log.info("send Message matao");
-        messageClient.output().send(MessageBuilder.withPayload(SysCache.single.getCommonItem("matao").toJsonString()).build());
-    }
+//    @Scheduled(fixedRate = 500)
+//    @Async(PoolConstant.POOL_SCHEDULE)
+//    public void sendMessage() throws Exception {
+//        log.info("send Message matao");
+//        messageClient.output().send(MessageBuilder.withPayload(SysCache.single.getCommonItem("matao").toJsonString()).build());
+//    }
 
 
 }
