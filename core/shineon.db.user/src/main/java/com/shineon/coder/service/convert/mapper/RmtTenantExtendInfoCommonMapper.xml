@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="id" commonName="sortIndex" type="java.lang.Integer"/>
   <item pojoName="tenantid" commonName="parent" type="java.lang.String"/>
   <item pojoName="tenantname" commonName="content" type="java.lang.String"/>

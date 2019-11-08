@@ -6,6 +6,8 @@ package com.shineon.coder.kernel.constant.message;
 public class MessageConstant {
 
 
+    static public final Integer MESSAGE_RETRY_COUNT = 5;//重发次数
+
    static public final Long MESSAGE_RETYR_INTERVAL =1000*60L;//一分钟
 
     //回复

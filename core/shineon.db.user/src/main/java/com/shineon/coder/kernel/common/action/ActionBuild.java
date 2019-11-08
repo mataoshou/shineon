@@ -17,6 +17,10 @@ public class ActionBuild {
     Logger log = LoggerFactory.getLogger(getClass());
 
     public void build(String actionName,Class convertClass,Class pojoClass) throws IOException {
+        build(actionName,convertClass,pojoClass,ActionConstant.ACTION_METHOD);
+    }
+
+    public void build(String actionName,Class convertClass,Class pojoClass,String[] methods) throws IOException {
         if(actionName.endsWith(".java"))
         {
             actionName = ClassBuildUtil.getFileName(actionName);
@@ -67,7 +71,7 @@ public class ActionBuild {
 
         constantClassBuild.classInit(constantName,null,null, ActionConstant.ACTION_CONSTANT_PACKAGE,null,true,null);
 
-        for(String method: ActionConstant.ACTION_METHOD)
+        for(String method: methods)
         {
             constantClassBuild.addTabContent("\r\n");
             constantClassBuild.addTabContent(String.format("public static final String ACTION_%s =\"/%s/%s\";",
@@ -91,7 +95,7 @@ public class ActionBuild {
         dtoClassBuild.addTabContent("@Autowired");
         dtoClassBuild.addTabContent(String.format("%sFeign service;",baseName));
 
-        for(String method: ActionConstant.ACTION_METHOD)
+        for(String method: methods)
         {
             dtoClassBuild.addTabContent("\r\n");
             dtoClassBuild.addTabContent(String.format("public %s %s(QueryItem item){return null;}",pojoClass.getSimpleName(),method.toLowerCase()));
@@ -125,7 +129,7 @@ public class ActionBuild {
         actionClassBuild.addTabContent("@Autowired");
         actionClassBuild.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
 
-        for(String method: ActionConstant.ACTION_METHOD)
+        for(String method: methods)
         {
             actionClassBuild.addTabContent("\r\n");
             actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",constantName,method.toUpperCase()));

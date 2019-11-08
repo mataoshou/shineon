@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="id" commonName="id" type="java.lang.String"/>
   <item pojoName="operatename" commonName="parent" type="java.lang.String"/>
   <item pojoName="operatetype" commonName="sortIndex" type="java.lang.Integer"/>

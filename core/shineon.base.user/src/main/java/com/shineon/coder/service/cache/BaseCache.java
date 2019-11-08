@@ -102,7 +102,7 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
         try {
             if (util.lock(keyLock)) {
                 util.delete(keyData);
-                Log.info("添加缓存数据：" + keyData);
+                log.info("添加缓存数据：" + keyData);
 
                 List<String> userKeys = new ArrayList();
 
