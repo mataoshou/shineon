@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="usercode" commonName="creator" type="java.lang.String"/>
+  <item pojoName="username" commonName="parent" type="java.lang.String"/>
+  <item pojoName="userpassword" commonName="group" type="java.lang.String"/>
+  <item pojoName="displayname" commonName="title" type="java.lang.String"/>
+  <item pojoName="userthumb" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="usermark" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="createdtime" commonName="createTime" type="java.util.Date"/>
+  <item pojoName="modifiedtime" commonName="beginTime" type="java.util.Date"/>
+  <item pojoName="deletedtime" commonName="endTime" type="java.util.Date"/>
+  <item pojoName="workcode" commonName="" type="java.lang.Integer"/>
+  <item pojoName="oganizationcode" commonName="" type="java.lang.Integer"/>
+  <item pojoName="departmentcode" commonName="" type="java.lang.Integer"/>
+  <item pojoName="deletedflag" commonName="" type="java.lang.Byte"/>
+  <item pojoName="limitedtime" commonName="" type="java.util.Date"/>
+  <item pojoName="logincount" commonName="" type="java.lang.Byte"/>
+  <item pojoName="selectcondition" commonName="" type="java.lang.Byte"/>
+  <item pojoName="systemuserflag" commonName="" type="java.lang.Byte"/>
+</root>

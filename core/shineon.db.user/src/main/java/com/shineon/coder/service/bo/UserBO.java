@@ -16,16 +16,16 @@ public class UserBO {
     IRmtUserInfoMapper userMapper;
 
 
-    public RmtUserInfo getUser(String id)
+    public RmtUserInfo get(String id)
     {
         return userMapper.selectByPrimaryKey(id);
     }
 
 
-    public List<RmtUserInfo> list()
+    public List<RmtUserInfo> list(int status)
     {
         SqlWhere where =new SqlWhere();
-        where.add2(RmtUserInfoProperty.deletedFlagProperty,0);
+        where.add2(RmtUserInfoProperty.deletedFlagProperty,status);
         return userMapper.list(null,null);
     }
 

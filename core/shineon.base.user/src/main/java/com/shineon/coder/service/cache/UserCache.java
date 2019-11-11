@@ -1,23 +1,17 @@
 package com.shineon.coder.service.cache;
 
-import com.shineon.coder.db.pojo.CacheItem;
 import com.shineon.coder.db.pojo.QueryItem;
 import com.shineon.coder.db.pojo.RmtUserInfo;
-import com.shineon.coder.kernel.constant.cache.CacheConstant;
 import com.shineon.coder.kernel.constant.cache.UserCacheConstant;
-import com.shineon.coder.kernel.util.SpringUtil;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.util.QueryItemCommonUtil;
 import com.shineon.coder.service.convert.util.RmtUserInfoCommonUtil;
-import com.shineon.coder.service.dto.UserDTO;
 import com.shineon.coder.service.feign.UserFeign;
 import com.shineon.coder.service.mq.client.UserNoticeMessageClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @Slf4j

@@ -18,11 +18,23 @@
 				<option value="2">Feign</option>
 				<option value="3">数据库构建</option>
 				<option value="4">convert构建</option>
+				<option value="5">缓存构建</option>
 			</select>
 		</div>
 		
 		<div class="sys-center-show" style="background: #00F7DE;height: 180px; width: 700px;margin-left: 400px;margin-bottom:5px;padding: 30px;padding-top: 10px;">
 			<div style="background: #C0C4CC;width: 690px;height: 30px;; padding-left: 20px;margin-bottom: 10px;padding-top: 4px;">选择生成参数</div>
+			
+			
+			<div class="dto-content">
+				<span style="width: 200px;display: inline-block;height: 30px;"> dto类选择:  </span>
+				<select style="width: 350px;height: 30px;" class="sys-dto">
+					
+					
+				</select>
+			</div>
+
+			
 			<div class="util-content">
 				<span style="width: 200px;display: inline-block;height: 30px;"> commonUtils类选择:  </span>
 				<select style="width: 350px;height: 30px;" class="sys-util">
@@ -85,9 +97,9 @@
 				MT.change_center(val);
 			}
 			
-			MT.selects = [".sys-util",".sys-pojo",".sys-name"];
-			MT.urls = ["/sys/list/commonUtil","/sys/list/pojo","/sys/list/sysName"];
-			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/convert"]
+			MT.selects = [".sys-dto",".sys-util",".sys-pojo",".sys-name"];
+			MT.urls = ["/sys/list/dto","/sys/list/commonUtil","/sys/list/pojo","/sys/list/sysName"];
+			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/convert","/sys/oper/cache"]
 			
 			MT.init_center_show = function(val)
 			{
@@ -112,10 +124,11 @@
 				
 				var req ={};
 				req.name = $(".build-name").val();
-				req.className = $(".sys-util").val();
+				req.commonName = $(".sys-util").val();
 				req.pojoName = $(".sys-pojo").val();
 				req.sysName = $(".sys-name").val();
 				req.methods = $(".class-method").val();
+				req.dtoName = $(".sys-dto").val();
 				
 				MT.api(MT.build_urls[val/1-1],function(data){
 					
@@ -147,6 +160,7 @@
 					$(".pojo-content").css("display","block");
 					$(".sys-content").css("display","none");
 					$(".method-content").css("display","block");
+					$(".dto-content").css("display","none");
 				}
 				else  if(val==2)
 				{
@@ -154,6 +168,7 @@
 					$(".pojo-content").css("display","none");
 					$(".sys-content").css("display","block");
 					$(".method-content").css("display","none");
+					$(".dto-content").css("display","none");
 				}
 				else  if(val==3)
 				{
@@ -161,6 +176,7 @@
 					$(".pojo-content").css("display","none");
 					$(".sys-content").css("display","none");
 					$(".method-content").css("display","none");
+					$(".dto-content").css("display","none");
 				}
 				else  if(val==4)
 				{
@@ -168,6 +184,15 @@
 					$(".pojo-content").css("display","none");
 					$(".sys-content").css("display","none");
 					$(".method-content").css("display","none");
+					$(".dto-content").css("display","none");
+				}
+				else  if(val==5)
+				{
+					$(".util-content").css("display","block");
+					$(".pojo-content").css("display","block");
+					$(".sys-content").css("display","none");
+					$(".method-content").css("display","none");
+					$(".dto-content").css("display","none");
 				}
 			}
 			

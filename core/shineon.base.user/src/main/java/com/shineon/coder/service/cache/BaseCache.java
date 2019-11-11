@@ -1,12 +1,11 @@
 package com.shineon.coder.service.cache;
 
-import com.esotericsoftware.minlog.Log;
 import com.shineon.coder.db.pojo.QueryItem;
 import com.shineon.coder.kernel.common.cache.CacheUtil;
 import com.shineon.coder.kernel.constant.cache.CacheConstant;
+import com.shineon.coder.service.convert.BasicCommonUtil;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.CommonItemUtils;
-import com.shineon.coder.service.dto.BasicDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -29,7 +28,7 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
     CacheUtil util;
 
     @Autowired
-    BasicDTO basicDTO;
+    BasicCommonUtil basicCommonUtil;
 
     String cachePre ="";
     String cacheLast ="";
@@ -117,7 +116,7 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
                 }
 
 
-                util.set(keyData,basicDTO.toCommon(userKeys).toJsonString(),CacheConstant.CACHE_LIVE);
+                util.set(keyData,basicCommonUtil.toCommon(userKeys).toJsonString(),CacheConstant.CACHE_LIVE);
 
                 success(keyData,SysCache.single.getCommonItem(keyData).toJsonString());
 
@@ -230,7 +229,12 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
      */
     public POJO get(QueryItem qitem) throws Exception {
         CommonItem commonItem = util.get(getKey(qitem));
-        List<String> ukeys = basicDTO.toPojoList(commonItem);
+        List<String> ukeys = null;
+        if(commonItem!=null)
+        {
+            ukeys = basicCommonUtil.toPojoList(commonItem);
+        }
+
         if(ukeys==null)
         {
             log.info("缓存不存在，需要从数据库查询:" + qitem.toJsonString());
@@ -278,7 +282,7 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
             return pojos;
         }
         else {
-            List<String> ukeys = basicDTO.toPojoList(item);
+            List<String> ukeys = basicCommonUtil.toPojoList(item);
             return getListCache(ukeys);
         }
     }

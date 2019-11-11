@@ -3,6 +3,7 @@ package com.shineon.coder.action.sys;
 import com.shineon.coder.db.pojo.SimpleItem;
 import com.shineon.coder.kernel.common.convert.ConvertTools;
 import com.shineon.coder.kernel.constant.ConvertsConstant;
+import com.shineon.coder.kernel.constant.DTOConstant;
 import com.shineon.coder.kernel.constant.ServerConstant;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.SimpleCommonUtil;
@@ -25,6 +26,17 @@ public class SysClassListController {
     SimpleCommonUtil commonUtil;
 
 
+    @RequestMapping("sys/list/dto")
+    public CommonItem listDTO() throws IOException {
+
+        File root =getRoot(DTOConstant.DTO_PACKAGE);
+
+        log.info(root.getPath());
+
+        List<SimpleItem> names = getFileNames(root,DTOConstant.DTO_PACKAGE);
+
+        return commonUtil.toCommon(names);
+    }
 
     @RequestMapping("sys/list/commonUtil")
     public CommonItem listCommonUtils() throws IOException {
@@ -33,7 +45,7 @@ public class SysClassListController {
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root,ConvertsConstant.UTIL_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, ConvertsConstant.UTIL_PACKAGE);
 
         return commonUtil.toCommon(names);
     }
@@ -66,12 +78,12 @@ public class SysClassListController {
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root,ConvertsConstant.POJO_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, ConvertsConstant.POJO_PACKAGE);
 
         return commonUtil.toCommon(names);
     }
 
-    public List<SimpleItem> getFileNames(File file,String pre)
+    public List<SimpleItem> getFileNames(File file, String pre)
     {
         File[] fs = file.listFiles();
         List<SimpleItem> names = new ArrayList();

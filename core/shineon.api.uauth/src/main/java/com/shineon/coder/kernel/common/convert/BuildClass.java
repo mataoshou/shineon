@@ -20,8 +20,8 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 
-		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,null,true,
-				String.format("%s.%s;", ConvertsConstant.BASE_PACKAGE,baseName));
+		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,new String[]{"Service"},true,
+				String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Service");
 
 
 		File classFile = new File(root,fileName);
@@ -42,8 +42,8 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 		classBuildUtil.classInit(className,null,
-				new String[]{"CommonItemUtils"},ConvertsConstant.BASE_PACKAGE,null,true,
-				"java.util.Date;", String.format("%s.%s;", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
+				new String[]{String.format("CommonItemUtils<%s>",pojo)},ConvertsConstant.BASE_PACKAGE,null,true,
+				"java.util.Date", String.format("%s.%s", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
 				"java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
 				ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
 				ConvertsConstant.CONVERT_PACKAGE+".CommonItem",

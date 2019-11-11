@@ -1,14 +1,11 @@
 package com.shineon.coder.service.task;
 
 import com.shineon.coder.kernel.constant.PoolConstant;
-import com.shineon.coder.service.cache.SysCache;
 import com.shineon.coder.service.cache.UserCache;
-import com.shineon.coder.service.convert.CommonItem;
-import com.shineon.coder.service.dto.UserDTO;
+import com.shineon.coder.service.dto.UserDTO1;
 import com.shineon.coder.service.mq.client.UserNoticeMessageClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -27,7 +24,7 @@ public class UserTask {
     UserCache userCache;
 
     @Autowired
-    UserDTO dto;
+    UserDTO1 dto;
 
     @Scheduled(fixedRate = 1000*10)
     @Async(PoolConstant.POOL_SCHEDULE)

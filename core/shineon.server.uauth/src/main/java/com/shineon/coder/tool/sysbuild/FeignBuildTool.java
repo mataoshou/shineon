@@ -8,7 +8,11 @@ import java.io.IOException;
 public class FeignBuildTool {
 
     public static void main(String[] args) throws IOException {
+
         FeignBuild feignBuild =new FeignBuild();
-        feignBuild.build("matao", ServerConstant.SHINEON_DB_USER);
+        feignBuild.build("user", ServerConstant.SHINEON_BASE_USER);
+
+
+
     }
 }

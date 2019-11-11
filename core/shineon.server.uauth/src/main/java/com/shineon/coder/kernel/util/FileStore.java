@@ -4,6 +4,10 @@ import java.io.*;
 
 public class FileStore
 {
+
+	public static String getContent(File f) throws IOException {
+		return getContent(f,"UTF-8");
+	}
 	//获取文章内容
 	public static String getContent(File f,String charset) throws IOException {
 		if(f.exists())
@@ -30,7 +34,11 @@ public class FileStore
 		}
 		return null;
 	}
-	
+
+
+	public static void putString(File f,String str){
+		putString(f,str,"UTF-8");
+	}
 	public static void putString(File f,String str,String charset)
 	{
 //		if(f.exists())

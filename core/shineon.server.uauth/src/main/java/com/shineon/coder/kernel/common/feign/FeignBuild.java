@@ -2,18 +2,21 @@ package com.shineon.coder.kernel.common.feign;
 
 import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.ServerConstant;
-import com.shineon.coder.kernel.constant.action.ActionConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 
-@Slf4j
 public class FeignBuild {
 
+    Logger log = LoggerFactory.getLogger(getClass());
     public void build(String feignName,String serverName) throws IOException {
+        build(feignName,serverName, FeignConstant.FEIGN_METHOD);
+    }
+    public void build(String feignName,String serverName,String[] methods) throws IOException {
         feignName = ClassBuildUtil.getFileName(feignName);
 
         String className = ClassBuildUtil.firstUpper(feignName) +"Feign";
@@ -58,7 +61,7 @@ public class FeignBuild {
 
         constantClassBuild.addTabContent("\r\n");
         constantClassBuild.addTabContent(String.format("public static final String FEIGN_SERVER_NAME =\"%s\";",serverName));
-        for(String method: ActionConstant.ACTION_METHOD)
+        for(String method: methods)
         {
             constantClassBuild.addTabContent("\r\n");
             constantClassBuild.addTabContent(String.format("public static final String FEIGN_%s =\"/%s/%s\";",
@@ -79,11 +82,11 @@ public class FeignBuild {
                 "org.springframework.web.bind.annotation.RequestMapping",
                 FeignConstant.FEIGN_CONSTANT_PACKAGE +"." +constantName);
 
-        for(String method: FeignConstant.FEIGN_METHOD)
+        for(String method: methods)
         {
             feignClassBuild.addTabContent("\r\n");
             feignClassBuild.addTabContent(String.format("@RequestMapping(%s. FEIGN_%s)",constantName,method.toUpperCase()));
-            feignClassBuild.addTabContent(String.format("CommonItem %s();",method.toLowerCase()));
+            feignClassBuild.addTabContent(String.format("CommonItem %s(CommonItem item);",method.toLowerCase()));
         }
         feignClassBuild.finish(feignFile);
 
@@ -99,11 +102,11 @@ public class FeignBuild {
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.stereotype.Component",
                 FeignConstant.FEIGN_CONSTANT_PACKAGE +"." +constantName);
 
-        for(String method: FeignConstant.FEIGN_METHOD)
+        for(String method: methods)
         {
             backClassBuild.addTabContent("\r\n");
             backClassBuild.addTabContent(String.format("@Override"));
-            backClassBuild.addTabContent(String.format("public CommonItem %s(){return fail(%s.FEIGN_SERVER_NAME);}",method.toLowerCase(),constantName));
+            backClassBuild.addTabContent(String.format("public CommonItem %s(CommonItem item){return fail(%s.FEIGN_SERVER_NAME);}",method.toLowerCase(),constantName));
         }
         backClassBuild.finish(fallBackFile);
     }

@@ -1,8 +1,8 @@
 package com.shineon.coder.action;
 
 import com.shineon.coder.kernel.constant.SysConstant;
+import com.shineon.coder.service.convert.BasicCommonUtil;
 import com.shineon.coder.service.convert.CommonItem;
-import com.shineon.coder.service.dto.BasicDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ActionExceptionHandler {
 
     @Autowired
-    BasicDTO dto;
+    BasicCommonUtil commonUtil;
 
     Logger logger = LoggerFactory.getLogger(SysConstant.CURRENT_SYS_NAME);
     @ResponseBody
@@ -26,6 +26,6 @@ public class ActionExceptionHandler {
         logger.info(String.format("[%s]服务异常：%s (%s)", SysConstant.CURRENT_SYS_NAME,ex.getMessage(), ex.getStackTrace()[0]));
         ex.printStackTrace();
 
-        return dto.fail(errorReason);
+        return commonUtil.fail(errorReason);
     }
 }

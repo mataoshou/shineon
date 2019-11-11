@@ -19,12 +19,12 @@
 		request.errorReason = "errorReason";
 		
 		request.datas=[];
-		request.datas[0]={id:10,title:"马焘"};
+		request.datas[0]={id:"111"};
 		
 		
 		$.ajax({
            type: "post",
-           url: "http://127.0.0.1:121/user/edit",
+           url: "http://127.0.0.1:129/user/get",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {

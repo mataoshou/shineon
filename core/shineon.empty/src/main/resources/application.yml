@@ -1,0 +1,37 @@
+spring:
+  application: 
+    name: shineon.db.user
+  data: 
+    mongodb: 
+      host: 127.0.0.1
+      port: 27017
+      database: shineonUser
+  rabbitmq: 
+    addresses: 127.0.0.1
+    password: matao
+    publisherconfirms: true
+    port: 5672
+    username: matao
+  datasource: 
+    password: shineon@1234
+    driverclassname: com.mysql.jdbc.Driver
+    url: "jdbc:mysql://127.0.0.1:3306/rmt_sys_uia_info?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai"
+    username: root
+  redis: 
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+server: 
+  port: 121
+logging: 
+  level: 
+    root: info
+  file: log/shineon.db.user.log
+shineon: 
+  version: 20190724
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"
+mybatis: 
+  mapperlocations: "classpath:com/shineon/coder/db/sql/mapper/*.xml"
