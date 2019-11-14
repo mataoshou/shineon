@@ -1,1 +1,0 @@
-package com.shineon.coder.service.convert.util;import com.shineon.coder.service.convert.base.MessageItemCommonBase;;public class MessageItemCommonUtil extends MessageItemCommonBase {}

@@ -1,1 +1,0 @@
-package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtUserInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtUserInfoCommonUtil extends RmtUserInfoCommonBase {}

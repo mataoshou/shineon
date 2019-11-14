@@ -1,11 +1,8 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.db.sql.pojo.RmtUserInfo;
 import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
-import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
-import com.shineon.coder.service.convert.util.RmtUserInfoCommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -88,17 +85,26 @@ public class ActionBuild {
         dtoClassBuild.classInit(dtoName,null,null, ActionConstant.ACTION_DTO_PACKAGE,
                 new String[]{"Service","Slf4j"},true,"org.springframework.stereotype.Service",convertClass.getName(),
                 "lombok.extern.slf4j.Slf4j",pojoClass.getName(),"org.springframework.beans.factory.annotation.Autowired",
-                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
-                "com.shineon.coder.db.pojo.QueryItem");
+//                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
+                "com.shineon.coder.db.pojo.QueryItem",
+                "com.shineon.coder.service.convert.util.QueryItemCommonUtil",
+                "com.shineon.coder.service.convert.CommonItem");
 
         dtoClassBuild.addTabContent("\r\n");
         dtoClassBuild.addTabContent("@Autowired");
-        dtoClassBuild.addTabContent(String.format("%sFeign service;",baseName));
+        dtoClassBuild.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
+
+//        dtoClassBuild.addTabContent("\r\n");
+//        dtoClassBuild.addTabContent("@Autowired");
+//        dtoClassBuild.addTabContent(String.format("%sFeign service;",baseName));
 
         for(String method: methods)
         {
             dtoClassBuild.addTabContent("\r\n");
-            dtoClassBuild.addTabContent(String.format("public %s %s(QueryItem item){return null;}",pojoClass.getSimpleName(),method.toLowerCase()));
+            dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item){",pojoClass.getSimpleName(),method.toLowerCase()));
+            dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
+            dtoClassBuild.addTabContent(String.format("return null;"));
+            dtoClassBuild.addTabLeftContent(String.format("}"));
         }
 
         dtoClassBuild.finish(dtoFile);
@@ -113,8 +119,7 @@ public class ActionBuild {
                 true,convertClass.getName(),"lombok.extern.slf4j.Slf4j",
                 "org.springframework.web.bind.annotation.RestController","org.springframework.web.bind.annotation.RequestMapping",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.beans.factory.annotation.Autowired",
-                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, ActionConstant.ACTION_CONSTANT_PACKAGE+"." +constantName,
-                "com.shineon.coder.service.convert.util.QueryItemCommonUtil","com.shineon.coder.db.pojo.QueryItem"
+                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, ActionConstant.ACTION_CONSTANT_PACKAGE+"." +constantName
                 ,"org.springframework.web.bind.annotation.RequestBody");
 
 
@@ -126,17 +131,14 @@ public class ActionBuild {
         actionClassBuild.addTabContent("@Autowired");
         actionClassBuild.addTabContent(String.format("%s commonUtil;",convertClass.getSimpleName()));
 
-        actionClassBuild.addTabContent("\r\n");
-        actionClassBuild.addTabContent("@Autowired");
-        actionClassBuild.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
+
 
         for(String method: methods)
         {
             actionClassBuild.addTabContent("\r\n");
             actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",constantName,method.toUpperCase()));
             actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item){",method.toLowerCase()));
-            actionClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
-            actionClassBuild.addTabContent(String.format("return null;"));
+            actionClassBuild.addTabRightContent(String.format("return commonUtil.toCommon(dto.%s(item));",method.toLowerCase()));
             actionClassBuild.addTabLeftContent(String.format("}"));
         }
         actionClassBuild.finish(actionFile);
@@ -145,11 +147,11 @@ public class ActionBuild {
 
 
 
-    public static void main(String[] args) throws IOException {
-        System.out.println(ActionBuild.class.getName());
-        System.out.println(ActionBuild.class.getSimpleName());
-
-        ActionBuild build = new ActionBuild();
-        build.build("matao", RmtUserInfoCommonUtil.class, RmtUserInfo.class);
-    }
+//    public static void main(String[] args) throws IOException {
+//        System.out.println(ActionBuild.class.getName());
+//        System.out.println(ActionBuild.class.getSimpleName());
+//
+//        ActionBuild build = new ActionBuild();
+//        build.build("matao", RmtUserInfoCommonUtil.class, RmtUserInfo.class);
+//    }
 }

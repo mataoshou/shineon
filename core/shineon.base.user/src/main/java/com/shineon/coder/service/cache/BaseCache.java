@@ -74,6 +74,14 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
 
 
     /**
+     * 更新缓存前，需要更新数据库的数据
+     * @param pojo
+     * @return
+     */
+    public abstract void updatePojoByDB(POJO pojo);
+
+
+    /**
      * 缓存中没有数据，从数据库中获取 单个数据
      * @param queryItem
      * @return
@@ -110,6 +118,8 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
                     String uKey = getKey(getKeyParams(pojo));
 
                     util.delete(uKey);
+
+                    updatePojoByDB(pojo);
                     util.set(uKey,dto.toCommon(pojo).toJsonString(),CacheConstant.CACHE_LIVE);
 
                     userKeys.add(getKeyParams(pojo));

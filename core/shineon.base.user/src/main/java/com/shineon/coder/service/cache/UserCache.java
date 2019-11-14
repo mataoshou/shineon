@@ -70,6 +70,11 @@ public class UserCache extends BaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
     }
 
     @Override
+    public void updatePojoByDB(RmtUserInfo userInfo) {
+        userFeign.edit(dto.toCommon(userInfo));
+    }
+
+    @Override
     public CommonItem getPojoByDB(QueryItem queryItem) {
         return  userFeign.get( queryItemCommonUtil.toCommon(queryItem));
     }
