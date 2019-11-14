@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root> 
+  <item pojoName="name" commonName="name" type="java.lang.String"/>
+  <item pojoName="interval" commonName="interval" type="long"/>
+  <item pojoName="status" commonName="" type="short"/>
+  <item pojoName="lastTime" commonName="" type="long"/>
+  <item pojoName="initStatus" commonName="" type="short"/>
+</root>

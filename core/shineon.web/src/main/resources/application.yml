@@ -1,0 +1,30 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application: 
+    name: shineon.web
+  session: 
+    timeout: 3600s
+    redis: 
+      namespace: 
+        spring: session
+      flushmode: on_save
+    storetype: redis
+  redis: 
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+server: 
+  port: 132
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"
+
+feign:
+  hystrix:
+    enabled: true
+logging:
+  file: log/shineon-api-uauth.log
+  level:
+    root : info
