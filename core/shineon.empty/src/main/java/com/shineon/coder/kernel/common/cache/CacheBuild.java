@@ -63,7 +63,7 @@ public class CacheBuild {
         cacheClassBuildUtil.classInit(cacheName,String.format("BaseCache<%s,%s>",pojoClass.getSimpleName(),dtoClass.getSimpleName()),null, CacheConstant.CACHE_PACKAGE,
                 new String[]{"Service","Slf4j"},true,new String[]{pojoClass.getName(),dtoClass.getName(),"lombok.extern.slf4j.Slf4j",
                 "org.springframework.stereotype.Service","com.shineon.coder.kernel.util.SpringUtil", CacheConstant.CACHE_CONSTANT_PACKAGE+"." +constantName,
-                "com.shineon.coder.db.pojo.QueryItem","com.shineon.coder.service.convert.CommonItem"});
+                "com.shineon.coder.db.pojo.QueryItem","com.shineon.coder.service.convert.CommonItem","java.util.List"});
 
         ///////////////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("public %s()",cacheName));
@@ -88,14 +88,14 @@ public class CacheBuild {
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public boolean success(String key, String body) {"));
+        cacheClassBuildUtil.addTabContent(String.format("public boolean success(String key, List<%s> pojos) {",pojoClass.getSimpleName()));
         cacheClassBuildUtil.addTabRightContent(String.format("return true;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public boolean fail(String key, String body, Exception e) {"));
+        cacheClassBuildUtil.addTabContent(String.format("public boolean fail(String key, List<%s> pojos, Exception e) {",pojoClass.getSimpleName()));
         cacheClassBuildUtil.addTabRightContent(String.format("return true;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
@@ -128,14 +128,5 @@ public class CacheBuild {
     }
 
 
-    public void buildEmptyMethod(ClassBuildUtil cacheClassBuildUtil)
-    {
-        cacheClassBuildUtil.addTabContent("@");
-    }
 
-
-    public static void main(String[] args) throws IOException {
-        CacheBuild cacheBuild = new CacheBuild();
-//        cacheBuild.build("matao", RmtUserInfoCommonUtil.class, RmtUserInfo.class);
-    }
 }

@@ -114,7 +114,8 @@ public class ActionBuild {
                 "org.springframework.web.bind.annotation.RestController","org.springframework.web.bind.annotation.RequestMapping",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.beans.factory.annotation.Autowired",
                 ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, ActionConstant.ACTION_CONSTANT_PACKAGE+"." +constantName,
-                "com.shineon.coder.service.convert.util.QueryItemCommonUtil","com.shineon.coder.db.pojo.QueryItem");
+                "com.shineon.coder.service.convert.util.QueryItemCommonUtil","com.shineon.coder.db.pojo.QueryItem"
+                ,"org.springframework.web.bind.annotation.RequestBody");
 
 
         actionClassBuild.addTabContent("\r\n");
@@ -133,7 +134,7 @@ public class ActionBuild {
         {
             actionClassBuild.addTabContent("\r\n");
             actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",constantName,method.toUpperCase()));
-            actionClassBuild.addTabContent(String.format("public CommonItem %s(CommonItem item){",method.toLowerCase()));
+            actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item){",method.toLowerCase()));
             actionClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
             actionClassBuild.addTabContent(String.format("return null;"));
             actionClassBuild.addTabLeftContent(String.format("}"));
@@ -149,6 +150,6 @@ public class ActionBuild {
         System.out.println(ActionBuild.class.getSimpleName());
 
         ActionBuild build = new ActionBuild();
-        build.build("user", RmtUserInfoCommonUtil.class, RmtUserInfo.class);
+        build.build("matao", RmtUserInfoCommonUtil.class, RmtUserInfo.class);
     }
 }

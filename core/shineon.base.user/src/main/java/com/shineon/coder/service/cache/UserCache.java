@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class UserCache extends BaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
@@ -46,12 +48,12 @@ public class UserCache extends BaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
     }
 
     @Override
-    public boolean success(String key, String body) {
-        return  messageClient.output().send(MessageBuilder.withPayload(SysCache.single.getCommonItem(key).toJsonString()).build());
+    public boolean success(String key,List<RmtUserInfo> pojos) {
+        return  messageClient.output().send(MessageBuilder.withPayload(key).build());
     }
 
     @Override
-    public boolean fail(String key, String body, Exception e) {
+    public boolean fail(String key,List<RmtUserInfo> pojos, Exception e) {
 
         log.info("设置缓存失败：" +e.getMessage());
         return false;

@@ -44,19 +44,19 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
     /**
      * 缓存更新成功
      * @param key
-     * @param body
+     * @param pojos
      * @return
      */
-    public abstract boolean success(String key,String body);
+    public abstract boolean success(String key,List<POJO> pojos);
 
 
     /**
      * 缓存更新成功
      * @param key
-     * @param body
+     * @param pojos
      * @return
      */
-    public abstract boolean fail(String key,String body,Exception e);
+    public abstract boolean fail(String key,List<POJO> pojos,Exception e);
 
     /**
      * 返回作为key值的字段值
@@ -118,7 +118,7 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
 
                 util.set(keyData,basicCommonUtil.toCommon(userKeys).toJsonString(), CacheConstant.CACHE_LIVE);
 
-                success(keyData, SysCache.single.getCommonItem(keyData).toJsonString());
+                success(keyData,pojos);
 
                 util.unlock(keyLock);
                 return true;
@@ -130,7 +130,7 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
             log.info("缓存数据更新失败："+keyData);
             e.printStackTrace();
 
-            fail(keyData, SysCache.single.getCommonItem(keyData).toJsonString(),e);
+            fail(keyData,pojos,e);
         }
 
         return true;
@@ -229,7 +229,12 @@ public abstract class BaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
      */
     public POJO get(QueryItem qitem) throws Exception {
         CommonItem commonItem = util.get(getKey(qitem));
-        List<String> ukeys = basicCommonUtil.toPojoList(commonItem);
+        List<String> ukeys = null;
+        if(commonItem!=null)
+        {
+            ukeys = basicCommonUtil.toPojoList(commonItem);
+        }
+
         if(ukeys==null)
         {
             log.info("缓存不存在，需要从数据库查询:" + qitem.toJsonString());

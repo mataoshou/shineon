@@ -6,7 +6,7 @@ import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.DTOConstant;
 import com.shineon.coder.kernel.constant.ServerConstant;
 import com.shineon.coder.service.convert.CommonItem;
-import com.shineon.coder.service.convert.SimpleCommonUtil;
+import com.shineon.coder.service.convert.util.SimpleItemCommonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,7 @@ import java.util.List;
 public class SysClassListController {
 
     @Autowired
-    SimpleCommonUtil commonUtil;
+    SimpleItemCommonUtil commonUtil;
 
 
     @RequestMapping("sys/list/dto")
