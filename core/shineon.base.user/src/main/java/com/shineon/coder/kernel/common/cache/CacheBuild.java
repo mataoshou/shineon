@@ -62,7 +62,7 @@ public class CacheBuild {
         ///////////////.....................................//////////////////////////////////////////////////////
         ClassBuildUtil cacheClassBuildUtil = new ClassBuildUtil();
 
-        cacheClassBuildUtil.classInit(cacheName,String.format("BaseCache<%s,%s>",pojoClass.getSimpleName(),dtoClass.getSimpleName()),null,CacheConstant.CACHE_PACKAGE,
+        cacheClassBuildUtil.classInit(cacheName,String.format("IBaseCache<%s,%s>",pojoClass.getSimpleName(),dtoClass.getSimpleName()),null,CacheConstant.CACHE_PACKAGE,
                 new String[]{"Service","Slf4j"},true,new String[]{pojoClass.getName(),dtoClass.getName(),"lombok.extern.slf4j.Slf4j",
                 "org.springframework.stereotype.Service","com.shineon.coder.kernel.util.SpringUtil",CacheConstant.CACHE_CONSTANT_PACKAGE+"." +constantName,
                 "com.shineon.coder.db.pojo.QueryItem","com.shineon.coder.service.convert.CommonItem","java.util.List"});
@@ -82,7 +82,7 @@ public class CacheBuild {
 
         /////////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public boolean check(String key) {"));
+        cacheClassBuildUtil.addTabContent(String.format("protected boolean check(String key) {"));
         cacheClassBuildUtil.addTabRightContent(String.format("return true;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
 
@@ -90,21 +90,21 @@ public class CacheBuild {
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public boolean success(String key, List<%s> pojos) {",pojoClass.getSimpleName()));
+        cacheClassBuildUtil.addTabContent(String.format("protected boolean success(String key, List<%s> pojos) {",pojoClass.getSimpleName()));
         cacheClassBuildUtil.addTabRightContent(String.format("return true;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public boolean fail(String key, List<%s> pojos, Exception e) {",pojoClass.getSimpleName()));
+        cacheClassBuildUtil.addTabContent(String.format("protected boolean fail(String key, List<%s> pojos, Exception e) {",pojoClass.getSimpleName()));
         cacheClassBuildUtil.addTabRightContent(String.format("return true;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public String getKeyParams(%s pojo) {",pojoClass.getSimpleName()));
+        cacheClassBuildUtil.addTabContent(String.format("protected String getKeyParams(%s pojo) {",pojoClass.getSimpleName()));
         cacheClassBuildUtil.addTabRightContent(String.format("return pojo.getId();"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
@@ -112,16 +112,29 @@ public class CacheBuild {
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public CommonItem selectListByDB(QueryItem queryItem) {"));
+        cacheClassBuildUtil.addTabContent(String.format("protected CommonItem selectListByDB(QueryItem queryItem) {"));
         cacheClassBuildUtil.addTabRightContent(String.format("return null;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("public CommonItem getPojoByDB(QueryItem queryItem) {"));
+        cacheClassBuildUtil.addTabContent(String.format("protected CommonItem getPojoByDB(QueryItem queryItem) {"));
         cacheClassBuildUtil.addTabRightContent(String.format("return null;"));
         cacheClassBuildUtil.addTabLeftContent(String.format("}"));
+        cacheClassBuildUtil.addTabContent("\r\n");
+
+        ///////////////////////////////////////////////////////////////////
+        cacheClassBuildUtil.addTabContent(String.format("@Override"));
+        cacheClassBuildUtil.addTabContent(String.format("protected void updatePojoByDB(%s pojo) {",pojoClass.getSimpleName()));
+        cacheClassBuildUtil.addTabContent(String.format("}"));
+        cacheClassBuildUtil.addTabContent("\r\n");
+
+
+        ///////////////////////////////////////////////////////////////////
+        cacheClassBuildUtil.addTabContent(String.format("@Override"));
+        cacheClassBuildUtil.addTabContent(String.format("protected void deletePojoByDB(%s pojo) {",pojoClass.getSimpleName()));
+        cacheClassBuildUtil.addTabContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
 
         cacheClassBuildUtil.finish(cacheFile);

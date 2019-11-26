@@ -89,7 +89,9 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("private CommonData %s( %s pojo) {" ,methodName,pojoName));
 
-		classBuildUtil.addTabRightContent(String.format("CommonData data = new CommonData();" ));
+		classBuildUtil.addTabRightContent(String.format("if(pojo==null) return null;" ));
+
+		classBuildUtil.addTabContent(String.format("CommonData data = new CommonData();" ));
 
 		for(MapperItem item:items)
 		{
@@ -114,7 +116,9 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("private %s %s( CommonData data) {" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("%s pojo = new %s();",pojoName,pojoName ));
+		classBuildUtil.addTabRightContent(String.format("if(data==null) return null;"));
+
+		classBuildUtil.addTabContent(String.format("%s pojo = new %s();",pojoName,pojoName ));
 
 		for(MapperItem item:items)
 		{
@@ -138,7 +142,9 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("public CommonItem %s( %s pojo) {" ,methodName,pojoName));
 
-		classBuildUtil.addTabRightContent("return success(toCommonData(pojo));");
+
+		classBuildUtil.addTabRightContent("if(pojo==null) return null;");
+		classBuildUtil.addTabContent("return success(toCommonData(pojo));");
 
 
 		classBuildUtil.addTabLeftContent(String.format("}"));
@@ -152,7 +158,9 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("public  CommonItem %s( List<%s> pojos) {" ,methodName,pojoName));
 
-		classBuildUtil.addTabRightContent(String.format("List<CommonData> result = new ArrayList();" ));
+
+		classBuildUtil.addTabRightContent(String.format("if(pojos==null) return null;" ));
+		classBuildUtil.addTabContent(String.format("List<CommonData> result = new ArrayList();" ));
 
 		classBuildUtil.addTabContent(String.format("for(%s item : pojos){",pojoName));
 		classBuildUtil.addTabRightContent(String.format("result.add(toCommonData(item));"));
@@ -173,7 +181,8 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("public %s %s( CommonItem item) {" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();"));
+		classBuildUtil.addTabRightContent(String.format("if(item==null) return null;"));
+		classBuildUtil.addTabContent(String.format("List<CommonData> datas = item.getDatas();"));
 
 		classBuildUtil.addTabContent(String.format("if(datas ==null||datas.size()==0){logger.debug(\"CommonItem 中data数据为空!!\"); return null;}"));
 
@@ -193,8 +202,9 @@ public class BuildClass {
 
 		classBuildUtil.addTabContent(String.format("public List<%s> %s(  CommonItem item) {" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("List<%s> result = new ArrayList();",pojoName ));
-		classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();" ));
+		classBuildUtil.addTabRightContent(String.format("if(item==null) return null;"));
+		classBuildUtil.addTabContent(String.format("List<%s> result = new ArrayList();",pojoName ));
+		classBuildUtil.addTabContent(String.format("List<CommonData> datas = item.getDatas();" ));
 
 		classBuildUtil.addTabContent(String.format("for(CommonData data : datas){"));
 		classBuildUtil.addTabRightContent(String.format("result.add(toPojoData(data));"));

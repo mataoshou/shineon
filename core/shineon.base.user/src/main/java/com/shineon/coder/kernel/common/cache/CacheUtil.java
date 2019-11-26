@@ -34,8 +34,8 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      * 创建 单个数据的缓存 缓存key
      * @throws Exception
      */
-    public String createCacheKey(String prev, String last, String id) throws Exception {
-        String cacheKey = prev + "." + CacheConstant.CACHE_POJO_PRE +"." + id+"." +last;
+    public String createCacheKey(String prev,String sign, String last, String id) throws Exception {
+        String cacheKey = prev + "." + sign +"." + id+"." +last;
 
         return cacheKey;
     }
@@ -44,8 +44,8 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      * 创建 列表数据的缓存 缓存key
      * @throws Exception
      */
-    public String createCacheKey(String prev, String last, QueryItem item) throws Exception {
-        String cacheKey = prev + "." + item.toCode()+"." +last;
+    public String createCacheKey(String prev, String last, QueryItem item,String sign) throws Exception {
+        String cacheKey = prev + "." + item.toCode(sign)+"." +last;
         return cacheKey;
     }
 
@@ -130,7 +130,7 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      */
     public CommonItem get(String key)
     {
-        System.out.println(key);
+        log.info(key);
         Object value = redisTemplate.opsForValue().get(key);
 
         if(value==null)return null;

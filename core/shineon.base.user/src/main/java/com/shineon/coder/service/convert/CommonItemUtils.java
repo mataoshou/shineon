@@ -4,17 +4,17 @@ import com.shineon.coder.kernel.constant.CommonItemConstant;
 
 import java.util.List;
 
-public interface CommonItemUtils<T> {
+public interface CommonItemUtils<POJO> {
 
 
-    CommonItem toCommon( T pojo);
+    CommonItem toCommon( POJO pojo);
 
-    CommonItem toCommon( List<T> pojos);
+    CommonItem toCommon( List<POJO> pojos);
 
 
-    T toPojo( CommonItem item);
+    POJO toPojo( CommonItem item);
 
-    public List<T> toPojoList(  CommonItem item);
+    public List<POJO> toPojoList(  CommonItem item);
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////

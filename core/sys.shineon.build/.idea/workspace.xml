@@ -2,39 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f8cb5b-7d44-48eb-87c4-51cc674c95e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/action/UserController2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/service/dto/UserDTO1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.api.uauth/src/main/java/com/shineon/coder/action/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.api.uauth/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.api.uauth/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.api.uauth/src/main/java/com/shineon/coder/kernel/constant/action/UserActionConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.api.uauth/src/main/java/com/shineon/coder/service/dto/UserDTO.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/oper/IBaseMessageOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/oper/OperationUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/oper/UserMessageOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shineon.base.user/log/shineon.base.user.log" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/log/shineon.base.user.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/action/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/constant/action/UserActionConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/cache/BaseCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/cache/BaseCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/common/cache/CacheBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/common/cache/CacheBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/constant/feign/UserConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/constant/feign/UserConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/constant/message/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/kernel/constant/message/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/cache/BaseCache.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/cache/UserCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/cache/UserCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/dto/UserDTO1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/dto/UserDTO1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/action/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/kernel/constant/action/UserActionConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.db.user/src/main/java/com/shineon/coder/service/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/action/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/action/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/service/cache/BaseCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/service/cache/BaseCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.empty/src/main/java/com/shineon/coder/service/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.log/shineon.api.uauth.log" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.log/shineon.api.uauth.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.server.uauth/log/shineonapiuauth.log" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.server.uauth/log/shineonapiuauth.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.server.uauth/src/main/java/com/shineon/coder/action/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.server.uauth/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.server.uauth/src/main/java/com/shineon/coder/kernel/common/action/ActionBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.server.uauth/src/main/java/com/shineon/coder/kernel/constant/action/UserActionConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.server.uauth/src/main/java/com/shineon/coder/service/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.web/log/shineon-api-uauth.log" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.web/log/shineon-api-uauth.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.web/src/main/java/com/shineon/coder/service/task/SysTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.web/src/main/java/com/shineon/coder/service/task/SysTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.web/src/main/java/com/shineon/coder/service/task/UserTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.web/src/main/java/com/shineon/coder/service/task/UserTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shineon.web/web/api/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.web/web/api/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/convert/CommonItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/convert/CommonItemUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/feign/UserFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/feign/UserFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/feign/UserFeignFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/feign/UserFeignFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/MessageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/MessageItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/service/UserNoticeMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/mq/service/UserNoticeMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/task/UserTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.base.user/src/main/java/com/shineon/coder/service/task/UserTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shineon.db.user/log/shineon.db.user.log" beforeDir="false" afterPath="$PROJECT_DIR$/../shineon.db.user/log/shineon.db.user.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+            <state relative-caret-position="266">
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/build/sys/rebuild/ReBuild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="475">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -87,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/build/rewrite/CommonWrite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="436">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,16 +156,16 @@
         <option value="$PROJECT_DIR$/src/build/sys/BuildEmptyProject.java" />
         <option value="$PROJECT_DIR$/src/build/sys/rebuild/ReplacePorject.java" />
         <option value="$PROJECT_DIR$/src/build/tool/FileStore.java" />
-        <option value="$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java" />
         <option value="$PROJECT_DIR$/src/build/sys/rebuild/BuildNewProject.java" />
         <option value="$PROJECT_DIR$/src/build/sys/rebuild/ReBuild.java" />
         <option value="$PROJECT_DIR$/src/build/rewrite/CommonWrite.java" />
+        <option value="$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-46" />
-    <option name="y" value="366" />
+    <option name="x" value="325" />
+    <option name="y" value="42" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -202,26 +187,6 @@
               <item name="sys.shineon.build" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sys.shineon.build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sys.shineon.build" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sys.shineon.build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sys.shineon.build" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="rewrite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sys.shineon.build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sys.shineon.build" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="rebuild" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -233,8 +198,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573712408997" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shineon.db.user" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573727444250" />
+    <property name="last_opened_file_path" value="E:/mg.frame/core/sys.mg.build" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -344,17 +309,20 @@
       <workItem from="1573614232417" duration="6047000" />
       <workItem from="1573626321798" duration="47000" />
       <workItem from="1573626443641" duration="2045000" />
-      <workItem from="1573698396059" duration="2705000" />
+      <workItem from="1573698396059" duration="3580000" />
+      <workItem from="1573780796730" duration="1795000" />
+      <workItem from="1574043764562" duration="720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33240000" />
+    <option name="totallyTimeSpent" value="36630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -363,7 +331,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30769232" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30769232" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -425,16 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/build/tool/FileStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -477,10 +435,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/sys/rebuild/ReBuild.java">
+    <entry file="file://$PROJECT_DIR$/src/build/rewrite/CommonWrite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="436">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -494,10 +455,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build/rewrite/CommonWrite.java">
+    <entry file="file://$PROJECT_DIR$/src/build/sys/rebuild/ReBuild.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="475">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/sys/rebuild/ReplaceProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

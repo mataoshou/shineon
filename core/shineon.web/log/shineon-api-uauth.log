@@ -608,3 +608,4 @@
 2019-11-14 14:17:14.888  INFO [shineon.web,de882ee51b7c256a,de882ee51b7c256a,false] 96912 --- [http-nio-132-exec-1] c.s.coder.action.WebFileController       : application/x-javascript
 2019-11-14 14:17:14.888  INFO [shineon.web,de882ee51b7c256a,de882ee51b7c256a,false] 96912 --- [http-nio-132-exec-1] c.s.coder.action.WebFileController       : 处理文本文件
 2019-11-14 14:17:28.376  INFO [shineon.web,,,] 96912 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-11-14 14:22:28.380  INFO [shineon.web,,,] 96912 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

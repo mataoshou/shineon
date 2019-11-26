@@ -4,6 +4,7 @@ import com.shineon.coder.db.pojo.QueryItem;
 import com.shineon.coder.kernel.constant.action.UserActionConstant;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.util.QueryItemCommonUtil;
+import com.shineon.coder.service.feign.UserFeign;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,6 +47,7 @@ public class UserTests {
 
         MvcResult mvcResult = mockMvc.perform(
                 post(UserActionConstant.ACTION_GET)
+//                post()
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(commonItem.toJsonString()))
                 .andReturn();
@@ -69,6 +71,20 @@ public class UserTests {
                 .andReturn();
 
         System.out.println(mvcResult.getResponse().getContentAsString());
+    }
+
+
+    @Autowired
+    UserFeign userFeign;
+
+    @Test
+    public void feignGet()
+    {
+        QueryItem item = new QueryItem();
+
+        item.setId("111");
+        CommonItem commonItem = commonUtil.toCommon(item);
+        System.out.println( userFeign.get(commonItem).toJsonString());
     }
 
 }

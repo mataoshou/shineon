@@ -2547,3 +2547,56 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2019-11-14 14:17:52.735  INFO [shineon.api.uauth,,,] 102284 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-11-14 14:18:30.571  INFO [shineon.api.uauth,b622a2544f4d32c4,b622a2544f4d32c4,false] 102284 --- [http-nio-129-exec-6] shineon.api.uauth                        : [shineon.api.uauth]服务异常：null (com.shineon.coder.service.convert.base.RmtUserInfoCommonBase.toCommonData(RmtUserInfoCommonBase.java:21))
 2019-11-14 14:19:32.685  INFO [shineon.api.uauth,58c29f49d3fcfc51,58c29f49d3fcfc51,false] 102284 --- [http-nio-129-exec-7] shineon.api.uauth                        : [shineon.api.uauth]服务异常：null (com.shineon.coder.service.convert.base.RmtUserInfoCommonBase.toCommonData(RmtUserInfoCommonBase.java:21))
+2019-11-14 14:22:52.740  INFO [shineon.api.uauth,,,] 102284 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-11-14 14:23:36.070  INFO [shineon.api.uauth,,,] 102284 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2019-11-14 14:23:36.082  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.API.UAUTH with eureka with status DOWN
+2019-11-14 14:23:36.083  WARN [shineon.api.uauth,,,] 102284 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1573712616083, current=DOWN, previous=UP]
+2019-11-14 14:23:36.084  INFO [shineon.api.uauth,,,] 102284 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.API.UAUTH/fh18829-2:shineon.api.uauth:129: registering service...
+2019-11-14 14:23:36.093  INFO [shineon.api.uauth,,,] 102284 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.API.UAUTH/fh18829-2:shineon.api.uauth:129 - registration status: 204
+2019-11-14 14:23:36.123  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-11-14 14:23:36.124  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2019-11-14 14:23:36.124  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2019-11-14 14:23:36.129  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-11-14 14:23:36.157  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
+2019-11-14 14:23:36.162  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-shineon.server.uauth
+2019-11-14 14:23:36.166  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_60]
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_60]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+
+2019-11-14 14:23:37.302  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.i.monitor.IntegrationMBeanExporter   : Summary on shutdown: nullChannel
+2019-11-14 14:23:37.303  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.i.monitor.IntegrationMBeanExporter   : Summary on shutdown: errorChannel
+2019-11-14 14:23:37.303  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] o.s.i.monitor.IntegrationMBeanExporter   : Summary on shutdown: _org.springframework.integration.errorLogger.handler
+2019-11-14 14:23:37.303  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-11-14 14:23:40.304  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-11-14 14:23:40.385  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.API.UAUTH/fh18829-2:shineon.api.uauth:129 - deregister  status: 200
+2019-11-14 14:23:40.393  INFO [shineon.api.uauth,,,] 102284 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

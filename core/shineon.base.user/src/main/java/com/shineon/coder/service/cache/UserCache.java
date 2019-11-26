@@ -17,10 +17,10 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class UserCache extends BaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
+public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
 
-    @Autowired
-    UserNoticeMessageClient messageClient;
+//    @Autowired
+//    UserNoticeMessageClient messageClient;
 
     @Autowired
     QueryItemCommonUtil queryItemCommonUtil;
@@ -36,7 +36,7 @@ public class UserCache extends BaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
 
 
     @Override
-    public boolean check(String key) {
+    protected boolean check(String key) {
 //        CacheItem cacheItem = SysCache.single.getCache(key);
 //
 //        if((System.currentTimeMillis() - cacheItem.getLastModified())< CacheConstant.CACHE_SYS_INTERVAL)
@@ -48,34 +48,40 @@ public class UserCache extends BaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
     }
 
     @Override
-    public boolean success(String key,List<RmtUserInfo> pojos) {
-        return  messageClient.output().send(MessageBuilder.withPayload(key).build());
+    protected boolean success(String key,List<RmtUserInfo> pojos) {
+//        return  messageClient.output().send(MessageBuilder.withPayload(key).build());
+        return true;
     }
 
     @Override
-    public boolean fail(String key,List<RmtUserInfo> pojos, Exception e) {
+    protected boolean fail(String key,List<RmtUserInfo> pojos, Exception e) {
 
         log.info("设置缓存失败：" +e.getMessage());
         return false;
     }
 
     @Override
-    public String getKeyParams(RmtUserInfo pojo) {
+    protected String getKeyParams(RmtUserInfo pojo) {
         return pojo.getId();
     }
 
     @Override
-    public CommonItem selectListByDB(QueryItem queryItem) {
+    protected CommonItem selectListByDB(QueryItem queryItem) {
         return  userFeign.list( queryItemCommonUtil.toCommon(queryItem));
     }
 
     @Override
-    public void updatePojoByDB(RmtUserInfo userInfo) {
+    protected void updatePojoByDB(RmtUserInfo userInfo) {
         userFeign.edit(dto.toCommon(userInfo));
     }
 
     @Override
-    public CommonItem getPojoByDB(QueryItem queryItem) {
+    protected void deletePojoByDB(RmtUserInfo userInfo) {
+        userFeign.delete(dto.toCommon(userInfo));
+    }
+
+    @Override
+    protected CommonItem getPojoByDB(QueryItem queryItem) {
         return  userFeign.get( queryItemCommonUtil.toCommon(queryItem));
     }
 

@@ -1,49 +1,68 @@
-spring:
-  main:
-    allow-bean-definition-overriding: true
-  cloud:
+spring: 
+  cloud: 
     stream:
+      rabbit:
+        bindings:
+          UserNoticeMessageInput:
+            consumer:
+              deadLetterQueueName: UserErrorMessage.errorMessage
+              autoBindDlq: true
+              deadLetterExchange: UserErrorMessage
+          PrivilegeMessageInput:
+            consumer:
+              deadLetterQueueName: UserErrorMessage.errorMessage
+              autoBindDlq: true
+              deadLetterExchange: UserErrorMessage
+          UserNoticeMessageOutput:
+            producer:
+              deadLetterQueueName: UserErrorMessage.errorMessage
+              autoBindDlq: true
+              deadLetterExchange: UserErrorMessage
       bindings:
-        UserNoticeMessageOutput:
-          destination: UserNoticeMessage
+        PrivilegeMessageInput:
+          destination: PrivilegeMessage
+          group: privilege
+        UserErrorMessageInput:
+          destination: UserErrorMessage
+          group: errorMessage
         UserNoticeMessageInput:
           destination: UserNoticeMessage
           group: userNotice
-#          consumer:
-#            acknowledge-mode: manual
-  application:
+        PrivilegeMessageOutput:
+          destination: PrivilegeMessage
+        UserNoticeMessageOutput: 
+          destination: UserNoticeMessage
+        UserErrorMessageOutput: 
+          destination: UserErrorMessage
+  main: 
+    allowbeandefinitionoverriding: true
+  application: 
     name: shineon.base.user
-  rabbitmq:
+  rabbitmq: 
     addresses: 127.0.0.1
     password: matao
-    publisherconfirms: true
     port: 5672
     username: matao
-#    listener:
-#      direct:
-#        acknowledge-mode: manual
-#      simple:
-#        acknowledge-mode: manual
-  redis:
+#    publisher-confirms: true
+  redis: 
     host: 127.0.0.1
     port: 6379
     database: 0
-server:
-  port: 125
-eureka:
-  client:
-    serviceurl:
-      defaultZone: "http://127.0.0.1:81/eureka"
-
-ribbon:
+ribbon: 
   ConnectTimeout: 4000 #ribbon请求连接的超时时间，默认值2000
   MaxAutoRetriesNextServer: 1 #对切换实例的重试次数，默认1
   MaxAutoRetries: 0     #对当前实例的重试次数，默认0
   ReadTimeout: 8000   #负载均衡超时时间，默认值5000
-logging:
-  level:
+server: 
+  port: 125
+logging: 
+  level: 
     root: info
   file: log/shineon.base.user.log
-feign:
-  hystrix:
+feign: 
+  hystrix: 
     enabled: true
+eureka: 
+  client: 
+    serviceurl: 
+      defaultZone: "http://127.0.0.1:81/eureka"

@@ -1,11 +1,25 @@
 package com.shineon.coder.service.task;
 
+import com.shineon.coder.db.pojo.CacheItem;
+import com.shineon.coder.db.pojo.RmtUserInfo;
 import com.shineon.coder.kernel.constant.PoolConstant;
+import com.shineon.coder.kernel.constant.ServerConstant;
+import com.shineon.coder.kernel.constant.message.MessageConstant;
+import com.shineon.coder.service.cache.SysCache;
 import com.shineon.coder.service.cache.UserCache;
+import com.shineon.coder.service.convert.util.CacheItemCommonUtil;
+import com.shineon.coder.service.convert.util.RmtUserInfoCommonUtil;
 import com.shineon.coder.service.dto.UserDTO1;
+import com.shineon.coder.service.mq.MessageItem;
+import com.shineon.coder.service.mq.client.PrivilegeMessageClient;
+import com.shineon.coder.service.mq.client.UserErrorMessageClient;
 import com.shineon.coder.service.mq.client.UserNoticeMessageClient;
+import com.shineon.coder.service.mq.oper.OperationUtil;
+import com.shineon.coder.service.mq.service.UserErrorMessageService;
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -42,13 +56,67 @@ public class UserTask {
 //        }
     }
 
+    @Autowired
+    RmtUserInfoCommonUtil commonUtil;
 
-//    @Scheduled(fixedRate = 500)
+    @Autowired
+    PrivilegeMessageClient privilegeMessageClient;
+
+    @Autowired
+    CacheItemCommonUtil cacheItemCommonUtil;
+
+    @Autowired
+    OperationUtil operationUtil;
+
+//    @Scheduled(fixedRate = 5000)
 //    @Async(PoolConstant.POOL_SCHEDULE)
 //    public void sendMessage() throws Exception {
-//        log.info("send Message matao");
-//        messageClient.output().send(MessageBuilder.withPayload(SysCache.single.getCommonItem("matao").toJsonString()).build());
+//        log.info("send message");
+//        MessageItem item = new MessageItem();
+//        item.setOperType(MessageConstant.MESSAGE_OPER_EDIT);
+//
+//        item.setSourceName(ServerConstant.SHINEON_SERVER_UAUTH);
+//        item.setDstName(ServerConstant.SHINEON_BASE_USER);
+//        item.setOperObjectName(RmtUserInfo.class.getSimpleName());
+//
+//        item.setId("123");
+//
+//        RmtUserInfo userInfo = new RmtUserInfo();
+//        userInfo.setId("1111");
+//        userInfo.setUsername("matao");
+//
+//        item.setData(commonUtil.toCommon(userInfo));
+//
+//        operationUtil.sendMessage(messageClient,item);
+////        messageClient.output().send(MessageBuilder.withPayload(item.toJsonString()).setHeader("x-retries",3).build());
 //    }
+
+    @Scheduled(fixedRate = 3000)
+    @Async(PoolConstant.POOL_SCHEDULE)
+    public void sendMessage2() throws Exception {
+        log.info("send prvilege message");
+        MessageItem item = new MessageItem();
+        item.setOperType(MessageConstant.MESSAGE_OPER_EDIT);
+
+        item.setSourceName(ServerConstant.SHINEON_SERVER_UAUTH);
+        item.setDstName(ServerConstant.SHINEON_BASE_USER);
+        item.setOperObjectName(CacheItem.class.getSimpleName());
+        item.setMstype(MessageConstant.MESSAGE_TYPE_SINGLE);
+
+
+        item.setId("privilege123");
+
+        CacheItem cacheItem = new CacheItem();
+        cacheItem.setName("matao");
+
+        item.setData(cacheItemCommonUtil.toCommon(cacheItem));
+
+
+        operationUtil.sendMessage(messageClient,item);
+
+        log.info("开始发送消息" );
+
+    }
 
 
 }

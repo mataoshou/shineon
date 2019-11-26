@@ -10,6 +10,6 @@ public class MessageBuildTool {
      */
     public static void main(String[] args) throws Exception {
         MessageBuild messageBuild = new MessageBuild();
-        messageBuild.buildMessage("userNotice");
+        messageBuild.buildMessage("privilege");
     }
 }

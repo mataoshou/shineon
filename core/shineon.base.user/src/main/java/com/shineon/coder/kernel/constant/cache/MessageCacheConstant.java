@@ -1,0 +1,1 @@
+package com.shineon.coder.kernel.constant.cache ;public class MessageCacheConstant {	public static final String CACHE_PRE = "MESSAGE";		public static final String CACHE_LAST = "" + CacheConstant.REDIS_KEY_LAST;}

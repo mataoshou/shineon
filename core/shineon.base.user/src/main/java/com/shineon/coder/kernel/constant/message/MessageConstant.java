@@ -15,10 +15,13 @@ public class MessageConstant {
     //不回复
     static public final Integer MESSAGE_TYPE_UNREPLY = 2;
 
+    static public final String MESSAGE_TYPE_SINGLE = "SINGLE";
+    static public final String MESSAGE_TYPE_PUBLISH = "PUBLISH";
+
     //操作类型
-    static public final  String MESSAGE_OPER_UPDATE = "UPDATE";
+    static public final  String MESSAGE_OPER_EDIT = "EDIT";
     static public final  String MESSAGE_OPER_INSERT = "INSERT";
     static public final  String MESSAGE_OPER_DELETE = "DELETE";
-    static public final  String MESSAGE_OPER_REFRESH = "REFRESH";
+    static public final  String MESSAGE_OPER_RSELECT = "SELECT";
 
 }

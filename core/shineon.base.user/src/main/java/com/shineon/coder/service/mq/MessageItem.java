@@ -1,6 +1,9 @@
 package com.shineon.coder.service.mq;
 
 import com.alibaba.fastjson.JSONObject;
+import com.shineon.coder.kernel.constant.message.MessageConstant;
+import com.shineon.coder.kernel.util.GuidUtil;
+import com.shineon.coder.kernel.util.Md5Util;
 import com.shineon.coder.service.convert.CommonItem;
 
 public class MessageItem {
@@ -11,10 +14,27 @@ public class MessageItem {
 
     private String dstName;
 
-    private Integer operType;
+    private String operType;
+
+    private String operObjectName;
+
+    private String mstype = MessageConstant.MESSAGE_TYPE_SINGLE;
 
     private CommonItem data;
 
+    public MessageItem()
+    {
+//        this.id =
+    }
+
+
+    public String getMstype() {
+        return mstype;
+    }
+
+    public void setMstype(String mstype) {
+        this.mstype = mstype;
+    }
 
     public String getId() {
         return id;
@@ -48,12 +68,19 @@ public class MessageItem {
         this.data = data;
     }
 
+    public String getOperObjectName() {
+        return operObjectName;
+    }
 
-    public Integer getOperType() {
+    public void setOperObjectName(String operObjectName) {
+        this.operObjectName = operObjectName;
+    }
+
+    public String getOperType() {
         return operType;
     }
 
-    public void setOperType(Integer operType) {
+    public void setOperType(String operType) {
         this.operType = operType;
     }
 
@@ -65,5 +92,10 @@ public class MessageItem {
     public JSONObject toJson()
     {
         return (JSONObject) JSONObject.toJSON(this);
+    }
+
+
+    public String toCode() throws Exception {
+        return  Md5Util.digest(this.getData().toJsonString());
     }
 }

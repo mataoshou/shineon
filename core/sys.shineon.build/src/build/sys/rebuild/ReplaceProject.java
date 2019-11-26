@@ -12,7 +12,7 @@ public class ReplaceProject {
 //    private File root =  new File("E:\\mg.frame\\core\\");
 
     public void replaceName(String[] sourceName,String[] dstName,String sysName,File rootFile) throws Exception {
-        File sysFile = new File(rootFile,sysName+"\\src\\main");
+        File sysFile = new File(rootFile,sysName+"");
         for (int i = 0; i < sourceName.length; i++) {
             replaceName(sourceName[i], dstName[i],sysName,sysFile);
         }
