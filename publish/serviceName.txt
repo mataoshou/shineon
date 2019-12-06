@@ -1,0 +1,7 @@
+shineon.eurake
+shineon.db.user
+shineon.base.user
+shineon.server.uauth
+shineon.api.uauth
+shineon.web
+shineon.zuul

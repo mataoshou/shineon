@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class ControllerLog {
 
-    @Pointcut("args(com.shineon.coder.service.convert.CommonItem)")
+    @Pointcut("args(com.alibaba.fastjson.JSONObject)")
     public void params() {
     }
 

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shineon</groupId>
-    <artifactId>shineon.service.uauth</artifactId>
+    <artifactId>shineon.server.uauth</artifactId>
     <version>1.0</version>
     <name>shineon.service.uauth</name>
     <description>server for uauth</description>

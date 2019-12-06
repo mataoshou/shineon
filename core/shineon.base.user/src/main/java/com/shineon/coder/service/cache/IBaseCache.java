@@ -9,6 +9,8 @@ import com.shineon.coder.service.convert.CommonItemUtils;
 import com.shineon.coder.service.convert.util.QueryItemCommonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.ApplicationListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,8 @@ import java.util.List;
  * @param <DTO>
  */
 @Slf4j
-public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
+public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
+        implements ApplicationListener<ApplicationReadyEvent> {
 
 
     @Autowired
@@ -56,6 +59,8 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
     public void setPojo_sign(String pojo_sign) {
         this.pojo_sign = pojo_sign;
     }
+
+
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -120,6 +125,9 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
      * @return
      */
     protected abstract CommonItem getPojoByDB(QueryItem queryItem);
+
+
+    protected abstract void initCache();
 
 
 
@@ -323,11 +331,8 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
         {
             return false;
         }
-
-        String keyLock = keyData +".LOCK";
-
         try {
-            if (util.lock(keyLock)) {
+            if (lock(keyData)) {
                 util.delete(keyData);
                 log.info("添加缓存数据：" + keyData);
 
@@ -350,13 +355,13 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
 
                 success(keyData,pojos);
 
-                util.unlock(keyLock);
+                unlock(keyData);
                 return true;
             }
         }
         catch (Exception e)
         {
-            util.unlock(keyLock);
+            unlock(keyData);
             log.info("缓存数据更新失败："+keyData);
             e.printStackTrace();
 
@@ -364,6 +369,18 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
         }
 
         return true;
+    }
+
+    public boolean lock(String key)
+    {
+        String keyLock = key +".LOCK";
+        return util.lock(keyLock);
+    }
+
+    public boolean unlock(String key)
+    {
+        String keyLock = key +".LOCK";
+        return util.unlock(keyLock);
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -384,5 +401,11 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>> {
         List<POJO> list = new ArrayList<POJO>();
         list.add(pojo);
         return list;
+    }
+
+
+    @Override
+    public void onApplicationEvent(ApplicationReadyEvent event) {
+        initCache();
     }
 }

@@ -5,7 +5,9 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://10.0.192.104:81/eureka
+      defaultZone: http://127.0.0.1:81/eureka
+  instance:
+    prefer-ip-address: true
 
 
 zuul:
@@ -43,3 +45,4 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+

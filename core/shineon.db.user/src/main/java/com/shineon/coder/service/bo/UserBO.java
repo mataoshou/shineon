@@ -25,8 +25,8 @@ public class UserBO {
     public List<RmtUserInfo> list(int status)
     {
         SqlWhere where =new SqlWhere();
-        where.add2(RmtUserInfoProperty.deletedFlagProperty,status);
-        return userMapper.list(null,null);
+        where.add2(RmtUserInfoProperty.deletedFlagProperty,0);
+        return userMapper.list(where.toString(),null);
     }
 
     public void add(RmtUserInfo user)
@@ -37,6 +37,11 @@ public class UserBO {
     public void update(RmtUserInfo user)
     {
         userMapper.updateByPrimaryKey(user);
+    }
+
+    public RmtUserInfo getByName(String name)
+    {
+        return userMapper.selectByName(name);
     }
 
 }

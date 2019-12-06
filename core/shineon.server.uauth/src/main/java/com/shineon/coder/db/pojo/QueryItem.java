@@ -12,6 +12,8 @@ public class QueryItem {
 
     private String title;
 
+    private String content;
+
     private Short status1;
 
     private Short status2;

@@ -49,6 +49,9 @@ eureka:
   client: 
     serviceurl: 
       defaultZone: "http://127.0.0.1:81/eureka"
+  instance:
+    prefer-ip-address: true
+
 ribbon: 
   ConnectTimeout: 3000
   MaxAutoRetriesNextServer: 1

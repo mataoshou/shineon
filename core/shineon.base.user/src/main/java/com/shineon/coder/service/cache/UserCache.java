@@ -3,6 +3,8 @@ package com.shineon.coder.service.cache;
 import com.shineon.coder.db.pojo.QueryItem;
 import com.shineon.coder.db.pojo.RmtUserInfo;
 import com.shineon.coder.kernel.constant.cache.UserCacheConstant;
+import com.shineon.coder.kernel.util.SpringUtil;
+import com.shineon.coder.kernel.util.StringUtil;
 import com.shineon.coder.service.convert.CommonItem;
 import com.shineon.coder.service.convert.util.QueryItemCommonUtil;
 import com.shineon.coder.service.convert.util.RmtUserInfoCommonUtil;
@@ -28,7 +30,7 @@ public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
     @Autowired
     UserFeign userFeign;
 
-    public UserCache()
+    public void initCache()
     {
         setDTO(new RmtUserInfoCommonUtil());
         setCacheDecorate(UserCacheConstant.CACHE_PRE,UserCacheConstant.CACHE_LAST);
@@ -82,7 +84,16 @@ public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
 
     @Override
     protected CommonItem getPojoByDB(QueryItem queryItem) {
-        return  userFeign.get( queryItemCommonUtil.toCommon(queryItem));
+        StringUtil util = SpringUtil.getBean(StringUtil.class);
+        if(util.isUnEmpty(queryItem.getId())) {
+            return userFeign.get(queryItemCommonUtil.toCommon(queryItem));
+        }
+
+        if(util.isUnEmpty(queryItem.getTitle())) {
+            return userFeign.getByName(queryItemCommonUtil.toCommon(queryItem));
+        }
+
+        return null;
     }
 
 

@@ -74,10 +74,10 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
     /**
      *  解锁
      */
-    public void unlock(String key)
+    public boolean unlock(String key)
     {
 
-        redisTemplate.delete(key);
+        return redisTemplate.delete(key);
     }
 
     /**

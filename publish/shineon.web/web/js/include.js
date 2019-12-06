@@ -1,7 +1,13 @@
 
-if(rootPath==undefined)
-{
-	 rootPath ="";
+
+try{
+	if(rootPath==null||rootPath==undefined)
+	{
+		 rootPath ="";
+	}
+	
+}catch(e){
+	var rootPath ="";
 }
 //////////////////////基础js文件
 document.write('<script src="'+rootPath+'/js/jquery.js"></script>');
