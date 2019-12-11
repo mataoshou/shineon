@@ -24,6 +24,14 @@ public class QueryItem {
 
     private Date endTime;
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     public String getId() {
         return id;
     }

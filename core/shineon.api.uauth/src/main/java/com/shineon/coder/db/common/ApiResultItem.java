@@ -1,11 +1,8 @@
-package com.shineon.coder.db.pojo;
+package com.shineon.coder.db.common;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.shineon.coder.service.convert.CommonData;
 import com.shineon.coder.service.convert.CommonItem;
-
-import java.util.List;
 
 public class ApiResultItem {
 

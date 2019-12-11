@@ -12,19 +12,26 @@ public class CommonData {
 
     private String id;
 
-    private String parent;
+    private String parentCode1;
 
-    private String group;
+    private String parentCode2;
+
+    private String createName;
+
+    private String createId;
+
+    private String changerId;
+
+    private String parent1Name;
+
+    private String parent2Name;
+
 
     private Short status1;
 
     private Short status2;
 
     private Short status3;
-
-    private Short status4;
-
-    private Integer sortIndex;
 
     private String title ;
 
@@ -36,16 +43,13 @@ public class CommonData {
 
     private Date createTime;
 
-    private String creator;
-
     private  Date beginTime;
 
     private Date endTime;
 
+    private  Long begin;
 
-    private  long begin;
-
-    private long end;
+    private Long end;
 
 
     public String getId() {
@@ -56,20 +60,60 @@ public class CommonData {
         this.id = id;
     }
 
-    public String getParent() {
-        return parent;
+    public String getParentCode1() {
+        return parentCode1;
     }
 
-    public void setParent(String parent) {
-        this.parent = parent;
+    public void setParentCode1(String parentCode1) {
+        this.parentCode1 = parentCode1;
     }
 
-    public String getGroup() {
-        return group;
+    public String getParentCode2() {
+        return parentCode2;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setParentCode2(String parentCode2) {
+        this.parentCode2 = parentCode2;
+    }
+
+    public String getCreateName() {
+        return createName;
+    }
+
+    public void setCreateName(String createName) {
+        this.createName = createName;
+    }
+
+    public String getCreateId() {
+        return createId;
+    }
+
+    public void setCreateId(String createId) {
+        this.createId = createId;
+    }
+
+    public String getChangerId() {
+        return changerId;
+    }
+
+    public void setChangerId(String changerId) {
+        this.changerId = changerId;
+    }
+
+    public String getParent1Name() {
+        return parent1Name;
+    }
+
+    public void setParent1Name(String parent1Name) {
+        this.parent1Name = parent1Name;
+    }
+
+    public String getParent2Name() {
+        return parent2Name;
+    }
+
+    public void setParent2Name(String parent2Name) {
+        this.parent2Name = parent2Name;
     }
 
     public Short getStatus1() {
@@ -136,14 +180,6 @@ public class CommonData {
         this.createTime = createTime;
     }
 
-    public String getCreator() {
-        return creator;
-    }
-
-    public void setCreator(String creator) {
-        this.creator = creator;
-    }
-
     public Date getBeginTime() {
         return beginTime;
     }
@@ -160,35 +196,19 @@ public class CommonData {
         this.endTime = endTime;
     }
 
-    public long getBegin() {
+    public Long getBegin() {
         return begin;
     }
 
-    public void setBegin(long begin) {
+    public void setBegin(Long begin) {
         this.begin = begin;
     }
 
-    public long getEnd() {
+    public Long getEnd() {
         return end;
     }
 
-    public void setEnd(long end) {
+    public void setEnd(Long end) {
         this.end = end;
-    }
-
-    public Short getStatus4() {
-        return status4;
-    }
-
-    public void setStatus4(Short status4) {
-        this.status4 = status4;
-    }
-
-    public Integer getSortIndex() {
-        return sortIndex;
-    }
-
-    public void setSortIndex(Integer sortIndex) {
-        this.sortIndex = sortIndex;
     }
 }

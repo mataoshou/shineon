@@ -4,6 +4,7 @@ import com.shineon.coder.db.sql.SqlWhere;
 import com.shineon.coder.db.sql.mergedao.IRmtUserInfoMapper;
 import com.shineon.coder.db.sql.pojo.RmtUserInfo;
 import com.shineon.coder.db.sql.property.RmtUserInfoProperty;
+import com.shineon.coder.kernel.util.GuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -22,21 +23,31 @@ public class UserBO {
     }
 
 
-    public List<RmtUserInfo> list(int status)
+    public List<RmtUserInfo> list()
     {
         SqlWhere where =new SqlWhere();
         where.add2(RmtUserInfoProperty.deletedFlagProperty,0);
         return userMapper.list(where.toString(),null);
     }
 
-    public void add(RmtUserInfo user)
+    public RmtUserInfo add(RmtUserInfo user)
     {
-        userMapper.insert(user);
+        GuidUtil util = new GuidUtil();
+
+//        user.setUsercode("001");
+
+        user.setCreateuserid(user.getModifyuserid());
+        user.setCreatedtime(user.getModifytime());
+
+        user.setId(util.gen());
+        userMapper.insertUser(user);
+
+        return get(user.getId());
     }
 
     public void update(RmtUserInfo user)
     {
-        userMapper.updateByPrimaryKey(user);
+        userMapper.updateByPrimaryKeySelective(user);
     }
 
     public RmtUserInfo getByName(String name)

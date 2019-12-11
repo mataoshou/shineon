@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root> 
+<root>
   <item pojoName="id" commonName="id" type="java.lang.String"/>
-  <item pojoName="sourceSys" commonName="group" type="java.lang.String"/>
-  <item pojoName="dstSys" commonName="parent" type="java.lang.String"/>
-  <item pojoName="message" commonName="creator" type="java.lang.String"/>
-  <item pojoName="mstype" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="sourceSys" commonName="parentCode1" type="java.lang.String"/>
+  <item pojoName="dstSys" commonName="parentCode2" type="java.lang.String"/>
+  <item pojoName="message" commonName="createName" type="java.lang.String"/>
+  <item pojoName="mstype" commonName="parent1Name" type="java.lang.String"/>
   <item pojoName="mstatus" commonName="" type="short"/>
   <item pojoName="retry" commonName="" type="int"/>
-  <item pojoName="lastModifyTime" commonName="end" type="long"/>
+  <item pojoName="lastModifyTime" commonName="" type="long"/>
 </root>

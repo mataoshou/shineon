@@ -58,6 +58,18 @@ public class CacheUtil implements ApplicationListener<ContextRefreshedEvent>
      * @param key
      * @return
      */
+    public boolean lock(String key,long timeout)
+    {
+
+        log.debug("[尝试获取redis锁]"+ key);
+
+        Boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key,"1", timeout, TimeUnit.MILLISECONDS);
+
+        if(isSuccess==null)return false;
+
+        return isSuccess;
+    }
+
     public boolean lock(String key)
     {
 

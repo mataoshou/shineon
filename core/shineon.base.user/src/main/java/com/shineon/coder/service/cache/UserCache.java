@@ -69,12 +69,13 @@ public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
 
     @Override
     protected CommonItem selectListByDB(QueryItem queryItem) {
-        return  userFeign.list( queryItemCommonUtil.toCommon(queryItem));
+        CommonItem item = queryItemCommonUtil.toCommon(queryItem);
+        return  userFeign.list(item);
     }
 
     @Override
-    protected void updatePojoByDB(RmtUserInfo userInfo) {
-        userFeign.edit(dto.toCommon(userInfo));
+    protected RmtUserInfo updatePojoByDB(RmtUserInfo userInfo) {
+        return dto.toPojo(userFeign.edit(dto.toCommon(userInfo)));
     }
 
     @Override

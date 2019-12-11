@@ -3,6 +3,7 @@
 <root>
   <item pojoName="id" commonName="id" type="java.lang.String"/>
   <item pojoName="title" commonName="title" type="java.lang.String"/>
+  <item pojoName="content" commonName="content" type="java.lang.String"/>
   <item pojoName="status1" commonName="status1" type="java.lang.Short"/>
   <item pojoName="status2" commonName="status2" type="java.lang.Short"/>
   <item pojoName="status3" commonName="status3" type="java.lang.Short"/>

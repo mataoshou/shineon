@@ -24,4 +24,23 @@
         from rmt_user_info
         where userName = #{name,jdbcType=VARCHAR}
     </select>
+
+    <insert id="insertUser"   parameterType="com.shineon.coder.db.sql.pojo.RmtUserInfo" >
+        insert into rmt_user_info (id,userCode, userName, userPassword,
+        displayName, userThumb, workCode,
+        oganizationID, departmentID, userExtendID,
+        createdTime, createUserID, modifyTime,
+        modifyUserID, deletedTime, deletedUserID,
+        deletedFlag, limitedTime, loginCount,
+        selectCondition, systemUserFlag, reserved1,
+        reserved2)
+        values (#{id,jdbcType=VARCHAR},#{usercode,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{userpassword,jdbcType=VARCHAR},
+        #{displayname,jdbcType=VARCHAR}, #{userthumb,jdbcType=VARCHAR}, #{workcode,jdbcType=VARCHAR},
+        #{oganizationid,jdbcType=VARCHAR}, #{departmentid,jdbcType=VARCHAR}, #{userextendid,jdbcType=VARCHAR},
+        #{createdtime,jdbcType=TIMESTAMP}, #{createuserid,jdbcType=VARCHAR}, #{modifytime,jdbcType=TIMESTAMP},
+        #{modifyuserid,jdbcType=VARCHAR}, #{deletedtime,jdbcType=TIMESTAMP}, #{deleteduserid,jdbcType=VARCHAR},
+        #{deletedflag,jdbcType=TINYINT}, #{limitedtime,jdbcType=TIMESTAMP}, #{logincount,jdbcType=TINYINT},
+        #{selectcondition,jdbcType=TINYINT}, #{systemuserflag,jdbcType=TINYINT}, #{reserved1,jdbcType=INTEGER},
+        #{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>

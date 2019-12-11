@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root> 
+<root>
   <item pojoName="id" commonName="id" type="java.lang.String"/>
-  <item pojoName="departmentid" commonName="parent" type="java.lang.String"/>
-  <item pojoName="departmentcode" commonName="sortIndex" type="java.lang.Integer"/>
-  <item pojoName="departmentname" commonName="creator" type="java.lang.String"/>
-  <item pojoName="organizationid" commonName="content" type="java.lang.String"/>
+  <item pojoName="departmentid" commonName="parentCode1" type="java.lang.String"/>
+  <item pojoName="departmentname" commonName="parent1Name" type="java.lang.String"/>
+  <item pojoName="organizationid" commonName="parentCode2" type="java.lang.String"/>
   <item pojoName="levelinfo" commonName="title" type="java.lang.String"/>
-  <item pojoName="parentid" commonName="ptitle" type="java.lang.String"/>
+  <item pojoName="parentid" commonName="createId" type="java.lang.String"/>
   <item pojoName="createdtime" commonName="createTime" type="java.util.Date"/>
-  <item pojoName="createuserid" commonName="group" type="java.lang.String"/>
+  <item pojoName="createuserid" commonName="createName" type="java.lang.String"/>
   <item pojoName="modifytime" commonName="beginTime" type="java.util.Date"/>
-  <item pojoName="modifyuserid" commonName="thumb" type="java.lang.String"/>
+  <item pojoName="modifyuserid" commonName="changerId" type="java.lang.String"/>
+  <item pojoName="reserved2" commonName="parent2Name" type="java.lang.String"/>
+  <item pojoName="departmentcode" commonName="" type="java.lang.Integer"/>
   <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
-  <item pojoName="reserved2" commonName="" type="java.lang.String"/>
 </root>

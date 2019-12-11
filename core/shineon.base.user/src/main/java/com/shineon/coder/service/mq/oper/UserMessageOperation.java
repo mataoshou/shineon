@@ -22,7 +22,7 @@ public class UserMessageOperation extends IBaseMessageOperation<RmtUserInfo, Rmt
     protected RmtUserInfo edit(RmtUserInfo userInfo) {
         try {
             log.info("edit user");
-            cache.setCache(userInfo);
+            cache.setCache(userInfo,true);
             return userInfo;
         } catch (Exception e) {
             e.printStackTrace();

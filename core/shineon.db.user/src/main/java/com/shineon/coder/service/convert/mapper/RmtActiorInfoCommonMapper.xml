@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root> 
+<root>
   <item pojoName="id" commonName="id" type="java.lang.String"/>
-  <item pojoName="actorname" commonName="parent" type="java.lang.String"/>
+  <item pojoName="actorname" commonName="parentCode1" type="java.lang.String"/>
   <item pojoName="createtime" commonName="createTime" type="java.util.Date"/>
-  <item pojoName="secretlevel" commonName="sortIndex" type="java.lang.Integer"/>
-  <item pojoName="description" commonName="ptitle" type="java.lang.String"/>
-  <item pojoName="systemactorflag" commonName="creator" type="java.lang.String"/>
-  <item pojoName="reserved2" commonName="title" type="java.lang.String"/>
-  <item pojoName="privilegegroup" commonName="group" type="java.lang.String"/>
+  <item pojoName="description" commonName="parentCode2" type="java.lang.String"/>
+  <item pojoName="systemactorflag" commonName="createName" type="java.lang.String"/>
+  <item pojoName="reserved2" commonName="createId" type="java.lang.String"/>
+  <item pojoName="privilegegroup" commonName="changerId" type="java.lang.String"/>
+  <item pojoName="secretlevel" commonName="" type="java.lang.Integer"/>
   <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
   <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
 </root>

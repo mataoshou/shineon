@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root>
-  <item pojoName="name" commonName="parent" type="java.lang.String"/>
-  <item pojoName="createTime" commonName="begin" type="long"/>
-  <item pojoName="lastModified" commonName="end" type="long"/>
+  <item pojoName="name" commonName="parent1Name" type="java.lang.String"/>
+  <item pojoName="createTime" commonName="" type="long"/>
+  <item pojoName="lastModified" commonName="" type="long"/>
   <item pojoName="status" commonName="" type="short"/>
 </root>

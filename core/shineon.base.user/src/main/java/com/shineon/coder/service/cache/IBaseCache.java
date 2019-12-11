@@ -109,7 +109,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
      * @param pojo
      * @return
      */
-    protected abstract void updatePojoByDB(POJO pojo);
+    protected abstract POJO updatePojoByDB(POJO pojo);
 
     /**
      * 更新缓存前，需要更新数据库的数据
@@ -198,7 +198,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
 
             POJO pojo = dto.toPojo(getPojoByDB(qitem));
             if(pojo==null)return null;
-            setCache(pojo);
+            setCache(pojo,false);
             return pojo;
         }
         if(ukeys.size()>1)
@@ -221,7 +221,6 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
         {
             item = new QueryItem();
         }
-
         return util.createCacheKey(cachePre,cacheLast,item,list_sign);
     }
 
@@ -235,8 +234,14 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
         CommonItem item = util.get(getKey(key));
         if(item == null)
         {
-            List<POJO> pojos = dto.toPojoList(selectListByDB(key));
-            setCache(key,pojos);
+            if(key ==null)
+            {
+                key = new QueryItem();
+            }
+
+            CommonItem datas = selectListByDB(key);
+            List<POJO> pojos = dto.toPojoList(datas);
+            setCache(key,pojos,false);
             return pojos;
         }
         else {
@@ -266,11 +271,11 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
         /**
      * 删除单个pojo的缓存
      */
-    private void delete(POJO pojo,boolean deleteDB) throws Exception {
+    private void delete(POJO pojo,boolean synDB) throws Exception {
         deleteListKeys();
         String rkey = getKey(getKeyParams(pojo));
         util.delete(rkey);
-        if(deleteDB)
+        if(synDB)
         {
             deletePojoByDB(pojo);
         }
@@ -297,23 +302,27 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
      * 更新缓存 删除数据,然后更新数据
      * @return
      */
-    public final boolean update(POJO pojo) throws Exception {
-
+    public final POJO update(POJO pojo,boolean synDB) throws Exception {
         delete(pojo,false);
-        setCache(pojo);
 
-        return true;
+        return  setCache(pojo,true);
     }
 
 
     /**
      *缓存单个pojo数据
      */
-    public final boolean setCache(POJO pojo) throws Exception {
+    public final POJO setCache(POJO pojo,boolean synDB) throws Exception {
+
+        if(getKeyParams(pojo)==null&&synDB)
+        {
+            pojo = updatePojoByDB(pojo);
+        }
         QueryItem item = new QueryItem();
         item.setId(getKeyParams(pojo));
-        return setCache(item,toList(pojo));
+        return setCache(item,toList(pojo),synDB).get(0);
     }
+
 
 
     /**
@@ -323,13 +332,13 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
      * @return
      * @throws Exception
      */
-    public final boolean setCache(QueryItem itemKey,List<POJO> pojos)throws Exception{
+    private final List<POJO> setCache(QueryItem itemKey,List<POJO> pojos,boolean synDB)throws Exception{
 
         String keyData = getKey(itemKey);
 
         if(!check(keyData))
         {
-            return false;
+            return null;
         }
         try {
             if (lock(keyData)) {
@@ -338,13 +347,19 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
 
                 List<String> userKeys = new ArrayList();
 
-                for(POJO pojo : pojos)
+                for(int i=0;i<pojos.size();i++)
                 {
+
+                    POJO pojo = pojos.get(i);
                     String uKey = getKey(getKeyParams(pojo));
 
                     util.delete(uKey);
 
-                    updatePojoByDB(pojo);
+                    if(synDB) {
+                        pojo = updatePojoByDB(pojo);
+                        pojos.remove(i);
+                        pojos.add(i,pojo);
+                    }
                     util.set(uKey,dto.toCommon(pojo).toJsonString(),liveTime);
 
                     userKeys.add(getKeyParams(pojo));
@@ -356,7 +371,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
                 success(keyData,pojos);
 
                 unlock(keyData);
-                return true;
+                return pojos;
             }
         }
         catch (Exception e)
@@ -368,13 +383,19 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
             fail(keyData,pojos,e);
         }
 
-        return true;
+        return pojos;
     }
 
     public boolean lock(String key)
     {
         String keyLock = key +".LOCK";
         return util.lock(keyLock);
+    }
+
+    public boolean lock(String key,long timeout)
+    {
+        String keyLock = key +".LOCK";
+        return util.lock(keyLock,timeout);
     }
 
     public boolean unlock(String key)

@@ -82,16 +82,13 @@ public class MQMessageCommonUtils {
    public boolean isRepeatSend(MessageItem item) throws Exception {
       String key = buildId(item);
 
-      QueryItem queryItem = queryItemCommonUtil.createPojo(key);
 
-      MqMessage mqMessage =  cache.get(queryItem);
-
-      if(mqMessage!=null)
+      if(cache.lock(key,CacheConstant.CACHE_LIVE))
       {
-         return false;
+         return true;
       }
 
-      return true;
+      return false;
    }
 
    /**
@@ -112,7 +109,7 @@ public class MQMessageCommonUtils {
 
       mqMessage.changeStatus((short) 1);
 
-      cache.update(mqMessage);
+      cache.update(mqMessage,false);
 
       return mqMessage;
    }
@@ -120,7 +117,7 @@ public class MQMessageCommonUtils {
    public MqMessage sendSuccess(MessageItem item) throws Exception {
       MqMessage mqMessage = empty(item);
 
-      cache.setCache(mqMessage);
+      cache.setCache(mqMessage,false);
 
       return mqMessage;
    }
@@ -134,7 +131,7 @@ public class MQMessageCommonUtils {
       MqMessage mqMessage = getCache(item);
 
       mqMessage.changeStatus((short) 100);
-      cache.update(mqMessage);
+      cache.update(mqMessage,false);
 
       return mqMessage;
    }
@@ -148,7 +145,7 @@ public class MQMessageCommonUtils {
       MqMessage mqMessage = getCache(item);
 
       mqMessage.changeStatus((short) -1);
-      cache.update(mqMessage);
+      cache.update(mqMessage,false);
 
       return mqMessage;
    }
@@ -157,7 +154,7 @@ public class MQMessageCommonUtils {
       MqMessage mqMessage = getCache(item);
 
       mqMessage.retrySend();
-      cache.update(mqMessage);
+      cache.update(mqMessage,false);
 
       return mqMessage;
    }
