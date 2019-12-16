@@ -48,8 +48,7 @@ public class SysCache {
     }
 
 
-    public CacheItem getCache(CommonItem item)
-    {
+    public CacheItem getCache(CommonItem item) throws Exception {
 
         String cacheKey =commonUtil.toPojo(item).getName();
         CacheItem cacheItem = mg_cache.get(cacheKey);

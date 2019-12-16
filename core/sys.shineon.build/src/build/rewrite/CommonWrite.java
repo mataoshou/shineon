@@ -24,7 +24,7 @@ public class CommonWrite {
         }
     };
 
-    String replacePath = "src\\main\\java\\com\\shineon\\coder\\action\\ControllerLog.java";
+    String replacePath = "src\\main\\java\\com\\shineon\\coder\\service\\convert\\CommonItemUtils.java";
 
     public void replace() throws IOException {
 

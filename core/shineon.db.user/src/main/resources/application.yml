@@ -1,4 +1,6 @@
 spring:
+  main:
+    allowbeandefinitionoverriding: true
   application: 
     name: shineon.db.user
   data: 

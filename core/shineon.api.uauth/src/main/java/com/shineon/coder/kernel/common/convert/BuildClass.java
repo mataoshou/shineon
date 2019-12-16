@@ -20,7 +20,7 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 
-		classBuildUtil.classInit(className,baseName, null,ConvertsConstant.UTIL_PACKAGE ,new String[]{"Service"},true,
+		classBuildUtil.classInit(className,baseName, null, ConvertsConstant.UTIL_PACKAGE ,new String[]{"Service"},true,
 				String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Service");
 
 
@@ -42,7 +42,7 @@ public class BuildClass {
 		ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 		classBuildUtil.classInit(className,null,
-				new String[]{String.format("CommonItemUtils<%s>",pojo)},ConvertsConstant.BASE_PACKAGE,null,true,
+				new String[]{String.format("CommonItemUtils<%s>",pojo)}, ConvertsConstant.BASE_PACKAGE,null,true,
 				"java.util.Date", String.format("%s.%s", ConvertsConstant.POJO_PACKAGE,pojo), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
 				"java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
 				ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
@@ -131,7 +131,7 @@ public class BuildClass {
 		classBuildUtil.addTabLeftContent(String.format("}"));
 	}
 
-	public void toCommon(String pojoName ,ClassBuildUtil classBuildUtil)
+	public void toCommon(String pojoName , ClassBuildUtil classBuildUtil)
 	{
 
 		String methodName = "toCommon";
@@ -171,9 +171,11 @@ public class BuildClass {
 	{
 		String methodName = "toPojo";
 
-		classBuildUtil.addTabContent(String.format("public %s %s( CommonItem item) {" ,pojoName,methodName));
+		classBuildUtil.addTabContent(String.format("public %s %s( CommonItem item) throws Exception{" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();"));
+		classBuildUtil.addTabRightContent(String.format("checkCommonItem(item);"));
+
+		classBuildUtil.addTabContent(String.format("List<CommonData> datas = item.getDatas();"));
 
 		classBuildUtil.addTabContent(String.format("if(datas ==null||datas.size()==0){logger.debug(\"CommonItem 中data数据为空!!\"); return null;}"));
 
@@ -191,9 +193,11 @@ public class BuildClass {
 	{
 		String methodName = "toPojoList";
 
-		classBuildUtil.addTabContent(String.format("public List<%s> %s(  CommonItem item) {" ,pojoName,methodName));
+		classBuildUtil.addTabContent(String.format("public List<%s> %s(  CommonItem item) throws Exception{" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("List<%s> result = new ArrayList();",pojoName ));
+		classBuildUtil.addTabRightContent(String.format("checkCommonItem(item);"));
+
+		classBuildUtil.addTabContent(String.format("List<%s> result = new ArrayList();",pojoName ));
 		classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();" ));
 
 		classBuildUtil.addTabContent(String.format("for(CommonData data : datas){"));

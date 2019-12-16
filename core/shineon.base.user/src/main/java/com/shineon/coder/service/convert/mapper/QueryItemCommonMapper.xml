@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="id" commonName="id" type="java.lang.String"/>
   <item pojoName="title" commonName="title" type="java.lang.String"/>
   <item pojoName="status1" commonName="status1" type="java.lang.Short"/>

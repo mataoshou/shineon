@@ -12,9 +12,9 @@ public interface CommonItemUtils<T> {
     CommonItem toCommon(List<T> pojos);
 
 
-    T toPojo(CommonItem item);
+    T toPojo(CommonItem item) throws Exception;
 
-    public List<T> toPojoList(CommonItem item);
+    public List<T> toPojoList(CommonItem item) throws Exception;
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -106,6 +106,13 @@ public interface CommonItemUtils<T> {
         }
 
         return  false;
+    }
+
+    default void checkCommonItem(CommonItem item) throws Exception {
+        if(!item.getErrorStatus().equals(CommonItemConstant.STATUS_SUCCESS))
+        {
+            throw new Exception(item.getErrorReason());
+        }
     }
 
 }

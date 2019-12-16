@@ -3,6 +3,6 @@ package com.shineon.coder.service.convert.base ;import java.util.Date;import 
 	private SimpleItem toPojoData( CommonData data) {		SimpleItem pojo = new SimpleItem();		pojo.setKey(data.getParentCode1());		pojo.setValue(data.getParentCode2());		return pojo;	}	
 	public CommonItem toCommon( SimpleItem pojo) {		return success(toCommonData(pojo));	}	
 	public  CommonItem toCommon( List<SimpleItem> pojos) {		List<CommonData> result = new ArrayList();		for(SimpleItem item : pojos){			result.add(toCommonData(item));		}		return success(result);	}	
-	public SimpleItem toPojo( CommonItem item) {		List<CommonData> datas = item.getDatas();		if(datas ==null||datas.size()==0){logger.debug("CommonItem 中data数据为空!!"); return null;}		if(datas.size()>1){logger.debug("CommonItem 中data数据不止一条数据!!"); }		return toPojoData(datas.get(0));	}	
-	public List<SimpleItem> toPojoList(  CommonItem item) {		List<SimpleItem> result = new ArrayList();			List<CommonData> datas = item.getDatas();			for(CommonData data : datas){				result.add(toPojoData(data));			}			return result;		}		
+	public SimpleItem toPojo( CommonItem item) throws Exception{		checkCommonItem(item);		List<CommonData> datas = item.getDatas();		if(datas ==null||datas.size()==0){logger.debug("CommonItem 中data数据为空!!"); return null;}		if(datas.size()>1){logger.debug("CommonItem 中data数据不止一条数据!!"); }		return toPojoData(datas.get(0));	}	
+	public List<SimpleItem> toPojoList(  CommonItem item) throws Exception{		checkCommonItem(item);		List<SimpleItem> result = new ArrayList();			List<CommonData> datas = item.getDatas();			for(CommonData data : datas){				result.add(toPojoData(data));			}			return result;		}		
 }

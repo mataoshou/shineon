@@ -1,190 +1,76 @@
-2019-12-06 11:03:27.384  INFO [shineon.web,,,] 1404 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-06 11:03:28.196  INFO [shineon.web,,,] 1404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-06 11:03:28.198  INFO [shineon.web,,,] 1404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-06 11:03:28.223  INFO [shineon.web,,,] 1404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
-2019-12-06 11:03:28.360  WARN [shineon.web,,,] 1404 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-06 11:03:28.736  INFO [shineon.web,,,] 1404 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
-2019-12-06 11:03:28.783  INFO [shineon.web,,,] 1404 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-06 11:03:28.788  INFO [shineon.web,,,] 1404 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-06 11:03:28.796  INFO [shineon.web,,,] 1404 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-06 11:03:29.102  INFO [shineon.web,,,] 1404 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:03:29.161  INFO [shineon.web,,,] 1404 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$379e2421] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:03:29.201  INFO [shineon.web,,,] 1404 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8c66bef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:03:30.050  INFO [shineon.web,,,] 1404 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:03:30.051  INFO [shineon.web,,,] 1404 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:03:30.370  WARN [shineon.web,,,] 1404 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:03:30.370  INFO [shineon.web,,,] 1404 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:03:30.382  INFO [shineon.web,,,] 1404 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5a82bc58
-2019-12-06 11:03:30.589  INFO [shineon.web,,,] 1404 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-06 11:03:31.165  INFO [shineon.web,,,] 1404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-06 11:03:31.175  INFO [shineon.web,,,] 1404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-06 11:03:31.579  WARN [shineon.web,,,] 1404 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:03:31.579  INFO [shineon.web,,,] 1404 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:03:33.836  INFO [shineon.web,,,] 1404 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-12-06 11:03:33.837  INFO [shineon.web,,,] 1404 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-12-06 11:03:34.983  INFO [shineon.web,,,] 1404 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-06 11:03:35.149  INFO [shineon.web,,,] 1404 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
-2019-12-06 11:03:35.179  INFO [shineon.web,,,] 1404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:03:35.179  INFO [shineon.web,,,] 1404 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-06 11:03:35.179  INFO [shineon.web,,,] 1404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-06 11:03:35.219  INFO [shineon.web,,,] 1404 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
-2019-12-06 11:03:35.836  INFO [shineon.web,,,] 1404 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 9.204 seconds (JVM running for 9.868)
-2019-12-06 11:03:36.018  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-06 11:03:36.022  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
-2019-12-06 11:03:36.037  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:03:36.037  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-06 11:03:36.037  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
-2019-12-06 11:03:36.042  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
-2019-12-06 11:03:36.044  INFO [shineon.web,,,] 1404 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2019-12-06 11:11:58.475  INFO [shineon.web,,,] 11228 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-06 11:11:59.280  INFO [shineon.web,,,] 11228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-06 11:11:59.283  INFO [shineon.web,,,] 11228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-06 11:11:59.310  INFO [shineon.web,,,] 11228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
-2019-12-06 11:11:59.447  WARN [shineon.web,,,] 11228 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-06 11:11:59.828  INFO [shineon.web,,,] 11228 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
-2019-12-06 11:11:59.887  INFO [shineon.web,,,] 11228 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-06 11:11:59.892  INFO [shineon.web,,,] 11228 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-06 11:11:59.899  INFO [shineon.web,,,] 11228 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-06 11:12:00.217  INFO [shineon.web,,,] 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:12:00.279  INFO [shineon.web,,,] 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$379e2421] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:12:00.324  INFO [shineon.web,,,] 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e8c66bef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:12:01.173  INFO [shineon.web,,,] 11228 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:12:01.174  INFO [shineon.web,,,] 11228 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:12:01.525  WARN [shineon.web,,,] 11228 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:12:01.525  INFO [shineon.web,,,] 11228 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:12:01.538  INFO [shineon.web,,,] 11228 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@41be8db9
-2019-12-06 11:12:01.727  INFO [shineon.web,,,] 11228 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-06 11:12:02.371  INFO [shineon.web,,,] 11228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-06 11:12:02.379  INFO [shineon.web,,,] 11228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-06 11:12:02.727  WARN [shineon.web,,,] 11228 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:12:02.727  INFO [shineon.web,,,] 11228 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:12:04.899  INFO [shineon.web,,,] 11228 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-12-06 11:12:04.901  INFO [shineon.web,,,] 11228 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-12-06 11:12:06.111  INFO [shineon.web,,,] 11228 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-06 11:12:06.275  INFO [shineon.web,,,] 11228 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
-2019-12-06 11:12:06.303  INFO [shineon.web,,,] 11228 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:12:06.303  INFO [shineon.web,,,] 11228 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-06 11:12:06.303  INFO [shineon.web,,,] 11228 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-06 11:12:06.343  INFO [shineon.web,,,] 11228 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
-2019-12-06 11:12:06.954  INFO [shineon.web,,,] 11228 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 9.229 seconds (JVM running for 9.856)
-2019-12-06 11:12:07.242  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-06 11:12:07.245  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
-2019-12-06 11:12:07.257  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:12:07.258  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-06 11:12:07.258  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
-2019-12-06 11:12:07.263  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
-2019-12-06 11:12:07.265  INFO [shineon.web,,,] 11228 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2019-12-06 11:30:32.587  INFO [shineon.web,,,] 13524 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-06 11:30:33.451  INFO [shineon.web,,,] 13524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-06 11:30:33.454  INFO [shineon.web,,,] 13524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-06 11:30:33.480  INFO [shineon.web,,,] 13524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
-2019-12-06 11:30:33.627  WARN [shineon.web,,,] 13524 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-06 11:30:34.039  INFO [shineon.web,,,] 13524 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
-2019-12-06 11:30:34.089  INFO [shineon.web,,,] 13524 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-06 11:30:34.094  INFO [shineon.web,,,] 13524 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-06 11:30:34.102  INFO [shineon.web,,,] 13524 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-06 11:30:34.419  INFO [shineon.web,,,] 13524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:30:34.476  INFO [shineon.web,,,] 13524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$7b5f98c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:30:34.521  INFO [shineon.web,,,] 13524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c87e095] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:30:35.372  INFO [shineon.web,,,] 13524 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:30:35.372  INFO [shineon.web,,,] 13524 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:30:35.712  WARN [shineon.web,,,] 13524 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:30:35.712  INFO [shineon.web,,,] 13524 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:30:35.725  INFO [shineon.web,,,] 13524 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6a1d1467
-2019-12-06 11:30:35.951  INFO [shineon.web,,,] 13524 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-06 11:30:36.571  INFO [shineon.web,,,] 13524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-06 11:30:36.577  INFO [shineon.web,,,] 13524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-06 11:30:36.947  WARN [shineon.web,,,] 13524 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:30:36.947  INFO [shineon.web,,,] 13524 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:30:39.236  INFO [shineon.web,,,] 13524 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-12-06 11:30:39.237  INFO [shineon.web,,,] 13524 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-12-06 11:30:40.400  INFO [shineon.web,,,] 13524 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-06 11:30:40.554  INFO [shineon.web,,,] 13524 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
-2019-12-06 11:30:40.584  INFO [shineon.web,,,] 13524 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:30:40.584  INFO [shineon.web,,,] 13524 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-06 11:30:40.584  INFO [shineon.web,,,] 13524 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-06 11:30:40.621  INFO [shineon.web,,,] 13524 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
-2019-12-06 11:30:41.241  INFO [shineon.web,,,] 13524 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 9.424 seconds (JVM running for 10.058)
-2019-12-06 11:30:41.420  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-06 11:30:41.423  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
-2019-12-06 11:30:41.434  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:30:41.435  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-06 11:30:41.435  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
-2019-12-06 11:30:41.440  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
-2019-12-06 11:30:41.441  INFO [shineon.web,,,] 13524 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2019-12-06 11:33:08.823  INFO [shineon.web,,,] 13396 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-06 11:33:09.643  INFO [shineon.web,,,] 13396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-06 11:33:09.646  INFO [shineon.web,,,] 13396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-06 11:33:09.674  INFO [shineon.web,,,] 13396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
-2019-12-06 11:33:09.813  WARN [shineon.web,,,] 13396 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-06 11:33:10.171  INFO [shineon.web,,,] 13396 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
-2019-12-06 11:33:10.229  INFO [shineon.web,,,] 13396 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-06 11:33:10.234  INFO [shineon.web,,,] 13396 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-06 11:33:10.242  INFO [shineon.web,,,] 13396 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-06 11:33:10.556  INFO [shineon.web,,,] 13396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:33:10.613  INFO [shineon.web,,,] 13396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$fdc79310] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:33:10.652  INFO [shineon.web,,,] 13396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$aeefdade] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 11:33:11.472  INFO [shineon.web,,,] 13396 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:33:11.472  INFO [shineon.web,,,] 13396 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 11:33:11.817  WARN [shineon.web,,,] 13396 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:33:11.818  INFO [shineon.web,,,] 13396 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:33:11.832  INFO [shineon.web,,,] 13396 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@41be8db9
-2019-12-06 11:33:12.032  INFO [shineon.web,,,] 13396 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-06 11:33:12.656  INFO [shineon.web,,,] 13396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-06 11:33:12.663  INFO [shineon.web,,,] 13396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-06 11:33:13.029  WARN [shineon.web,,,] 13396 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 11:33:13.029  INFO [shineon.web,,,] 13396 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 11:33:15.198  INFO [shineon.web,,,] 13396 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-12-06 11:33:15.199  INFO [shineon.web,,,] 13396 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-12-06 11:33:16.431  INFO [shineon.web,,,] 13396 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-06 11:33:16.600  INFO [shineon.web,,,] 13396 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
-2019-12-06 11:33:16.628  INFO [shineon.web,,,] 13396 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:33:16.628  INFO [shineon.web,,,] 13396 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-06 11:33:16.628  INFO [shineon.web,,,] 13396 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-06 11:33:16.667  INFO [shineon.web,,,] 13396 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
-2019-12-06 11:33:17.284  INFO [shineon.web,,,] 13396 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 9.26 seconds (JVM running for 9.931)
-2019-12-06 11:33:17.507  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-06 11:33:17.509  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
-2019-12-06 11:33:17.521  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 11:33:17.522  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-06 11:33:17.522  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
-2019-12-06 11:33:17.526  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
-2019-12-06 11:33:17.528  INFO [shineon.web,,,] 13396 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2019-12-06 13:50:39.243  INFO [shineon.web,,,] 10968 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-06 13:50:40.060  INFO [shineon.web,,,] 10968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-06 13:50:40.063  INFO [shineon.web,,,] 10968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-06 13:50:40.088  INFO [shineon.web,,,] 10968 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
-2019-12-06 13:50:40.246  WARN [shineon.web,,,] 10968 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-06 13:50:40.628  INFO [shineon.web,,,] 10968 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
-2019-12-06 13:50:40.690  INFO [shineon.web,,,] 10968 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-06 13:50:40.696  INFO [shineon.web,,,] 10968 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-06 13:50:40.704  INFO [shineon.web,,,] 10968 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-06 13:50:41.041  INFO [shineon.web,,,] 10968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 13:50:41.100  INFO [shineon.web,,,] 10968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$fdc79310] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 13:50:41.148  INFO [shineon.web,,,] 10968 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$aeefdade] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-06 13:50:42.047  INFO [shineon.web,,,] 10968 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 13:50:42.047  INFO [shineon.web,,,] 10968 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
-2019-12-06 13:50:42.399  WARN [shineon.web,,,] 10968 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 13:50:42.399  INFO [shineon.web,,,] 10968 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 13:50:42.414  INFO [shineon.web,,,] 10968 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@41be8db9
-2019-12-06 13:50:42.640  INFO [shineon.web,,,] 10968 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-06 13:50:43.308  INFO [shineon.web,,,] 10968 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-06 13:50:43.316  INFO [shineon.web,,,] 10968 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-06 13:50:43.697  WARN [shineon.web,,,] 10968 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-06 13:50:43.697  INFO [shineon.web,,,] 10968 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-06 13:50:46.136  INFO [shineon.web,,,] 10968 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-12-06 13:50:46.138  INFO [shineon.web,,,] 10968 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-12-06 13:50:47.445  INFO [shineon.web,,,] 10968 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-06 13:50:47.631  INFO [shineon.web,,,] 10968 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
-2019-12-06 13:50:47.693  INFO [shineon.web,,,] 10968 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 13:50:47.693  INFO [shineon.web,,,] 10968 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-06 13:50:47.693  INFO [shineon.web,,,] 10968 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-06 13:50:47.736  INFO [shineon.web,,,] 10968 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
-2019-12-06 13:50:48.382  INFO [shineon.web,,,] 10968 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 10.02 seconds (JVM running for 10.715)
-2019-12-06 13:50:48.689  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-06 13:50:48.691  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
-2019-12-06 13:50:48.706  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-06 13:50:48.706  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
-2019-12-06 13:50:48.706  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
-2019-12-06 13:50:48.719  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
-2019-12-06 13:50:48.721  INFO [shineon.web,,,] 10968 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-12-13 17:28:47.843  INFO [shineon.web,,,] 5804 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
+2019-12-13 17:28:48.695  INFO [shineon.web,,,] 5804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-13 17:28:48.698  INFO [shineon.web,,,] 5804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-13 17:28:48.722  INFO [shineon.web,,,] 5804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-12-13 17:28:48.881  WARN [shineon.web,,,] 5804 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-13 17:28:49.287  INFO [shineon.web,,,] 5804 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
+2019-12-13 17:28:49.351  INFO [shineon.web,,,] 5804 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-12-13 17:28:49.356  INFO [shineon.web,,,] 5804 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-12-13 17:28:49.363  INFO [shineon.web,,,] 5804 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-12-13 17:28:49.718  INFO [shineon.web,,,] 5804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 17:28:49.777  INFO [shineon.web,,,] 5804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$fdc79310] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 17:28:49.828  INFO [shineon.web,,,] 5804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$aeefdade] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 17:28:50.706  INFO [shineon.web,,,] 5804 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
+2019-12-13 17:28:50.707  INFO [shineon.web,,,] 5804 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
+2019-12-13 17:28:51.080  WARN [shineon.web,,,] 5804 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-13 17:28:51.080  INFO [shineon.web,,,] 5804 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-13 17:28:51.095  INFO [shineon.web,,,] 5804 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@57b1ec84
+2019-12-13 17:28:51.347  INFO [shineon.web,,,] 5804 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-12-13 17:28:52.038  INFO [shineon.web,,,] 5804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-13 17:28:52.045  INFO [shineon.web,,,] 5804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
+2019-12-13 17:28:52.445  WARN [shineon.web,,,] 5804 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-13 17:28:52.445  INFO [shineon.web,,,] 5804 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-13 17:28:54.932  INFO [shineon.web,,,] 5804 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-13 17:28:54.933  INFO [shineon.web,,,] 5804 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-13 17:28:56.368  INFO [shineon.web,,,] 5804 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-13 17:28:56.551  INFO [shineon.web,,,] 5804 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
+2019-12-13 17:28:56.583  INFO [shineon.web,,,] 5804 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-13 17:28:56.583  INFO [shineon.web,,,] 5804 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-12-13 17:28:56.583  INFO [shineon.web,,,] 5804 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-12-13 17:28:56.626  INFO [shineon.web,,,] 5804 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
+2019-12-13 17:28:57.261  INFO [shineon.web,,,] 5804 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 10.262 seconds (JVM running for 10.938)
+2019-12-13 17:28:57.615  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-13 17:28:57.618  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
+2019-12-13 17:28:57.631  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-13 17:28:57.631  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2019-12-13 17:28:57.632  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2019-12-13 17:28:57.649  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
+2019-12-13 17:28:57.651  INFO [shineon.web,,,] 5804 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-12-13 17:41:21.588  INFO [shineon.web,,,] 10356 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
+2019-12-13 17:41:22.521  INFO [shineon.web,,,] 10356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-13 17:41:22.525  INFO [shineon.web,,,] 10356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-13 17:41:22.554  INFO [shineon.web,,,] 10356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-12-13 17:41:22.705  WARN [shineon.web,,,] 10356 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-13 17:41:23.116  INFO [shineon.web,,,] 10356 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79efc5b0-78fc-3690-9160-ab130a0109fd
+2019-12-13 17:41:23.176  INFO [shineon.web,,,] 10356 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-12-13 17:41:23.181  INFO [shineon.web,,,] 10356 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-12-13 17:41:23.189  INFO [shineon.web,,,] 10356 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-12-13 17:41:23.530  INFO [shineon.web,,,] 10356 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 17:41:23.586  INFO [shineon.web,,,] 10356 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$7b5f98c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 17:41:23.631  INFO [shineon.web,,,] 10356 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c87e095] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 17:41:24.507  INFO [shineon.web,,,] 10356 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
+2019-12-13 17:41:24.508  INFO [shineon.web,,,] 10356 --- [main] c.shineon.coder.service.cache.SysCache   : Ìí¼Ó»º´æ£ºCACHE_SYS_USER
+2019-12-13 17:41:24.861  WARN [shineon.web,,,] 10356 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-13 17:41:24.861  INFO [shineon.web,,,] 10356 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-13 17:41:24.877  INFO [shineon.web,,,] 10356 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@58fbcb71
+2019-12-13 17:41:25.103  INFO [shineon.web,,,] 10356 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-12-13 17:41:25.741  INFO [shineon.web,,,] 10356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-13 17:41:25.748  INFO [shineon.web,,,] 10356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
+2019-12-13 17:41:26.131  WARN [shineon.web,,,] 10356 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-13 17:41:26.131  INFO [shineon.web,,,] 10356 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-13 17:41:28.492  INFO [shineon.web,,,] 10356 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-13 17:41:28.494  INFO [shineon.web,,,] 10356 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-13 17:41:29.721  INFO [shineon.web,,,] 10356 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-13 17:41:29.905  INFO [shineon.web,,,] 10356 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
+2019-12-13 17:41:29.936  INFO [shineon.web,,,] 10356 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-13 17:41:29.936  INFO [shineon.web,,,] 10356 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-12-13 17:41:29.936  INFO [shineon.web,,,] 10356 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-12-13 17:41:29.979  INFO [shineon.web,,,] 10356 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
+2019-12-13 17:41:30.610  INFO [shineon.web,,,] 10356 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 9.835 seconds (JVM running for 10.496)
+2019-12-13 17:41:30.817  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-13 17:41:30.820  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.WEB with eureka with status DOWN
+2019-12-13 17:41:30.832  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-13 17:41:30.833  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2019-12-13 17:41:30.833  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2019-12-13 17:41:30.838  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule1'
+2019-12-13 17:41:30.840  INFO [shineon.web,,,] 10356 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'

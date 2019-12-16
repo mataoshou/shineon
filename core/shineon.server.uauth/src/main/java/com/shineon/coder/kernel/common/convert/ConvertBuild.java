@@ -47,6 +47,7 @@ public class ConvertBuild {
 
         File pojo = new File(root, ConvertsConstant.POJO_PACKAGE.replace(".","\\"));
 
+
         File buildRoot = new File(root,ConvertsConstant.CONVERT_PACKAGE.replace(".","\\"));
 
         mapper = new File(buildRoot,"mapper");

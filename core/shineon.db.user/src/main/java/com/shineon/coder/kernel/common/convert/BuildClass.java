@@ -171,9 +171,11 @@ public class BuildClass {
 	{
 		String methodName = "toPojo";
 
-		classBuildUtil.addTabContent(String.format("public %s %s( CommonItem item) {" ,pojoName,methodName));
+		classBuildUtil.addTabContent(String.format("public %s %s( CommonItem item) throws Exception{" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();"));
+		classBuildUtil.addTabRightContent(String.format("checkCommonItem(item);"));
+
+		classBuildUtil.addTabContent(String.format("List<CommonData> datas = item.getDatas();"));
 
 		classBuildUtil.addTabContent(String.format("if(datas ==null||datas.size()==0){logger.debug(\"CommonItem 中data数据为空!!\"); return null;}"));
 
@@ -191,9 +193,11 @@ public class BuildClass {
 	{
 		String methodName = "toPojoList";
 
-		classBuildUtil.addTabContent(String.format("public List<%s> %s(  CommonItem item) {" ,pojoName,methodName));
+		classBuildUtil.addTabContent(String.format("public List<%s> %s(  CommonItem item) throws Exception{" ,pojoName,methodName));
 
-		classBuildUtil.addTabRightContent(String.format("List<%s> result = new ArrayList();",pojoName ));
+		classBuildUtil.addTabRightContent(String.format("checkCommonItem(item);"));
+
+		classBuildUtil.addTabContent(String.format("List<%s> result = new ArrayList();",pojoName ));
 		classBuildUtil.addTabRightContent(String.format("List<CommonData> datas = item.getDatas();" ));
 
 		classBuildUtil.addTabContent(String.format("for(CommonData data : datas){"));

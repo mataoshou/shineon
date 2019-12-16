@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root>
+<root> 
   <item pojoName="tenantid" commonName="parentCode1" type="java.lang.String"/>
   <item pojoName="tenantname" commonName="parent1Name" type="java.lang.String"/>
   <item pojoName="description" commonName="parentCode2" type="java.lang.String"/>

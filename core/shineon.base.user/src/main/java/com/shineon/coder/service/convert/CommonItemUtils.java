@@ -4,17 +4,17 @@ import com.shineon.coder.kernel.constant.CommonItemConstant;
 
 import java.util.List;
 
-public interface CommonItemUtils<POJO> {
+public interface CommonItemUtils<T> {
 
 
-    CommonItem toCommon( POJO pojo);
+    CommonItem toCommon(T pojo);
 
-    CommonItem toCommon( List<POJO> pojos);
+    CommonItem toCommon(List<T> pojos);
 
 
-    POJO toPojo( CommonItem item);
+    T toPojo(CommonItem item) throws Exception;
 
-    public List<POJO> toPojoList(  CommonItem item);
+    public List<T> toPojoList(CommonItem item) throws Exception;
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -106,6 +106,13 @@ public interface CommonItemUtils<POJO> {
         }
 
         return  false;
+    }
+
+    default void checkCommonItem(CommonItem item) throws Exception {
+        if(!item.getErrorStatus().equals(CommonItemConstant.STATUS_SUCCESS))
+        {
+            throw new Exception(item.getErrorReason());
+        }
     }
 
 }

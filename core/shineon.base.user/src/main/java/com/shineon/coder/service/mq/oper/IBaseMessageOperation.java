@@ -31,8 +31,7 @@ public abstract class IBaseMessageOperation<POJO,DTO extends CommonItemUtils<POJ
      * @param item
      * @return
      */
-    public final POJO oper(MessageItem item)
-    {
+    public final POJO oper(MessageItem item) throws Exception {
         POJO pojo = dto.toPojo(item.getData());
         switch (item.getOperType())
         {
@@ -49,8 +48,7 @@ public abstract class IBaseMessageOperation<POJO,DTO extends CommonItemUtils<POJ
      * @param item
      * @return
      */
-    public boolean check(MessageItem item)
-    {
+    public boolean check(MessageItem item) throws Exception {
         if(pojoName==null)
         {
             pojoName =dto.toPojo(item.getData()).getClass().getSimpleName();
