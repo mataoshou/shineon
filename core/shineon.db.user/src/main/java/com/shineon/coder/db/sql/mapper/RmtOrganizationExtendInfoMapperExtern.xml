@@ -12,4 +12,8 @@
             order by ${order}
         </if>
     </select>
+    <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtOrganizationExtendInfo" >
+        insert into rmt_organization_extend_info (id,organizationID,organizationAddress,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{organizationid,jdbcType=VARCHAR},#{organizationaddress,jdbcType=VARCHAR},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>

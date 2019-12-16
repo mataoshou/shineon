@@ -12,4 +12,14 @@
             order by ${order}
         </if>
     </select>
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_tenant_chart_info 
+        where tenantName = #{name,jdbcType=VARCHAR}
+    </select> 
+    <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtTenantChartInfo" >
+        insert into rmt_tenant_chart_info (id,tenantID,tenantName,tenantCode,levelInfo,parentID,showOrder,createTime,createUserID,modifyTime,modifyUserID,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{tenantid,jdbcType=VARCHAR},#{tenantname,jdbcType=VARCHAR},#{tenantcode,jdbcType=INTEGER},#{levelinfo,jdbcType=VARCHAR},#{parentid,jdbcType=VARCHAR},#{showorder,jdbcType=INTEGER},#{createtime,jdbcType=TIMESTAMP},#{createuserid,jdbcType=VARCHAR},#{modifytime,jdbcType=TIMESTAMP},#{modifyuserid,jdbcType=VARCHAR},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>

@@ -88,7 +88,7 @@ public class ActionBuild {
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
                 "com.shineon.coder.db.pojo.QueryItem",
                 "com.shineon.coder.service.convert.util.QueryItemCommonUtil",
-                "com.shineon.coder.service.convert.CommonItem");
+                "com.shineon.coder.service.convert.CommonItem", "com.shineon.coder.db.common.ApiResultItem");
 
         dtoClassBuild.addTabContent("\r\n");
         dtoClassBuild.addTabContent("@Autowired");
@@ -101,7 +101,7 @@ public class ActionBuild {
         for(String method: methods)
         {
             dtoClassBuild.addTabContent("\r\n");
-            dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item){",pojoClass.getSimpleName(),method.toLowerCase()));
+            dtoClassBuild.addTabContent(String.format("public ApiResultItem %s(CommonItem item) throws Exception{",method.toLowerCase()));
             dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
             dtoClassBuild.addTabContent(String.format("return null;"));
             dtoClassBuild.addTabLeftContent(String.format("}"));
@@ -120,7 +120,8 @@ public class ActionBuild {
                 "org.springframework.web.bind.annotation.RestController","org.springframework.web.bind.annotation.RequestMapping",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.beans.factory.annotation.Autowired",
                 ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, ActionConstant.ACTION_CONSTANT_PACKAGE+"." +constantName
-                ,"org.springframework.web.bind.annotation.RequestBody");
+                ,"org.springframework.web.bind.annotation.RequestBody","com.alibaba.fastjson.JSONObject",
+                "com.shineon.coder.db.common.ApiResultItem");
 
 
         actionClassBuild.addTabContent("\r\n");
@@ -137,8 +138,8 @@ public class ActionBuild {
         {
             actionClassBuild.addTabContent("\r\n");
             actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",constantName,method.toUpperCase()));
-            actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item){",method.toLowerCase()));
-            actionClassBuild.addTabRightContent(String.format("return commonUtil.toCommon(dto.%s(item));",method.toLowerCase()));
+            actionClassBuild.addTabContent(String.format("public ApiResultItem %s(@RequestBody JSONObject params) throws Exception{",method.toLowerCase()));
+            actionClassBuild.addTabRightContent(String.format("return dto.%s(item);",method.toLowerCase()));
             actionClassBuild.addTabLeftContent(String.format("}"));
         }
         actionClassBuild.finish(actionFile);

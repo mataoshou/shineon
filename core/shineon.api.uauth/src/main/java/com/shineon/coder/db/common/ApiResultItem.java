@@ -1,8 +1,11 @@
 package com.shineon.coder.db.common;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.shineon.coder.service.convert.CommonItem;
+
+import java.util.List;
 
 public class ApiResultItem {
 
@@ -10,15 +13,29 @@ public class ApiResultItem {
 
     private String msg;
 
-    private JSONObject data;
+    private JSONArray data = new JSONArray();
 
-    public ApiResultItem(CommonItem item,Object data)
+    public ApiResultItem(CommonItem item,Object data) throws Exception {
+
+        this.msg = item.getErrorReason();
+        this.code = item.getErrorStatus();
+
+        if(data instanceof  List)
+        {
+            throw new Exception("List转换使用 ApiResultItem(CommonItem item, List data,boolean isConvert) 方法");
+        }
+
+        this.data.add(JSON.toJSON(data));
+
+    }
+
+    public ApiResultItem(CommonItem item, List data,boolean isConvert)
     {
 
         this.msg = item.getErrorReason();
         this.code = item.getErrorStatus();
 
-        this.data = (JSONObject) JSON.toJSON(data);
+        this.data.addAll(data);
 
     }
 
@@ -39,11 +56,11 @@ public class ApiResultItem {
         this.msg = msg;
     }
 
-    public JSONObject getData() {
+    public JSONArray getData() {
         return data;
     }
 
-    public void setData(JSONObject data) {
+    public void setData(JSONArray data) {
         this.data = data;
     }
 }

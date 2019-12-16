@@ -12,4 +12,8 @@
             order by ${order}
         </if>
     </select>
+    <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtUserLoginInfo" >
+        insert into rmt_user_login_info (id,userID,loginIP,lastTimeLogin,lastTimeLogout,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{userid,jdbcType=VARCHAR},#{loginip,jdbcType=VARCHAR},#{lasttimelogin,jdbcType=TIMESTAMP},#{lasttimelogout,jdbcType=INTEGER},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>

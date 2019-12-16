@@ -1,86 +1,650 @@
-2019-12-13 17:26:59.441  INFO [shineon.db.user,,,] 16036 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-13 17:27:00.262  INFO [shineon.db.user,,,] 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-13 17:27:00.263  INFO [shineon.db.user,,,] 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-13 17:27:00.303  INFO [shineon.db.user,,,] 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
-2019-12-13 17:27:00.314  INFO [shineon.db.user,,,] 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-13 17:27:00.315  INFO [shineon.db.user,,,] 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-13 17:27:00.336  INFO [shineon.db.user,,,] 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
-2019-12-13 17:27:00.519  WARN [shineon.db.user,,,] 16036 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-13 17:27:00.871  INFO [shineon.db.user,,,] 16036 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c48d6ecb-46a6-3da9-b224-702cc46f2cac
-2019-12-13 17:27:01.234  INFO [shineon.db.user,,,] 16036 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f05c387f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-13 17:27:01.301  INFO [shineon.db.user,,,] 16036 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c763b7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-13 17:27:02.585  INFO [shineon.db.user,,,] 16036 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-12-13 17:27:02.585  INFO [shineon.db.user,,,] 16036 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
-2019-12-13 17:27:02.876  INFO [shineon.db.user,,,] 16036 --- [cluster-ClusterId{value='5df3596658dc9f3ea4921d77', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to 127.0.0.1:27017
-2019-12-13 17:27:02.880  INFO [shineon.db.user,,,] 16036 --- [cluster-ClusterId{value='5df3596658dc9f3ea4921d77', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1926236}
-2019-12-13 17:27:02.882  INFO [shineon.db.user,,,] 16036 --- [cluster-ClusterId{value='5df3596658dc9f3ea4921d77', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
-2019-12-13 17:27:04.745  INFO [shineon.db.user,,,] 16036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-13 17:27:04.752  INFO [shineon.db.user,,,] 16036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
-2019-12-13 17:27:05.176  WARN [shineon.db.user,,,] 16036 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-13 17:27:05.177  INFO [shineon.db.user,,,] 16036 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-13 17:27:05.186  WARN [shineon.db.user,,,] 16036 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-13 17:27:05.186  INFO [shineon.db.user,,,] 16036 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-13 17:27:10.369  INFO [shineon.db.user,,,] 16036 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-13 17:27:10.478  INFO [shineon.db.user,,,] 16036 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 11.818 seconds (JVM running for 12.47)
-2019-12-13 17:27:10.705  INFO [shineon.db.user,,,] 16036 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.shineon.coder.UserTests], using SpringBootContextLoader
-2019-12-13 17:27:10.706  INFO [shineon.db.user,,,] 16036 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.shineon.coder.UserTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-12-13 17:27:10.706  INFO [shineon.db.user,,,] 16036 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.shineon.coder.UserTests]: UserTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-12-13 17:27:10.708  INFO [shineon.db.user,,,] 16036 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.shineon.coder.CoderApplication for test class com.shineon.coder.UserTests
-2019-12-13 17:27:10.710  INFO [shineon.db.user,,,] 16036 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-12-13 17:27:10.710  INFO [shineon.db.user,,,] 16036 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2b85edc7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2bf45b7c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2559f65c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@490704a5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4d682397, org.springframework.test.context.transaction.TransactionalTestExecutionListener@444ebefd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2ecf4b3e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5f1c406e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5364b481, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@62ec4146, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@362e709e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@b0c4905]
-2019-12-13 17:27:11.240  INFO [shineon.db.user,,,] 16036 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2019-12-13 17:27:11.241  INFO [shineon.db.user,,,] 16036 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-12-13 17:27:11.281  INFO [shineon.db.user,,,] 16036 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 40 ms
-2019-12-13 17:27:11.642  INFO [shineon.db.user,,,] 16036 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [get] start execute
-2019-12-13 17:27:11.648  INFO [shineon.db.user,,,] 16036 --- [main] shineon.db.user                          : [shineon.db.user]�����쳣��OK (com.shineon.coder.service.convert.base.QueryItemCommonBase.toPojo(QueryItemCommonBase.java:61))
-2019-12-13 17:27:11.705  INFO [shineon.db.user,,,] 16036 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2019-12-13 17:27:11.705  INFO [shineon.db.user,,,] 16036 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-12-13 17:27:11.711  INFO [shineon.db.user,,,] 16036 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
-2019-12-13 17:27:11.712  INFO [shineon.db.user,,,] 16036 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
-2019-12-13 17:27:11.713  INFO [shineon.db.user,,,] 16036 --- [main] shineon.db.user                          : [shineon.db.user]�����쳣��OK (com.shineon.coder.service.convert.base.RmtUserInfoCommonBase.toPojo(RmtUserInfoCommonBase.java:76))
-2019-12-13 17:27:12.135  INFO [shineon.db.user,,,] 16036 --- [Thread-5] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-13 17:27:12.141  INFO [shineon.db.user,,,] 16036 --- [Thread-5] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.DB.USER with eureka with status DOWN
-2019-12-13 17:27:12.165  INFO [shineon.db.user,,,] 16036 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule'
-2019-12-13 17:39:49.507  INFO [shineon.db.user,,,] 14412 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
-2019-12-13 17:39:50.441  INFO [shineon.db.user,,,] 14412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-13 17:39:50.442  INFO [shineon.db.user,,,] 14412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-13 17:39:50.481  INFO [shineon.db.user,,,] 14412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
-2019-12-13 17:39:50.493  INFO [shineon.db.user,,,] 14412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-13 17:39:50.495  INFO [shineon.db.user,,,] 14412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-13 17:39:50.517  INFO [shineon.db.user,,,] 14412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
-2019-12-13 17:39:50.701  WARN [shineon.db.user,,,] 14412 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-13 17:39:51.044  INFO [shineon.db.user,,,] 14412 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c48d6ecb-46a6-3da9-b224-702cc46f2cac
-2019-12-13 17:39:51.416  INFO [shineon.db.user,,,] 14412 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$40c8e1af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-13 17:39:51.497  INFO [shineon.db.user,,,] 14412 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5ce2e4ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-13 17:39:52.847  INFO [shineon.db.user,,,] 14412 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-12-13 17:39:52.847  INFO [shineon.db.user,,,] 14412 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
-2019-12-13 17:39:52.924  INFO [shineon.db.user,,,] 14412 --- [cluster-ClusterId{value='5df35c6858dc9f384c6ecf93', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to 127.0.0.1:27017
-2019-12-13 17:39:52.931  INFO [shineon.db.user,,,] 14412 --- [cluster-ClusterId{value='5df35c6858dc9f384c6ecf93', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2847542}
-2019-12-13 17:39:52.933  INFO [shineon.db.user,,,] 14412 --- [cluster-ClusterId{value='5df35c6858dc9f384c6ecf93', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
-2019-12-13 17:39:54.393  INFO [shineon.db.user,,,] 14412 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-13 17:39:54.402  INFO [shineon.db.user,,,] 14412 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
-2019-12-13 17:39:54.753  WARN [shineon.db.user,,,] 14412 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-13 17:39:54.753  INFO [shineon.db.user,,,] 14412 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-13 17:39:54.761  WARN [shineon.db.user,,,] 14412 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-13 17:39:54.761  INFO [shineon.db.user,,,] 14412 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-13 17:40:01.270  INFO [shineon.db.user,,,] 14412 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-13 17:40:01.385  INFO [shineon.db.user,,,] 14412 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 12.755 seconds (JVM running for 13.714)
-2019-12-13 17:40:01.660  INFO [shineon.db.user,,,] 14412 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.shineon.coder.UserTests], using SpringBootContextLoader
-2019-12-13 17:40:01.661  INFO [shineon.db.user,,,] 14412 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.shineon.coder.UserTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-12-13 17:40:01.661  INFO [shineon.db.user,,,] 14412 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.shineon.coder.UserTests]: UserTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-12-13 17:40:01.662  INFO [shineon.db.user,,,] 14412 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.shineon.coder.CoderApplication for test class com.shineon.coder.UserTests
-2019-12-13 17:40:01.664  INFO [shineon.db.user,,,] 14412 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-12-13 17:40:01.665  INFO [shineon.db.user,,,] 14412 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@433db56d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e23af91, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@396ec737, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@35d53cd8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1bed61d2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@8a11a19, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@47393345, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b16e486, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2b85edc7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2bf45b7c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2559f65c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@490704a5]
-2019-12-13 17:40:01.678  INFO [shineon.db.user,,,] 14412 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2019-12-13 17:40:01.678  INFO [shineon.db.user,,,] 14412 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-12-13 17:40:01.712  INFO [shineon.db.user,,,] 14412 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 34 ms
-2019-12-13 17:40:02.131  INFO [shineon.db.user,,,] 14412 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [get] start execute
-2019-12-13 17:40:02.137  INFO [shineon.db.user,,,] 14412 --- [main] shineon.db.user                          : [shineon.db.user]�����쳣��OK (com.shineon.coder.service.convert.base.QueryItemCommonBase.toPojo(QueryItemCommonBase.java:61))
-2019-12-13 17:40:02.191  INFO [shineon.db.user,,,] 14412 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2019-12-13 17:40:02.192  INFO [shineon.db.user,,,] 14412 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2019-12-13 17:40:02.197  INFO [shineon.db.user,,,] 14412 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
-2019-12-13 17:40:02.199  INFO [shineon.db.user,,,] 14412 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
-2019-12-13 17:40:02.200  INFO [shineon.db.user,,,] 14412 --- [main] shineon.db.user                          : [shineon.db.user]�����쳣��OK (com.shineon.coder.service.convert.base.RmtUserInfoCommonBase.toPojo(RmtUserInfoCommonBase.java:76))
-2019-12-13 17:40:02.618  INFO [shineon.db.user,,,] 14412 --- [Thread-5] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-13 17:40:02.627  INFO [shineon.db.user,,,] 14412 --- [Thread-5] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.DB.USER with eureka with status DOWN
-2019-12-13 17:40:02.637  INFO [shineon.db.user,,,] 14412 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule'
+2019-12-16 13:45:27.069  INFO [shineon.db.user,,,] 14308 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 13:45:32.715  INFO [shineon.db.user,,,] 14308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 13:45:32.716  INFO [shineon.db.user,,,] 14308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 13:45:32.779  INFO [shineon.db.user,,,] 14308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 0 repository interfaces.
+2019-12-16 13:45:32.785  INFO [shineon.db.user,,,] 14308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 13:45:32.786  INFO [shineon.db.user,,,] 14308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 13:45:32.802  INFO [shineon.db.user,,,] 14308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-12-16 13:45:32.927  WARN [shineon.db.user,,,] 14308 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 13:45:33.212  INFO [shineon.db.user,,,] 14308 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=80b11e7d-99da-3f53-99ef-4ad1ed925560
+2019-12-16 13:45:33.616  INFO [shineon.db.user,,,] 14308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cfe69c00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 13:45:33.667  INFO [shineon.db.user,,,] 14308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ec009efd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 13:45:34.146  INFO [shineon.db.user,,,] 14308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 13:45:34.161  INFO [shineon.db.user,,,] 14308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 13:45:34.161  INFO [shineon.db.user,,,] 14308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 13:45:36.041  INFO [shineon.db.user,,,] 14308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 13:45:36.041  INFO [shineon.db.user,,,] 14308 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8957 ms
+2019-12-16 13:45:38.941  WARN [shineon.db.user,,,] 14308 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 13:45:38.941  INFO [shineon.db.user,,,] 14308 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 13:45:38.950  INFO [shineon.db.user,,,] 14308 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@42679fc2
+2019-12-16 13:45:40.047  INFO [shineon.db.user,,,] 14308 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 13:45:40.048  INFO [shineon.db.user,,,] 14308 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 13:45:40.560  INFO [shineon.db.user,,,] 14308 --- [cluster-ClusterId{value='5df71a0458dc9f37e4817f8e', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to 127.0.0.1:27017
+2019-12-16 13:45:40.562  INFO [shineon.db.user,,,] 14308 --- [cluster-ClusterId{value='5df71a0458dc9f37e4817f8e', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1309564}
+2019-12-16 13:45:40.573  INFO [shineon.db.user,,,] 14308 --- [cluster-ClusterId{value='5df71a0458dc9f37e4817f8e', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 13:45:43.108  INFO [shineon.db.user,,,] 14308 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 13:45:43.109  INFO [shineon.db.user,,,] 14308 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 13:45:43.174  WARN [shineon.db.user,,,] 14308 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 13:45:43.174  INFO [shineon.db.user,,,] 14308 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 13:45:46.081  INFO [shineon.db.user,,,] 14308 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 13:45:46.222  INFO [shineon.db.user,,,] 14308 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 13:45:46.261  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 13:45:46.332  INFO [shineon.db.user,,,] 14308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 13:45:46.333  INFO [shineon.db.user,,,] 14308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 13:45:46.537  INFO [shineon.db.user,,,] 14308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 13:45:46.537  INFO [shineon.db.user,,,] 14308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 13:45:46.969  INFO [shineon.db.user,,,] 14308 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 13:45:47.025  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 13:45:47.025  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 13:45:47.026  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 13:45:47.026  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 13:45:47.026  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 13:45:47.026  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 13:45:47.026  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 13:45:47.226  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 13:45:47.228  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 13:45:47.229  INFO [shineon.db.user,,,] 14308 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 13:45:47.232  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576475147232 with initial instances count: 1
+2019-12-16 13:45:47.242  INFO [shineon.db.user,,,] 14308 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 13:45:47.242  INFO [shineon.db.user,,,] 14308 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576475147242, current=UP, previous=STARTING]
+2019-12-16 13:45:47.257  INFO [shineon.db.user,,,] 14308 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 13:45:47.306  INFO [shineon.db.user,,,] 14308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 13:45:47.307  INFO [shineon.db.user,,,] 14308 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 13:45:47.309  INFO [shineon.db.user,,,] 14308 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 23.137 seconds (JVM running for 23.972)
+2019-12-16 13:45:47.344  INFO [shineon.db.user,,,] 14308 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 13:50:47.032  INFO [shineon.db.user,,,] 14308 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 13:50:57.385  INFO [shineon.db.user,,,] 14308 --- [http-nio-121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 13:50:57.385  INFO [shineon.db.user,,,] 14308 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-16 13:50:57.404  INFO [shineon.db.user,,,] 14308 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-12-16 13:50:57.464  INFO [shineon.db.user,cfe596900f6bdb40,c836820e1da60620,false] 14308 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 13:50:57.522  INFO [shineon.db.user,cfe596900f6bdb40,c836820e1da60620,false] 14308 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-16 13:50:57.523  WARN [shineon.db.user,cfe596900f6bdb40,c836820e1da60620,false] 14308 --- [http-nio-121-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-12-16 13:50:57.860  INFO [shineon.db.user,cfe596900f6bdb40,c836820e1da60620,false] 14308 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-16 13:50:57.992  INFO [shineon.db.user,cfe596900f6bdb40,c836820e1da60620,false] 14308 --- [http-nio-121-exec-1] shineon.db.user                          : [shineon.db.user]服务异常：nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'userCode' in 'class com.shineon.coder.db.sql.pojo.RmtUserInfo' (org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77))
+2019-12-16 13:55:34.791  INFO [shineon.db.user,,,] 16548 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 13:55:36.292  INFO [shineon.db.user,,,] 16548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 13:55:36.293  INFO [shineon.db.user,,,] 16548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 13:55:36.321  INFO [shineon.db.user,,,] 16548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2019-12-16 13:55:36.330  INFO [shineon.db.user,,,] 16548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 13:55:36.331  INFO [shineon.db.user,,,] 16548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 13:55:36.375  INFO [shineon.db.user,,,] 16548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2019-12-16 13:55:36.454  WARN [shineon.db.user,,,] 16548 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 13:55:36.673  INFO [shineon.db.user,,,] 16548 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=80b11e7d-99da-3f53-99ef-4ad1ed925560
+2019-12-16 13:55:36.980  INFO [shineon.db.user,,,] 16548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9db5c73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 13:55:37.019  INFO [shineon.db.user,,,] 16548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e5f55f70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 13:55:37.359  INFO [shineon.db.user,,,] 16548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 13:55:37.376  INFO [shineon.db.user,,,] 16548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 13:55:37.376  INFO [shineon.db.user,,,] 16548 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 13:55:37.471  INFO [shineon.db.user,,,] 16548 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 13:55:37.472  INFO [shineon.db.user,,,] 16548 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2670 ms
+2019-12-16 13:55:37.594  WARN [shineon.db.user,,,] 16548 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 13:55:37.594  INFO [shineon.db.user,,,] 16548 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 13:55:37.601  INFO [shineon.db.user,,,] 16548 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@30a7653e
+2019-12-16 13:55:38.155  INFO [shineon.db.user,,,] 16548 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 13:55:38.155  INFO [shineon.db.user,,,] 16548 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 13:55:38.226  INFO [shineon.db.user,,,] 16548 --- [cluster-ClusterId{value='5df71c5a58dc9f40a49a72f0', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to 127.0.0.1:27017
+2019-12-16 13:55:38.228  INFO [shineon.db.user,,,] 16548 --- [cluster-ClusterId{value='5df71c5a58dc9f40a49a72f0', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=949747}
+2019-12-16 13:55:38.229  INFO [shineon.db.user,,,] 16548 --- [cluster-ClusterId{value='5df71c5a58dc9f40a49a72f0', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 13:55:40.082  INFO [shineon.db.user,,,] 16548 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 13:55:40.089  INFO [shineon.db.user,,,] 16548 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 13:55:40.125  WARN [shineon.db.user,,,] 16548 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 13:55:40.125  INFO [shineon.db.user,,,] 16548 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 13:55:41.527  INFO [shineon.db.user,,,] 16548 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 13:55:41.619  INFO [shineon.db.user,,,] 16548 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 13:55:41.648  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 13:55:41.698  INFO [shineon.db.user,,,] 16548 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 13:55:41.698  INFO [shineon.db.user,,,] 16548 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 13:55:41.804  INFO [shineon.db.user,,,] 16548 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 13:55:41.805  INFO [shineon.db.user,,,] 16548 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 13:55:41.972  INFO [shineon.db.user,,,] 16548 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 13:55:42.022  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 13:55:42.022  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 13:55:42.022  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 13:55:42.022  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 13:55:42.022  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 13:55:42.023  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 13:55:42.023  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 13:55:42.139  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 13:55:42.140  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 13:55:42.142  INFO [shineon.db.user,,,] 16548 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 13:55:42.144  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576475742144 with initial instances count: 5
+2019-12-16 13:55:42.151  INFO [shineon.db.user,,,] 16548 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 13:55:42.152  INFO [shineon.db.user,,,] 16548 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576475742152, current=UP, previous=STARTING]
+2019-12-16 13:55:42.153  INFO [shineon.db.user,,,] 16548 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 13:55:42.190  INFO [shineon.db.user,,,] 16548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 13:55:42.190  INFO [shineon.db.user,,,] 16548 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 13:55:42.191  INFO [shineon.db.user,,,] 16548 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 8.234 seconds (JVM running for 9.343)
+2019-12-16 13:55:42.205  INFO [shineon.db.user,,,] 16548 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 13:57:20.264  INFO [shineon.db.user,,,] 16548 --- [http-nio-121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 13:57:20.264  INFO [shineon.db.user,,,] 16548 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-16 13:57:20.277  INFO [shineon.db.user,,,] 16548 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-12-16 13:57:20.358  INFO [shineon.db.user,a8f2b0e91a66e847,53843fe46998fe93,false] 16548 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 13:57:20.387  INFO [shineon.db.user,a8f2b0e91a66e847,53843fe46998fe93,false] 16548 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-16 13:57:20.388  WARN [shineon.db.user,a8f2b0e91a66e847,53843fe46998fe93,false] 16548 --- [http-nio-121-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-12-16 13:57:20.538  INFO [shineon.db.user,a8f2b0e91a66e847,53843fe46998fe93,false] 16548 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-16 13:57:20.608  INFO [shineon.db.user,a8f2b0e91a66e847,53843fe46998fe93,false] 16548 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] finish execute
+2019-12-16 13:57:20.974  INFO [shineon.db.user,a8f2b0e91a66e847,4bfdfab7ee691778,false] 16548 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 13:57:21.000  INFO [shineon.db.user,a8f2b0e91a66e847,4bfdfab7ee691778,false] 16548 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] finish execute
+2019-12-16 13:58:51.387  INFO [shineon.db.user,aa130256b7b3cb53,b3403c74125c3184,false] 16548 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 13:58:51.397  INFO [shineon.db.user,aa130256b7b3cb53,b3403c74125c3184,false] 16548 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] finish execute
+2019-12-16 13:58:51.423  INFO [shineon.db.user,aa130256b7b3cb53,d9478492c53db075,false] 16548 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 13:58:51.430  INFO [shineon.db.user,aa130256b7b3cb53,d9478492c53db075,false] 16548 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] finish execute
+2019-12-16 13:59:18.645  INFO [shineon.db.user,e1dfec97bdba49c2,6782cfcb23a42ec0,false] 16548 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] start execute
+2019-12-16 13:59:18.647  INFO [shineon.db.user,e1dfec97bdba49c2,6782cfcb23a42ec0,false] 16548 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] finish execute
+2019-12-16 13:59:41.892  INFO [shineon.db.user,fd5b9e6025320470,bbc637dfec79bee6,false] 16548 --- [http-nio-121-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] start execute
+2019-12-16 13:59:41.894  INFO [shineon.db.user,fd5b9e6025320470,bbc637dfec79bee6,false] 16548 --- [http-nio-121-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] finish execute
+2019-12-16 14:00:09.205  INFO [shineon.db.user,4ec30ffc8a72e620,4f55b0bbf7aaa22d,false] 16548 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] start execute
+2019-12-16 14:00:09.206  INFO [shineon.db.user,4ec30ffc8a72e620,4f55b0bbf7aaa22d,false] 16548 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] finish execute
+2019-12-16 14:00:42.029  INFO [shineon.db.user,,,] 16548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:01:34.252  INFO [shineon.db.user,c2eb90f2d442990a,41c29164331ec6e0,false] 16548 --- [http-nio-121-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [list] start execute
+2019-12-16 14:01:34.297  INFO [shineon.db.user,c2eb90f2d442990a,41c29164331ec6e0,false] 16548 --- [http-nio-121-exec-3] shineon.db.user                          : [shineon.db.user]服务异常：nested exception is org.apache.ibatis.binding.BindingException: Parameter 'where' not found. Available parameters are [arg1, arg0, param1, param2] (org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77))
+2019-12-16 14:05:42.035  INFO [shineon.db.user,,,] 16548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:10:42.040  INFO [shineon.db.user,,,] 16548 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:12:00.122  INFO [shineon.db.user,,,] 17088 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 14:12:01.705  INFO [shineon.db.user,,,] 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 14:12:01.705  INFO [shineon.db.user,,,] 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 14:12:01.730  INFO [shineon.db.user,,,] 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-12-16 14:12:01.736  INFO [shineon.db.user,,,] 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 14:12:01.737  INFO [shineon.db.user,,,] 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 14:12:01.751  INFO [shineon.db.user,,,] 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-12-16 14:12:01.819  WARN [shineon.db.user,,,] 17088 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 14:12:02.028  INFO [shineon.db.user,,,] 17088 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=80b11e7d-99da-3f53-99ef-4ad1ed925560
+2019-12-16 14:12:02.268  INFO [shineon.db.user,,,] 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94d0cb72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 14:12:02.310  INFO [shineon.db.user,,,] 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b0eace6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 14:12:02.630  INFO [shineon.db.user,,,] 17088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 14:12:02.647  INFO [shineon.db.user,,,] 17088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 14:12:02.647  INFO [shineon.db.user,,,] 17088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 14:12:02.740  INFO [shineon.db.user,,,] 17088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 14:12:02.740  INFO [shineon.db.user,,,] 17088 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2609 ms
+2019-12-16 14:12:02.854  WARN [shineon.db.user,,,] 17088 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 14:12:02.855  INFO [shineon.db.user,,,] 17088 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 14:12:02.867  INFO [shineon.db.user,,,] 17088 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@68af87ad
+2019-12-16 14:12:03.330  INFO [shineon.db.user,,,] 17088 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 14:12:03.331  INFO [shineon.db.user,,,] 17088 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 14:12:03.368  INFO [shineon.db.user,,,] 17088 --- [cluster-ClusterId{value='5df7203358dc9f42c0259731', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:3}] to 127.0.0.1:27017
+2019-12-16 14:12:03.369  INFO [shineon.db.user,,,] 17088 --- [cluster-ClusterId{value='5df7203358dc9f42c0259731', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=740683}
+2019-12-16 14:12:03.370  INFO [shineon.db.user,,,] 17088 --- [cluster-ClusterId{value='5df7203358dc9f42c0259731', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 14:12:05.314  INFO [shineon.db.user,,,] 17088 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 14:12:05.315  INFO [shineon.db.user,,,] 17088 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 14:12:05.350  WARN [shineon.db.user,,,] 17088 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 14:12:05.350  INFO [shineon.db.user,,,] 17088 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 14:12:06.750  INFO [shineon.db.user,,,] 17088 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 14:12:06.847  INFO [shineon.db.user,,,] 17088 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 14:12:06.883  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 14:12:06.925  INFO [shineon.db.user,,,] 17088 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 14:12:06.925  INFO [shineon.db.user,,,] 17088 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 14:12:07.010  INFO [shineon.db.user,,,] 17088 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 14:12:07.010  INFO [shineon.db.user,,,] 17088 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 14:12:07.146  INFO [shineon.db.user,,,] 17088 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:12:07.189  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 14:12:07.189  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 14:12:07.189  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 14:12:07.189  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 14:12:07.190  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 14:12:07.190  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 14:12:07.190  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 14:12:07.303  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 14:12:07.305  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 14:12:07.306  INFO [shineon.db.user,,,] 17088 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 14:12:07.309  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576476727308 with initial instances count: 5
+2019-12-16 14:12:07.316  INFO [shineon.db.user,,,] 17088 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 14:12:07.316  INFO [shineon.db.user,,,] 17088 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576476727316, current=UP, previous=STARTING]
+2019-12-16 14:12:07.318  INFO [shineon.db.user,,,] 17088 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 14:12:07.340  INFO [shineon.db.user,,,] 17088 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 14:12:07.350  INFO [shineon.db.user,,,] 17088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 14:12:07.351  INFO [shineon.db.user,,,] 17088 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 14:12:07.352  INFO [shineon.db.user,,,] 17088 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 8.033 seconds (JVM running for 8.778)
+2019-12-16 14:12:25.105  INFO [shineon.db.user,,,] 17088 --- [http-nio-121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 14:12:25.105  INFO [shineon.db.user,,,] 17088 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-16 14:12:25.117  INFO [shineon.db.user,,,] 17088 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-12-16 14:12:25.154  INFO [shineon.db.user,5d3a3d23f8bd29cc,6f85cfc176997fd1,false] 17088 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [list] start execute
+2019-12-16 14:12:25.179  INFO [shineon.db.user,5d3a3d23f8bd29cc,6f85cfc176997fd1,false] 17088 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-16 14:12:25.180  WARN [shineon.db.user,5d3a3d23f8bd29cc,6f85cfc176997fd1,false] 17088 --- [http-nio-121-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-12-16 14:12:25.276  INFO [shineon.db.user,5d3a3d23f8bd29cc,6f85cfc176997fd1,false] 17088 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-16 14:12:25.305  INFO [shineon.db.user,5d3a3d23f8bd29cc,6f85cfc176997fd1,false] 17088 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [list] finish execute
+2019-12-16 14:17:07.203  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:22:07.209  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:27:07.214  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:32:07.219  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:37:07.224  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:41:03.722  INFO [shineon.db.user,84530c889df5b28e,84530c889df5b28e,false] 17088 --- [http-nio-121-exec-6] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\pojo
+2019-12-16 14:41:03.722  INFO [shineon.db.user,89197dbf113771e8,89197dbf113771e8,false] 17088 --- [http-nio-121-exec-5] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\service\convert\util
+2019-12-16 14:41:03.722  INFO [shineon.db.user,176e20ed9e71effb,176e20ed9e71effb,false] 17088 --- [http-nio-121-exec-4] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\service\dto
+2019-12-16 14:41:40.526  INFO [shineon.db.user,2af71833ae7c385b,2af71833ae7c385b,false] 17088 --- [http-nio-121-exec-8] c.s.c.kernel.common.action.ActionBuild   : E:\shineon.frame\shineon\core\shineon.db.user\src\main\java\com\shineon\coder\kernel\constant\action\OrganizationActionConstant.java存在同名常量文件，请确认！！！
+2019-12-16 14:42:07.229  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:47:07.234  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:52:07.239  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:57:07.252  INFO [shineon.db.user,,,] 17088 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:57:26.182  INFO [shineon.db.user,,,] 17844 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 14:57:28.605  INFO [shineon.db.user,,,] 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 14:57:28.606  INFO [shineon.db.user,,,] 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 14:57:29.445  INFO [shineon.db.user,,,] 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 836ms. Found 0 repository interfaces.
+2019-12-16 14:57:29.454  INFO [shineon.db.user,,,] 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 14:57:29.455  INFO [shineon.db.user,,,] 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 14:57:29.495  INFO [shineon.db.user,,,] 17844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-12-16 14:57:29.577  WARN [shineon.db.user,,,] 17844 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 14:57:29.987  INFO [shineon.db.user,,,] 17844 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1183fc3-f5dc-3bb2-b8d9-43f2b53fe3f0
+2019-12-16 14:57:30.302  INFO [shineon.db.user,,,] 17844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a340da1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 14:57:30.344  INFO [shineon.db.user,,,] 17844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$564e109e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 14:57:30.837  INFO [shineon.db.user,,,] 17844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 14:57:30.886  INFO [shineon.db.user,,,] 17844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 14:57:30.887  INFO [shineon.db.user,,,] 17844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 14:57:31.234  INFO [shineon.db.user,,,] 17844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 14:57:31.234  INFO [shineon.db.user,,,] 17844 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5009 ms
+2019-12-16 14:57:31.457  WARN [shineon.db.user,,,] 17844 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 14:57:31.458  INFO [shineon.db.user,,,] 17844 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 14:57:31.465  INFO [shineon.db.user,,,] 17844 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@15d3793b
+2019-12-16 14:57:32.512  INFO [shineon.db.user,,,] 17844 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 14:57:32.512  INFO [shineon.db.user,,,] 17844 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 14:57:34.802  INFO [shineon.db.user,,,] 17844 --- [cluster-ClusterId{value='5df72adc58dc9f45b461f487', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4}] to 127.0.0.1:27017
+2019-12-16 14:57:34.815  INFO [shineon.db.user,,,] 17844 --- [cluster-ClusterId{value='5df72adc58dc9f45b461f487', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2165161}
+2019-12-16 14:57:34.816  INFO [shineon.db.user,,,] 17844 --- [cluster-ClusterId{value='5df72adc58dc9f45b461f487', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 14:57:38.563  INFO [shineon.db.user,,,] 17844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 14:57:38.565  INFO [shineon.db.user,,,] 17844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 14:57:38.614  WARN [shineon.db.user,,,] 17844 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 14:57:38.614  INFO [shineon.db.user,,,] 17844 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 14:57:41.751  INFO [shineon.db.user,,,] 17844 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 14:57:41.849  INFO [shineon.db.user,,,] 17844 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 14:57:41.886  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 14:57:41.969  INFO [shineon.db.user,,,] 17844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 14:57:41.969  INFO [shineon.db.user,,,] 17844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 14:57:42.136  INFO [shineon.db.user,,,] 17844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 14:57:42.136  INFO [shineon.db.user,,,] 17844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 14:57:42.309  INFO [shineon.db.user,,,] 17844 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 14:57:42.354  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 14:57:42.493  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 14:57:42.496  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 14:57:42.497  INFO [shineon.db.user,,,] 17844 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 14:57:42.509  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576479462499 with initial instances count: 5
+2019-12-16 14:57:42.519  INFO [shineon.db.user,,,] 17844 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 14:57:42.519  INFO [shineon.db.user,,,] 17844 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576479462519, current=UP, previous=STARTING]
+2019-12-16 14:57:42.520  INFO [shineon.db.user,,,] 17844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 14:57:42.567  INFO [shineon.db.user,,,] 17844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 14:57:42.586  INFO [shineon.db.user,,,] 17844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 14:57:42.586  INFO [shineon.db.user,,,] 17844 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 14:57:42.588  INFO [shineon.db.user,,,] 17844 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 17.176 seconds (JVM running for 17.84)
+2019-12-16 15:02:42.361  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:07:42.372  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:12:42.377  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:17:42.389  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:22:42.397  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:27:42.408  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:32:42.420  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:37:42.426  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:42:42.437  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:47:42.449  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:52:42.468  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 15:57:42.480  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:01:43.498 ERROR [shineon.db.user,,,] 17844 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: 127.0.0.1:81 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1405) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: org.apache.http.NoHttpResponseException: 127.0.0.1:81 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.11.jar:4.4.11]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 26 common frames omitted
+
+2019-12-16 16:01:43.506  WARN [shineon.db.user,,,] 17844 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: org.apache.http.NoHttpResponseException: 127.0.0.1:81 failed to respond
+2019-12-16 16:01:43.509  INFO [shineon.db.user,,,] 17844 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2019-12-16 16:02:42.497  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:07:42.502  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:12:42.507  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:17:42.519  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:22:42.531  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:27:42.536  INFO [shineon.db.user,,,] 17844 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:30:18.502  INFO [shineon.db.user,,,] 17024 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 16:30:21.516  INFO [shineon.db.user,,,] 17024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 16:30:21.516  INFO [shineon.db.user,,,] 17024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 16:30:21.551  INFO [shineon.db.user,,,] 17024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-12-16 16:30:21.557  INFO [shineon.db.user,,,] 17024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 16:30:21.558  INFO [shineon.db.user,,,] 17024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 16:30:21.638  INFO [shineon.db.user,,,] 17024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-12-16 16:30:21.806  WARN [shineon.db.user,,,] 17024 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 16:30:22.091  INFO [shineon.db.user,,,] 17024 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1183fc3-f5dc-3bb2-b8d9-43f2b53fe3f0
+2019-12-16 16:30:22.452  INFO [shineon.db.user,,,] 17024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$44a67b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 16:30:22.499  INFO [shineon.db.user,,,] 17024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$20646ab4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 16:30:22.910  INFO [shineon.db.user,,,] 17024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 16:30:22.936  INFO [shineon.db.user,,,] 17024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 16:30:22.936  INFO [shineon.db.user,,,] 17024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 16:30:23.180  INFO [shineon.db.user,,,] 17024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 16:30:23.180  INFO [shineon.db.user,,,] 17024 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4653 ms
+2019-12-16 16:30:23.391  WARN [shineon.db.user,,,] 17024 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 16:30:23.391  INFO [shineon.db.user,,,] 17024 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 16:30:23.401  INFO [shineon.db.user,,,] 17024 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5e50df2e
+2019-12-16 16:30:24.194  INFO [shineon.db.user,,,] 17024 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 16:30:24.194  INFO [shineon.db.user,,,] 17024 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 16:30:24.492  INFO [shineon.db.user,,,] 17024 --- [cluster-ClusterId{value='5df740a058dc9f42808f887f', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:5}] to 127.0.0.1:27017
+2019-12-16 16:30:24.495  INFO [shineon.db.user,,,] 17024 --- [cluster-ClusterId{value='5df740a058dc9f42808f887f', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1107896}
+2019-12-16 16:30:24.496  INFO [shineon.db.user,,,] 17024 --- [cluster-ClusterId{value='5df740a058dc9f42808f887f', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 16:30:27.427  INFO [shineon.db.user,,,] 17024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 16:30:27.428  INFO [shineon.db.user,,,] 17024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 16:30:27.469  WARN [shineon.db.user,,,] 17024 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 16:30:27.469  INFO [shineon.db.user,,,] 17024 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 16:30:30.139  INFO [shineon.db.user,,,] 17024 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 16:30:30.306  INFO [shineon.db.user,,,] 17024 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 16:30:30.334  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 16:30:30.555  INFO [shineon.db.user,,,] 17024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 16:30:30.555  INFO [shineon.db.user,,,] 17024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 16:30:30.870  INFO [shineon.db.user,,,] 17024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 16:30:30.870  INFO [shineon.db.user,,,] 17024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 16:30:31.047  INFO [shineon.db.user,,,] 17024 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:30:31.326  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 16:30:31.327  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 16:30:31.327  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 16:30:31.327  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 16:30:31.327  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 16:30:31.327  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 16:30:31.327  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 16:30:31.513  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 16:30:31.519  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 16:30:31.522  INFO [shineon.db.user,,,] 17024 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 16:30:31.530  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576485031527 with initial instances count: 5
+2019-12-16 16:30:31.545  INFO [shineon.db.user,,,] 17024 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 16:30:31.545  INFO [shineon.db.user,,,] 17024 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576485031545, current=UP, previous=STARTING]
+2019-12-16 16:30:31.547  INFO [shineon.db.user,,,] 17024 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 16:30:31.595  INFO [shineon.db.user,,,] 17024 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 16:30:31.635  INFO [shineon.db.user,,,] 17024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 16:30:31.636  INFO [shineon.db.user,,,] 17024 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 16:30:31.637  INFO [shineon.db.user,,,] 17024 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 14.313 seconds (JVM running for 15.228)
+2019-12-16 16:30:58.035  INFO [shineon.db.user,,,] 17024 --- [http-nio-121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 16:30:58.035  INFO [shineon.db.user,,,] 17024 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-16 16:30:58.052  INFO [shineon.db.user,,,] 17024 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-12-16 16:30:58.115  INFO [shineon.db.user,ae266c066b3a3bfa,bfe43056cd2ac7c0,false] 17024 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 16:30:58.145  INFO [shineon.db.user,ae266c066b3a3bfa,bfe43056cd2ac7c0,false] 17024 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-16 16:30:58.146  WARN [shineon.db.user,ae266c066b3a3bfa,bfe43056cd2ac7c0,false] 17024 --- [http-nio-121-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-12-16 16:30:58.383  INFO [shineon.db.user,ae266c066b3a3bfa,bfe43056cd2ac7c0,false] 17024 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-16 16:30:58.493  INFO [shineon.db.user,ae266c066b3a3bfa,bfe43056cd2ac7c0,false] 17024 --- [http-nio-121-exec-1] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_user_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list' (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234))
+2019-12-16 16:31:05.602  INFO [shineon.db.user,c8caf9a0059e4f67,2fefe243334600a0,false] 17024 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 16:31:05.606  INFO [shineon.db.user,c8caf9a0059e4f67,2fefe243334600a0,false] 17024 --- [http-nio-121-exec-2] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_user_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list' (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234))
+2019-12-16 16:34:54.802  INFO [shineon.db.user,8030df36e5784fec,9a9bdcbb8fd7ee3f,false] 17024 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 16:34:54.814  INFO [shineon.db.user,8030df36e5784fec,9a9bdcbb8fd7ee3f,false] 17024 --- [http-nio-121-exec-4] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_user_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list' (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234))
+2019-12-16 16:34:59.502  INFO [shineon.db.user,ca443a5e11ce1efc,128894aae0d15f52,false] 17024 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 16:34:59.504  INFO [shineon.db.user,ca443a5e11ce1efc,128894aae0d15f52,false] 17024 --- [http-nio-121-exec-5] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_user_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list' (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234))
+2019-12-16 16:35:31.333  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:40:31.338  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:45:31.356  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:50:31.361  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:55:31.372  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 16:59:18.063  INFO [shineon.db.user,d01fff067b7be269,864b4a9235ddb9ba,false] 17024 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 16:59:18.068  INFO [shineon.db.user,d01fff067b7be269,864b4a9235ddb9ba,false] 17024 --- [http-nio-121-exec-7] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_user_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list' (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234))
+2019-12-16 16:59:26.515  INFO [shineon.db.user,2bd804cd90fdd057,19aa9fa8ed4cdd0d,false] 17024 --- [http-nio-121-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 16:59:26.519  INFO [shineon.db.user,2bd804cd90fdd057,19aa9fa8ed4cdd0d,false] 17024 --- [http-nio-121-exec-8] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_user_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'organizationID' in 'field list' (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234))
+2019-12-16 17:00:31.384  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:05:31.396  INFO [shineon.db.user,,,] 17024 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:07:25.095  INFO [shineon.db.user,,,] 7904 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 17:07:26.700  INFO [shineon.db.user,,,] 7904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 17:07:26.700  INFO [shineon.db.user,,,] 7904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 17:07:26.760  INFO [shineon.db.user,,,] 7904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2019-12-16 17:07:26.768  INFO [shineon.db.user,,,] 7904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 17:07:26.769  INFO [shineon.db.user,,,] 7904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 17:07:26.784  INFO [shineon.db.user,,,] 7904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2019-12-16 17:07:26.860  WARN [shineon.db.user,,,] 7904 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 17:07:27.069  INFO [shineon.db.user,,,] 7904 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1183fc3-f5dc-3bb2-b8d9-43f2b53fe3f0
+2019-12-16 17:07:27.438  INFO [shineon.db.user,,,] 7904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f92826f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 17:07:27.478  INFO [shineon.db.user,,,] 7904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4bac856c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 17:07:27.782  INFO [shineon.db.user,,,] 7904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 17:07:27.800  INFO [shineon.db.user,,,] 7904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 17:07:27.800  INFO [shineon.db.user,,,] 7904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 17:07:27.893  INFO [shineon.db.user,,,] 7904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 17:07:27.893  INFO [shineon.db.user,,,] 7904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2786 ms
+2019-12-16 17:07:28.025  WARN [shineon.db.user,,,] 7904 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 17:07:28.025  INFO [shineon.db.user,,,] 7904 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 17:07:28.033  INFO [shineon.db.user,,,] 7904 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6ee88e21
+2019-12-16 17:07:28.687  INFO [shineon.db.user,,,] 7904 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 17:07:28.687  INFO [shineon.db.user,,,] 7904 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 17:07:28.840  INFO [shineon.db.user,,,] 7904 --- [cluster-ClusterId{value='5df7495058dc9f1ee02d0a54', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6}] to 127.0.0.1:27017
+2019-12-16 17:07:28.843  INFO [shineon.db.user,,,] 7904 --- [cluster-ClusterId{value='5df7495058dc9f1ee02d0a54', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1085709}
+2019-12-16 17:07:28.844  INFO [shineon.db.user,,,] 7904 --- [cluster-ClusterId{value='5df7495058dc9f1ee02d0a54', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 17:07:30.516  INFO [shineon.db.user,,,] 7904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 17:07:30.518  INFO [shineon.db.user,,,] 7904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 17:07:30.553  WARN [shineon.db.user,,,] 7904 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 17:07:30.553  INFO [shineon.db.user,,,] 7904 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 17:07:32.418  INFO [shineon.db.user,,,] 7904 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 17:07:32.517  INFO [shineon.db.user,,,] 7904 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 17:07:32.556  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 17:07:32.641  INFO [shineon.db.user,,,] 7904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 17:07:32.642  INFO [shineon.db.user,,,] 7904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 17:07:33.124  INFO [shineon.db.user,,,] 7904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 17:07:33.124  INFO [shineon.db.user,,,] 7904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 17:07:33.285  INFO [shineon.db.user,,,] 7904 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:07:33.332  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 17:07:33.332  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 17:07:33.333  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 17:07:33.333  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 17:07:33.333  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 17:07:33.333  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 17:07:33.333  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 17:07:33.466  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 17:07:33.468  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 17:07:33.469  INFO [shineon.db.user,,,] 7904 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 17:07:33.471  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576487253471 with initial instances count: 5
+2019-12-16 17:07:33.478  INFO [shineon.db.user,,,] 7904 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 17:07:33.479  INFO [shineon.db.user,,,] 7904 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576487253479, current=UP, previous=STARTING]
+2019-12-16 17:07:33.480  INFO [shineon.db.user,,,] 7904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 17:07:33.517  INFO [shineon.db.user,,,] 7904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 17:07:33.518  INFO [shineon.db.user,,,] 7904 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 17:07:33.519  INFO [shineon.db.user,,,] 7904 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 9.685 seconds (JVM running for 10.308)
+2019-12-16 17:07:33.546  INFO [shineon.db.user,,,] 7904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 17:08:17.919  INFO [shineon.db.user,,,] 7904 --- [http-nio-121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 17:08:17.919  INFO [shineon.db.user,,,] 7904 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-16 17:08:17.932  INFO [shineon.db.user,,,] 7904 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-12-16 17:08:17.974  INFO [shineon.db.user,c48f541537bd075a,e03c4b83b80c3c22,false] 7904 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:08:17.990  INFO [shineon.db.user,c48f541537bd075a,e03c4b83b80c3c22,false] 7904 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-16 17:08:17.991  WARN [shineon.db.user,c48f541537bd075a,e03c4b83b80c3c22,false] 7904 --- [http-nio-121-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-12-16 17:08:18.076  INFO [shineon.db.user,c48f541537bd075a,e03c4b83b80c3c22,false] 7904 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-16 17:08:18.132  INFO [shineon.db.user,c48f541537bd075a,e03c4b83b80c3c22,false] 7904 --- [http-nio-121-exec-1] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'organizationID' cannot be null
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_organization_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'organizationID' cannot be null
+; Column 'organizationID' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'organizationID' cannot be null (org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:87))
+2019-12-16 17:09:04.094  INFO [shineon.db.user,3a3fbc6ec62755ac,cb1cc877d4969885,false] 7904 --- [http-nio-121-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:09:04.096  INFO [shineon.db.user,3a3fbc6ec62755ac,cb1cc877d4969885,false] 7904 --- [http-nio-121-exec-3] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'createdTime' cannot be null
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_organization_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'createdTime' cannot be null
+; Column 'createdTime' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'createdTime' cannot be null (org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:87))
+2019-12-16 17:09:08.458  INFO [shineon.db.user,dff0f7a6cf2d1514,e4b09bb5abed5aa9,false] 7904 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:09:08.460  INFO [shineon.db.user,dff0f7a6cf2d1514,e4b09bb5abed5aa9,false] 7904 --- [http-nio-121-exec-4] shineon.db.user                          : [shineon.db.user]服务异常：
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'createdTime' cannot be null
+### The error may exist in file [E:\shineon.frame\shineon\core\shineon.db.user\target\classes\com\shineon\coder\db\sql\mapper\RmtOrganizationInfoMapperExtern.xml]
+### The error may involve com.shineon.coder.db.sql.mergedao.IRmtOrganizationInfoMapper.insertByCustomId-Inline
+### The error occurred while setting parameters
+### SQL: insert into rmt_organization_info (id,organizationID,organizationCode,organizationName,organizationType,description,createdTime,createUserID,modifyTime,modifyUserID,deletedTime,deletedUserID,deletedFlag,reserved1,reserved2)         values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'createdTime' cannot be null
+; Column 'createdTime' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'createdTime' cannot be null (org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:87))
+2019-12-16 17:12:33.339  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:14:16.745  INFO [shineon.db.user,973a15583484adfc,0b657cd327264dac,false] 7904 --- [http-nio-121-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:14:16.770  INFO [shineon.db.user,973a15583484adfc,0b657cd327264dac,false] 7904 --- [http-nio-121-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] finish execute
+2019-12-16 17:14:16.972  INFO [shineon.db.user,973a15583484adfc,f8683b6090b6a56d,false] 7904 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:14:16.996  INFO [shineon.db.user,973a15583484adfc,f8683b6090b6a56d,false] 7904 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] finish execute
+2019-12-16 17:14:24.230  INFO [shineon.db.user,cfb7262432792c02,3c874cb474ae6899,false] 7904 --- [http-nio-121-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:14:24.236  INFO [shineon.db.user,cfb7262432792c02,3c874cb474ae6899,false] 7904 --- [http-nio-121-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] finish execute
+2019-12-16 17:14:24.251  INFO [shineon.db.user,cfb7262432792c02,6cae161ea45b51d5,false] 7904 --- [http-nio-121-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:14:24.257  INFO [shineon.db.user,cfb7262432792c02,6cae161ea45b51d5,false] 7904 --- [http-nio-121-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] finish execute
+2019-12-16 17:14:43.175  INFO [shineon.db.user,b5ea61a082e91a88,bb89c229cababf66,false] 7904 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] start execute
+2019-12-16 17:14:43.203  INFO [shineon.db.user,b5ea61a082e91a88,bb89c229cababf66,false] 7904 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] finish execute
+2019-12-16 17:17:33.344  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:22:33.349  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:23:41.716  INFO [shineon.db.user,49239c391cee234a,020f135962a1668d,false] 7904 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 17:23:41.728  INFO [shineon.db.user,49239c391cee234a,020f135962a1668d,false] 7904 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] finish execute
+2019-12-16 17:23:41.741  INFO [shineon.db.user,49239c391cee234a,aa77e868c9c5cd68,false] 7904 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] start execute
+2019-12-16 17:23:41.748  INFO [shineon.db.user,49239c391cee234a,aa77e868c9c5cd68,false] 7904 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [edit] finish execute
+2019-12-16 17:27:33.354  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:32:33.359  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:37:30.634  INFO [shineon.db.user,388871bf5e5cc931,8155ff42294fb074,false] 7904 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] start execute
+2019-12-16 17:37:30.644  INFO [shineon.db.user,388871bf5e5cc931,8155ff42294fb074,false] 7904 --- [http-nio-121-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [UserController] [getByName] finish execute
+2019-12-16 17:37:33.364  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:41:15.589  INFO [shineon.db.user,4326e88d6b604258,c7ae67078c69ee04,false] 7904 --- [http-nio-121-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:41:15.595  INFO [shineon.db.user,4326e88d6b604258,c7ae67078c69ee04,false] 7904 --- [http-nio-121-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] finish execute
+2019-12-16 17:41:15.607  INFO [shineon.db.user,4326e88d6b604258,d8174a95614cae37,false] 7904 --- [http-nio-121-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] start execute
+2019-12-16 17:41:15.614  INFO [shineon.db.user,4326e88d6b604258,d8174a95614cae37,false] 7904 --- [http-nio-121-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [edit] finish execute
+2019-12-16 17:41:29.744  INFO [shineon.db.user,ca99d16b1567511d,5e4436ae086ca9b9,false] 7904 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [get] start execute
+2019-12-16 17:41:29.746  INFO [shineon.db.user,ca99d16b1567511d,5e4436ae086ca9b9,false] 7904 --- [http-nio-121-exec-2] shineon.db.user                          : [shineon.db.user]服务异常：null (com.shineon.coder.service.convert.base.RmtOrganizationInfoCommonBase.toCommonData(RmtOrganizationInfoCommonBase.java:21))
+2019-12-16 17:42:33.369  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:45:50.882  INFO [shineon.db.user,fae2898c8c400602,f3cec944ec11b5d4,false] 7904 --- [http-nio-121-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] start execute
+2019-12-16 17:45:50.886  INFO [shineon.db.user,fae2898c8c400602,5a032415a24122d9,false] 7904 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] start execute
+2019-12-16 17:45:50.899  INFO [shineon.db.user,fae2898c8c400602,f3cec944ec11b5d4,false] 7904 --- [http-nio-121-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] finish execute
+2019-12-16 17:45:50.900  INFO [shineon.db.user,fae2898c8c400602,5a032415a24122d9,false] 7904 --- [http-nio-121-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] finish execute
+2019-12-16 17:47:33.374  INFO [shineon.db.user,,,] 7904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:49:30.590  INFO [shineon.db.user,,,] 6632 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-16 17:49:33.434  INFO [shineon.db.user,,,] 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 17:49:33.435  INFO [shineon.db.user,,,] 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 17:49:33.464  INFO [shineon.db.user,,,] 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-12-16 17:49:33.472  INFO [shineon.db.user,,,] 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-16 17:49:33.473  INFO [shineon.db.user,,,] 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-16 17:49:33.490  INFO [shineon.db.user,,,] 6632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-12-16 17:49:33.586  WARN [shineon.db.user,,,] 6632 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-16 17:49:33.809  INFO [shineon.db.user,,,] 6632 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1183fc3-f5dc-3bb2-b8d9-43f2b53fe3f0
+2019-12-16 17:49:34.088  INFO [shineon.db.user,,,] 6632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$10e83de3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 17:49:34.127  INFO [shineon.db.user,,,] 6632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2d0240e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 17:49:34.444  INFO [shineon.db.user,,,] 6632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 121 (http)
+2019-12-16 17:49:34.462  INFO [shineon.db.user,,,] 6632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-16 17:49:34.462  INFO [shineon.db.user,,,] 6632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-16 17:49:34.559  INFO [shineon.db.user,,,] 6632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-16 17:49:34.559  INFO [shineon.db.user,,,] 6632 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3959 ms
+2019-12-16 17:49:34.673  WARN [shineon.db.user,,,] 6632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 17:49:34.673  INFO [shineon.db.user,,,] 6632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 17:49:34.686  INFO [shineon.db.user,,,] 6632 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@601eb4af
+2019-12-16 17:49:35.230  INFO [shineon.db.user,,,] 6632 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-12-16 17:49:35.230  INFO [shineon.db.user,,,] 6632 --- [main] org.mongodb.driver.cluster               : Adding discovered server 127.0.0.1:27017 to client view of cluster
+2019-12-16 17:49:35.277  INFO [shineon.db.user,,,] 6632 --- [cluster-ClusterId{value='5df7532f58dc9f19e894a87a', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:7}] to 127.0.0.1:27017
+2019-12-16 17:49:35.279  INFO [shineon.db.user,,,] 6632 --- [cluster-ClusterId{value='5df7532f58dc9f19e894a87a', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 0, 5]}, minWireVersion=0, maxWireVersion=3, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1065514}
+2019-12-16 17:49:35.280  INFO [shineon.db.user,,,] 6632 --- [cluster-ClusterId{value='5df7532f58dc9f19e894a87a', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-12-16 17:49:37.448  INFO [shineon.db.user,,,] 6632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-16 17:49:37.449  INFO [shineon.db.user,,,] 6632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-16 17:49:37.484  WARN [shineon.db.user,,,] 6632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-16 17:49:37.484  INFO [shineon.db.user,,,] 6632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-16 17:49:38.808  INFO [shineon.db.user,,,] 6632 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-16 17:49:38.902  INFO [shineon.db.user,,,] 6632 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-16 17:49:38.932  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-16 17:49:38.972  INFO [shineon.db.user,,,] 6632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-16 17:49:38.972  INFO [shineon.db.user,,,] 6632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-16 17:49:39.043  INFO [shineon.db.user,,,] 6632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-16 17:49:39.043  INFO [shineon.db.user,,,] 6632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-16 17:49:39.176  INFO [shineon.db.user,,,] 6632 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-16 17:49:39.224  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-16 17:49:39.330  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-16 17:49:39.331  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-16 17:49:39.332  INFO [shineon.db.user,,,] 6632 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-16 17:49:39.334  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576489779334 with initial instances count: 5
+2019-12-16 17:49:39.342  INFO [shineon.db.user,,,] 6632 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.DB.USER with eureka with status UP
+2019-12-16 17:49:39.343  INFO [shineon.db.user,,,] 6632 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576489779343, current=UP, previous=STARTING]
+2019-12-16 17:49:39.344  INFO [shineon.db.user,,,] 6632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121: registering service...
+2019-12-16 17:49:39.380  INFO [shineon.db.user,,,] 6632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 121 (http) with context path ''
+2019-12-16 17:49:39.381  INFO [shineon.db.user,,,] 6632 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 121
+2019-12-16 17:49:39.382  INFO [shineon.db.user,,,] 6632 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 9.514 seconds (JVM running for 10.097)
+2019-12-16 17:49:39.385  INFO [shineon.db.user,,,] 6632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.DB.USER/fh18829-2:shineon.db.user:121 - registration status: 204
+2019-12-16 17:49:51.695  INFO [shineon.db.user,,,] 6632 --- [http-nio-121-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 17:49:51.695  INFO [shineon.db.user,,,] 6632 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-16 17:49:51.710  INFO [shineon.db.user,,,] 6632 --- [http-nio-121-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-12-16 17:49:51.761  INFO [shineon.db.user,ce8eff33385f624c,08d255989f82994a,false] 6632 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [get] start execute
+2019-12-16 17:49:51.781  INFO [shineon.db.user,ce8eff33385f624c,08d255989f82994a,false] 6632 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-16 17:49:51.782  WARN [shineon.db.user,ce8eff33385f624c,08d255989f82994a,false] 6632 --- [http-nio-121-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-12-16 17:49:51.983  INFO [shineon.db.user,ce8eff33385f624c,08d255989f82994a,false] 6632 --- [http-nio-121-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-16 17:49:52.017  INFO [shineon.db.user,ce8eff33385f624c,08d255989f82994a,false] 6632 --- [http-nio-121-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [get] finish execute
+2019-12-16 17:50:06.330  INFO [shineon.db.user,43034dd6c706ae82,f143d0c650f874e3,false] 6632 --- [http-nio-121-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [get] start execute
+2019-12-16 17:50:06.334  INFO [shineon.db.user,43034dd6c706ae82,f143d0c650f874e3,false] 6632 --- [http-nio-121-exec-2] shineon.db.user                          : [shineon.db.user]服务异常：数据不存在！ (com.shineon.coder.service.dto.OrganizationDTO.get(OrganizationDTO.java:34))
+2019-12-16 17:54:39.230  INFO [shineon.db.user,,,] 6632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:59:39.235  INFO [shineon.db.user,,,] 6632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-16 17:59:48.223  INFO [shineon.db.user,8dc3cd04f64ee922,8518aaa07060e78f,false] 6632 --- [http-nio-121-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] start execute
+2019-12-16 17:59:48.315  INFO [shineon.db.user,8dc3cd04f64ee922,8518aaa07060e78f,false] 6632 --- [http-nio-121-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] finish execute
+2019-12-16 18:00:30.115  INFO [shineon.db.user,d8ecf06cd5088552,15e23592c4b6a35b,false] 6632 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] start execute
+2019-12-16 18:00:30.117  INFO [shineon.db.user,d8ecf06cd5088552,15e23592c4b6a35b,false] 6632 --- [http-nio-121-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.db.user] [OrganizationController] [list] finish execute

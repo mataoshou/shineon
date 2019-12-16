@@ -68,7 +68,7 @@ public class CacheBuild {
                 "com.shineon.coder.db.pojo.QueryItem","com.shineon.coder.service.convert.CommonItem","java.util.List"});
 
         ///////////////////////////////////////////////////////////////////////////
-        cacheClassBuildUtil.addTabContent(String.format("public %s()",cacheName));
+        cacheClassBuildUtil.addTabContent(String.format("public void initCache()"));
         cacheClassBuildUtil.addTabContent(String.format("{"));
 
         cacheClassBuildUtil.addTabRightContent(String.format("setDTO(SpringUtil.getBean(%s.class));",dtoClass.getSimpleName()));
@@ -126,7 +126,7 @@ public class CacheBuild {
 
         ///////////////////////////////////////////////////////////////////
         cacheClassBuildUtil.addTabContent(String.format("@Override"));
-        cacheClassBuildUtil.addTabContent(String.format("protected void updatePojoByDB(%s pojo) {",pojoClass.getSimpleName()));
+        cacheClassBuildUtil.addTabContent(String.format("protected CommonItem updatePojoByDB(%s pojo) {",pojoClass.getSimpleName()));
         cacheClassBuildUtil.addTabContent(String.format("}"));
         cacheClassBuildUtil.addTabContent("\r\n");
 

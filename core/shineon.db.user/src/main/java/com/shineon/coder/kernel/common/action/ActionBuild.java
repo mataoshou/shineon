@@ -101,7 +101,7 @@ public class ActionBuild {
         for(String method: methods)
         {
             dtoClassBuild.addTabContent("\r\n");
-            dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item){",pojoClass.getSimpleName(),method.toLowerCase()));
+            dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",pojoClass.getSimpleName(),method.toLowerCase()));
             dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
             dtoClassBuild.addTabContent(String.format("return null;"));
             dtoClassBuild.addTabLeftContent(String.format("}"));
@@ -137,7 +137,7 @@ public class ActionBuild {
         {
             actionClassBuild.addTabContent("\r\n");
             actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",constantName,method.toUpperCase()));
-            actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item){",method.toLowerCase()));
+            actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item)throws Exception{",method.toLowerCase()));
             actionClassBuild.addTabRightContent(String.format("return commonUtil.toCommon(dto.%s(item));",method.toLowerCase()));
             actionClassBuild.addTabLeftContent(String.format("}"));
         }

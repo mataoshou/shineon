@@ -109,7 +109,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
      * @param pojo
      * @return
      */
-    protected abstract POJO updatePojoByDB(POJO pojo);
+    protected abstract CommonItem updatePojoByDB(POJO pojo);
 
     /**
      * 更新缓存前，需要更新数据库的数据
@@ -316,7 +316,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
 
         if(getKeyParams(pojo)==null&&synDB)
         {
-            pojo = updatePojoByDB(pojo);
+            pojo = dto.toPojo(updatePojoByDB(pojo));
         }
         QueryItem item = new QueryItem();
         item.setId(getKeyParams(pojo));
@@ -356,7 +356,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
                     util.delete(uKey);
 
                     if(synDB) {
-                        pojo = updatePojoByDB(pojo);
+                        pojo = dto.toPojo(updatePojoByDB(pojo));
                         pojos.remove(i);
                         pojos.add(i,pojo);
                     }

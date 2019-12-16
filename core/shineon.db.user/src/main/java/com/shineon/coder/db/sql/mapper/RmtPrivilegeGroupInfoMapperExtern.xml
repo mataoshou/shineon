@@ -12,4 +12,14 @@
             order by ${order}
         </if>
     </select>
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_privilege_group_info 
+        where privilegeGroupName = #{name,jdbcType=VARCHAR}
+    </select> 
+    <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtPrivilegeGroupInfo" >
+        insert into rmt_privilege_group_info (id,privilegeGroupName,privilegeGroupType,description,showOrder,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{privilegegroupname,jdbcType=VARCHAR},#{privilegegrouptype,jdbcType=INTEGER},#{description,jdbcType=VARCHAR},#{showorder,jdbcType=INTEGER},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>

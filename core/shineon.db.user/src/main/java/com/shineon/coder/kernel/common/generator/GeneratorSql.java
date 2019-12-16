@@ -102,7 +102,7 @@ public class GeneratorSql {
 
                 String propertyName = fileName + "Property";
 
-                //////////////////////////////////////构建dao文件///////////////////////////////////////////////
+                //////////////////////////////////////构建basedao文件///////////////////////////////////////////////
                 System.out.println("开始生成dao文件：" + fileName);
                 File daoFile = new File(daoRoot, mapperFileName + ".java");
                 File baseDaoFile = new File(daoRoot, mapperBaseFileName + ".java");
@@ -119,18 +119,7 @@ public class GeneratorSql {
                 }
 
 
-                File externDaoFile = new File(daoRoot, mapperExternFileName + ".java");
-
-                if (!externDaoFile.exists()||isOverride) {
-                    ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-                    classBuildUtil.classInit(mapperExternFileName, "",null, DBConstant.DB_DAO_PACKAGE, null, false,
-                            String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, fileName), "java.util.List");
-                    classBuildUtil.addTabContent( String.format(" List<%s> list(String where,String order);", fileName));
-                    classBuildUtil.finish(externDaoFile);
-                }
-
-                BaseFileUtil.delete(daoFile);
-                /////////////////////////////////////构建xml文件////////////////////////////////////////////////
+                /////////////////////////////////////构建base xml文件////////////////////////////////////////////////
                 System.out.println("开始生成dao文件：" + fileName);
                 File mapperFile = new File(mapperRoot, mapperFileName + ".xml");
                 File baseMapperFile = new File(mapperRoot, mapperBaseFileName + ".xml");
@@ -146,6 +135,9 @@ public class GeneratorSql {
                 }
 
 
+
+
+                /////////////////////////////////////构建extern xml文件////////////////////////////////////////////////
                 File externMapperFile = new File(mapperRoot, mapperExternFileName + ".xml");
 
                 if (!externMapperFile.exists()||isOverride) {
@@ -162,14 +154,86 @@ public class GeneratorSql {
                             "        <if test=\"order != null\">\n" +
                             "            order by ${order}\n" +
                             "        </if>\n" +
-                            "    </select>\n" +
-                            "</mapper>";
+                            "    </select>\n" ;
 
-                    content = content.replace("##1", mergeFileName).replace("##2", tableName);
+                        DomUtil domUtil = new DomUtil();
+                        Document document = domUtil.getDocument(baseMapperFile);
+
+                        Element element = document.getRootElement().element("resultMap");
+
+                        List<Element> eles = element.elements();
+
+
+                        String insert_keys="";
+                        String insert_value="";
+
+                        String itemName ="";
+                        for (Element ele : eles) {
+                            String column = ele.attributeValue("column");
+                            String jdbcType = ele.attributeValue("jdbcType");
+                            String property = ele.attributeValue("property");
+                            if(itemName.length()==0&&(column.indexOf("name")>0||column.indexOf("Name")>0))
+                            {
+                                itemName=column;
+                            }
+
+                            insert_keys += column+",";
+                            insert_value += String.format("#{%s,jdbcType=%s},",property,jdbcType);
+                        }
+                        insert_keys = insert_keys.substring(0,insert_keys.length()-1);
+                        insert_value = insert_value.substring(0,insert_value.length()-1);
+
+
+                        String selectByName = "";
+                        if(itemName.length()>0)
+                        {
+                            selectByName ="    <select id=\"selectByName\" resultMap=\"BaseResultMap\" parameterType=\"java.lang.String\" >\n" +
+                                        "        select\n" +
+                                        "        <include refid=\"Base_Column_List\" />\n" +
+                                        "        from ##2 \n" +
+                                        "        where ##3 = #{name,jdbcType=VARCHAR}\n" +
+                                        "    </select> \n";
+                        }
+
+                        String insertByCustomId = "    <insert id=\"insertByCustomId\"   parameterType=\"##4\" >\n" +
+                                                "        insert into ##2 (##5)\n" +
+                                                "        values (##6)\n" +
+                                                "    </insert>\n";
+
+
+
+
+                    content +=selectByName;
+                    content +=insertByCustomId;
+                    content +="</mapper>";
+
+                    content = content.replace("##1", mergeFileName).replace("##2", tableName).replace("##3",itemName)
+                    .replace("##4",String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, fileName)).replace("##5",insert_keys).replace("##6",insert_value);
                     FileStore.putString(externMapperFile, content, "UTF-8");
                 }
 
                 BaseFileUtil.delete(mapperFile);
+
+
+                //////////////////////////////////////构建externdao文件///////////////////////////////////////////////
+                File externDaoFile = new File(daoRoot, mapperExternFileName + ".java");
+
+                if (!externDaoFile.exists()||isOverride) {
+                    ClassBuildUtil classBuildUtil = new ClassBuildUtil();
+                    classBuildUtil.classInit(mapperExternFileName, "",null, DBConstant.DB_DAO_PACKAGE, null, false,
+                            String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, fileName), "java.util.List","org.apache.ibatis.annotations.Param");
+                    classBuildUtil.addTabContent("\r");
+                    classBuildUtil.addTabContent( String.format(" List<%s> list(@Param(\"where\") String where,@Param(\"order\") String order);", fileName));
+                    classBuildUtil.addTabContent("\r");
+                    classBuildUtil.addTabContent( String.format(" %s selectByName(String name);", fileName));
+                    classBuildUtil.addTabContent("\r");
+                    classBuildUtil.addTabContent( String.format(" int insertByCustomId(%s item);", fileName));
+                    classBuildUtil.finish(externDaoFile);
+                }
+
+                BaseFileUtil.delete(daoFile);
+
+
                 ///////////////////////////////////生成merge文件/////////////////////////////////////////////////////////
                 File mergeFile = new File(mergeRoot, mergeFileName + ".java");
 

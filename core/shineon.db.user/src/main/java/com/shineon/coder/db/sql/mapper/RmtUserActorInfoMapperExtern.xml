@@ -12,4 +12,8 @@
             order by ${order}
         </if>
     </select>
+    <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtUserActorInfo" >
+        insert into rmt_user_actor_info (id,userID,departmentID,actorGroup,speciallyGroup,createTime,createUserID,description,reserved1,reserved2)
+        values (#{id,jdbcType=INTEGER},#{userid,jdbcType=INTEGER},#{departmentid,jdbcType=VARCHAR},#{actorgroup,jdbcType=VARCHAR},#{speciallygroup,jdbcType=VARCHAR},#{createtime,jdbcType=TIMESTAMP},#{createuserid,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},#{reserved1,jdbcType=VARCHAR},#{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>

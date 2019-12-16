@@ -74,13 +74,8 @@ public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
     }
 
     @Override
-    protected RmtUserInfo updatePojoByDB(RmtUserInfo userInfo) {
-        try {
-            return dto.toPojo(userFeign.edit(dto.toCommon(userInfo)));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+    protected CommonItem updatePojoByDB(RmtUserInfo userInfo) {
+            return userFeign.edit(dto.toCommon(userInfo));
     }
 
     @Override

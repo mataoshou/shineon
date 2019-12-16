@@ -8,6 +8,7 @@ import com.shineon.coder.kernel.util.GuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -30,7 +31,7 @@ public class UserBO {
         return userMapper.list(where.toString(),null);
     }
 
-    public RmtUserInfo add(RmtUserInfo user)
+    public RmtUserInfo insert(RmtUserInfo user)
     {
         GuidUtil util = new GuidUtil();
 
@@ -40,14 +41,25 @@ public class UserBO {
         user.setCreatedtime(user.getModifytime());
 
         user.setId(util.gen());
-        userMapper.insertUser(user);
+        userMapper.insertByCustomId(user);
 
         return get(user.getId());
     }
 
-    public void update(RmtUserInfo user)
+    public RmtUserInfo update(RmtUserInfo user)
     {
         userMapper.updateByPrimaryKeySelective(user);
+
+        return get(user.getId());
+    }
+
+
+    public RmtUserInfo delete(RmtUserInfo user)
+    {
+        user.setDeletedflag((byte) 1);
+        user.setDeletedtime(new Date());
+        update(user);
+        return get(user.getId());
     }
 
     public RmtUserInfo getByName(String name)

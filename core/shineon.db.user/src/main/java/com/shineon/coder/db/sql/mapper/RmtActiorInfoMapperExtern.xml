@@ -12,4 +12,14 @@
             order by ${order}
         </if>
     </select>
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+        <include refid="Base_Column_List" />
+        from rmt_actior_info 
+        where actorName = #{name,jdbcType=VARCHAR}
+    </select> 
+    <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtActiorInfo" >
+        insert into rmt_actior_info (id,actorName,createTime,secretLevel,description,showOrder,systemActorFlag,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{actorname,jdbcType=VARCHAR},#{createtime,jdbcType=TIMESTAMP},#{secretlevel,jdbcType=INTEGER},#{description,jdbcType=VARCHAR},#{showorder,jdbcType=INTEGER},#{systemactorflag,jdbcType=VARCHAR},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+    </insert>
 </mapper>
