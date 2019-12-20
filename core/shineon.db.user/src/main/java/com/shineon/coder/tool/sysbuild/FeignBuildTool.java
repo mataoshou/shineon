@@ -1,14 +1,15 @@
 package com.shineon.coder.tool.sysbuild;
 
-import com.shineon.coder.kernel.common.feign.FeignBuild;
-import com.shineon.coder.kernel.constant.ServerConstant;
-
-import java.io.IOException;
+import com.shineon.coder.db.sql.pojo.RmtPrivilegeInfo;
+import com.shineon.coder.kernel.common.feign.FeignFactory;
+import com.shineon.coder.kernel.constant.feign.FeignConstant;
+import com.shineon.coder.kernel.constant.sys.SysConstant;
+import com.shineon.coder.service.convert.util.RmtPrivilegeInfoCommonUtil;
 
 public class FeignBuildTool {
 
-    public static void main(String[] args) throws IOException {
-        FeignBuild feignBuild =new FeignBuild();
-        feignBuild.build("matao", ServerConstant.SHINEON_DB_USER);
+    public static void main(String[] args) throws Exception {
+        FeignFactory factory =new FeignFactory();
+        factory.delete("matao", RmtPrivilegeInfoCommonUtil.class,RmtPrivilegeInfo.class, FeignConstant.FEIGN_METHOD, SysConstant.CURRENT_SYS_NAME);
     }
 }

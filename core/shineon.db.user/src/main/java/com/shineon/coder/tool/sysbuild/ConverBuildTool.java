@@ -1,7 +1,7 @@
 package com.shineon.coder.tool.sysbuild;
 
 
-import com.shineon.coder.kernel.common.convert.ConvertBuild;
+import com.shineon.coder.kernel.common.convert.ConvertFactory;
 
 public class ConverBuildTool {
 
@@ -11,8 +11,9 @@ public class ConverBuildTool {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        ConvertBuild tool = new ConvertBuild();
-        tool.buildConvert();
+        ConvertFactory factory = new ConvertFactory();
+        factory.build();
+//        tool.buildConvert();
 
 
         //全部重新生成

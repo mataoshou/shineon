@@ -1,7 +1,7 @@
 package com.shineon.coder.kernel.common.rebuild;
 
 import com.shineon.coder.kernel.common.CommonTool;
-import com.shineon.coder.kernel.constant.SysConstant;
+import com.shineon.coder.kernel.constant.sys.SysConstant;
 import com.shineon.coder.kernel.util.FileStore;
 
 import java.io.File;

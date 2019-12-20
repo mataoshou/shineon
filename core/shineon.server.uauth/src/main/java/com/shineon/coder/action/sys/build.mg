@@ -64,7 +64,7 @@
 			<div class="method-content">
 				<span style="width: 200px;display: inline-block;height: 30px;"> 函数列表:  </span>
 
-				<input  style="width: 350px;height: 30px;" class="class-method" value="get,edit,list"/>
+				<input  style="width: 350px;height: 30px;" class="class-method" value="get,edit,list,delete"/>
 
 			</div>
 		</div>
@@ -127,7 +127,7 @@
 				req.commonName = $(".sys-util").val();
 				req.pojoName = $(".sys-pojo").val();
 				req.sysName = $(".sys-name").val();
-				req.methods = $(".class-method").val();
+				req.oper = $(".class-method").val();
 				req.dtoName = $(".sys-dto").val();
 
 				MT.api(MT.build_urls[val/1-1],function(data){
@@ -158,40 +158,40 @@
 				{
 					$(".util-content").css("display","block");
 					$(".pojo-content").css("display","block");
-					$(".sys-content").css("display","none");
+					$(".sys-content").css("display","block");
 					$(".method-content").css("display","block");
 					$(".dto-content").css("display","none");
 				}
 				else  if(val==2)
 				{
-					$(".util-content").css("display","none");
-					$(".pojo-content").css("display","none");
+					$(".util-content").css("display","block");
+					$(".pojo-content").css("display","block");
 					$(".sys-content").css("display","block");
-					$(".method-content").css("display","none");
+					$(".method-content").css("display","block");
 					$(".dto-content").css("display","none");
 				}
 				else  if(val==3)
 				{
-					$(".util-content").css("display","none");
-					$(".pojo-content").css("display","none");
-					$(".sys-content").css("display","none");
-					$(".method-content").css("display","none");
+					$(".util-content").css("display","block");
+					$(".pojo-content").css("display","block");
+					$(".sys-content").css("display","block");
+					$(".method-content").css("display","block");
 					$(".dto-content").css("display","none");
 				}
 				else  if(val==4)
 				{
-					$(".util-content").css("display","none");
-					$(".pojo-content").css("display","none");
-					$(".sys-content").css("display","none");
-					$(".method-content").css("display","none");
+					$(".util-content").css("display","block");
+					$(".pojo-content").css("display","block");
+					$(".sys-content").css("display","block");
+					$(".method-content").css("display","block");
 					$(".dto-content").css("display","none");
 				}
 				else  if(val==5)
 				{
 					$(".util-content").css("display","block");
 					$(".pojo-content").css("display","block");
-					$(".sys-content").css("display","none");
-					$(".method-content").css("display","none");
+					$(".sys-content").css("display","block");
+					$(".method-content").css("display","block");
 					$(".dto-content").css("display","none");
 				}
 			}

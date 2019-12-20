@@ -1,8 +1,65 @@
 package com.shineon.coder.kernel.common.convert;
 
+import com.shineon.coder.kernel.util.DomUtil;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConvertTools {
+
+    Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public List<PropertyItem> getItems(Class cl)
+    {
+        Field[] fs = cl.getDeclaredFields();
+        logger.debug(cl.getName() +"  属性数量："+fs.length);
+
+        List<PropertyItem> list = new ArrayList<>();
+
+        for(Field f:fs)
+        {
+//            System.out.println(f.getName());
+            PropertyItem item = new PropertyItem();
+            item.name = f.getName();
+            item.type = f.getType().getName();
+            item.status = false;
+
+            list.add(item);
+        }
+
+        return  list;
+    }
+
+    //获取原来的映射关系
+    public List<MapperItem> getMapper(File file) throws IOException, DocumentException {
+
+        DomUtil dom = new DomUtil();
+
+        Document doc = dom.getDocument(file);
+        List<MapperItem> list = new ArrayList<>();
+        Element root =  doc.getRootElement();
+        List<Element> eles = root.elements();
+        for(Element ele :eles)
+        {
+            MapperItem item = new MapperItem();
+            item.commonName = ele.attributeValue("commonName").trim();
+            item.pojoName = ele.attributeValue("pojoName").trim();
+            item.type = ele.attributeValue("type").trim();
+            item.status = true;
+            list.add(item);
+        }
+
+        return list;
+    }
+
 
 
     public PropertyItem getItem(PropertyItem item, List<PropertyItem> items)

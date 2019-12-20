@@ -1,41 +1,43 @@
 spring: 
   cloud: 
-    stream:
-      rabbit:
-        bindings:
-          UserNoticeMessageInput:
-            consumer:
+    stream: 
+      rabbit: 
+        bindings: 
+          PrivilegeMessageInput: 
+            consumer: 
               deadLetterQueueName: UserErrorMessage.errorMessage
               autoBindDlq: true
               deadLetterExchange: UserErrorMessage
-          PrivilegeMessageInput:
-            consumer:
+          UserNoticeMessageInput: 
+            consumer: 
               deadLetterQueueName: UserErrorMessage.errorMessage
               autoBindDlq: true
               deadLetterExchange: UserErrorMessage
-          UserNoticeMessageOutput:
-            producer:
+          UserNoticeMessageOutput: 
+            producer: 
               deadLetterQueueName: UserErrorMessage.errorMessage
               autoBindDlq: true
               deadLetterExchange: UserErrorMessage
-      bindings:
-        PrivilegeMessageInput:
-          destination: PrivilegeMessage
-          group: privilege
-        UserErrorMessageInput:
-          destination: UserErrorMessage
-          group: errorMessage
-        UserNoticeMessageInput:
-          destination: UserNoticeMessage
-          group: userNotice
-        PrivilegeMessageOutput:
+      bindings: 
+        Matao3MessageInput: 
+          destination: Matao3Message
+        Matao3MessageOutput: 
+          destination: Matao3Message
+        PrivilegeMessageOutput: 
           destination: PrivilegeMessage
         UserNoticeMessageOutput: 
           destination: UserNoticeMessage
-        UserErrorMessageOutput: 
+        PrivilegeMessageInput: 
+          destination: PrivilegeMessage
+          group: privilege
+        UserErrorMessageInput: 
           destination: UserErrorMessage
+          group: errorMessage
+        UserNoticeMessageInput: 
+          destination: UserNoticeMessage
+          group: userNotice
   main: 
-    allowbeandefinitionoverriding: true
+    allow-bean-definition-overriding: true
   application: 
     name: shineon.base.user
   rabbitmq: 
@@ -43,7 +45,6 @@ spring:
     password: matao
     port: 5672
     username: matao
-#    publisher-confirms: true
   redis: 
     host: 127.0.0.1
     port: 6379
@@ -66,5 +67,5 @@ eureka:
   client: 
     serviceurl: 
       defaultZone: "http://127.0.0.1:81/eureka"
-  instance:
+  instance: 
     prefer-ip-address: true

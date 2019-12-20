@@ -1,10 +1,11 @@
 package com.shineon.coder.action.sys;
 
 
-import com.shineon.coder.kernel.common.action.ActionBuild;
-import com.shineon.coder.kernel.common.cache.CacheBuild;
-import com.shineon.coder.kernel.common.convert.ConvertBuild;
-import com.shineon.coder.kernel.common.feign.FeignBuild;
+import com.shineon.coder.kernel.common.action.ActionFactory;
+import com.shineon.coder.kernel.common.cache.CacheFactory;
+import com.shineon.coder.kernel.common.convert.ConvertFactory;
+import com.shineon.coder.kernel.common.feign.FeignFactory;
+import com.shineon.coder.kernel.constant.sys.SysConstant;
 import com.shineon.coder.service.convert.BasicCommonUtil;
 import com.shineon.coder.service.convert.CommonItem;
 import lombok.extern.slf4j.Slf4j;
@@ -29,11 +30,11 @@ public class SysOperController {
 
         if(item.getMethods()!=null)
         {
-            item.setMethods(item.getMethods().replace("，",","));
+            item.setOper(item.getOper().replace("，",","));
         }
 
-        ActionBuild build = new ActionBuild();
-        build.build(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods().split(","));
+        ActionFactory factory = new ActionFactory();
+        factory.build(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods(), SysConstant.CURRENT_SYS_NAME);
         return commonUtil.success();
     }
 
@@ -45,29 +46,21 @@ public class SysOperController {
 
         if(item.getMethods()!=null)
         {
-            item.setMethods(item.getMethods().replace("，",","));
+            item.setOper(item.getOper().replace("，",","));
         }
 
-        FeignBuild build = new FeignBuild();
-        build.build(item.getName(),item.getSysName(),item.getMethods().split(","));
+        FeignFactory factory = new FeignFactory();
+        factory.build(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods(),item.getSysName());
         return commonUtil.success();
     }
 
-    @RequestMapping("sys/oper/db")
-    public CommonItem db()  {
-
-
-//        GeneratorSql build = new GeneratorSql();
-//        build.build();
-        return commonUtil.success();
-    }
 
     @RequestMapping("sys/oper/convert")
     public CommonItem convert() throws Exception {
 
 
-        ConvertBuild build = new ConvertBuild();
-        build.buildConvert();
+        ConvertFactory factory = new ConvertFactory();
+        factory.build();
         return commonUtil.success();
     }
 
@@ -79,15 +72,15 @@ public class SysOperController {
         if(item==null)throw new Exception("参数为空，请检查！！");
         if(item.getName()==null||item.getName().trim().length()==0)throw new Exception("名称为空，请检查！！");
 
-        if(item.getMethods()!=null)
+        if(item.getOper()!=null)
         {
-            item.setMethods(item.getMethods().replace("，",","));
+            item.setOper(item.getOper().replace("，",","));
         }
 
-        CacheBuild build = new CacheBuild();
+        CacheFactory factory = new CacheFactory();
         Class dotClass =Class.forName(item.getCommonName());
         Class pojoClass = Class.forName(item.getPojoName());
-        build.build(item.getName(),dotClass,pojoClass);
+        factory.build(item.getName(),dotClass,pojoClass,item.getMethods(),item.getSysName());
         return commonUtil.success();
     }
 

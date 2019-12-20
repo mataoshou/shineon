@@ -8,6 +8,7 @@ import com.shineon.coder.kernel.util.GuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -36,6 +37,13 @@ public class OrganizationBO {
         organization.setCreateuserid(organization.getModifyuserid());
         organization.setCreatedtime(organization.getModifytime());
         organization.setId(util.gen());
+
+        if(organization.getOrganizationcode()==null)
+        {
+            organization.setOrganizationcode(1);
+        }
+        organization.setDeletedflag((byte) 0);
+
         organizationInfoMapper.insertByCustomId(organization);
 
         return get(organization.getId());
@@ -49,6 +57,12 @@ public class OrganizationBO {
     }
 
 
-
+    public RmtOrganizationInfo delete(RmtOrganizationInfo organizationInfo)
+    {
+        organizationInfo.setDeletedflag((byte) 1);
+        organizationInfo.setDeletedtime(new Date());
+        update(organizationInfo);
+        return get(organizationInfo.getId());
+    }
 
 }

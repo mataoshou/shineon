@@ -1,6 +1,6 @@
 package com.shineon.coder;
 
-import com.shineon.coder.kernel.constant.DBConstant;
+import com.shineon.coder.kernel.constant.db.DBConstant;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

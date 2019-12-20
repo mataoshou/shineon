@@ -7,7 +7,9 @@ public class SysItem {
     private String dtoName;
     private String sysName;
 
-    private String methods;
+    private String oper;
+
+    private String[] methods;
 
     public String getName() {
         return name;
@@ -42,11 +44,20 @@ public class SysItem {
         this.sysName = sysName;
     }
 
-    public String getMethods() {
+    public String getOper() {
+        return oper;
+    }
+
+    public void setOper(String oper) {
+        this.oper = oper;
+        this.methods= this.oper.split(",");
+    }
+
+    public String[] getMethods() {
         return methods;
     }
 
-    public void setMethods(String methods) {
+    public void setMethods(String[] methods) {
         this.methods = methods;
     }
 

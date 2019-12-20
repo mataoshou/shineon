@@ -8,5 +8,5 @@ public class ActionConstant {
 
     public static final String ACTION_DTO_PACKAGE ="com.shineon.coder.service.dto";
 
-    public static final String[] ACTION_METHOD ={"get","edit","list"};
+    public static final String[] ACTION_METHOD ={"get","edit","list","delete"};
 }

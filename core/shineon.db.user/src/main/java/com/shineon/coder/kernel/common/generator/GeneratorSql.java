@@ -1,6 +1,6 @@
 package com.shineon.coder.kernel.common.generator;
 
-import com.shineon.coder.kernel.constant.DBConstant;
+import com.shineon.coder.kernel.constant.db.DBConstant;
 import com.shineon.coder.kernel.util.BaseFileUtil;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import com.shineon.coder.kernel.util.DomUtil;
@@ -115,7 +115,6 @@ public class GeneratorSql {
                     String content = FileStore.getContent(daoFile, "UTF-8");
                     content = content.replace(mapperFileName, mapperBaseFileName);
                     FileStore.putString(baseDaoFile, content, "UTF-8");
-
                 }
 
 

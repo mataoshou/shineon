@@ -1,566 +1,323 @@
-2019-12-16 13:46:01.848  INFO [shineon.server.uauth,,,] 16224 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
-2019-12-16 13:46:03.035  INFO [shineon.server.uauth,,,] 16224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-16 13:46:03.036  INFO [shineon.server.uauth,,,] 16224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-16 13:46:03.052  INFO [shineon.server.uauth,,,] 16224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
-2019-12-16 13:46:03.111  WARN [shineon.server.uauth,,,] 16224 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-16 13:46:03.329  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f7b7e58-9cac-35d3-ac4f-06ff1f5509d4
-2019-12-16 13:46:03.340  INFO [shineon.server.uauth,,,] 16224 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-16 13:46:03.345  INFO [shineon.server.uauth,,,] 16224 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-16 13:46:03.349  INFO [shineon.server.uauth,,,] 16224 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-16 13:46:03.528  INFO [shineon.server.uauth,,,] 16224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$8b53d713] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 13:46:03.626  INFO [shineon.server.uauth,,,] 16224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$66e5e233] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 13:46:03.635  INFO [shineon.server.uauth,,,] 16224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$9fcd8b00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 13:46:03.641  INFO [shineon.server.uauth,,,] 16224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 13:46:03.683  INFO [shineon.server.uauth,,,] 16224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 13:46:03.708  INFO [shineon.server.uauth,,,] 16224 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3c7c1ee1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 13:46:04.254  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 122 (http)
-2019-12-16 13:46:04.279  INFO [shineon.server.uauth,,,] 16224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-16 13:46:04.279  INFO [shineon.server.uauth,,,] 16224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-12-16 13:46:04.427  INFO [shineon.server.uauth,,,] 16224 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-16 13:46:04.427  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2568 ms
-2019-12-16 13:46:04.558  WARN [shineon.server.uauth,,,] 16224 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 13:46:04.558  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 13:46:04.565  INFO [shineon.server.uauth,,,] 16224 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@41e9f86
-2019-12-16 13:46:06.122  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-16 13:46:06.123  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-16 13:46:06.149  WARN [shineon.server.uauth,,,] 16224 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 13:46:06.150  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 13:46:07.427  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-16 13:46:07.550  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-16 13:46:07.684  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
-2019-12-16 13:46:07.725  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
-2019-12-16 13:46:07.742  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
-2019-12-16 13:46:07.765  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-16 13:46:07.765  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-16 13:46:07.766  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-16 13:46:07.776  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-16 13:46:07.805  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-16 13:46:07.898  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-16 13:46:07.898  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-16 13:46:07.961  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-16 13:46:07.961  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-16 13:46:08.256  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 13:46:08.298  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-16 13:46:08.298  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-16 13:46:08.298  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-16 13:46:08.298  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-16 13:46:08.299  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-16 13:46:08.299  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-16 13:46:08.299  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-16 13:46:08.389  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-12-16 13:46:08.390  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-16 13:46:08.392  INFO [shineon.server.uauth,,,] 16224 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-16 13:46:08.394  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576475168393 with initial instances count: 4
-2019-12-16 13:46:08.401  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.SERVER.UAUTH with eureka with status UP
-2019-12-16 13:46:08.401  INFO [shineon.server.uauth,,,] 16224 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576475168401, current=UP, previous=STARTING]
-2019-12-16 13:46:08.402  INFO [shineon.server.uauth,,,] 16224 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122: registering service...
-2019-12-16 13:46:08.425  INFO [shineon.server.uauth,,,] 16224 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - registration status: 204
-2019-12-16 13:46:08.452  INFO [shineon.server.uauth,,,] 16224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 122 (http) with context path ''
-2019-12-16 13:46:08.453  INFO [shineon.server.uauth,,,] 16224 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 122
-2019-12-16 13:46:08.454  INFO [shineon.server.uauth,,,] 16224 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 7.444 seconds (JVM running for 8.956)
-2019-12-16 13:50:56.536  INFO [shineon.server.uauth,,,] 16224 --- [http-nio-122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-16 13:50:56.536  INFO [shineon.server.uauth,,,] 16224 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-16 13:50:56.554  INFO [shineon.server.uauth,,,] 16224 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2019-12-16 13:50:56.605  INFO [shineon.server.uauth,cfe596900f6bdb40,42ce3d0e01c2e38f,false] 16224 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [edit] start execute
-2019-12-16 13:50:56.850  INFO [shineon.server.uauth,cfe596900f6bdb40,483a115ad59b9579,false] 16224 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 13:50:56.869  INFO [shineon.server.uauth,cfe596900f6bdb40,483a115ad59b9579,false] 16224 --- [hystrix-shineon.base.user-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon.base.user
-2019-12-16 13:50:56.870  INFO [shineon.server.uauth,cfe596900f6bdb40,483a115ad59b9579,false] 16224 --- [hystrix-shineon.base.user-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon.base.user instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2019-12-16 13:50:56.874  INFO [shineon.server.uauth,cfe596900f6bdb40,483a115ad59b9579,false] 16224 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2019-12-16 13:50:56.887  INFO [shineon.server.uauth,cfe596900f6bdb40,483a115ad59b9579,false] 16224 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 13:50:56.888  INFO [shineon.server.uauth,cfe596900f6bdb40,483a115ad59b9579,false] 16224 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon.base.user initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[10.0.192.104:125],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:10.0.192.104:125;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@4ced4688
-2019-12-16 13:50:57.728  INFO [shineon.server.uauth,cfe596900f6bdb40,42ce3d0e01c2e38f,false] 16224 --- [http-nio-122-exec-1] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 13:50:57.878  INFO [shineon.server.uauth,,,] 16224 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 13:51:08.304  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 13:56:08.309  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 13:57:20.179  INFO [shineon.server.uauth,a8f2b0e91a66e847,bdd5a92c523f3546,false] 16224 --- [http-nio-122-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [edit] start execute
-2019-12-16 13:57:21.184  INFO [shineon.server.uauth,a8f2b0e91a66e847,bdd5a92c523f3546,false] 16224 --- [http-nio-122-exec-3] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 13:58:51.376  INFO [shineon.server.uauth,aa130256b7b3cb53,1a9ad0e26932787f,false] 16224 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [edit] start execute
-2019-12-16 13:58:51.466  INFO [shineon.server.uauth,aa130256b7b3cb53,1a9ad0e26932787f,false] 16224 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [edit] finish execute
-2019-12-16 13:59:18.623  INFO [shineon.server.uauth,e1dfec97bdba49c2,487dfac60979568d,false] 16224 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] start execute
-2019-12-16 13:59:18.667  INFO [shineon.server.uauth,e1dfec97bdba49c2,487dfac60979568d,false] 16224 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] finish execute
-2019-12-16 13:59:41.880  INFO [shineon.server.uauth,fd5b9e6025320470,8b8edcd82fc18eb7,false] 16224 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] start execute
-2019-12-16 13:59:41.904  INFO [shineon.server.uauth,fd5b9e6025320470,8b8edcd82fc18eb7,false] 16224 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] finish execute
-2019-12-16 14:00:09.175  INFO [shineon.server.uauth,4ec30ffc8a72e620,1df5454e89764f2d,false] 16224 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] start execute
-2019-12-16 14:00:09.218  INFO [shineon.server.uauth,4ec30ffc8a72e620,1df5454e89764f2d,false] 16224 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] finish execute
-2019-12-16 14:01:08.326  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:01:34.232  INFO [shineon.server.uauth,c2eb90f2d442990a,f5b7ec3a72072675,false] 16224 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 14:01:34.312  INFO [shineon.server.uauth,c2eb90f2d442990a,f5b7ec3a72072675,false] 16224 --- [http-nio-122-exec-2] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：[shineon.db.user]服务异常：nested exception is org.apache.ibatis.binding.BindingException: Parameter 'where' not found. Available parameters are [arg1, arg0, param1, param2] (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 14:06:08.331  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:11:08.337  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:12:25.035  INFO [shineon.server.uauth,5d3a3d23f8bd29cc,891fe712026b53c2,false] 16224 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 14:12:25.347  INFO [shineon.server.uauth,5d3a3d23f8bd29cc,891fe712026b53c2,false] 16224 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 14:16:08.342  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:18:05.360  INFO [shineon.server.uauth,9b0a2f6a90b8331a,7b66bb935d5cc001,false] 16224 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] start execute
-2019-12-16 14:18:05.404  INFO [shineon.server.uauth,9b0a2f6a90b8331a,7b66bb935d5cc001,false] 16224 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] finish execute
-2019-12-16 14:20:05.273  INFO [shineon.server.uauth,f0e8488bd8ef882b,a04df716f1edef83,false] 16224 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] start execute
-2019-12-16 14:20:05.283  INFO [shineon.server.uauth,f0e8488bd8ef882b,a04df716f1edef83,false] 16224 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] finish execute
-2019-12-16 14:21:08.347  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:26:08.359  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:31:08.364  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:36:08.369  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:41:08.374  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:46:08.386  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:51:08.397  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:56:08.403  INFO [shineon.server.uauth,,,] 16224 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:57:14.162  INFO [shineon.server.uauth,,,] 14572 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
-2019-12-16 14:57:15.655  INFO [shineon.server.uauth,,,] 14572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-16 14:57:15.657  INFO [shineon.server.uauth,,,] 14572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-16 14:57:15.680  INFO [shineon.server.uauth,,,] 14572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
-2019-12-16 14:57:15.799  WARN [shineon.server.uauth,,,] 14572 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-16 14:57:16.153  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f7b7e58-9cac-35d3-ac4f-06ff1f5509d4
-2019-12-16 14:57:16.168  INFO [shineon.server.uauth,,,] 14572 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-16 14:57:16.176  INFO [shineon.server.uauth,,,] 14572 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-16 14:57:16.182  INFO [shineon.server.uauth,,,] 14572 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-16 14:57:16.588  INFO [shineon.server.uauth,,,] 14572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$5fd0635e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 14:57:16.881  INFO [shineon.server.uauth,,,] 14572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$3b626e7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 14:57:16.897  INFO [shineon.server.uauth,,,] 14572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$744a174b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 14:57:16.907  INFO [shineon.server.uauth,,,] 14572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 14:57:16.977  INFO [shineon.server.uauth,,,] 14572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 14:57:17.025  INFO [shineon.server.uauth,,,] 14572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$10f8ab2c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 14:57:17.457  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 122 (http)
-2019-12-16 14:57:17.477  INFO [shineon.server.uauth,,,] 14572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-16 14:57:17.477  INFO [shineon.server.uauth,,,] 14572 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-12-16 14:57:17.593  INFO [shineon.server.uauth,,,] 14572 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-16 14:57:17.593  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3420 ms
-2019-12-16 14:57:17.767  WARN [shineon.server.uauth,,,] 14572 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 14:57:17.768  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 14:57:17.775  INFO [shineon.server.uauth,,,] 14572 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@35145874
-2019-12-16 14:57:19.804  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-16 14:57:19.805  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-16 14:57:19.832  WARN [shineon.server.uauth,,,] 14572 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 14:57:19.833  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 14:57:21.906  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-16 14:57:22.114  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-16 14:57:22.321  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
-2019-12-16 14:57:22.331  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
-2019-12-16 14:57:22.382  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
-2019-12-16 14:57:22.406  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-16 14:57:22.406  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-16 14:57:22.406  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-16 14:57:22.420  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-16 14:57:22.454  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-16 14:57:22.828  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-16 14:57:22.829  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-16 14:57:22.968  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-16 14:57:22.969  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-16 14:57:23.315  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-16 14:57:23.376  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-16 14:57:23.510  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-12-16 14:57:23.512  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-16 14:57:23.514  INFO [shineon.server.uauth,,,] 14572 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-16 14:57:23.518  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576479443516 with initial instances count: 4
-2019-12-16 14:57:23.526  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.SERVER.UAUTH with eureka with status UP
-2019-12-16 14:57:23.527  INFO [shineon.server.uauth,,,] 14572 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576479443527, current=UP, previous=STARTING]
-2019-12-16 14:57:23.528  INFO [shineon.server.uauth,,,] 14572 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122: registering service...
-2019-12-16 14:57:23.579  INFO [shineon.server.uauth,,,] 14572 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - registration status: 204
-2019-12-16 14:57:23.642  INFO [shineon.server.uauth,,,] 14572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 122 (http) with context path ''
-2019-12-16 14:57:23.642  INFO [shineon.server.uauth,,,] 14572 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 122
-2019-12-16 14:57:23.644  INFO [shineon.server.uauth,,,] 14572 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 10.932 seconds (JVM running for 11.575)
-2019-12-16 15:02:23.382  INFO [shineon.server.uauth,,,] 14572 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:07:23.394  INFO [shineon.server.uauth,,,] 14572 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:12:23.418  INFO [shineon.server.uauth,,,] 14572 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:17:23.424  INFO [shineon.server.uauth,,,] 14572 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:22:23.429  INFO [shineon.server.uauth,,,] 14572 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:23:06.756  INFO [shineon.server.uauth,,,] 14572 --- [http-nio-122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-16 15:23:06.756  INFO [shineon.server.uauth,,,] 14572 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-16 15:23:06.801  INFO [shineon.server.uauth,,,] 14572 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 45 ms
-2019-12-16 15:23:07.200  INFO [shineon.server.uauth,156c10c699d9aab9,156c10c699d9aab9,false] 14572 --- [http-nio-122-exec-3] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.server.uauth\target\classes\com\shineon\coder\service\dto
-2019-12-16 15:23:07.200  INFO [shineon.server.uauth,e25cf58785ba5790,e25cf58785ba5790,false] 14572 --- [http-nio-122-exec-4] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.server.uauth\target\classes\com\shineon\coder\service\convert\util
-2019-12-16 15:23:07.200  INFO [shineon.server.uauth,f88f4f9ec398d2a6,f88f4f9ec398d2a6,false] 14572 --- [http-nio-122-exec-5] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.server.uauth\target\classes\com\shineon\coder\db\pojo
-2019-12-16 15:23:31.238  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 CacheItemCommonBase 的 文件内容
-2019-12-16 15:23:31.239  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\CacheItemCommonBase.java
-2019-12-16 15:23:31.255  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.273  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 QueryItemCommonBase 的 文件内容
-2019-12-16 15:23:31.274  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\QueryItemCommonBase.java
-2019-12-16 15:23:31.275  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.288  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtOrganizationInfoCommonBase 的 文件内容
-2019-12-16 15:23:31.289  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\RmtOrganizationInfoCommonBase.java
-2019-12-16 15:23:31.289  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.289  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtOrganizationInfoCommonUtil 的 文件内容
-2019-12-16 15:23:31.290  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\util\RmtOrganizationInfoCommonUtil.java
-2019-12-16 15:23:31.290  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.308  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtPrivilegeInfoCommonBase 的 文件内容
-2019-12-16 15:23:31.309  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\RmtPrivilegeInfoCommonBase.java
-2019-12-16 15:23:31.310  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.310  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtPrivilegeInfoCommonUtil 的 文件内容
-2019-12-16 15:23:31.310  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\util\RmtPrivilegeInfoCommonUtil.java
-2019-12-16 15:23:31.310  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.323  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtUserDepartmentInfoCommonBase 的 文件内容
-2019-12-16 15:23:31.323  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\RmtUserDepartmentInfoCommonBase.java
-2019-12-16 15:23:31.328  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.328  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtUserDepartmentInfoCommonUtil 的 文件内容
-2019-12-16 15:23:31.328  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\util\RmtUserDepartmentInfoCommonUtil.java
-2019-12-16 15:23:31.329  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.342  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 RmtUserInfoCommonBase 的 文件内容
-2019-12-16 15:23:31.343  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\RmtUserInfoCommonBase.java
-2019-12-16 15:23:31.344  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:31.347  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 SimpleItemCommonBase 的 文件内容
-2019-12-16 15:23:31.347  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\convert\base\SimpleItemCommonBase.java
-2019-12-16 15:23:31.357  INFO [shineon.server.uauth,d8e8925d0770009e,d8e8925d0770009e,false] 14572 --- [http-nio-122-exec-7] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:23:51.748  INFO [shineon.server.uauth,,,] 14156 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
-2019-12-16 15:23:52.814  INFO [shineon.server.uauth,,,] 14156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-16 15:23:52.815  INFO [shineon.server.uauth,,,] 14156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-16 15:23:52.833  INFO [shineon.server.uauth,,,] 14156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
-2019-12-16 15:23:52.900  WARN [shineon.server.uauth,,,] 14156 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-16 15:23:53.136  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=23530200-b02d-3036-a636-68665ca2303c
-2019-12-16 15:23:53.148  INFO [shineon.server.uauth,,,] 14156 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-16 15:23:53.154  INFO [shineon.server.uauth,,,] 14156 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-16 15:23:53.160  INFO [shineon.server.uauth,,,] 14156 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-16 15:23:53.327  INFO [shineon.server.uauth,,,] 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$18600610] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 15:23:53.417  INFO [shineon.server.uauth,,,] 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$f3f21130] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 15:23:53.426  INFO [shineon.server.uauth,,,] 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$2cd9b9fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 15:23:53.432  INFO [shineon.server.uauth,,,] 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 15:23:53.478  INFO [shineon.server.uauth,,,] 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 15:23:53.501  INFO [shineon.server.uauth,,,] 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c9884dde] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 15:23:53.824  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 122 (http)
-2019-12-16 15:23:53.840  INFO [shineon.server.uauth,,,] 14156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-16 15:23:53.840  INFO [shineon.server.uauth,,,] 14156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-12-16 15:23:53.938  INFO [shineon.server.uauth,,,] 14156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-16 15:23:53.938  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2180 ms
-2019-12-16 15:23:54.064  WARN [shineon.server.uauth,,,] 14156 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 15:23:54.064  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 15:23:54.077  INFO [shineon.server.uauth,,,] 14156 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@48bc2fce
-2019-12-16 15:23:55.669  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-16 15:23:55.670  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-16 15:23:55.696  WARN [shineon.server.uauth,,,] 14156 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 15:23:55.696  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 15:23:56.892  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-16 15:23:57.016  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-16 15:23:57.162  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
-2019-12-16 15:23:57.221  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
-2019-12-16 15:23:57.269  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
-2019-12-16 15:23:57.327  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-16 15:23:57.327  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-16 15:23:57.327  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-16 15:23:57.339  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-16 15:23:57.370  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-16 15:23:57.488  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-16 15:23:57.488  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-16 15:23:57.559  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-16 15:23:57.559  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-16 15:23:57.882  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:23:58.130  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-16 15:23:58.130  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-16 15:23:58.130  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-16 15:23:58.130  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-16 15:23:58.131  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-16 15:23:58.131  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-16 15:23:58.131  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-16 15:23:58.233  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-12-16 15:23:58.234  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-16 15:23:58.236  INFO [shineon.server.uauth,,,] 14156 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-16 15:23:58.238  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576481038237 with initial instances count: 5
-2019-12-16 15:23:58.245  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.SERVER.UAUTH with eureka with status UP
-2019-12-16 15:23:58.245  INFO [shineon.server.uauth,,,] 14156 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576481038245, current=UP, previous=STARTING]
-2019-12-16 15:23:58.247  INFO [shineon.server.uauth,,,] 14156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122: registering service...
-2019-12-16 15:23:58.272  INFO [shineon.server.uauth,,,] 14156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - registration status: 204
-2019-12-16 15:23:58.303  INFO [shineon.server.uauth,,,] 14156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 122 (http) with context path ''
-2019-12-16 15:23:58.303  INFO [shineon.server.uauth,,,] 14156 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 122
-2019-12-16 15:23:58.304  INFO [shineon.server.uauth,,,] 14156 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 7.396 seconds (JVM running for 8.03)
-2019-12-16 15:24:04.997  INFO [shineon.server.uauth,,,] 14156 --- [http-nio-122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-16 15:24:04.997  INFO [shineon.server.uauth,,,] 14156 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-16 15:24:05.015  INFO [shineon.server.uauth,,,] 14156 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2019-12-16 15:24:05.206  INFO [shineon.server.uauth,5a539db69bf8afca,5a539db69bf8afca,false] 14156 --- [http-nio-122-exec-4] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.server.uauth\target\classes\com\shineon\coder\service\dto
-2019-12-16 15:24:05.206  INFO [shineon.server.uauth,66abcf6808aeba9a,66abcf6808aeba9a,false] 14156 --- [http-nio-122-exec-6] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.server.uauth\target\classes\com\shineon\coder\db\pojo
-2019-12-16 15:24:05.207  INFO [shineon.server.uauth,390c5078a92d4a3e,390c5078a92d4a3e,false] 14156 --- [http-nio-122-exec-5] c.s.c.action.sys.SysClassListController  : E:\shineon.frame\shineon\core\shineon.server.uauth\target\classes\com\shineon\coder\service\convert\util
-2019-12-16 15:24:33.200  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.c.kernel.common.action.ActionBuild   : 常量存储路径E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\kernel\constant\action\OrganizationActionConstant.java
-2019-12-16 15:24:33.200  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 OrganizationActionConstant 的 文件内容
-2019-12-16 15:24:33.201  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\kernel\constant\action\OrganizationActionConstant.java
-2019-12-16 15:24:33.202  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:24:33.202  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 OrganizationDTO 的 文件内容
-2019-12-16 15:24:33.203  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\dto\OrganizationDTO.java
-2019-12-16 15:24:33.203  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:24:33.203  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 OrganizationController 的 文件内容
-2019-12-16 15:24:33.204  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\action\OrganizationController.java
-2019-12-16 15:24:33.204  INFO [shineon.server.uauth,ddaaf3a40e5dc92b,ddaaf3a40e5dc92b,false] 14156 --- [http-nio-122-exec-8] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:24:48.665  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.c.kernel.common.feign.FeignBuild     : 常量存储路径E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\kernel\constant\feign\OrganizationConstant.java
-2019-12-16 15:24:48.665  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 OrganizationConstant 的 文件内容
-2019-12-16 15:24:48.666  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\kernel\constant\feign\OrganizationConstant.java
-2019-12-16 15:24:48.666  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:24:48.666  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 OrganizationFeign 的 文件内容
-2019-12-16 15:24:48.666  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\feign\OrganizationFeign.java
-2019-12-16 15:24:48.679  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:24:48.680  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 开始构建类文件 OrganizationFeignFallBack 的 文件内容
-2019-12-16 15:24:48.680  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 开始生成文件：E:\shineon.frame\shineon\core\shineon.server.uauth\src\main\java\com\shineon\coder\service\feign\OrganizationFeignFallBack.java
-2019-12-16 15:24:48.681  INFO [shineon.server.uauth,211cbff59b91542b,211cbff59b91542b,false] 14156 --- [http-nio-122-exec-4] c.s.coder.kernel.util.ClassBuildUtil     : 文件生成成功！！
-2019-12-16 15:28:58.148  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:33:58.153  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:38:58.158  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:43:58.163  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:48:58.168  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:53:58.173  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 15:58:58.178  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:03:58.183  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:08:58.188  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:13:58.194  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:18:58.199  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:23:58.204  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:28:58.209  INFO [shineon.server.uauth,,,] 14156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:29:27.951  INFO [shineon.server.uauth,f0ea9fac5a103260,df983690bc45aaeb,false] 14156 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 16:29:28.232  INFO [shineon.server.uauth,f0ea9fac5a103260,114bf22d76bcea9c,false] 14156 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 16:29:28.257  INFO [shineon.server.uauth,f0ea9fac5a103260,114bf22d76bcea9c,false] 14156 --- [hystrix-shineon.base.user-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon.base.user
-2019-12-16 16:29:28.257  INFO [shineon.server.uauth,f0ea9fac5a103260,114bf22d76bcea9c,false] 14156 --- [hystrix-shineon.base.user-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon.base.user instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2019-12-16 16:29:28.264  INFO [shineon.server.uauth,f0ea9fac5a103260,114bf22d76bcea9c,false] 14156 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2019-12-16 16:29:28.280  INFO [shineon.server.uauth,f0ea9fac5a103260,114bf22d76bcea9c,false] 14156 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 16:29:28.282  INFO [shineon.server.uauth,f0ea9fac5a103260,114bf22d76bcea9c,false] 14156 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon.base.user initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[10.0.192.104:125],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:10.0.192.104:125;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@54c74d9
-2019-12-16 16:29:29.074  INFO [shineon.server.uauth,f0ea9fac5a103260,df983690bc45aaeb,false] 14156 --- [http-nio-122-exec-1] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 16:29:29.267  INFO [shineon.server.uauth,,,] 14156 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 16:30:07.718  INFO [shineon.server.uauth,,,] 13580 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
-2019-12-16 16:30:09.851  INFO [shineon.server.uauth,,,] 13580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-16 16:30:09.853  INFO [shineon.server.uauth,,,] 13580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-16 16:30:09.875  INFO [shineon.server.uauth,,,] 13580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
-2019-12-16 16:30:10.000  WARN [shineon.server.uauth,,,] 13580 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-16 16:30:10.532  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=380c5d30-2618-3b59-9915-5404a693f1c2
-2019-12-16 16:30:10.548  INFO [shineon.server.uauth,,,] 13580 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-16 16:30:10.558  INFO [shineon.server.uauth,,,] 13580 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-16 16:30:10.564  INFO [shineon.server.uauth,,,] 13580 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-16 16:30:10.899  INFO [shineon.server.uauth,,,] 13580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$8420489a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 16:30:11.286  INFO [shineon.server.uauth,,,] 13580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$5fb253ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 16:30:11.302  INFO [shineon.server.uauth,,,] 13580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$9899fc87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 16:30:11.314  INFO [shineon.server.uauth,,,] 13580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 16:30:11.385  INFO [shineon.server.uauth,,,] 13580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 16:30:11.419  INFO [shineon.server.uauth,,,] 13580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$35489068] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 16:30:12.023  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 122 (http)
-2019-12-16 16:30:12.041  INFO [shineon.server.uauth,,,] 13580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-16 16:30:12.042  INFO [shineon.server.uauth,,,] 13580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-12-16 16:30:12.463  INFO [shineon.server.uauth,,,] 13580 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-16 16:30:12.464  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4735 ms
-2019-12-16 16:30:12.652  WARN [shineon.server.uauth,,,] 13580 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 16:30:12.652  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 16:30:12.660  INFO [shineon.server.uauth,,,] 13580 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@391515c7
-2019-12-16 16:30:15.351  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-16 16:30:15.353  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-16 16:30:15.379  WARN [shineon.server.uauth,,,] 13580 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 16:30:15.379  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 16:30:17.047  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-16 16:30:17.196  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-16 16:30:17.405  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
-2019-12-16 16:30:17.418  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
-2019-12-16 16:30:17.491  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
-2019-12-16 16:30:17.530  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-16 16:30:17.530  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-16 16:30:17.530  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-16 16:30:17.548  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-16 16:30:17.594  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-16 16:30:17.705  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-16 16:30:17.705  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-16 16:30:17.796  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-16 16:30:17.796  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-16 16:30:18.328  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:30:18.572  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-16 16:30:18.572  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-16 16:30:18.573  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-16 16:30:18.573  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-16 16:30:18.573  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-16 16:30:18.573  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-16 16:30:18.573  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-16 16:30:18.721  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-12-16 16:30:18.723  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-16 16:30:18.725  INFO [shineon.server.uauth,,,] 13580 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-16 16:30:18.727  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576485018727 with initial instances count: 5
-2019-12-16 16:30:18.738  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.SERVER.UAUTH with eureka with status UP
-2019-12-16 16:30:18.738  INFO [shineon.server.uauth,,,] 13580 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576485018738, current=UP, previous=STARTING]
-2019-12-16 16:30:18.740  INFO [shineon.server.uauth,,,] 13580 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122: registering service...
-2019-12-16 16:30:18.764  INFO [shineon.server.uauth,,,] 13580 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - registration status: 204
-2019-12-16 16:30:18.796  INFO [shineon.server.uauth,,,] 13580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 122 (http) with context path ''
-2019-12-16 16:30:18.797  INFO [shineon.server.uauth,,,] 13580 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 122
-2019-12-16 16:30:18.799  INFO [shineon.server.uauth,,,] 13580 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 12.988 seconds (JVM running for 13.791)
-2019-12-16 16:30:38.816  INFO [shineon.server.uauth,,,] 13580 --- [http-nio-122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-16 16:30:38.817  INFO [shineon.server.uauth,,,] 13580 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-16 16:30:38.837  INFO [shineon.server.uauth,,,] 13580 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
-2019-12-16 16:30:38.941  INFO [shineon.server.uauth,d500f0d1af46d970,4763f13a8081fb20,false] 13580 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 16:30:39.232  INFO [shineon.server.uauth,d500f0d1af46d970,f55dcd29d4c45576,false] 13580 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 16:30:39.261  INFO [shineon.server.uauth,d500f0d1af46d970,f55dcd29d4c45576,false] 13580 --- [hystrix-shineon.base.user-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon.base.user
-2019-12-16 16:30:39.261  INFO [shineon.server.uauth,d500f0d1af46d970,f55dcd29d4c45576,false] 13580 --- [hystrix-shineon.base.user-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon.base.user instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2019-12-16 16:30:39.265  INFO [shineon.server.uauth,d500f0d1af46d970,f55dcd29d4c45576,false] 13580 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2019-12-16 16:30:39.281  INFO [shineon.server.uauth,d500f0d1af46d970,f55dcd29d4c45576,false] 13580 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 16:30:39.282  INFO [shineon.server.uauth,d500f0d1af46d970,f55dcd29d4c45576,false] 13580 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon.base.user initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[10.0.192.104:125],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:10.0.192.104:125;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@22edf233
-2019-12-16 16:30:39.851  INFO [shineon.server.uauth,d500f0d1af46d970,4763f13a8081fb20,false] 13580 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 16:30:40.267  INFO [shineon.server.uauth,,,] 13580 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 16:30:51.681  INFO [shineon.server.uauth,183a0666b640e09f,87251755c7aedad7,false] 13580 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 16:30:51.714  INFO [shineon.server.uauth,183a0666b640e09f,87251755c7aedad7,false] 13580 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 16:30:57.524  INFO [shineon.server.uauth,ae266c066b3a3bfa,83ce6f36c58c3356,false] 13580 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 16:30:58.539  INFO [shineon.server.uauth,ae266c066b3a3bfa,83ce6f36c58c3356,false] 13580 --- [http-nio-122-exec-4] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 16:31:05.571  INFO [shineon.server.uauth,c8caf9a0059e4f67,ba0585f826b807f3,false] 13580 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 16:31:05.622  INFO [shineon.server.uauth,c8caf9a0059e4f67,ba0585f826b807f3,false] 13580 --- [http-nio-122-exec-6] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 16:34:54.792  INFO [shineon.server.uauth,8030df36e5784fec,2e22ffc27f44444f,false] 13580 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 16:34:54.822  INFO [shineon.server.uauth,8030df36e5784fec,2e22ffc27f44444f,false] 13580 --- [http-nio-122-exec-8] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 16:34:59.477  INFO [shineon.server.uauth,ca443a5e11ce1efc,4a932bba0cc3387a,false] 13580 --- [http-nio-122-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 16:34:59.513  INFO [shineon.server.uauth,ca443a5e11ce1efc,4a932bba0cc3387a,false] 13580 --- [http-nio-122-exec-9] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 16:35:18.579  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:40:18.584  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:45:18.589  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:50:18.594  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:55:18.599  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 16:59:18.048  INFO [shineon.server.uauth,d01fff067b7be269,0e47528a5810cb77,false] 13580 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 16:59:18.078  INFO [shineon.server.uauth,d01fff067b7be269,0e47528a5810cb77,false] 13580 --- [http-nio-122-exec-1] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 16:59:26.503  INFO [shineon.server.uauth,2bd804cd90fdd057,2df6c6b9144ca1ba,false] 13580 --- [http-nio-122-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 16:59:26.531  INFO [shineon.server.uauth,2bd804cd90fdd057,2df6c6b9144ca1ba,false] 13580 --- [http-nio-122-exec-3] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:00:18.604  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:05:18.616  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:08:17.754  INFO [shineon.server.uauth,c48f541537bd075a,cdf140097b2f64c8,false] 13580 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 17:08:18.201  INFO [shineon.server.uauth,c48f541537bd075a,cdf140097b2f64c8,false] 13580 --- [http-nio-122-exec-4] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:09:04.085  INFO [shineon.server.uauth,3a3fbc6ec62755ac,a33970b0662158c4,false] 13580 --- [http-nio-122-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 17:09:04.108  INFO [shineon.server.uauth,3a3fbc6ec62755ac,a33970b0662158c4,false] 13580 --- [http-nio-122-exec-5] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:09:08.445  INFO [shineon.server.uauth,dff0f7a6cf2d1514,66934a4b2a36a7c7,false] 13580 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 17:09:08.482  INFO [shineon.server.uauth,dff0f7a6cf2d1514,66934a4b2a36a7c7,false] 13580 --- [http-nio-122-exec-6] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:10:18.621  INFO [shineon.server.uauth,,,] 13580 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:13:59.596  INFO [shineon.server.uauth,,,] 17540 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
-2019-12-16 17:14:01.029  INFO [shineon.server.uauth,,,] 17540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-16 17:14:01.030  INFO [shineon.server.uauth,,,] 17540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-16 17:14:01.046  INFO [shineon.server.uauth,,,] 17540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
-2019-12-16 17:14:01.112  WARN [shineon.server.uauth,,,] 17540 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-16 17:14:01.325  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=380c5d30-2618-3b59-9915-5404a693f1c2
-2019-12-16 17:14:01.345  INFO [shineon.server.uauth,,,] 17540 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-16 17:14:01.354  INFO [shineon.server.uauth,,,] 17540 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-2019-12-16 17:14:01.359  INFO [shineon.server.uauth,,,] 17540 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-16 17:14:01.532  INFO [shineon.server.uauth,,,] 17540 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$a80a71f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 17:14:01.563  INFO [shineon.server.uauth,,,] 17540 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$839c7d11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 17:14:01.573  INFO [shineon.server.uauth,,,] 17540 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$bc8425de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 17:14:01.579  INFO [shineon.server.uauth,,,] 17540 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 17:14:01.624  INFO [shineon.server.uauth,,,] 17540 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 17:14:01.649  INFO [shineon.server.uauth,,,] 17540 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5932b9bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-16 17:14:02.025  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 122 (http)
-2019-12-16 17:14:02.039  INFO [shineon.server.uauth,,,] 17540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-16 17:14:02.039  INFO [shineon.server.uauth,,,] 17540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-12-16 17:14:02.128  INFO [shineon.server.uauth,,,] 17540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-16 17:14:02.128  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2521 ms
-2019-12-16 17:14:02.253  WARN [shineon.server.uauth,,,] 17540 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 17:14:02.253  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 17:14:02.259  INFO [shineon.server.uauth,,,] 17540 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@38732364
-2019-12-16 17:14:04.218  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-16 17:14:04.219  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule1'
-2019-12-16 17:14:04.245  WARN [shineon.server.uauth,,,] 17540 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-16 17:14:04.245  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-16 17:14:05.583  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-16 17:14:05.724  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-16 17:14:06.433  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
-2019-12-16 17:14:06.473  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
-2019-12-16 17:14:06.487  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
-2019-12-16 17:14:06.509  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-16 17:14:06.510  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-16 17:14:06.510  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-16 17:14:06.521  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-16 17:14:06.544  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-16 17:14:06.645  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-16 17:14:06.645  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-16 17:14:06.718  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-16 17:14:06.718  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-16 17:14:06.848  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-16 17:14:06.892  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-16 17:14:07.159  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-12-16 17:14:07.160  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-16 17:14:07.162  INFO [shineon.server.uauth,,,] 17540 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-16 17:14:07.164  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576487647163 with initial instances count: 5
-2019-12-16 17:14:07.171  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.SERVER.UAUTH with eureka with status UP
-2019-12-16 17:14:07.171  INFO [shineon.server.uauth,,,] 17540 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576487647171, current=UP, previous=STARTING]
-2019-12-16 17:14:07.173  INFO [shineon.server.uauth,,,] 17540 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122: registering service...
-2019-12-16 17:14:07.197  INFO [shineon.server.uauth,,,] 17540 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - registration status: 204
-2019-12-16 17:14:07.228  INFO [shineon.server.uauth,,,] 17540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 122 (http) with context path ''
-2019-12-16 17:14:07.228  INFO [shineon.server.uauth,,,] 17540 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 122
-2019-12-16 17:14:07.229  INFO [shineon.server.uauth,,,] 17540 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 8.615 seconds (JVM running for 9.153)
-2019-12-16 17:14:16.178  INFO [shineon.server.uauth,,,] 17540 --- [http-nio-122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-16 17:14:16.178  INFO [shineon.server.uauth,,,] 17540 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-16 17:14:16.196  INFO [shineon.server.uauth,,,] 17540 --- [http-nio-122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2019-12-16 17:14:16.242  INFO [shineon.server.uauth,973a15583484adfc,ea9abb30118db7df,false] 17540 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 17:14:16.583  INFO [shineon.server.uauth,973a15583484adfc,c9eca0f5f6875e43,false] 17540 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 17:14:16.627  INFO [shineon.server.uauth,973a15583484adfc,c9eca0f5f6875e43,false] 17540 --- [hystrix-shineon.base.user-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon.base.user
-2019-12-16 17:14:16.627  INFO [shineon.server.uauth,973a15583484adfc,c9eca0f5f6875e43,false] 17540 --- [hystrix-shineon.base.user-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon.base.user instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2019-12-16 17:14:16.632  INFO [shineon.server.uauth,973a15583484adfc,c9eca0f5f6875e43,false] 17540 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2019-12-16 17:14:16.654  INFO [shineon.server.uauth,973a15583484adfc,c9eca0f5f6875e43,false] 17540 --- [hystrix-shineon.base.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 17:14:16.655  INFO [shineon.server.uauth,973a15583484adfc,c9eca0f5f6875e43,false] 17540 --- [hystrix-shineon.base.user-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon.base.user initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.base.user,current list of Servers=[10.0.192.104:125],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:10.0.192.104:125;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@4b2c9107
-2019-12-16 17:14:17.081  INFO [shineon.server.uauth,973a15583484adfc,ea9abb30118db7df,false] 17540 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] finish execute
-2019-12-16 17:14:17.635  INFO [shineon.server.uauth,,,] 17540 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.base.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2019-12-16 17:14:24.220  INFO [shineon.server.uauth,cfb7262432792c02,4a873b8cf39df306,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 17:14:24.269  INFO [shineon.server.uauth,cfb7262432792c02,4a873b8cf39df306,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] finish execute
-2019-12-16 17:14:43.113  INFO [shineon.server.uauth,b5ea61a082e91a88,92c1d08af04192ee,false] 17540 --- [http-nio-122-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:14:43.214  INFO [shineon.server.uauth,b5ea61a082e91a88,92c1d08af04192ee,false] 17540 --- [http-nio-122-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:15:10.043  INFO [shineon.server.uauth,8b14aed822795ce9,693eeb555c7e399f,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:15:10.063  INFO [shineon.server.uauth,8b14aed822795ce9,693eeb555c7e399f,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:19:06.898  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:20:10.215  INFO [shineon.server.uauth,e3fd8414bee62e6c,36dcb2bde5689ba8,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 17:20:10.248  INFO [shineon.server.uauth,e3fd8414bee62e6c,36dcb2bde5689ba8,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 17:20:27.091  INFO [shineon.server.uauth,7b22f9175291cb8f,b9c501286e9366d2,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] start execute
-2019-12-16 17:20:27.130  INFO [shineon.server.uauth,7b22f9175291cb8f,b9c501286e9366d2,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] finish execute
-2019-12-16 17:23:17.612  INFO [shineon.server.uauth,83a60c45827f0edb,a27a0f530710034c,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 17:23:17.643  INFO [shineon.server.uauth,83a60c45827f0edb,a27a0f530710034c,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 17:23:41.686  INFO [shineon.server.uauth,49239c391cee234a,cb8b4870eff5b636,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [edit] start execute
-2019-12-16 17:23:41.759  INFO [shineon.server.uauth,49239c391cee234a,cb8b4870eff5b636,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [edit] finish execute
-2019-12-16 17:24:06.903  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:24:40.455  INFO [shineon.server.uauth,9bdb37b05837e58c,551992ab806255fb,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 17:24:40.471  INFO [shineon.server.uauth,9bdb37b05837e58c,551992ab806255fb,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 17:26:40.616  INFO [shineon.server.uauth,11dad44826613226,bdfb0e144a752af4,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 17:26:40.635  INFO [shineon.server.uauth,11dad44826613226,bdfb0e144a752af4,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 17:29:06.916  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:34:06.921  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:36:33.165  INFO [shineon.server.uauth,37939aad33cc3f1a,81234b016fa8fec3,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 17:36:33.182  INFO [shineon.server.uauth,37939aad33cc3f1a,81234b016fa8fec3,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 17:37:15.019  INFO [shineon.server.uauth,17471a8e4ba42b26,15953205069ab262,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] start execute
-2019-12-16 17:37:15.030  INFO [shineon.server.uauth,17471a8e4ba42b26,15953205069ab262,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [list] finish execute
-2019-12-16 17:37:23.210  INFO [shineon.server.uauth,2498d62e6066ede6,06b04cc87401c85f,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] start execute
-2019-12-16 17:37:23.220  INFO [shineon.server.uauth,2498d62e6066ede6,06b04cc87401c85f,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [get] finish execute
-2019-12-16 17:37:30.421  INFO [shineon.server.uauth,388871bf5e5cc931,1eb0ff0bf0c8675c,false] 17540 --- [http-nio-122-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] start execute
-2019-12-16 17:37:30.707  INFO [shineon.server.uauth,388871bf5e5cc931,1eb0ff0bf0c8675c,false] 17540 --- [http-nio-122-exec-3] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [UserController] [login] finish execute
-2019-12-16 17:37:42.153  INFO [shineon.server.uauth,e445df9eb8f69922,7dd9ae1ec9ca0034,false] 17540 --- [http-nio-122-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:37:42.163  INFO [shineon.server.uauth,e445df9eb8f69922,7dd9ae1ec9ca0034,false] 17540 --- [http-nio-122-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:38:27.726  INFO [shineon.server.uauth,8824e6e504259b34,6e9257028ab3df3e,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:38:27.753  INFO [shineon.server.uauth,8824e6e504259b34,6e9257028ab3df3e,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:38:33.681  INFO [shineon.server.uauth,0432f5cf335a670b,0f28d40d2c58893d,false] 17540 --- [http-nio-122-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:38:33.689  INFO [shineon.server.uauth,0432f5cf335a670b,0f28d40d2c58893d,false] 17540 --- [http-nio-122-exec-7] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:38:53.864  INFO [shineon.server.uauth,5584cf29e1a3507d,4a7fa489677d82cb,false] 17540 --- [http-nio-122-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:38:53.874  INFO [shineon.server.uauth,5584cf29e1a3507d,4a7fa489677d82cb,false] 17540 --- [http-nio-122-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:39:06.926  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:39:40.190  INFO [shineon.server.uauth,a8f0f3309f7b9f43,30e080d5f5bd1e1f,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:39:40.198  INFO [shineon.server.uauth,a8f0f3309f7b9f43,30e080d5f5bd1e1f,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:41:15.579  INFO [shineon.server.uauth,4326e88d6b604258,18b9811548afec91,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] start execute
-2019-12-16 17:41:15.626  INFO [shineon.server.uauth,4326e88d6b604258,18b9811548afec91,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [edit] finish execute
-2019-12-16 17:41:27.541  INFO [shineon.server.uauth,4c10862c9663c7c1,1b026fdeb6cac1d4,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:41:27.553  INFO [shineon.server.uauth,4c10862c9663c7c1,1b026fdeb6cac1d4,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:41:29.718  INFO [shineon.server.uauth,ca99d16b1567511d,7470f4e7d94a462a,false] 17540 --- [http-nio-122-exec-5] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [get] start execute
-2019-12-16 17:41:29.756  INFO [shineon.server.uauth,ca99d16b1567511d,7470f4e7d94a462a,false] 17540 --- [http-nio-122-exec-5] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：[shineon.db.user]服务异常：null (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:41:57.500  INFO [shineon.server.uauth,8e595b9526c74c62,4ee5faa669ade0f8,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [get] start execute
-2019-12-16 17:41:57.511  INFO [shineon.server.uauth,8e595b9526c74c62,4ee5faa669ade0f8,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [get] finish execute
-2019-12-16 17:42:07.872  INFO [shineon.server.uauth,976bbc5fdea67405,102c843950b08fe8,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:42:07.880  INFO [shineon.server.uauth,976bbc5fdea67405,102c843950b08fe8,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:43:44.334  INFO [shineon.server.uauth,f0ed50c92b9d2719,19e862f4880c1a80,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:43:45.843  INFO [shineon.server.uauth,f0ed50c92b9d2719,19e862f4880c1a80,false] 17540 --- [http-nio-122-exec-10] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:44:06.931  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:45:29.113  INFO [shineon.server.uauth,fae2898c8c400602,04eb3845ff54268c,false] 17540 --- [http-nio-122-exec-1] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:45:30.115  INFO [shineon.server.uauth,fae2898c8c400602,04eb3845ff54268c,false] 17540 --- [http-nio-122-exec-1] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:46:05.076  INFO [shineon.server.uauth,dba84047c2e18176,74aed60b8284850f,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:46:06.078  INFO [shineon.server.uauth,dba84047c2e18176,74aed60b8284850f,false] 17540 --- [http-nio-122-exec-2] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:46:13.320  INFO [shineon.server.uauth,bf0a22843b5a05b0,89bf7bbe3e4066a5,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:46:13.331  INFO [shineon.server.uauth,bf0a22843b5a05b0,89bf7bbe3e4066a5,false] 17540 --- [http-nio-122-exec-4] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 17:49:06.949  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:49:51.595  INFO [shineon.server.uauth,ce8eff33385f624c,27aedb2bde001d0e,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [get] start execute
-2019-12-16 17:49:52.049  INFO [shineon.server.uauth,ce8eff33385f624c,27aedb2bde001d0e,false] 17540 --- [http-nio-122-exec-6] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [get] finish execute
-2019-12-16 17:50:06.319  INFO [shineon.server.uauth,43034dd6c706ae82,1b57b467b428e21d,false] 17540 --- [http-nio-122-exec-8] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [get] start execute
-2019-12-16 17:50:06.358  INFO [shineon.server.uauth,43034dd6c706ae82,1b57b467b428e21d,false] 17540 --- [http-nio-122-exec-8] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务异常：[shineon.db.user]服务异常：数据不存在！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 17:54:06.954  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:59:06.959  INFO [shineon.server.uauth,,,] 17540 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-16 17:59:46.381  INFO [shineon.server.uauth,8dc3cd04f64ee922,fd384b6bf5d1cfea,false] 17540 --- [http-nio-122-exec-9] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 17:59:47.394  INFO [shineon.server.uauth,8dc3cd04f64ee922,fd384b6bf5d1cfea,false] 17540 --- [http-nio-122-exec-9] shineon.service.uauth                    : [shineon.service.uauth]服务异常：[shineon.base.user]服务访问失败！！ (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
-2019-12-16 18:00:05.480  INFO [shineon.server.uauth,8467dba37685a427,238aa8597e74c1f5,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 18:00:05.528  INFO [shineon.server.uauth,8467dba37685a427,238aa8597e74c1f5,false] 17540 --- [http-nio-122-exec-10] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
-2019-12-16 18:00:30.106  INFO [shineon.server.uauth,d8ecf06cd5088552,1d9bb331c12addda,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] start execute
-2019-12-16 18:00:30.129  INFO [shineon.server.uauth,d8ecf06cd5088552,1d9bb331c12addda,false] 17540 --- [http-nio-122-exec-2] com.shineon.coder.action.ControllerLog   : action [shineon.service.uauth] [OrganizationController] [list] finish execute
+2019-12-20 16:35:51.085  INFO [shineon.server.uauth,,,] 10520 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
+2019-12-20 16:35:51.727  INFO [shineon.server.uauth,,,] 10520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-20 16:35:51.728  INFO [shineon.server.uauth,,,] 10520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-20 16:35:51.747  INFO [shineon.server.uauth,,,] 10520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-12-20 16:35:51.807  WARN [shineon.server.uauth,,,] 10520 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-20 16:35:52.027  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88c7501f-2ef9-321c-91ea-2360ccb825d1
+2019-12-20 16:35:52.038  INFO [shineon.server.uauth,,,] 10520 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-12-20 16:35:52.043  INFO [shineon.server.uauth,,,] 10520 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-12-20 16:35:52.047  INFO [shineon.server.uauth,,,] 10520 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-12-20 16:35:52.222  INFO [shineon.server.uauth,,,] 10520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$19a1b911] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-20 16:35:52.333  INFO [shineon.server.uauth,,,] 10520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$f533c431] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-20 16:35:52.342  INFO [shineon.server.uauth,,,] 10520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$2e1b6cfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-20 16:35:52.348  INFO [shineon.server.uauth,,,] 10520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-20 16:35:52.391  INFO [shineon.server.uauth,,,] 10520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-20 16:35:52.416  INFO [shineon.server.uauth,,,] 10520 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$caca00df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-20 16:35:52.765  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 122 (http)
+2019-12-20 16:35:52.784  INFO [shineon.server.uauth,,,] 10520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-20 16:35:52.784  INFO [shineon.server.uauth,,,] 10520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-20 16:35:52.883  INFO [shineon.server.uauth,,,] 10520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-20 16:35:52.884  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1787 ms
+2019-12-20 16:35:53.013  WARN [shineon.server.uauth,,,] 10520 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-20 16:35:53.014  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-20 16:35:53.026  INFO [shineon.server.uauth,,,] 10520 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@72465eb2
+2019-12-20 16:35:54.645  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-20 16:35:54.647  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-20 16:35:54.672  WARN [shineon.server.uauth,,,] 10520 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-20 16:35:54.673  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-20 16:35:55.846  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-20 16:35:55.987  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-12-20 16:35:56.136  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2019-12-20 16:35:56.182  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2019-12-20 16:35:56.213  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2019-12-20 16:35:56.235  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-20 16:35:56.236  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-12-20 16:35:56.236  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-12-20 16:35:56.248  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-20 16:35:56.286  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-20 16:35:56.408  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-20 16:35:56.408  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-20 16:35:56.505  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-20 16:35:56.506  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-20 16:35:56.784  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-20 16:35:56.840  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-20 16:35:57.881 ERROR [shineon.server.uauth,,,] 10520 --- [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:414) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:269) [eureka-client-1.9.8.jar:1.9.8]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:330) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$d232f9fe.CGLIB$eurekaClient$2(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$d232f9fe$$FastClassBySpringCGLIB$$cd817381.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$d232f9fe.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:356) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:353) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$58cb3135.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.shineon.coder.CoderApplication.main(CoderApplication.java:14) ~[classes/:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 78 common frames omitted
+
+2019-12-20 16:35:57.882  WARN [shineon.server.uauth,,,] 10520 --- [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-12-20 16:35:57.882 ERROR [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1051) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:965) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:414) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:269) [eureka-client-1.9.8.jar:1.9.8]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:330) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$d232f9fe.CGLIB$eurekaClient$2(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$d232f9fe$$FastClassBySpringCGLIB$$cd817381.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$d232f9fe.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:356) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:353) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$58cb3135.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.shineon.coder.CoderApplication.main(CoderApplication.java:14) ~[classes/:na]
+
+2019-12-20 16:35:57.883  WARN [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2019-12-20 16:35:57.884  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-20 16:35:57.885  INFO [shineon.server.uauth,,,] 10520 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-20 16:35:57.888  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576830957887 with initial instances count: 0
+2019-12-20 16:35:57.894  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.SERVER.UAUTH with eureka with status UP
+2019-12-20 16:35:57.895  INFO [shineon.server.uauth,,,] 10520 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576830957895, current=UP, previous=STARTING]
+2019-12-20 16:35:57.896  INFO [shineon.server.uauth,,,] 10520 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122: registering service...
+2019-12-20 16:35:57.948  INFO [shineon.server.uauth,,,] 10520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 122 (http) with context path ''
+2019-12-20 16:35:57.949  INFO [shineon.server.uauth,,,] 10520 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 122
+2019-12-20 16:35:57.950  INFO [shineon.server.uauth,,,] 10520 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 7.93 seconds (JVM running for 8.798)
+2019-12-20 16:35:58.903 ERROR [shineon.server.uauth,,,] 10520 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2019-12-20 16:35:58.904  WARN [shineon.server.uauth,,,] 10520 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-12-20 16:35:58.904  WARN [shineon.server.uauth,,,] 10520 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.SERVER.UAUTH/fh18829-2:shineon.server.uauth:122 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+
+2019-12-20 16:35:58.904  WARN [shineon.server.uauth,,,] 10520 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.8.jar:1.9.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+

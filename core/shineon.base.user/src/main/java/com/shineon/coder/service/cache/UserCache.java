@@ -21,18 +21,13 @@ import java.util.List;
 @Slf4j
 public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
 
-//    @Autowired
-//    UserNoticeMessageClient messageClient;
-
-    @Autowired
-    QueryItemCommonUtil queryItemCommonUtil;
 
     @Autowired
     UserFeign userFeign;
 
     public void initCache()
     {
-        setDTO(new RmtUserInfoCommonUtil());
+        setCommonutil(new RmtUserInfoCommonUtil());
         setCacheDecorate(UserCacheConstant.CACHE_PRE,UserCacheConstant.CACHE_LAST);
     }
 
@@ -75,12 +70,12 @@ public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
 
     @Override
     protected CommonItem updatePojoByDB(RmtUserInfo userInfo) {
-            return userFeign.edit(dto.toCommon(userInfo));
+            return userFeign.edit(commonutil.toCommon(userInfo));
     }
 
     @Override
     protected void deletePojoByDB(RmtUserInfo userInfo) {
-        userFeign.delete(dto.toCommon(userInfo));
+        userFeign.delete(commonutil.toCommon(userInfo));
     }
 
     @Override

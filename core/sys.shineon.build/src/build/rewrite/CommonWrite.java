@@ -24,7 +24,7 @@ public class CommonWrite {
         }
     };
 
-    String replacePath = "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\action\\ActionBuild.java";
+    String replacePath = "src\\main\\java\\com\\shineon\\coder\\kernel\\util\\BaseFileUtil.java";
 
     public void replace() throws IOException {
 

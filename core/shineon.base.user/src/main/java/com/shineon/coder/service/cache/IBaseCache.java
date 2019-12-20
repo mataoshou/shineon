@@ -21,10 +21,10 @@ import java.util.List;
  * 待改进部分  缓存的删除和编辑
  *
  * @param <POJO>
- * @param <DTO>
+ * @param <commonutil>
  */
 @Slf4j
-public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
+public abstract class IBaseCache<POJO,CommonUtils extends CommonItemUtils<POJO>>
         implements ApplicationListener<ApplicationReadyEvent> {
 
 
@@ -36,6 +36,8 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
 
     @Autowired
     QueryItemCommonUtil queryItemCommonUtil;
+
+
 
     ///////////////////////////////////////////////////常量区////////////////////////////////////////////////////////
     String cachePre ="";
@@ -135,15 +137,15 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
 
    //////////////////////////////////////////初始化区域/////////////////////////////////////////////////////////////
 
-    DTO dto;
+    CommonUtils commonutil;
 
     /**
      * 设置dto对象
-     * @param _dto
+     * @param _commonutil
      */
-    protected  void setDTO(DTO _dto)
+    protected  void setCommonutil(CommonUtils _commonutil)
     {
-        this.dto =  _dto;
+        this.commonutil =  _commonutil;
     }
 
 
@@ -169,7 +171,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
     private POJO getPOJO(String key) throws Exception {
         String item = getKey(key);
 
-        POJO pojo = dto.toPojo(util.get(item));
+        POJO pojo = commonutil.toPojo(util.get(item));
         if(pojo==null)
         {
             QueryItem queryItem =queryItemCommonUtil.createPojo(getKeyParams(pojo));
@@ -196,7 +198,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
         {
             log.info("缓存不存在，需要从数据库查询:" + qitem.toJsonString());
 
-            POJO pojo = dto.toPojo(getPojoByDB(qitem));
+            POJO pojo = commonutil.toPojo(getPojoByDB(qitem));
             if(pojo==null)return null;
             setCache(pojo,false);
             return pojo;
@@ -205,7 +207,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
         {
             log.info("缓存数据量超过1条"+qitem.toJsonString());
         }
-        return dto.toPojo(util.get(getKey(ukeys.get(0))));
+        return commonutil.toPojo(util.get(getKey(ukeys.get(0))));
     }
 
 
@@ -240,7 +242,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
             }
 
             CommonItem datas = selectListByDB(key);
-            List<POJO> pojos = dto.toPojoList(datas);
+            List<POJO> pojos = commonutil.toPojoList(datas);
             setCache(key,pojos,false);
             return pojos;
         }
@@ -295,6 +297,7 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
     private  void deleteListKeys()
     {
         String keyPattern =  cachePre + "." + list_sign +"*";
+        log.info("清理列表数据：" + keyPattern);
         util.deleteKeys(keyPattern);
     }
 
@@ -314,9 +317,10 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
      */
     public final POJO setCache(POJO pojo,boolean synDB) throws Exception {
 
+        delete(pojo,false);
         if(getKeyParams(pojo)==null&&synDB)
         {
-            pojo = dto.toPojo(updatePojoByDB(pojo));
+            pojo = commonutil.toPojo(updatePojoByDB(pojo));
         }
         QueryItem item = new QueryItem();
         item.setId(getKeyParams(pojo));
@@ -356,11 +360,11 @@ public abstract class IBaseCache<POJO,DTO extends CommonItemUtils<POJO>>
                     util.delete(uKey);
 
                     if(synDB) {
-                        pojo = dto.toPojo(updatePojoByDB(pojo));
+                        pojo = commonutil.toPojo(updatePojoByDB(pojo));
                         pojos.remove(i);
                         pojos.add(i,pojo);
                     }
-                    util.set(uKey,dto.toCommon(pojo).toJsonString(),liveTime);
+                    util.set(uKey,commonutil.toCommon(pojo).toJsonString(),liveTime);
 
                     userKeys.add(getKeyParams(pojo));
                 }

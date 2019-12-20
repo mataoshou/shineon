@@ -1,6 +1,6 @@
 package com.shineon.coder.kernel.common.task.pool;
 
-import com.shineon.coder.kernel.constant.PoolConstant;
+import com.shineon.coder.kernel.constant.pool.PoolConstant;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;

@@ -30,7 +30,8 @@ public class ClassBuildUtil {
     /**
      * 初始化class类
      * @param className  类名
-     * @param baseName 接口和父类
+     * @param baseName 父类
+     * @param imps 接口
      * @param packageName 包名
      * @param annotation 注解
      * @param isclass 是否为class  false 为接口

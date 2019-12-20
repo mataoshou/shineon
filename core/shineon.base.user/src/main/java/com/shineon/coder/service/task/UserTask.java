@@ -1,6 +1,6 @@
 package com.shineon.coder.service.task;
 
-import com.shineon.coder.kernel.constant.PoolConstant;
+import com.shineon.coder.kernel.constant.pool.PoolConstant;
 import com.shineon.coder.service.cache.UserCache;
 import com.shineon.coder.service.convert.util.CacheItemCommonUtil;
 import com.shineon.coder.service.convert.util.RmtUserInfoCommonUtil;

@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.shineon.coder.service.convert.CommonItem;
 
+import java.util.Collection;
 import java.util.List;
 
 public class ApiResultItem {
@@ -22,22 +23,16 @@ public class ApiResultItem {
 
         if(data instanceof  List)
         {
-            throw new Exception("List转换使用 ApiResultItem(CommonItem item, List data,boolean isConvert) 方法");
+            if(data!=null) {
+                this.data.addAll((Collection<? extends Object>) data);
+            }
+        }
+        else if(data!=null) {
+            this.data.add(JSON.toJSON(data));
         }
 
-        this.data.add(JSON.toJSON(data));
-
     }
 
-    public ApiResultItem(CommonItem item, List data,boolean isConvert)
-    {
-
-        this.msg = item.getErrorReason();
-        this.code = item.getErrorStatus();
-
-        this.data.addAll(data);
-
-    }
 
 
     public Integer getCode() {

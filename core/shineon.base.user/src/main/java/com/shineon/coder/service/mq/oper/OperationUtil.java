@@ -1,8 +1,8 @@
 package com.shineon.coder.service.mq.oper;
 
 import com.alibaba.fastjson.JSON;
-import com.shineon.coder.kernel.constant.PoolConstant;
 import com.shineon.coder.kernel.constant.message.MessageConstant;
+import com.shineon.coder.kernel.constant.pool.PoolConstant;
 import com.shineon.coder.service.mq.BaseMessage;
 import com.shineon.coder.service.mq.MessageItem;
 import lombok.extern.slf4j.Slf4j;

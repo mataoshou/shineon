@@ -6,6 +6,7 @@
 	</head>
 	<body>
 		<input type="button" value="添加" onclick="addItem()" />
+		<input type="button" value="编辑" onclick="editItem()" />
 		<input type="button" value="列表" onclick="listItem()" />
 		<input type="button" value="获取" onclick="getItem()" />
 		
@@ -14,6 +15,30 @@
 		
 	var config_url = "http://127.0.0.1:182/"
 	
+	
+	function editItem()
+	{
+		
+		var request= {};
+		request.id = "D08DA592B5524AF9AB7A2E29A8AF4C71";
+		request.organizationname = "shineon1231236";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/organization/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
 	
 	function getItem()
 	{

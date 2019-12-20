@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="添加" onclick="addItem()" />
+		<input type="button" value="编辑" onclick="editItem()" />
+		<input type="button" value="列表" onclick="listItem()" />
+		<input type="button" value="获取" onclick="getItem()" />
+		
+	</body>
+	<script>
+		
+	var config_url = "http://127.0.0.1:182/"
+	
+	
+	function editItem()
+	{
+		
+		var request= {};
+		request.id = "CC69B6A439D84551ADC6022C235668EE";
+		request.name = "shineon";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/privilegeGroup/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	function getItem()
+	{
+		
+		var request= {};
+		
+		request.id = "CC69B6A439D84551ADC6022C235668EE";
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/privilegeGroup/get",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	function listItem()
+	{
+		
+		var request= {};
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/privilegeGroup/list",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	
+	function addItem()
+	{
+		
+		var request= {};
+		request.name = "shineon1231236";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/privilegeGroup/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	</script>
+	
+	<script>
+		
+	var rootPath =".."
+		
+	</script>
+	<script src="../config/config.load.js"></script>
+	<script src="../js/include.js"></script>
+</html>

@@ -2,9 +2,8 @@ package com.shineon.coder;
 
 
 import com.shineon.coder.db.pojo.RmtUserInfo;
-import com.shineon.coder.kernel.constant.ServerConstant;
-import com.shineon.coder.kernel.constant.SysConstant;
 import com.shineon.coder.kernel.constant.message.MessageConstant;
+import com.shineon.coder.kernel.constant.sys.ServerConstant;
 import com.shineon.coder.service.convert.util.RmtUserInfoCommonUtil;
 import com.shineon.coder.service.mq.MessageItem;
 import com.shineon.coder.service.mq.client.UserNoticeMessageClient;

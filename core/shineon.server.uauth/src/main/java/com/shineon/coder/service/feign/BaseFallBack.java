@@ -1,6 +1,6 @@
 package com.shineon.coder.service.feign;
 
-import com.shineon.coder.kernel.constant.CommonItemConstant;
+import com.shineon.coder.kernel.constant.convert.CommonItemConstant;
 import com.shineon.coder.service.convert.CommonItem;
 
 public interface BaseFallBack {

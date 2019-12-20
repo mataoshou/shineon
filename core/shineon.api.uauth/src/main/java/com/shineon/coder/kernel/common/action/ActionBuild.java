@@ -1,7 +1,8 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
+import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
+import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,22 +89,35 @@ public class ActionBuild {
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
                 "com.shineon.coder.db.pojo.QueryItem",
                 "com.shineon.coder.service.convert.util.QueryItemCommonUtil",
-                "com.shineon.coder.service.convert.CommonItem", "com.shineon.coder.db.common.ApiResultItem");
+                "com.shineon.coder.service.convert.CommonItem", "com.shineon.coder.db.common.ApiResultItem",
+                FeignConstant.FEIGN_PACKAGE+String.format(".%sFeign",baseName));
 
         dtoClassBuild.addTabContent("\r\n");
         dtoClassBuild.addTabContent("@Autowired");
         dtoClassBuild.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
 
-//        dtoClassBuild.addTabContent("\r\n");
-//        dtoClassBuild.addTabContent("@Autowired");
-//        dtoClassBuild.addTabContent(String.format("%sFeign service;",baseName));
+        dtoClassBuild.addTabContent("\r\n");
+        dtoClassBuild.addTabContent("@Autowired");
+        dtoClassBuild.addTabContent(String.format("%sFeign feign;",baseName));
+
+
+        dtoClassBuild.addTabContent("\r\n");
+        dtoClassBuild.addTabContent("@Autowired");
+        dtoClassBuild.addTabContent(String.format("%s commonUtil;",convertClass.getSimpleName()));
 
         for(String method: methods)
         {
             dtoClassBuild.addTabContent("\r\n");
             dtoClassBuild.addTabContent(String.format("public ApiResultItem %s(CommonItem item) throws Exception{",method.toLowerCase()));
             dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
-            dtoClassBuild.addTabContent(String.format("return null;"));
+
+            dtoClassBuild.addTabContent(String.format("CommonItem result =  feign.%s(item);",method.toLowerCase()));
+            if(method.indexOf("list")>=0) {
+                dtoClassBuild.addTabContent(String.format("return  new ApiResultItem(result ,commonUtil.toPojoList(result));"));
+            }
+            else {
+                dtoClassBuild.addTabContent(String.format("return new ApiResultItem(result ,commonUtil.toPojo(result));"));
+            }
             dtoClassBuild.addTabLeftContent(String.format("}"));
         }
 

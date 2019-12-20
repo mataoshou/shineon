@@ -69,6 +69,15 @@ public class BaseFileUtil
 		return f.getName();
 	}
 
+	public static   String getFileNameNoSuffix(String path)
+	{
+		File f = new File(path);
+		String name = f.getName();
+		name =  name.substring(0,name.lastIndexOf(".") );
+
+		return name;
+	}
+
 	/**
 	 * 获取文件后缀
 	 */

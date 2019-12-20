@@ -1,8 +1,8 @@
 package com.shineon.coder.kernel.common.feign;
 
-import com.shineon.coder.kernel.constant.ConvertsConstant;
-import com.shineon.coder.kernel.constant.ServerConstant;
+import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
+import com.shineon.coder.kernel.constant.sys.ServerConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

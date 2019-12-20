@@ -19,7 +19,7 @@
         where privilegeName = #{name,jdbcType=VARCHAR}
     </select> 
     <insert id="insertByCustomId"   parameterType="com.shineon.coder.db.sql.pojo.RmtPrivilegeInfo" >
-        insert into rmt_privilege_info (id,privilegeName,description,showOrder,reserved1,reserved2)
-        values (#{id,jdbcType=VARCHAR},#{privilegename,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},#{showorder,jdbcType=INTEGER},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
+        insert into rmt_privilege_info (id,privilegeName,operateGroup,description,showOrder,reserved1,reserved2)
+        values (#{id,jdbcType=VARCHAR},#{privilegename,jdbcType=VARCHAR},#{operategroup,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},#{showorder,jdbcType=INTEGER},#{reserved1,jdbcType=INTEGER},#{reserved2,jdbcType=VARCHAR})
     </insert>
 </mapper>

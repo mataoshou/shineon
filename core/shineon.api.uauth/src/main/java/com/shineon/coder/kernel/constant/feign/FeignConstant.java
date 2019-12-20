@@ -5,5 +5,5 @@ public class FeignConstant {
 
     public static final String FEIGN_CONSTANT_PACKAGE ="com.shineon.coder.kernel.constant.feign";
 
-    public static final String[] FEIGN_METHOD ={"get","edit","list"};
+    public static final String[] FEIGN_METHOD ={"get","edit","list","delete"};
 }

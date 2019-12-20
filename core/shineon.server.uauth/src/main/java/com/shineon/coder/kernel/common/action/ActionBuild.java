@@ -1,7 +1,7 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.kernel.constant.ConvertsConstant;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
+import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,22 +88,34 @@ public class ActionBuild {
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
                 "com.shineon.coder.db.pojo.QueryItem",
                 "com.shineon.coder.service.convert.util.QueryItemCommonUtil",
-                "com.shineon.coder.service.convert.CommonItem");
+                "com.shineon.coder.service.convert.CommonItem",
+                "java.util.List");
 
         dtoClassBuild.addTabContent("\r\n");
         dtoClassBuild.addTabContent("@Autowired");
         dtoClassBuild.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
 
-//        dtoClassBuild.addTabContent("\r\n");
-//        dtoClassBuild.addTabContent("@Autowired");
-//        dtoClassBuild.addTabContent(String.format("%sFeign service;",baseName));
+        dtoClassBuild.addTabContent("\r\n");
+        dtoClassBuild.addTabContent("@Autowired");
+        dtoClassBuild.addTabContent(String.format("%sFeign feign;",baseName));
+
+
+        dtoClassBuild.addTabContent("\r\n");
+        dtoClassBuild.addTabContent("@Autowired");
+        dtoClassBuild.addTabContent(String.format("%s commonUtil;",convertClass.getSimpleName()));
 
         for(String method: methods)
         {
             dtoClassBuild.addTabContent("\r\n");
-            dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",pojoClass.getSimpleName(),method.toLowerCase()));
+            if(method.indexOf("list")>=0)
+            {
+                dtoClassBuild.addTabContent(String.format("public List<%s> %s(CommonItem item) throws Exception{",pojoClass.getSimpleName(),method.toLowerCase()));
+            }
+            else{
+                dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",pojoClass.getSimpleName(),method.toLowerCase()));
+            }
             dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
-            dtoClassBuild.addTabContent(String.format("return null;"));
+            dtoClassBuild.addTabContent(String.format("return commonUtil.toPojo(feign.%s(item));",method.toLowerCase()));
             dtoClassBuild.addTabLeftContent(String.format("}"));
         }
 

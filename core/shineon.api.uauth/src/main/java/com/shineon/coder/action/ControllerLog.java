@@ -1,6 +1,6 @@
 package com.shineon.coder.action;
 
-import com.shineon.coder.kernel.constant.SysConstant;
+import com.shineon.coder.kernel.constant.sys.SysConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;

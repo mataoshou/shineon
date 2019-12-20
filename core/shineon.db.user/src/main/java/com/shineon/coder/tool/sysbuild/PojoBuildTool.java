@@ -1,20 +1,15 @@
 package com.shineon.coder.tool.sysbuild;
 
-import com.shineon.coder.kernel.common.generator.GeneratorSql;
-import org.mybatis.generator.exception.InvalidConfigurationException;
-import org.mybatis.generator.exception.XMLParserException;
-
-import java.io.IOException;
-import java.sql.SQLException;
+import com.shineon.coder.kernel.common.generator.GeneratorFactory;
 
 public class PojoBuildTool {
-    public static void main(String[] args) throws InterruptedException, SQLException, InvalidConfigurationException, XMLParserException, IOException {
-        GeneratorSql sql = new GeneratorSql();
+    public static void main(String[] args) throws Exception {
+        GeneratorFactory factory = new GeneratorFactory();
 //        sql.build();
 
 
 //        全部重新生成
-        sql.overrideBuild();
+        factory.build();
     }
 
 }

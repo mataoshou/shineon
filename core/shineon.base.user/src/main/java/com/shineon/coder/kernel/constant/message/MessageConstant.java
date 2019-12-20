@@ -24,4 +24,8 @@ public class MessageConstant {
     static public final  String MESSAGE_OPER_DELETE = "DELETE";
     static public final  String MESSAGE_OPER_RSELECT = "SELECT";
 
+    static public final  String MESSAGE_PACKAGE = "com.shineon.coder.service.mq";
+    static public final  String MESSAGE_CLINET_PACKAGE = "com.shineon.coder.service.mq.client";
+    static public final  String MESSAGE_SERVICE_PACKAGE = "com.shineon.coder.service.mq.service";
+
 }

@@ -1,10 +1,8 @@
 package com.shineon.coder.service.task;
 
-import com.shineon.coder.kernel.constant.PoolConstant;
+import com.shineon.coder.kernel.constant.pool.PoolConstant;
 import com.shineon.coder.service.cache.SysCache;
-import com.shineon.coder.service.convert.CommonItem;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
