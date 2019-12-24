@@ -240,19 +240,15 @@ public abstract class ICreateBase {
     protected String[] methods;
     //系统名称
     protected String sysName;
-
-
     //对象文件路径
     protected File classFile;
     //常量对象文件路径
     protected File constantFile;
-
     //是否允许重写
     boolean rewrite = false;
-
-
+    //pojo类名称
     protected String pojoClassName;
-
+    //工具类名称
     protected String toolClassName;
 
 }

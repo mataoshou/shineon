@@ -9,9 +9,9 @@ import com.shineon.coder.service.convert.util.RmtOrganizationInfoCommonUtil;
 public class ActionBuildTool {
 
     public static void main(String[] args) throws Exception {
-        ActionFactory factory = new ActionFactory();
-        factory.delete("matao", RmtOrganizationInfoCommonUtil.class,
+        ActionFactory factory = new ActionFactory("matao", RmtOrganizationInfoCommonUtil.class,
                 RmtOrganizationInfo.class,ActionConstant.ACTION_METHOD, SysConstant.CURRENT_SYS_NAME);
+        factory.delete();
 
 
     }

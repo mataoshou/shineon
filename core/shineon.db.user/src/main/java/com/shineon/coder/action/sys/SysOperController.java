@@ -6,6 +6,9 @@ import com.shineon.coder.kernel.common.cache.CacheFactory;
 import com.shineon.coder.kernel.common.convert.ConvertFactory;
 import com.shineon.coder.kernel.common.feign.FeignFactory;
 import com.shineon.coder.kernel.common.generator.GeneratorFactory;
+import com.shineon.coder.kernel.common.ibase.IFactory;
+import com.shineon.coder.kernel.constant.action.ActionConstant;
+import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.constant.sys.SysConstant;
 import com.shineon.coder.service.convert.BasicCommonUtil;
 import com.shineon.coder.service.convert.CommonItem;
@@ -32,12 +35,16 @@ public class SysOperController {
         if(item.getMethods()!=null)
         {
             item.setOper(item.getOper().replace("，",","));
+        }else{
+            item.setMethods(ActionConstant.ACTION_METHOD);
         }
 
-        ActionFactory factory = new ActionFactory();
-        factory.build(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods(), SysConstant.CURRENT_SYS_NAME);
+        ActionFactory factory = new ActionFactory(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods(), SysConstant.CURRENT_SYS_NAME);
+        oper(factory,item);
         return commonUtil.success();
     }
+
+
 
     @RequestMapping("sys/oper/feign")
     public CommonItem feign(@RequestBody SysItem item) throws Exception {
@@ -48,15 +55,17 @@ public class SysOperController {
         if(item.getMethods()!=null)
         {
             item.setOper(item.getOper().replace("，",","));
+        }else{
+            item.setMethods(FeignConstant.FEIGN_METHOD);
         }
 
-        FeignFactory factory = new FeignFactory();
-        factory.build(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods(),item.getSysName());
+        FeignFactory factory = new FeignFactory(item.getName(),Class.forName(item.getCommonName()),Class.forName(item.getPojoName()),item.getMethods(), SysConstant.CURRENT_SYS_NAME);
+        oper(factory,item);
         return commonUtil.success();
     }
 
     @RequestMapping("sys/oper/db")
-    public CommonItem db() throws Exception {
+    public CommonItem db(@RequestBody SysItem item) throws Exception {
 
 
         GeneratorFactory factory = new GeneratorFactory();
@@ -65,11 +74,11 @@ public class SysOperController {
     }
 
     @RequestMapping("sys/oper/convert")
-    public CommonItem convert() throws Exception {
+    public CommonItem convert(@RequestBody SysItem item) throws Exception {
 
 
         ConvertFactory factory = new ConvertFactory();
-        factory.build();
+        oper(factory,item);
         return commonUtil.success();
     }
 
@@ -85,12 +94,27 @@ public class SysOperController {
         {
             item.setOper(item.getOper().replace("，",","));
         }
-
-        CacheFactory factory = new CacheFactory();
         Class dotClass =Class.forName(item.getCommonName());
         Class pojoClass = Class.forName(item.getPojoName());
-        factory.build(item.getName(),dotClass,pojoClass,item.getMethods(),item.getSysName());
+        CacheFactory factory = new CacheFactory(item.getName(),dotClass,pojoClass,item.getMethods(),item.getSysName());
+        oper(factory,item);
         return commonUtil.success();
+    }
+
+
+    public void oper(IFactory factory,SysItem item) throws Exception {
+        if(item.getCreateType()==0)
+        {
+            factory.build();
+        }
+        else if(item.getCreateType()==1)
+        {
+            factory.rebuild();
+        }
+        else if(item.getCreateType()==2)
+        {
+            factory.delete();
+        }
     }
 
 }

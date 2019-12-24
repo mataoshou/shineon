@@ -2,21 +2,16 @@ package com.shineon.coder.kernel.common.action;
 
 import com.shineon.coder.kernel.common.ibase.IFactory;
 
-public class ActionFactory implements IFactory {
-    @Override
-    public void build(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-        ActionMakeUp makeUp = new ActionMakeUp(name,toolClass,pojoClass,methods,sysName);
-        makeUp.build();
+public class ActionFactory extends IFactory<ActionMakeUp> {
+
+    public ActionFactory(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        super(name, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    public void build() throws Exception {
-
+    public ActionMakeUp setMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        return  new ActionMakeUp(name,toolClass,pojoClass,methods,sysName);
     }
 
-    @Override
-    public void delete(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-        ActionMakeUp makeUp = new ActionMakeUp(name,toolClass,pojoClass,methods,sysName);
-        makeUp.delete();
-    }
+
 }

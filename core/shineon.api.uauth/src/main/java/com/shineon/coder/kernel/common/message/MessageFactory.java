@@ -2,22 +2,15 @@ package com.shineon.coder.kernel.common.message;
 
 import com.shineon.coder.kernel.common.ibase.IFactory;
 
-public class MessageFactory implements IFactory {
+public class MessageFactory extends IFactory<MessageMakeUp> {
 
-    @Override
-    public void build(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-        MessageMakeUp messageMakeUp = new MessageMakeUp(name,toolClass,pojoClass,methods,sysName);
-        messageMakeUp.build();
+    public MessageFactory(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        super(name, toolClass, pojoClass, methods, sysName);
     }
 
-    @Override
-    public void build() throws Exception {
-
-    }
 
     @Override
-    public void delete(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-        MessageMakeUp messageMakeUp = new MessageMakeUp(name,toolClass,pojoClass,methods,sysName);
-        messageMakeUp.delete();
+    public MessageMakeUp setMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        return new MessageMakeUp(name,toolClass,pojoClass,methods,sysName);
     }
 }

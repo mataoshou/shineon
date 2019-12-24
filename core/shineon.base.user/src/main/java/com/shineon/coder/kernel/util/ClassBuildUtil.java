@@ -19,8 +19,6 @@ public class ClassBuildUtil {
 
     String classConetent;
 
-    List<MethodUtil> method_list = new ArrayList();
-
 
     public void classInit(String className,String packageName,boolean isclass,String... imports)
     {
@@ -105,17 +103,6 @@ public class ClassBuildUtil {
 
 
 
-    public void addMehod(MethodUtil methodUtil)
-    {
-        if(method_list==null)
-        {
-            method_list = new ArrayList();
-        }
-        if(methodUtil!=null)
-        {
-            method_list.add(methodUtil);
-        }
-    }
 
 
     String innerContent = "";
@@ -131,13 +118,13 @@ public class ClassBuildUtil {
         {
             innerContent ="";
 
-            if(method_list.size()>0)
-            {
-                for(MethodUtil method : method_list)
-                {
-                    innerContent += method.methodToString();
-                }
-            }
+//            if(method_list.size()>0)
+//            {
+//                for(MethodUtil method : method_list)
+//                {
+//                    innerContent += method.methodToString();
+//                }
+//            }
 
         }
 

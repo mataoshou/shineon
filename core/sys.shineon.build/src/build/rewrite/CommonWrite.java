@@ -24,7 +24,7 @@ public class CommonWrite {
         }
     };
 
-    String replacePath = "src\\main\\java\\com\\shineon\\coder\\kernel\\util\\BaseFileUtil.java";
+    String replacePath = "src\\main\\java\\com\\shineon\\coder\\tool\\sysbuild";
 
     public void replace() throws IOException {
 
@@ -51,7 +51,20 @@ public class CommonWrite {
 
 
     public static  void  main(String[] args) throws IOException {
-        CommonWrite write = new CommonWrite();
-        write.replace();
+
+        String[] paths = new String[]{
+                "src\\main\\java\\com\\shineon\\coder\\action\\sys",
+//                "src\\main\\java\\com\\shineon\\coder\\action\\sys\\SysOperController.java",
+//                "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\cache\\CacheFactory.java",
+//                "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\convert\\ConvertFactory.java",
+//                "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\feign\\FeignFactory.java"
+        };
+        for(String path :paths)
+        {
+            CommonWrite write = new CommonWrite();
+            write.replacePath = path;
+            write.replace();
+        }
+
     }
 }

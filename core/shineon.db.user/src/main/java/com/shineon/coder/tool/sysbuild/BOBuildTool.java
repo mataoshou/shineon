@@ -8,8 +8,8 @@ import com.shineon.coder.service.convert.util.RmtPrivilegeGroupInfoCommonUtil;
 public class BOBuildTool {
 
     public static void main(String[] args) throws Exception {
-        BOFactory factory = new BOFactory();
-        factory.delete("matao", RmtPrivilegeGroupInfoCommonUtil.class, RmtPrivilegeGroupInfo.class,null, SysConstant.CURRENT_SYS_NAME);
+        BOFactory factory = new BOFactory("matao", RmtPrivilegeGroupInfoCommonUtil.class, RmtPrivilegeGroupInfo.class,null, SysConstant.CURRENT_SYS_NAME);
+        factory.delete();
 //        factory.build("matao", RmtPrivilegeGroupInfoCommonUtil.class, RmtPrivilegeGroupInfo.class,null, SysConstant.CURRENT_SYS_NAME);
     }
 }

@@ -4,12 +4,13 @@ public class SysItem {
     private String name;
     private String commonName;
     private String pojoName;
-    private String dtoName;
     private String sysName;
 
     private String oper;
 
     private String[] methods;
+
+    private int createType;
 
     public String getName() {
         return name;
@@ -61,11 +62,12 @@ public class SysItem {
         this.methods = methods;
     }
 
-    public String getDtoName() {
-        return dtoName;
+
+    public int getCreateType() {
+        return createType;
     }
 
-    public void setDtoName(String dtoName) {
-        this.dtoName = dtoName;
+    public void setCreateType(int createType) {
+        this.createType = createType;
     }
 }

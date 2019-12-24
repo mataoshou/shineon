@@ -168,6 +168,37 @@ public abstract class ICreateBase {
 
 
 
+//    public void edit() throws ClassNotFoundException, IOException {
+//        String classFullName = String.format("%s.%s",this.getPackageName(),this.getClassName());
+//
+//        Class cl = Class.forName(classFullName);
+//
+//        Method[]  clmethods = cl.getMethods();
+//        for(Method method: clmethods)
+//        {
+//            logger.info(method.getName());
+//        }
+//
+//        String content = FileStore.getContent(this.classFile);
+//    }
+//
+//
+//    public String  getClassContent(String content){
+//        String reg = "\\{([\\w\\W]*)}";
+//
+//        Pattern pattern = Pattern.compile(reg);
+//        Matcher matcher = pattern.matcher(content);
+//        while (matcher.find())
+//        {
+//            String hit = matcher.group(1);
+//            return hit;
+//        }
+//
+//        return  "";
+//    }
+
+
+
 
     //////////////////////////////////抽象函数////////////////////////////////////////
 
@@ -222,6 +253,18 @@ public abstract class ICreateBase {
      * @return
      */
     protected abstract String getConstantName();
+
+//    /**
+//     * 生成方法
+//     * @return
+//     */
+//    protected  abstract IMethodBase createMethod();
+//
+//    /**
+//     * 生成常量类
+//     * @return
+//     */
+//    protected abstract IMethodBase createConstantMethod();
 
 
     ////////////////////////////////////全局变量//////////////////////////////////

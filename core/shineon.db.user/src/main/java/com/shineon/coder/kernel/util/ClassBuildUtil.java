@@ -6,8 +6,6 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ClassBuildUtil {
 
@@ -19,7 +17,7 @@ public class ClassBuildUtil {
 
     String classConetent;
 
-    List<MethodUtil> method_list = new ArrayList();
+//    List<MethodUtil> method_list = new ArrayList();
 
 
     public void classInit(String className,String packageName,boolean isclass,String... imports)
@@ -106,17 +104,17 @@ public class ClassBuildUtil {
 
 
 
-    public void addMehod(MethodUtil methodUtil)
-    {
-        if(method_list==null)
-        {
-            method_list = new ArrayList();
-        }
-        if(methodUtil!=null)
-        {
-            method_list.add(methodUtil);
-        }
-    }
+//    public void addMehod(MethodUtil methodUtil)
+//    {
+//        if(method_list==null)
+//        {
+//            method_list = new ArrayList();
+//        }
+//        if(methodUtil!=null)
+//        {
+//            method_list.add(methodUtil);
+//        }
+//    }
 
 
     String innerContent = "";
@@ -132,13 +130,13 @@ public class ClassBuildUtil {
         {
             innerContent ="";
 
-            if(method_list.size()>0)
-            {
-                for(MethodUtil method : method_list)
-                {
-                    innerContent += method.methodToString();
-                }
-            }
+//            if(method_list.size()>0)
+//            {
+//                for(MethodUtil method : method_list)
+//                {
+//                    innerContent += method.methodToString();
+//                }
+//            }
 
         }
 
@@ -164,9 +162,10 @@ public class ClassBuildUtil {
      * tab 间隔不变  增加类内容
      * @param line
      */
-    public void  addTabContent(String line)
+    public ClassBuildUtil  addTabContent(String line)
     {
         innerContent += getContent(tab_no,tab,line);
+        return this;
     }
 
 
@@ -174,21 +173,24 @@ public class ClassBuildUtil {
      * tab 间隔加1  增加类内容
      * @param line
      */
-    public void addTabRightContent(String line)
+    public ClassBuildUtil addTabRightContent(String line)
     {
         tab_no++;
 
         addTabContent(line);
+        return this;
     }
     /**
      * tab 间隔减1  增加类内容
      * @param line
      */
-    public void addTabLeftContent(String line)
+    public ClassBuildUtil addTabLeftContent(String line)
     {
         tab_no--;
 
         addTabContent(line);
+
+        return this;
     }
 
 

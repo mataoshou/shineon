@@ -20,7 +20,7 @@ public class ProjectInitTool {
     public void initPackage()
     {
         String root = System.getProperty("user.dir");
-        File f = new File(root,"src\\main\\java\\com\\shineon\\coder");
+        File f = new File(root,"src\\main\\java\\com\\mg\\coder");
         System.out.println(f.getPath());
 
         for(String path:classPaths)

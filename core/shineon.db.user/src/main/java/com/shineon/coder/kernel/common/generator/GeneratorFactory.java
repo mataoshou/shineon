@@ -8,12 +8,20 @@ import com.shineon.coder.kernel.util.BaseFileUtil;
 
 import java.io.File;
 
-public class GeneratorFactory implements IFactory {
+public class GeneratorFactory extends IFactory<GeneratorMakeUp> {
 
+
+    public GeneratorFactory() {
+        super("sql", null, null, null, null);
+    }
+
+    public GeneratorFactory(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        super(name, toolClass, pojoClass, methods, sysName);
+    }
 
     @Override
-    public void build(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-
+    public GeneratorMakeUp setMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        return new GeneratorMakeUp(name,null,null,null, SysConstant.CURRENT_SYS_NAME);
     }
 
     @Override
@@ -33,10 +41,5 @@ public class GeneratorFactory implements IFactory {
             GeneratorMakeUp makeUp = new GeneratorMakeUp(name,null,null,null, SysConstant.CURRENT_SYS_NAME);
             makeUp.build();
         }
-    }
-
-    @Override
-    public void delete(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-
     }
 }

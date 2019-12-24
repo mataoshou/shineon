@@ -8,12 +8,20 @@ import com.shineon.coder.kernel.util.BaseFileUtil;
 
 import java.io.File;
 
-public class ConvertFactory implements IFactory {
+public class ConvertFactory extends IFactory<ConvertMakeUp> {
 
+
+    public ConvertFactory() {
+        super("convert", null, null, null, null);
+    }
+
+    public ConvertFactory(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        super(name, toolClass, pojoClass, methods, sysName);
+    }
 
     @Override
-    public void build(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-
+    public ConvertMakeUp setMakeUp(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) {
+        return new ConvertMakeUp(name,null,pojoClass,null, SysConstant.CURRENT_SYS_NAME);
     }
 
     @Override
@@ -32,7 +40,8 @@ public class ConvertFactory implements IFactory {
     }
 
     @Override
-    public void delete(String name, Class toolClass, Class pojoClass, String[] methods, String sysName) throws Exception {
-
+    public void rebuild() throws Exception {
+        build();
     }
+
 }

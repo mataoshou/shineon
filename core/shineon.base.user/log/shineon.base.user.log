@@ -1,70 +1,78 @@
-2019-12-20 16:35:28.932  INFO [shineon.base.user,,,] 4008 --- [main] com.shineon.coder.CoderApplication       : No active profile set, falling back to default profiles: default
-2019-12-20 16:35:29.772  INFO [shineon.base.user,,,] 4008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-12-20 16:35:29.774  INFO [shineon.base.user,,,] 4008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-20 16:35:29.802  INFO [shineon.base.user,,,] 4008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
-2019-12-20 16:35:29.877  WARN [shineon.base.user,,,] 4008 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-12-20 16:35:30.143  INFO [shineon.base.user,,,] 4008 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6c5fe5f6-8314-360d-a73d-c61e1eb803f1
-2019-12-20 16:35:30.157  INFO [shineon.base.user,,,] 4008 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2019-12-20 16:35:30.168  INFO [shineon.base.user,,,] 4008 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2019-12-20 16:35:30.521  INFO [shineon.base.user,,,] 4008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-20 16:35:30.569  INFO [shineon.base.user,,,] 4008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$a5d8cdb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-20 16:35:30.587  INFO [shineon.base.user,,,] 4008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$816ad8d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-20 16:35:30.598  INFO [shineon.base.user,,,] 4008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$ba52819f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-20 16:35:30.605  INFO [shineon.base.user,,,] 4008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-20 16:35:30.655  INFO [shineon.base.user,,,] 4008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$57011580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-20 16:35:31.128  INFO [shineon.base.user,,,] 4008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 125 (http)
-2019-12-20 16:35:31.145  INFO [shineon.base.user,,,] 4008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-20 16:35:31.145  INFO [shineon.base.user,,,] 4008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-12-20 16:35:31.246  INFO [shineon.base.user,,,] 4008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-20 16:35:31.246  INFO [shineon.base.user,,,] 4008 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2299 ms
-2019-12-20 16:35:31.421  WARN [shineon.base.user,,,] 4008 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-20 16:35:31.421  INFO [shineon.base.user,,,] 4008 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-20 16:35:31.431  INFO [shineon.base.user,,,] 4008 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@615439f7
-2019-12-20 16:35:32.697  INFO [shineon.base.user,,,] 4008 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-12-20 16:35:34.341  INFO [shineon.base.user,,,] 4008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2019-12-20 16:35:34.342  INFO [shineon.base.user,,,] 4008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
-2019-12-20 16:35:34.511  WARN [shineon.base.user,,,] 4008 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-20 16:35:34.511  INFO [shineon.base.user,,,] 4008 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-20 16:35:36.057  INFO [shineon.base.user,,,] 4008 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-12-20 16:35:36.195  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
-2019-12-20 16:35:36.195  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.PrivilegeMessageInput' has 1 subscriber(s).
-2019-12-20 16:35:36.195  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserErrorMessageInput' has 1 subscriber(s).
-2019-12-20 16:35:36.320  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel UserErrorMessageOutput
-2019-12-20 16:35:36.362  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
-2019-12-20 16:35:36.386  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel PrivilegeMessageOutput
-2019-12-20 16:35:36.392  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel UserNoticeMessageOutput
-2019-12-20 16:35:36.398  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel UserErrorMessageInput
-2019-12-20 16:35:36.404  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel PrivilegeMessageInput
-2019-12-20 16:35:36.411  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel UserNoticeMessageInput
-2019-12-20 16:35:36.415  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
-2019-12-20 16:35:36.430  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
-2019-12-20 16:35:36.442  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@54780c40
-2019-12-20 16:35:36.481  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@4d91d2da
-2019-12-20 16:35:36.486  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@6ac83e67
-2019-12-20 16:35:36.514  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2019-12-20 16:35:36.515  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
-2019-12-20 16:35:36.515  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
-2019-12-20 16:35:36.833  INFO [shineon.base.user,,,] 4008 --- [main] c.s.coder.service.mq.oper.OperationUtil  : Ê∑ªÂä†Ê∂àÊÅØÊìç‰ΩúÂØπË±°com.shineon.coder.service.mq.oper.UserMessageOperation
-2019-12-20 16:35:36.853  INFO [shineon.base.user,,,] 4008 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
-2019-12-20 16:35:36.986  INFO [shineon.base.user,,,] 4008 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1a717d79:0/SimpleConnection@1812b564 [delegate=amqp://matao@127.0.0.1:5672/, localPort= 17209]
-2019-12-20 16:35:37.025  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.PrivilegeMessageOutput' has 1 subscriber(s).
-2019-12-20 16:35:37.080  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserErrorMessageOutput' has 1 subscriber(s).
-2019-12-20 16:35:37.081  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
-2019-12-20 16:35:37.099  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-20 16:35:37.138  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-20 16:35:37.497  INFO [shineon.base.user,,,] 4008 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-20 16:35:37.497  INFO [shineon.base.user,,,] 4008 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-20 16:35:37.593  INFO [shineon.base.user,,,] 4008 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-20 16:35:37.593  INFO [shineon.base.user,,,] 4008 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-20 16:35:38.338  INFO [shineon.base.user,,,] 4008 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-20 16:35:38.434  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-20 16:35:38.434  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-20 16:35:38.435  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-20 16:35:38.435  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-20 16:35:38.435  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-20 16:35:38.435  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-20 16:35:38.435  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-20 16:35:39.532 ERROR [shineon.base.user,,,] 4008 --- [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+2019-12-24 14:49:54.387  INFO [shineon.base.user,,,] 384 --- [main] com.shineon.coder.CoderApplicationTests  : No active profile set, falling back to default profiles: default
+2019-12-24 14:49:55.266  INFO [shineon.base.user,,,] 384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-24 14:49:55.268  INFO [shineon.base.user,,,] 384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-24 14:49:55.294  INFO [shineon.base.user,,,] 384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-12-24 14:49:55.479  WARN [shineon.base.user,,,] 384 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-24 14:49:55.849  INFO [shineon.base.user,,,] 384 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6e400c00-2d83-36dc-8e26-d14c9be1e31a
+2019-12-24 14:49:55.909  INFO [shineon.base.user,,,] 384 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-12-24 14:49:55.922  INFO [shineon.base.user,,,] 384 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-12-24 14:49:56.240  INFO [shineon.base.user,,,] 384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-24 14:49:56.305  INFO [shineon.base.user,,,] 384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$7b5f98c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-24 14:49:56.358  INFO [shineon.base.user,,,] 384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c87e095] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-24 14:49:57.447  WARN [shineon.base.user,,,] 384 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-24 14:49:57.448  INFO [shineon.base.user,,,] 384 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-24 14:49:57.463  INFO [shineon.base.user,,,] 384 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@143413cd
+2019-12-24 14:49:57.752  INFO [shineon.base.user,,,] 384 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-12-24 14:49:58.809  INFO [shineon.base.user,,,] 384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2019-12-24 14:49:58.816  INFO [shineon.base.user,,,] 384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'pool_schedule'
+2019-12-24 14:49:59.278  WARN [shineon.base.user,,,] 384 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-24 14:49:59.278  INFO [shineon.base.user,,,] 384 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-24 14:50:02.457  INFO [shineon.base.user,,,] 384 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-24 14:50:02.657  INFO [shineon.base.user,,,] 384 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserErrorMessageInput' has 1 subscriber(s).
+2019-12-24 14:50:02.658  INFO [shineon.base.user,,,] 384 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.PrivilegeMessageInput' has 1 subscriber(s).
+2019-12-24 14:50:02.658  INFO [shineon.base.user,,,] 384 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageInput' has 1 subscriber(s).
+2019-12-24 14:50:02.695  INFO [shineon.base.user,,,] 384 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-24 14:50:02.695  INFO [shineon.base.user,,,] 384 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2019-12-24 14:50:02.695  INFO [shineon.base.user,,,] 384 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-12-24 14:50:02.714  INFO [shineon.base.user,,,] 384 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.PrivilegeMessageOutput' has 1 subscriber(s).
+2019-12-24 14:50:02.715  INFO [shineon.base.user,,,] 384 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserErrorMessageOutput' has 1 subscriber(s).
+2019-12-24 14:50:02.715  INFO [shineon.base.user,,,] 384 --- [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.UserNoticeMessageOutput' has 1 subscriber(s).
+2019-12-24 14:50:02.775  INFO [shineon.base.user,a7d3d97a9909e4fa,a7d3d97a9909e4fa,false] 384 --- [pool_schedule1] com.shineon.coder.service.task.SysTask   : ø™ º«Â¿Ìª∫¥Ê ˝æ›
+2019-12-24 14:50:02.789  INFO [shineon.base.user,,,] 384 --- [main] com.shineon.coder.CoderApplicationTests  : Started CoderApplicationTests in 9.254 seconds (JVM running for 9.946)
+2019-12-24 14:50:02.811  INFO [shineon.base.user,,,] 384 --- [main] c.s.coder.service.mq.oper.OperationUtil  : ÃÌº”œ˚œ¢≤Ÿ◊˜∂‘œÛcom.shineon.coder.service.mq.oper.UserMessageOperation
+2019-12-24 14:50:02.827  INFO [shineon.base.user,,,] 384 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void com.shineon.coder.CoderApplicationTests.contextLoads() throws java.lang.Exception
+2019-12-24 14:50:03.026  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.shineon.coder.MessageTests], using SpringBootContextLoader
+2019-12-24 14:50:03.027  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.shineon.coder.MessageTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-12-24 14:50:03.028  INFO [shineon.base.user,,,] 384 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.shineon.coder.MessageTests]: MessageTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-12-24 14:50:03.029  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.shineon.coder.CoderApplication for test class com.shineon.coder.MessageTests
+2019-12-24 14:50:03.030  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-12-24 14:50:03.030  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f076c53, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c39c739, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b3b2a4f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2e8eafb2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a3f3bc4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@8cd2bb5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a3611b1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@419ece7a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@427c2c96, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@238d27ef, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@91c11b6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3ec6f3f1]
+2019-12-24 14:50:03.155  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.shineon.coder.UserTests], using SpringBootContextLoader
+2019-12-24 14:50:03.156  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.shineon.coder.UserTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-12-24 14:50:03.157  INFO [shineon.base.user,,,] 384 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.shineon.coder.UserTests]: UserTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-12-24 14:50:03.158  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.shineon.coder.CoderApplication for test class com.shineon.coder.UserTests
+2019-12-24 14:50:03.160  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-12-24 14:50:03.160  INFO [shineon.base.user,,,] 384 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@19b4dd60, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@40f77135, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4138af7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5bbf3869, org.springframework.test.context.support.DirtiesContextTestExecutionListener@64dfa1a3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1f5a1ad4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7866ffa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@25d87313, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3c130cb2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@73502d5e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@471d6571, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@213bd66a]
+2019-12-24 14:50:03.178  INFO [shineon.base.user,,,] 384 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-12-24 14:50:03.178  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-24 14:50:03.209  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 31 ms
+2019-12-24 14:50:03.790  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: shineon.db.user.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-24 14:50:03.836  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-shineon.db.user
+2019-12-24 14:50:03.837  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: shineon.db.user instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.db.user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-12-24 14:50:03.846  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-12-24 14:50:03.857  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-24 14:50:03.876  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-24 14:50:03.913  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-24 14:50:03.914  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-24 14:50:04.110  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-24 14:50:04.111  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-24 14:50:04.294  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-24 14:50:04.480  INFO [shineon.base.user,,,] 384 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-12-24 14:50:04.483  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-24 14:50:04.494  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
+2019-12-24 14:50:04.502  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-24 14:50:04.502  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-24 14:50:04.503  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-24 14:50:04.503  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-24 14:50:04.503  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-24 14:50:04.503  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-24 14:50:04.503  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-24 14:50:04.595  INFO [shineon.base.user,,,] 384 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.base.user] [UserController] [get] start execute
+2019-12-24 14:50:04.604  INFO [shineon.base.user,,,] 384 --- [main] c.s.coder.kernel.common.cache.CacheUtil  : SHINEON.BASE.USER.USER.000001.9E95A3155C7B1BD608AA319F5D7D6865.DATA
+2019-12-24 14:50:04.699  INFO [shineon.base.user,,,] 384 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-24 14:50:04.700  INFO [shineon.base.user,,,] 384 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-24 14:50:04.991  INFO [shineon.base.user,,,] 384 --- [main] c.s.coder.service.cache.IBaseCache       : ª∫¥Ê≤ª¥Ê‘⁄£¨–Ë“™¥” ˝æ›ø‚≤È—Ø:{"id":"111"}
+2019-12-24 14:50:05.579 ERROR [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
@@ -95,11 +103,11 @@ com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Con
 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:269) [eureka-client-1.9.8.jar:1.9.8]
 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:330) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$5e6a0e9f.CGLIB$eurekaClient$0(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$5e6a0e9f$$FastClassBySpringCGLIB$$4ca4f2bf.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33f0d9b4.CGLIB$eurekaClient$2(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33f0d9b4$$FastClassBySpringCGLIB$$77382753.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$5e6a0e9f.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33f0d9b4.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
@@ -117,35 +125,95 @@ com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Con
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:353) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at com.sun.proxy.$Proxy161.getInstancesByVipAddress(Unknown Source) ~[na:na]
+	at com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList.obtainServersViaDiscovery(DiscoveryEnabledNIWSServerList.java:167) ~[ribbon-eureka-2.3.0.jar:2.3.0]
+	at com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList.getUpdatedListOfServers(DiscoveryEnabledNIWSServerList.java:152) ~[ribbon-eureka-2.3.0.jar:2.3.0]
+	at org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList.getUpdatedListOfServers(DomainExtractingServerList.java:58) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.updateListOfServers(DynamicServerListLoadBalancer.java:240) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit(DynamicServerListLoadBalancer.java:144) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.<init>(DynamicServerListLoadBalancer.java:95) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.ZoneAwareLoadBalancer.<init>(ZoneAwareLoadBalancer.java:82) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration.ribbonLoadBalancer(RibbonClientConfiguration.java:155) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration$$EnhancerBySpringCGLIB$$ec1f01d6.CGLIB$ribbonLoadBalancer$4(<generated>) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration$$EnhancerBySpringCGLIB$$ec1f01d6$$FastClassBySpringCGLIB$$d5e3a0a6.invoke(<generated>) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration$$EnhancerBySpringCGLIB$$ec1f01d6.ribbonLoadBalancer(<generated>) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
 	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$cc596c67.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at com.shineon.coder.CoderApplication.main(CoderApplication.java:16) ~[classes/:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.createContext(NamedContextFactory.java:136) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.getContext(NamedContextFactory.java:101) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getContext(SpringClientFactory.java:131) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.getInstance(NamedContextFactory.java:145) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getInstance(SpringClientFactory.java:121) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getClientConfig(SpringClientFactory.java:75) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.openfeign.ribbon.LoadBalancerFeignClient.getClientConfig(LoadBalancerFeignClient.java:97) ~[spring-cloud-openfeign-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.openfeign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:81) ~[spring-cloud-openfeign-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.sleuth.instrument.web.client.feign.TraceLoadBalancerFeignClient.execute(TraceLoadBalancerFeignClient.java:71) ~[spring-cloud-sleuth-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:108) ~[feign-core-10.1.0.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:78) ~[feign-core-10.1.0.jar:na]
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:106) ~[feign-hystrix-10.1.0.jar:na]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at org.springframework.cloud.sleuth.instrument.async.TraceCallable.call(TraceCallable.java:70) ~[spring-cloud-sleuth-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55) ~[rxjava-1.3.8.jar:1.3.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
 Caused by: java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
@@ -165,10 +233,10 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
-	... 78 common frames omitted
+	... 138 common frames omitted
 
-2019-12-20 16:35:39.533  WARN [shineon.base.user,,,] 4008 --- [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
-2019-12-20 16:35:39.534 ERROR [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:125 - was unable to refresh its cache! status = Cannot execute request on any known server
+2019-12-24 14:50:05.581  WARN [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-12-24 14:50:05.582 ERROR [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:-1 - was unable to refresh its cache! status = Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
@@ -182,11 +250,11 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:269) [eureka-client-1.9.8.jar:1.9.8]
 	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:330) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$5e6a0e9f.CGLIB$eurekaClient$0(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$5e6a0e9f$$FastClassBySpringCGLIB$$4ca4f2bf.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33f0d9b4.CGLIB$eurekaClient$2(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33f0d9b4$$FastClassBySpringCGLIB$$77382753.invoke(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$5e6a0e9f.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$33f0d9b4.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
@@ -204,65 +272,156 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:353) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:129) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:117) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at com.sun.proxy.$Proxy161.getInstancesByVipAddress(Unknown Source) ~[na:na]
+	at com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList.obtainServersViaDiscovery(DiscoveryEnabledNIWSServerList.java:167) ~[ribbon-eureka-2.3.0.jar:2.3.0]
+	at com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList.getUpdatedListOfServers(DiscoveryEnabledNIWSServerList.java:152) ~[ribbon-eureka-2.3.0.jar:2.3.0]
+	at org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList.getUpdatedListOfServers(DomainExtractingServerList.java:58) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.updateListOfServers(DynamicServerListLoadBalancer.java:240) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit(DynamicServerListLoadBalancer.java:144) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.<init>(DynamicServerListLoadBalancer.java:95) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.ZoneAwareLoadBalancer.<init>(ZoneAwareLoadBalancer.java:82) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration.ribbonLoadBalancer(RibbonClientConfiguration.java:155) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration$$EnhancerBySpringCGLIB$$ec1f01d6.CGLIB$ribbonLoadBalancer$4(<generated>) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration$$EnhancerBySpringCGLIB$$ec1f01d6$$FastClassBySpringCGLIB$$d5e3a0a6.invoke(<generated>) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonClientConfiguration$$EnhancerBySpringCGLIB$$ec1f01d6.ribbonLoadBalancer(<generated>) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
 	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:499) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$cc596c67.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:57) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at com.shineon.coder.CoderApplication.main(CoderApplication.java:16) ~[classes/:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.createContext(NamedContextFactory.java:136) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.getContext(NamedContextFactory.java:101) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getContext(SpringClientFactory.java:131) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.getInstance(NamedContextFactory.java:145) ~[spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getInstance(SpringClientFactory.java:121) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getClientConfig(SpringClientFactory.java:75) ~[spring-cloud-netflix-ribbon-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.openfeign.ribbon.LoadBalancerFeignClient.getClientConfig(LoadBalancerFeignClient.java:97) ~[spring-cloud-openfeign-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.openfeign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:81) ~[spring-cloud-openfeign-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.sleuth.instrument.web.client.feign.TraceLoadBalancerFeignClient.execute(TraceLoadBalancerFeignClient.java:71) ~[spring-cloud-sleuth-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:108) ~[feign-core-10.1.0.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:78) ~[feign-core-10.1.0.jar:na]
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:106) ~[feign-hystrix-10.1.0.jar:na]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:302) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:298) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
+	at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100) ~[rxjava-1.3.8.jar:1.3.8]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at org.springframework.cloud.sleuth.instrument.async.TraceCallable.call(TraceCallable.java:70) ~[spring-cloud-sleuth-core-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69) ~[hystrix-core-1.5.18.jar:1.5.18]
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55) ~[rxjava-1.3.8.jar:1.3.8]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
 
-2019-12-20 16:35:39.535  WARN [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2019-12-20 16:35:39.536  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-20 16:35:39.537  INFO [shineon.base.user,,,] 4008 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-20 16:35:39.561  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576830939539 with initial instances count: 0
-2019-12-20 16:35:39.569  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHINEON.BASE.USER with eureka with status UP
-2019-12-20 16:35:39.569  INFO [shineon.base.user,,,] 4008 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576830939569, current=UP, previous=STARTING]
-2019-12-20 16:35:39.571  INFO [shineon.base.user,,,] 4008 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:125: registering service...
-2019-12-20 16:35:39.581  INFO [shineon.base.user,,,] 4008 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: PrivilegeMessage.privilege, bound to: PrivilegeMessage
-2019-12-20 16:35:39.612 ERROR [shineon.base.user,,,] 4008 --- [AMQP Connection 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Channel shutdown: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - inequivalent arg 'type' for exchange 'UserErrorMessage' in vhost '/': received 'direct' but current is 'topic', class-id=40, method-id=10)
-2019-12-20 16:35:39.656  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel PrivilegeMessage.privilege.errors
-2019-12-20 16:35:39.764  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.PrivilegeMessage.privilege.errors' has 1 subscriber(s).
-2019-12-20 16:35:39.764  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.PrivilegeMessage.privilege.errors' has 2 subscriber(s).
-2019-12-20 16:35:39.842  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.PrivilegeMessage.privilege
-2019-12-20 16:35:39.857  INFO [shineon.base.user,,,] 4008 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: UserErrorMessage.errorMessage, bound to: UserErrorMessage
-2019-12-20 16:35:39.868  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel UserErrorMessage.errorMessage.errors
-2019-12-20 16:35:39.876  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.UserErrorMessage.errorMessage.errors' has 1 subscriber(s).
-2019-12-20 16:35:39.876  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.UserErrorMessage.errorMessage.errors' has 2 subscriber(s).
-2019-12-20 16:35:39.880  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.UserErrorMessage.errorMessage
-2019-12-20 16:35:39.883  INFO [shineon.base.user,,,] 4008 --- [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: UserNoticeMessage.userNotice, bound to: UserNoticeMessage
-2019-12-20 16:35:39.926 ERROR [shineon.base.user,,,] 4008 --- [AMQP Connection 127.0.0.1:5672] o.s.a.r.c.CachingConnectionFactory       : Channel shutdown: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - inequivalent arg 'type' for exchange 'UserErrorMessage' in vhost '/': received 'direct' but current is 'topic', class-id=40, method-id=10)
-2019-12-20 16:35:39.939  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel UserNoticeMessage.userNotice.errors
-2019-12-20 16:35:39.946  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.UserNoticeMessage.userNotice.errors' has 1 subscriber(s).
-2019-12-20 16:35:39.946  INFO [shineon.base.user,,,] 4008 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.UserNoticeMessage.userNotice.errors' has 2 subscriber(s).
-2019-12-20 16:35:39.951  INFO [shineon.base.user,,,] 4008 --- [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started inbound.UserNoticeMessage.userNotice
-2019-12-20 16:35:40.000  INFO [shineon.base.user,c715d840192e12e9,c715d840192e12e9,false] 4008 --- [pool_schedule1] com.shineon.coder.service.task.SysTask   : ÂºÄÂßãÊ∏ÖÁêÜÁºìÂ≠òÊï∞ÊçÆ
-2019-12-20 16:35:40.013  INFO [shineon.base.user,,,] 4008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 125 (http) with context path ''
-2019-12-20 16:35:40.014  INFO [shineon.base.user,,,] 4008 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 125
-2019-12-20 16:35:40.015  INFO [shineon.base.user,,,] 4008 --- [main] com.shineon.coder.CoderApplication       : Started CoderApplication in 11.92 seconds (JVM running for 12.575)
-2019-12-20 16:35:40.578 ERROR [shineon.base.user,,,] 4008 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+2019-12-24 14:50:05.583  WARN [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2019-12-24 14:50:05.586  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-24 14:50:05.588  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-24 14:50:05.594  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1577170205591 with initial instances count: 0
+2019-12-24 14:50:05.607  INFO [shineon.base.user,13fd8c1e701c0e62,13fd8c1e701c0e62,false] 384 --- [hystrix-shineon.db.user-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client shineon.db.user initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=shineon.db.user,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@1c534b0d
+2019-12-24 14:50:05.664  INFO [shineon.base.user,,,] 384 --- [main] shineon.base.user                        : [shineon.base.user]“Ï≥££∫[[shineon.db.user]∑˛ŒÒ∑√Œ  ß∞‹£°£°] (com.shineon.coder.service.convert.CommonItemUtils.checkCommonItem(CommonItemUtils.java:114))
+2019-12-24 14:50:05.708  INFO [shineon.base.user,,,] 384 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-12-24 14:50:05.708  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-12-24 14:50:05.717  INFO [shineon.base.user,,,] 384 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+2019-12-24 14:50:05.719  INFO [shineon.base.user,,,] 384 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.base.user] [UserController] [edit] start execute
+2019-12-24 14:50:05.719  INFO [shineon.base.user,,,] 384 --- [main] c.s.coder.service.cache.IBaseCache       : «Â¿Ì¡–±Ì ˝æ›£∫SHINEON.BASE.USER.USER.000001*
+2019-12-24 14:50:05.738  INFO [shineon.base.user,,,] 384 --- [main] c.s.coder.service.cache.IBaseCache       : ÃÌº”ª∫¥Ê ˝æ›£∫SHINEON.BASE.USER.USER.000001.9E95A3155C7B1BD608AA319F5D7D6865.DATA
+2019-12-24 14:50:05.749  INFO [shineon.base.user,,,] 384 --- [main] c.s.coder.service.cache.IBaseCache       : ª∫¥Ê ˝æ›∏¸–¬ ß∞‹£∫SHINEON.BASE.USER.USER.000001.9E95A3155C7B1BD608AA319F5D7D6865.DATA
+2019-12-24 14:50:05.751  INFO [shineon.base.user,,,] 384 --- [main] c.shineon.coder.service.cache.UserCache  : …Ë÷√ª∫¥Ê ß∞‹£∫[shineon.db.user]∑˛ŒÒ∑√Œ  ß∞‹£°£°
+2019-12-24 14:50:05.752  INFO [shineon.base.user,,,] 384 --- [main] com.shineon.coder.action.ControllerLog   : action [shineon.base.user] [UserController] [edit] finish execute
+2019-12-24 14:50:06.184  INFO [shineon.base.user,,,] 384 --- [Thread-9] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2019-12-24 14:50:06.185  INFO [shineon.base.user,,,] 384 --- [Thread-5] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SHINEON.BASE.USER with eureka with status DOWN
+2019-12-24 14:50:06.187  WARN [shineon.base.user,,,] 384 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1577170206187, current=DOWN, previous=STARTING]
+2019-12-24 14:50:06.191  INFO [shineon.base.user,,,] 384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:-1: registering service...
+2019-12-24 14:50:06.204  INFO [shineon.base.user,,,] 384 --- [Thread-5] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-12-24 14:50:06.204  INFO [shineon.base.user,,,] 384 --- [Thread-5] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2019-12-24 14:50:06.204  INFO [shineon.base.user,,,] 384 --- [Thread-5] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2019-12-24 14:50:06.213  INFO [shineon.base.user,,,] 384 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'pool_schedule'
+2019-12-24 14:50:06.217  INFO [shineon.base.user,,,] 384 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-shineon.db.user
+2019-12-24 14:50:06.218  INFO [shineon.base.user,,,] 384 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_60]
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_60]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+
+2019-12-24 14:50:06.223  INFO [shineon.base.user,,,] 384 --- [Thread-5] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-12-24 14:50:07.211 ERROR [shineon.base.user,,,] 384 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
 
 com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
@@ -317,8 +476,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
 	... 30 common frames omitted
 
-2019-12-20 16:35:40.579  WARN [shineon.base.user,,,] 4008 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
-2019-12-20 16:35:40.579  WARN [shineon.base.user,,,] 4008 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:125 - registration failed Cannot execute request on any known server
+2019-12-24 14:50:07.212  WARN [shineon.base.user,,,] 384 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-12-24 14:50:07.212  WARN [shineon.base.user,,,] 384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:-1 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
@@ -337,7 +496,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
 
-2019-12-20 16:35:40.580  WARN [shineon.base.user,,,] 4008 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2019-12-24 14:50:07.212  WARN [shineon.base.user,,,] 384 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
@@ -356,3 +515,105 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_60]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
 
+2019-12-24 14:50:07.346  INFO [shineon.base.user,,,] 384 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-24 14:50:10.347  INFO [shineon.base.user,,,] 384 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-24 14:50:11.359 ERROR [shineon.base.user,,,] 384 --- [Thread-5] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:81/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:76) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.9.8.jar:1.9.8]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403) [spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142) [spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.9.jar:4.5.9]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.9.jar:4.5.9]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 42 common frames omitted
+
+2019-12-24 14:50:11.360  WARN [shineon.base.user,,,] 384 --- [Thread-5] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2019-12-24 14:50:11.360 ERROR [shineon.base.user,,,] 384 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHINEON.BASE.USER/fh18829-2:shineon.base.user:-1 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.9.8.jar:1.9.8]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.9.8.jar:1.9.8]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:235) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:403) [spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:142) [spring-cloud-context-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1036) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1029) [spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945) [spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+
+2019-12-24 14:50:11.367  INFO [shineon.base.user,,,] 384 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
