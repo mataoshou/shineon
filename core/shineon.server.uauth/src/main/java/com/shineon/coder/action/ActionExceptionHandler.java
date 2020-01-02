@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ActionExceptionHandler {
 
     @Autowired
-    BasicCommonUtil utils;
+    BasicCommonUtil commonUtil;
 
     Logger logger = LoggerFactory.getLogger(SysConstant.CURRENT_SYS_NAME);
     @ResponseBody
@@ -23,9 +23,13 @@ public class ActionExceptionHandler {
 
         String errorReason =String.format("[%s]异常：[%s]", SysConstant.CURRENT_SYS_NAME,ex.getMessage());
 
-        logger.info(String.format("[%s]服务异常：[%s] (%s)", SysConstant.CURRENT_SYS_NAME,ex.getMessage(), ex.getStackTrace()[0]));
+        logger.info(String.format("[%s]异常：[%s] (%s)", SysConstant.CURRENT_SYS_NAME,ex.getMessage(), ex.getStackTrace()[0]));
         ex.printStackTrace();
 
-        return utils.fail(errorReason);
+        return commonUtil.fail(errorReason);
     }
+
+
+
+
 }

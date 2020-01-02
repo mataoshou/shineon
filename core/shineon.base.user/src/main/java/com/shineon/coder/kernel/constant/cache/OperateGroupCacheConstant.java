@@ -1,0 +1,1 @@
+package com.shineon.coder.kernel.constant.cache ;public class OperateGroupCacheConstant {	public static final String CACHE_PRE = CacheConstant.REDIS_KEY_PRE+"OPERATEGROUP";		public static final String CACHE_LAST = "" + CacheConstant.REDIS_KEY_LAST;}

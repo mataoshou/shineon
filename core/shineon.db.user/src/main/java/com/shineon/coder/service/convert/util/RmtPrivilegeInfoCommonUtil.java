@@ -1,1 +1,1 @@
-package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtPrivilegeInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtPrivilegeInfoCommonUtil extends RmtPrivilegeInfoCommonBase {}
+package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtPrivilegeInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtPrivilegeInfoCommonUtil extends RmtPrivilegeInfoCommonBase {	}

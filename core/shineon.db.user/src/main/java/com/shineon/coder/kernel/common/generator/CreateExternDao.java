@@ -1,38 +1,60 @@
 package com.shineon.coder.kernel.common.generator;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.db.DBConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 
 import java.io.IOException;
 
-public class CreateExternDao extends ICreateBase {
+public class CreateExternDao extends ICreate {
     public CreateExternDao(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-        classBuildUtil.classInit(this.getClassName(), "",null,this.packageName, null, false,
-                String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, this.name), "java.util.List","org.apache.ibatis.annotations.Param");
-        classBuildUtil.addTabContent("\r");
-        classBuildUtil.addTabContent( String.format(" List<%s> list(@Param(\"where\") String where,@Param(\"order\") String order);", this.name));
-        classBuildUtil.addTabContent("\r");
-        classBuildUtil.addTabContent( String.format(" %s selectByName(String name);", this.name));
-        classBuildUtil.addTabContent("\r");
-        classBuildUtil.addTabContent( String.format(" int insertByCustomId(%s item);", this.name));
-        classBuildUtil.finish(this.classFile);
-    }
+        classBuildUtil.classInit(this.getClassName(), "",null,this.getPackageName(), null, false,
+                String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, this.getName()), "java.util.List","org.apache.ibatis.annotations.Param");
 
-    @Override
-    protected void createConstant() throws IOException {
+        return classBuildUtil;
+
 
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+        classBuildUtil.addTabContent("\r");
+        classBuildUtil.addTabContent( String.format(" List<%s> list(@Param(\"where\") String where,@Param(\"order\") String order);", this.getName()));
+        classBuildUtil.addTabContent("\r");
+        classBuildUtil.addTabContent( String.format(" %s selectByName(String name);", this.getName()));
+        classBuildUtil.addTabContent("\r");
+        classBuildUtil.addTabContent( String.format(" int insertByCustomId(%s item);", this.getName()));
+    }
+
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
     @Override
@@ -46,9 +68,10 @@ public class CreateExternDao extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
+
 
     @Override
     protected String getConstantPackageName() {
@@ -56,12 +79,14 @@ public class CreateExternDao extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return this.name+"MapperExtern";
+    protected String getClassNameLast() {
+        return "MapperExtern";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
+
+
 }

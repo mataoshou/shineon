@@ -21,12 +21,12 @@
 		
 		var request= {};
 		request.id = "CC69B6A439D84551ADC6022C235668EE";
-		request.name = "shineon";
+		request.privilegegroupname = "shineon";
 		
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilegeGroup/edit",
+           url: config_url +"/uauth/PrivilegeGroup/edit",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -48,7 +48,7 @@
 		request.id = "CC69B6A439D84551ADC6022C235668EE";
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilegeGroup/get",
+           url: config_url +"/uauth/PrivilegeGroup/get",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -70,7 +70,7 @@
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilegeGroup/list",
+           url: config_url +"/uauth/PrivilegeGroup/list",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -89,12 +89,12 @@
 	{
 		
 		var request= {};
-		request.name = "shineon1231236";
+		request.privilegegroupname = "shineon1231236";
 		
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilegeGroup/edit",
+           url: config_url +"/uauth/PrivilegeGroup/edit",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {

@@ -26,7 +26,7 @@
 		request.id = "8D5BE3CC6D2D4EEFB98C5FD1DC0FE958";
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/user/get",
+           url: config_url +"/uauth/User/get",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -48,7 +48,7 @@
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/user/list",
+           url: config_url +"/uauth/User/list",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -66,13 +66,13 @@
 	{
 		
 		var request= {};
-		request.userName = "matao";
-		request.userPassword = "123";
+		request.username = "matao";
+		request.userpassword = "123";
 		
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/user/login",
+           url: config_url +"/uauth/User/login",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -90,15 +90,15 @@
 	{
 		
 		var request= {};
-		request.userName = "matao11";
-		request.userPassword = "123";
+		request.username = "matao11";
+		request.userpassword = "123";
 		
-		request.displayName="马焘"
+		request.displayname="马焘"
 		
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/user/edit",
+           url: config_url +"/uauth/User/edit",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {

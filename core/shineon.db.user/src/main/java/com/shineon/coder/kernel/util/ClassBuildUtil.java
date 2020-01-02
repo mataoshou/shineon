@@ -15,7 +15,7 @@ public class ClassBuildUtil {
     int tab_no=0;
     String tab ="	";
 
-    String classConetent;
+    String classConetent="";
 
 //    List<MethodUtil> method_list = new ArrayList();
 

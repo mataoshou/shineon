@@ -13,6 +13,5 @@ public class ActionBuildTool {
                 RmtOrganizationInfo.class,ActionConstant.ACTION_METHOD, SysConstant.CURRENT_SYS_NAME);
         factory.delete();
 
-
     }
 }

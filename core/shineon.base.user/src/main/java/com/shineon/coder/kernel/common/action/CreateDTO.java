@@ -1,102 +1,107 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
 import com.shineon.coder.kernel.constant.cache.CacheConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
-import com.shineon.coder.service.cache.OrganizationCache;
-import com.shineon.coder.service.convert.util.RmtPrivilegeGroupInfoCommonUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 
-public class CreateDTO extends ICreateBase {
+public class CreateDTO extends ICreate {
 
     public CreateDTO(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil dtoClassBuild = new ClassBuildUtil();
 
-        dtoClassBuild.classInit(this.getClassName(),null,null,this.packageName,
-                new String[]{"Service","Slf4j"},true,"org.springframework.stereotype.Service",toolClass.getName(),
-                "lombok.extern.slf4j.Slf4j",pojoClass.getName(),"org.springframework.beans.factory.annotation.Autowired",
+        dtoClassBuild.classInit(this.getClassName(),null,null,this.getPackageName(),
+                new String[]{"Service","Slf4j"},true,"org.springframework.stereotype.Service",this.getItem().getToolClassFullName(),
+                "lombok.extern.slf4j.Slf4j",this.getItem().getPojoClassFullName(),"org.springframework.beans.factory.annotation.Autowired",
 //                FeignConstant.FEIGN_PACKAGE +"."+baseName + "Feign",
                 "com.shineon.coder.db.pojo.QueryItem",
                 "com.shineon.coder.service.convert.util.QueryItemCommonUtil",
                 "com.shineon.coder.service.convert.CommonItem",
-                "java.util.List",String.format("%s.%sCache",CacheConstant.CACHE_PACKAGE,this.name) );
+                "java.util.List",String.format("%s.%sCache",CacheConstant.CACHE_PACKAGE,this.getName()) );
 
-        dtoClassBuild.addTabContent("\r\n");
-        dtoClassBuild.addTabContent("@Autowired");
-        dtoClassBuild.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
+        return dtoClassBuild;
+    }
 
-
-        dtoClassBuild.addTabContent("\r\n");
-        dtoClassBuild.addTabContent("@Autowired");
-        dtoClassBuild.addTabContent(String.format("%s commonUtil;",this.toolClassName));
-
-        dtoClassBuild.addTabContent("\r\n");
-        dtoClassBuild.addTabContent("@Autowired");
-        dtoClassBuild.addTabContent(String.format("%sCache cache;",this.name));
+    @Override
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+        classBuildUtil.addTabContent("\r\n");
+        classBuildUtil.addTabContent("@Autowired");
+        classBuildUtil.addTabContent(String.format("QueryItemCommonUtil queryItemCommonUtil;"));
 
 
-        for(String method: methods)
+        classBuildUtil.addTabContent("\r\n");
+        classBuildUtil.addTabContent("@Autowired");
+        classBuildUtil.addTabContent(String.format("%s commonUtil;",this.getItem().getToolClassName()));
+
+        classBuildUtil.addTabContent("\r\n");
+        classBuildUtil.addTabContent("@Autowired");
+        classBuildUtil.addTabContent(String.format("%sCache cache;",this.getName()));
+    }
+
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+        if(methodName.indexOf("list")>=0)
         {
-            dtoClassBuild.addTabContent("\r\n");
-            if(method.indexOf("list")>=0)
-            {
-                dtoClassBuild.addTabContent(String.format("public List<%s> %s(CommonItem item) throws Exception{",pojoClassName,method.toLowerCase()));
-                dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
-                dtoClassBuild.addTabContent(String.format("return cache.getListCache(query);"));
-                dtoClassBuild.addTabLeftContent(String.format("}"));
-            }
-            else if(method.indexOf("get")>=0)
-            {
-                dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",pojoClassName,method.toLowerCase()));
-                dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
-                dtoClassBuild.addTabContent(String.format("return cache.get(query);"));
-                dtoClassBuild.addTabLeftContent(String.format("}"));
-            }
-            else if(method.indexOf("edit")>=0)
-            {
-                dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",pojoClassName,method.toLowerCase()));
-                dtoClassBuild.addTabRightContent(String.format("RmtOrganizationInfo pojo = commonUtil.toPojo(item);"));
-                dtoClassBuild.addTabContent(String.format("return cache.setCache(pojo,true);"));
-                dtoClassBuild.addTabLeftContent(String.format("}"));
-            }
-            else if(method.indexOf("delete")>=0)
-            {
-                dtoClassBuild.addTabContent(String.format("public void %s(CommonItem item) throws Exception{",method.toLowerCase()));
-                dtoClassBuild.addTabRightContent(String.format("%s pojo = commonUtil.toPojo(item);",this.pojoClassName));
-                dtoClassBuild.addTabContent(String.format("cache.delete(pojo);"));
-                dtoClassBuild.addTabLeftContent(String.format("}"));
-            }
-            else
-            {
-                dtoClassBuild.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",pojoClassName,method.toLowerCase()));
-                dtoClassBuild.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
-                dtoClassBuild.addTabContent(String.format("return null;"));
-                dtoClassBuild.addTabLeftContent(String.format("}"));
-            }
-
-
-
+            classBuildUtil.addTabContent(String.format("public List<%s> %s(CommonItem item) throws Exception{",this.getItem().getPojoClassName(),methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
+            classBuildUtil.addTabContent(String.format("return cache.getListCache(query);"));
+            classBuildUtil.addTabLeftContent(String.format("}"));
         }
-
-        dtoClassBuild.finish(this.classFile);
+        else if(methodName.indexOf("get")>=0)
+        {
+            classBuildUtil.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",this.getItem().getPojoClassName(),methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
+            classBuildUtil.addTabContent(String.format("return cache.get(query);"));
+            classBuildUtil.addTabLeftContent(String.format("}"));
+        }
+        else if(methodName.indexOf("edit")>=0)
+        {
+            classBuildUtil.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",this.getItem().getPojoClassName(),methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("%s pojo = commonUtil.toPojo(item);",this.getItem().getPojoClassName()));
+            classBuildUtil.addTabContent(String.format("return cache.setCache(pojo,true);"));
+            classBuildUtil.addTabLeftContent(String.format("}"));
+        }
+        else if(methodName.indexOf("delete")>=0)
+        {
+            classBuildUtil.addTabContent(String.format("public void %s(CommonItem item) throws Exception{",methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("%s pojo = commonUtil.toPojo(item);",this.getItem().getPojoClassName()));
+            classBuildUtil.addTabContent(String.format("cache.delete(pojo);"));
+            classBuildUtil.addTabLeftContent(String.format("}"));
+        }
+        else
+        {
+            classBuildUtil.addTabContent(String.format("public %s %s(CommonItem item) throws Exception{",this.getItem().getPojoClassName(),methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("QueryItem query = queryItemCommonUtil.toPojo(item);"));
+            classBuildUtil.addTabContent(String.format("return null;"));
+            classBuildUtil.addTabLeftContent(String.format("}"));
+        }
     }
 
     @Override
-    protected void createConstant() throws IOException {
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
 
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
     @Override
@@ -110,23 +115,21 @@ public class CreateDTO extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
-
     @Override
     protected String getConstantPackageName() {
         return "";
     }
 
     @Override
-    protected String getClassName() {
-        return this.name+"DTO";
+    protected String getClassNameLast() {
+        return "DTO";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
-
 }

@@ -385,6 +385,7 @@ public abstract class IBaseCache<POJO,CommonUtils extends CommonItemUtils<POJO>>
             e.printStackTrace();
 
             fail(keyData,pojos,e);
+            throw e;
         }
 
         return pojos;

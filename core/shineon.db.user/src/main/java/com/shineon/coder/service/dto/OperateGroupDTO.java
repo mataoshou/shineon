@@ -1,0 +1,8 @@
+package com.shineon.coder.service.dto ;import org.springframework.stereotype.Service;import com.shineon.coder.service.convert.util.RmtOperateGroupInfoCommonUtil;import lombok.extern.slf4j.Slf4j;import com.shineon.coder.db.sql.pojo.RmtOperateGroupInfo;import org.springframework.beans.factory.annotation.Autowired;import com.shineon.coder.db.pojo.QueryItem;import com.shineon.coder.service.convert.util.QueryItemCommonUtil;import com.shineon.coder.service.convert.CommonItem;import java.util.List;import com.shineon.coder.service.bo.OperateGroupBO;@Service@Slf4jpublic class OperateGroupDTO {	
+	@Autowired	QueryItemCommonUtil queryItemCommonUtil;	
+	@Autowired	RmtOperateGroupInfoCommonUtil commonUtil;	
+	@Autowired	OperateGroupBO bo;	
+	public RmtOperateGroupInfo get(CommonItem item) throws Exception{		QueryItem query = queryItemCommonUtil.toPojo(item);		RmtOperateGroupInfo result = bo.get(query.getId());		 if(result==null) throw new Exception("数据不存在！");		return result;	}	
+	public RmtOperateGroupInfo edit(CommonItem item) throws Exception{		RmtOperateGroupInfo pojo = commonUtil.toPojo(item);		if(pojo.getId() ==null||pojo.getId().equals("0")) {			return bo.insert(pojo);		}		else{ return bo.update(pojo); }	}	
+	public List<RmtOperateGroupInfo> list(CommonItem item) throws Exception{		QueryItem query = queryItemCommonUtil.toPojo(item);		return bo.list();	}	
+	public void delete(CommonItem item) throws Exception{		QueryItem query = queryItemCommonUtil.toPojo(item);		 if(!bo.delete(query.getId())){			if(!bo.delete(query.getId())){				throw new Exception("数据删除失败！！");			}		}	}}

@@ -1,87 +1,100 @@
 package com.shineon.coder.kernel.common.action;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.action.ActionConstant;
 import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 
 import java.io.IOException;
 
-public class CreateAction extends ICreateBase {
+public class CreateAction extends ICreate {
 
     public CreateAction(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
+
+    private String getDTOName()
+    {
+        return this.getName() +"DTO";
+    }
+
     @Override
-    protected void createClass() throws IOException {
-        ClassBuildUtil actionClassBuild = new ClassBuildUtil();
+    protected ClassBuildUtil createClass() {
+        ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
 
-        String dtoName = this.name +"DTO";
-
-        actionClassBuild.classInit(this.getClassName(),null
-                ,null, this.packageName,new String[]{"RestController","Slf4j"},
-                true,this.toolClass.getName(),"lombok.extern.slf4j.Slf4j",
+        classBuildUtil.classInit(this.getClassName(),null
+                ,null, this.getPackageName(),new String[]{"RestController","Slf4j"},
+                true,this.getItem().getToolClassFullName(),"lombok.extern.slf4j.Slf4j",
                 "org.springframework.web.bind.annotation.RestController","org.springframework.web.bind.annotation.RequestMapping",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.beans.factory.annotation.Autowired",
-                ActionConstant.ACTION_DTO_PACKAGE +"."+dtoName, this.constantPackageName+"." +this.getConstantName()
+                ActionConstant.ACTION_DTO_PACKAGE +"."+getDTOName(),
+                this.getConstantPackageName()+"." +this.getConstantClassName()
                 ,"org.springframework.web.bind.annotation.RequestBody");
 
-
-        actionClassBuild.addTabContent("\r\n");
-        actionClassBuild.addTabContent("@Autowired");
-        actionClassBuild.addTabContent(String.format("%s dto;",dtoName));
-
-        actionClassBuild.addTabContent("\r\n");
-        actionClassBuild.addTabContent("@Autowired");
-        actionClassBuild.addTabContent(String.format("%s commonUtil;",toolClassName));
-
-
-
-        for(String method: methods)
-        {
-            actionClassBuild.addTabContent("\r\n");
-
-
-            if(method.indexOf("delete")>0)
-            {
-                actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",this.getConstantName(),method.toUpperCase()));
-                actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item) throws Exception{",method.toLowerCase()));
-                actionClassBuild.addTabRightContent(String.format("dto.delete(item);"));
-                actionClassBuild.addTabContent(String.format("return commonUtil.success();"));
-                actionClassBuild.addTabLeftContent(String.format("}"));
-                continue;
-            }
-
-            actionClassBuild.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",this.getConstantName(),method.toUpperCase()));
-            actionClassBuild.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item)throws Exception{",method.toLowerCase()));
-            actionClassBuild.addTabRightContent(String.format("return commonUtil.toCommon(dto.%s(item));",method.toLowerCase()));
-            actionClassBuild.addTabLeftContent(String.format("}"));
-        }
-        actionClassBuild.finish(this.classFile);
+        return classBuildUtil;
     }
 
     @Override
-    protected void createConstant() throws IOException {
+    protected void createPreMethod(ClassBuildUtil classBuildUtil){
+
+
+        classBuildUtil.addTabContent("\r\n");
+        classBuildUtil.addTabContent("@Autowired");
+        classBuildUtil.addTabContent(String.format("%s dto;",getDTOName()));
+
+        classBuildUtil.addTabContent("\r\n");
+        classBuildUtil.addTabContent("@Autowired");
+        classBuildUtil.addTabContent(String.format("%s commonUtil;",this.getItem().getToolClassName()));
+    }
+
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName){
+        if(methodName.indexOf("delete")>=0)
+        {
+            classBuildUtil.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)",this.getConstantClassName(),methodName.toUpperCase()));
+            classBuildUtil.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item) throws Exception{",methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("dto.delete(item);"));
+            classBuildUtil.addTabContent(String.format("return commonUtil.success();"));
+            classBuildUtil.addTabLeftContent(String.format("}"));
+        }
+
+        else {
+            classBuildUtil.addTabContent(String.format("@RequestMapping(%s.ACTION_%s)", this.getConstantClassName(), methodName.toUpperCase()));
+            classBuildUtil.addTabContent(String.format("public CommonItem %s(@RequestBody CommonItem item)throws Exception{", methodName.toLowerCase()));
+            classBuildUtil.addTabRightContent(String.format("return commonUtil.toCommon(dto.%s(item));", methodName.toLowerCase()));
+            classBuildUtil.addTabLeftContent(String.format("}"));
+        }
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass()  {
         ClassBuildUtil constantClassBuild = new ClassBuildUtil();
 
-        constantClassBuild.classInit(this.getConstantName(),null,null, this.constantPackageName,null,true,null);
+        constantClassBuild.classInit(this.getConstantClassName(),null,null, this.getConstantPackageName(),null,true,null);
 
-        for(String method: methods)
-        {
-            constantClassBuild.addTabContent("\r\n");
-            constantClassBuild.addTabContent(String.format("public static final String ACTION_%s =\"/%s/%s\";",
-                    method.toUpperCase(),this.name.toLowerCase(),method.toLowerCase()));
-        }
-
-        constantClassBuild.finish(this.constantFile);
+        return constantClassBuild;
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
     }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName)  {
+        classBuildUtil.addTabContent("\r\n");
+        classBuildUtil.addTabContent(String.format("public static final String ACTION_%s =\"/%s/%s\";",
+                methodName.toUpperCase(),this.getName(),methodName.toLowerCase()));
+    }
+
+
 
     @Override
     protected void classInit() {
@@ -94,22 +107,23 @@ public class CreateAction extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return true;
     }
-
     @Override
     protected String getConstantPackageName() {
         return ActionConstant.ACTION_CONSTANT_PACKAGE;
     }
 
     @Override
-    protected String getClassName() {
-        return this.name+"Controller";
+    protected String getClassNameLast() {
+        return "Controller";
     }
 
+
     @Override
-    protected String getConstantName() {
-        return this.name +"ControllerConstant";
+    protected String getConstantClassNameLast() {
+        return "ControllerConstant";
     }
+
 }

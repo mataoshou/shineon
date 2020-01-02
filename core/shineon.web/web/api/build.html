@@ -14,11 +14,14 @@
 			<div style="background: #C0C4CC;width: 690px;height: 30px;; padding-left: 20px;margin-bottom: 10px;padding-top: 4px;;">选择生成内容</div>
 			<span style="width: 200px;display: inline-block;height: 30px;"> 选择操作类型:  </span>
 			<select class="sys-type" style="width: 150px;height: 30px;">
+				<option value="7">API/FEIGN构建</option>
 				<option value="1">api接口</option>
 				<option value="2">Feign</option>
 				<option value="3">数据库构建</option>
 				<option value="4">convert构建</option>
 				<option value="5">缓存构建</option>
+				<option value="6">bo构建</option>
+
 			</select>
 		</div>
 
@@ -37,7 +40,7 @@
 
 			<div class="pojo-content">
 				<span style="width: 200px;display: inline-block;height: 30px;"> pojo类选择:  </span>
-				<select style="width: 350px;height: 30px;" class="sys-pojo">
+				<select style="width: 350px;height: 30px;" class="sys-pojo" onchange="MT.setname()">
 
 
 				</select>
@@ -67,6 +70,7 @@
 			<input class = "build-name" style="width: 150px; height: 30px;;" />
 			<input type="button" value="新建" onclick="MT.sys_build(0)" />
 			<input type="button" value="重新生成" onclick="MT.sys_build(1)" />
+			<input type="button" value="删除" onclick="MT.sys_build(2)" />
 
 		</div>
 
@@ -89,9 +93,15 @@
 				MT.change_center(val);
 			}
 
+
+			MT.setname = function()
+			{
+				$(".build-name").val($(".sys-pojo").find("option:selected").text().trim());
+			}
+
 			MT.selects = [".sys-util",".sys-pojo",".sys-name"];
 			MT.urls = ["/sys/list/commonUtil","/sys/list/pojo","/sys/list/sysName"];
-			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/convert","/sys/oper/cache"]
+			MT.build_urls = ["/sys/oper/api","/sys/oper/feign","/sys/oper/db","/sys/oper/convert","/sys/oper/cache","/sys/oper/bo","/sys/oper/buildAll"]
 
 			MT.init_center_show = function(val)
 			{
@@ -180,6 +190,15 @@
 					$(".sys-content").css("display","block");
 					$(".method-content").css("display","block");
 				}
+				else  if(val==6)
+				{
+					$(".util-content").css("display","block");
+					$(".pojo-content").css("display","block");
+					$(".sys-content").css("display","block");
+					$(".method-content").css("display","block");
+					$(".class-method").val("get,insert,list,update,delete");
+				}
+				
 			}
 			
 			MT.build_center_show = function(val)

@@ -35,10 +35,11 @@ public class UserBO {
     {
         GuidUtil util = new GuidUtil();
 
-//        user.setUsercode("001");
-
-        user.setCreateuserid(user.getModifyuserid());
-        user.setCreatedtime(user.getModifytime());
+        user.setCreateuserid("0");
+        user.setCreatedtime(new Date());
+        user.setModifyuserid("0");
+        user.setModifytime(new Date());
+        user.setDeletedflag((byte) 0);
 
         user.setId(util.gen());
         userMapper.insertByCustomId(user);
@@ -54,15 +55,19 @@ public class UserBO {
     }
 
 
-    public RmtUserInfo delete(RmtUserInfo user)
+    public boolean delete(String id)
     {
-        user.setDeletedflag((byte) 1);
-        user.setDeletedtime(new Date());
-        update(user);
-        return get(user.getId());
+
+        RmtUserInfo userInfo = get(id);
+
+        userInfo.setDeletedflag((byte) 1);
+        userInfo.setDeletedtime(new Date());
+        update(userInfo);
+        return false;
     }
 
-    public RmtUserInfo getByName(String name)
+
+    public RmtUserInfo getbyname(String name)
     {
         return userMapper.selectByName(name);
     }

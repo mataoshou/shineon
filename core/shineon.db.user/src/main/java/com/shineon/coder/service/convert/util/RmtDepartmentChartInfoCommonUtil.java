@@ -1,1 +1,1 @@
-package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtDepartmentChartInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtDepartmentChartInfoCommonUtil extends RmtDepartmentChartInfoCommonBase {}
+package com.shineon.coder.service.convert.util ;import com.shineon.coder.service.convert.base.RmtDepartmentChartInfoCommonBase;import org.springframework.stereotype.Service;@Servicepublic class RmtDepartmentChartInfoCommonUtil extends RmtDepartmentChartInfoCommonBase {	}

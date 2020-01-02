@@ -20,13 +20,13 @@
 	{
 		
 		var request= {};
-		request.id = "D08DA592B5524AF9AB7A2E29A8AF4C71";
-		request.organizationname = "shineon1231236";
+		request.id = "9805FD8627B647A38CB1B728CB9C0C9E";
+		request.privilegename = "shineon1231236";
 		
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilege/edit",
+           url: config_url +"/uauth/Privilege/edit",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -45,10 +45,10 @@
 		
 		var request= {};
 		
-		request.id = "BC4F478A05464FAA817F73605EEE909A1";
+		request.id = "BC4F478A05464FAA817F73605EEE909A";
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilege/get",
+           url: config_url +"/uauth/Privilege/get",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -70,7 +70,7 @@
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilege/list",
+           url: config_url +"/uauth/Privilege/list",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {
@@ -94,7 +94,7 @@
 		
 		$.ajax({
            type: "post",
-           url: config_url +"/uauth/privilege/edit",
+           url: config_url +"/uauth/Privilege/edit",
            data : JSON.stringify(request),
            contentType : "application/json",
             success: function(result) {

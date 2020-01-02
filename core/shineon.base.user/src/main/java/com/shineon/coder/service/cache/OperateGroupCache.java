@@ -1,0 +1,10 @@
+package com.shineon.coder.service.cache ;import com.shineon.coder.db.pojo.RmtOperateGroupInfo;import com.shineon.coder.service.convert.util.RmtOperateGroupInfoCommonUtil;import lombok.extern.slf4j.Slf4j;import org.springframework.stereotype.Service;import com.shineon.coder.kernel.util.SpringUtil;import com.shineon.coder.kernel.constant.cache.OperateGroupCacheConstant;import com.shineon.coder.db.pojo.QueryItem;import com.shineon.coder.service.convert.CommonItem;import java.util.List;import org.springframework.beans.factory.annotation.Autowired;import com.shineon.coder.service.feign.OperateGroupFeign;@Service@Slf4jpublic class OperateGroupCache extends IBaseCache<RmtOperateGroupInfo,RmtOperateGroupInfoCommonUtil> {	public void initCache()	{		setCommonutil(SpringUtil.getBean(RmtOperateGroupInfoCommonUtil.class));		setCacheDecorate(OperateGroupCacheConstant.CACHE_PRE,OperateGroupCacheConstant.CACHE_LAST);	}	
+	@Override	protected boolean check(String key) {		return true;	}	
+	@Override	protected boolean success(String key, List<RmtOperateGroupInfo> pojos) {		return true;	}	
+	@Override	protected boolean fail(String key, List<RmtOperateGroupInfo> pojos, Exception e) {		return true;	}	
+	@Override	protected String getKeyParams(RmtOperateGroupInfo pojo) {		return pojo.getId();	}	
+	@Autowired	OperateGroupFeign feign;	@Override	protected CommonItem selectListByDB(QueryItem queryItem) {		return feign.list(queryItemCommonUtil.toCommon(queryItem));	}	
+	@Override	protected CommonItem getPojoByDB(QueryItem queryItem) {		return feign.get(queryItemCommonUtil.toCommon(queryItem));	}	
+	@Override	protected CommonItem updatePojoByDB(RmtOperateGroupInfo pojo) {		return feign.edit(commonutil.toCommon(pojo));	}	
+	@Override	protected void deletePojoByDB(RmtOperateGroupInfo pojo) {		feign.delete(commonutil.toCommon(pojo));	}	
+}

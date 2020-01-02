@@ -11,7 +11,7 @@ import java.util.List;
 public class CommonWrite {
 
 
-    String sourcePath = "E:\\shineon.frame\\shineon\\core\\shineon.db.user";
+    String sourcePath = "E:\\shineon.frame\\shineon\\core\\shineon.base.user";
 
 
     List<String> m_list =new ArrayList(){
@@ -53,7 +53,7 @@ public class CommonWrite {
     public static  void  main(String[] args) throws IOException {
 
         String[] paths = new String[]{
-                "src\\main\\java\\com\\shineon\\coder\\action\\sys",
+                "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\message",
 //                "src\\main\\java\\com\\shineon\\coder\\action\\sys\\SysOperController.java",
 //                "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\cache\\CacheFactory.java",
 //                "src\\main\\java\\com\\shineon\\coder\\kernel\\common\\convert\\ConvertFactory.java",

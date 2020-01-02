@@ -1,7 +1,7 @@
 package com.shineon.coder.kernel.common.convert;
 
 import com.shineon.coder.kernel.common.CommonTool;
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import org.dom4j.DocumentException;
@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class CreateConvertBase extends ICreateBase {
+public class CreateConvertBase extends ICreate {
 
 
     public CreateConvertBase(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
@@ -18,11 +18,32 @@ public class CreateConvertBase extends ICreateBase {
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
 
+
+
+
+        ClassBuildUtil classBuildUtil = new ClassBuildUtil();
+
+        classBuildUtil.classInit(this.getClassName(),null,
+                new String[]{String.format("CommonItemUtils<%s>",this.getItem().getPojoClassName())}, this.getPackageName(),null,true,
+                "java.util.Date", String.format("%s.%s", ConvertsConstant.POJO_PACKAGE,this.getItem().getPojoClassName()), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
+                "java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
+                ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
+                ConvertsConstant.CONVERT_PACKAGE+".CommonItem",
+                ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
+                "org.slf4j.Logger","org.slf4j.LoggerFactory");
+
+        return  classBuildUtil;
+
+
+    }
+
+    @Override
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
 
         ConvertTools tools = new ConvertTools();
-        String mapperName = name +"CommonMapper.xml";
+        String mapperName = this.getName() +"CommonMapper.xml";
         CommonTool tool = new CommonTool();
         File root = tool.getSysPath(ConvertsConstant.MAPPER_PACKAGE);
         File mapperFile = new File(root,mapperName);
@@ -33,48 +54,61 @@ public class CreateConvertBase extends ICreateBase {
             e.printStackTrace();
         }
 
-        ClassBuildUtil classBuildUtil = new ClassBuildUtil();
-
-        classBuildUtil.classInit(this.getClassName(),null,
-                new String[]{String.format("CommonItemUtils<%s>",pojoClassName)}, this.packageName,null,true,
-                "java.util.Date", String.format("%s.%s", ConvertsConstant.POJO_PACKAGE,pojoClassName), ConvertsConstant.CONVERT_PACKAGE+".CommonData",
-                "java.util.ArrayList","java.util.List","org.springframework.beans.factory.annotation.Autowired",
-                ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
-                ConvertsConstant.CONVERT_PACKAGE+".CommonItem",
-                ConvertsConstant.CONVERT_PACKAGE+".CommonItemUtils",
-                "org.slf4j.Logger","org.slf4j.LoggerFactory");
-
         ////////添加packagename;
 
         classBuildUtil.addTabContent("Logger logger = LoggerFactory.getLogger(getClass());");
         classBuildUtil.addTabContent("\r\n");
 
         ////////////////////////////////////CommonData 和 pojo 类之间的转换
-        toCommonData(pojoClass.getSimpleName(),mapperItems,classBuildUtil);
+        toCommonData(this.getItem().getPojoClassName(),mapperItems,classBuildUtil);
         classBuildUtil.addTabContent("\r\n");
 
-        toPojoData(pojoClass.getSimpleName(),mapperItems,classBuildUtil);
+        toPojoData(this.getItem().getPojoClassName(),mapperItems,classBuildUtil);
         classBuildUtil.addTabContent("\r\n");
 
         //////////////////////////////////// pojo 类  转换  为CommonItem
-        toCommon(pojoClass.getSimpleName(),classBuildUtil);
+        toCommon(this.getItem().getPojoClassName(),classBuildUtil);
         classBuildUtil.addTabContent("\r\n");
 
-        toCommonList(pojoClass.getSimpleName(),classBuildUtil);
+        toCommonList(this.getItem().getPojoClassName(),classBuildUtil);
         classBuildUtil.addTabContent("\r\n");
 
         //////////////////////////////////// CommonItem 类  转换  为pojo
-        toPojo(this.pojoClassName,classBuildUtil);
+        toPojo(this.getItem().getPojoClassFullName(),classBuildUtil);
         classBuildUtil.addTabContent("\r\n");
 
-        toPojoList(this.pojoClassName,classBuildUtil);
+        toPojoList(this.getItem().getPojoClassFullName(),classBuildUtil);
         classBuildUtil.addTabContent("\r\n");
 
-        classBuildUtil.finish(this.classFile);
+    }
+
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
 
-    public void toCommonData(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
+    private void toCommonData(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
     {
         String methodName = "toCommonData";
 
@@ -99,7 +133,7 @@ public class CreateConvertBase extends ICreateBase {
     }
 
 
-    public void toPojoData(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
+    private void toPojoData(String pojoName, List<MapperItem> items , ClassBuildUtil classBuildUtil)
     {
         String methodName = "toPojoData";
 
@@ -122,7 +156,7 @@ public class CreateConvertBase extends ICreateBase {
         classBuildUtil.addTabLeftContent(String.format("}"));
     }
 
-    public void toCommon(String pojoName , ClassBuildUtil classBuildUtil)
+    private void toCommon(String pojoName , ClassBuildUtil classBuildUtil)
     {
 
         String methodName = "toCommon";
@@ -136,7 +170,7 @@ public class CreateConvertBase extends ICreateBase {
 
     }
 
-    public void toCommonList(String pojoName , ClassBuildUtil classBuildUtil)
+    private void toCommonList(String pojoName , ClassBuildUtil classBuildUtil)
     {
 
         String methodName = "toCommon";
@@ -158,7 +192,7 @@ public class CreateConvertBase extends ICreateBase {
     }
 
 
-    public void toPojo(String pojoName , ClassBuildUtil classBuildUtil)
+    private void toPojo(String pojoName , ClassBuildUtil classBuildUtil)
     {
         String methodName = "toPojo";
 
@@ -180,7 +214,7 @@ public class CreateConvertBase extends ICreateBase {
 
 
 
-    public void toPojoList(String pojoName, ClassBuildUtil classBuildUtil)
+    private void toPojoList(String pojoName, ClassBuildUtil classBuildUtil)
     {
         String methodName = "toPojoList";
 
@@ -201,19 +235,10 @@ public class CreateConvertBase extends ICreateBase {
         classBuildUtil.addTabLeftContent(String.format("}"));
     }
 
-    @Override
-    protected void createConstant() throws IOException {
-
-    }
-
-    @Override
-    protected boolean checkBeforBuild() {
-        return true;
-    }
 
     @Override
     protected void classInit() {
-
+        setConver(true);
     }
 
     @Override
@@ -222,7 +247,7 @@ public class CreateConvertBase extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
 
@@ -232,17 +257,13 @@ public class CreateConvertBase extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return this.name+"CommonBase";
+    protected String getClassNameLast() {
+        return "CommonBase";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
 
-    @Override
-    public void isRewrite(boolean rewrite) {
-        super.isRewrite(true);
-    }
 }

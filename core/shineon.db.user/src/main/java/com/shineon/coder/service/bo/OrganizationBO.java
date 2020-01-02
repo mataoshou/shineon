@@ -34,8 +34,10 @@ public class OrganizationBO {
     public RmtOrganizationInfo insert(RmtOrganizationInfo organization)
     {
         GuidUtil util = new GuidUtil();
-        organization.setCreateuserid(organization.getModifyuserid());
-        organization.setCreatedtime(organization.getModifytime());
+        organization.setCreateuserid("0");
+        organization.setCreatedtime(new Date());
+        organization.setModifyuserid("0");
+        organization.setModifytime(new Date());
         organization.setId(util.gen());
 
         if(organization.getOrganizationcode()==null)
@@ -57,12 +59,13 @@ public class OrganizationBO {
     }
 
 
-    public RmtOrganizationInfo delete(RmtOrganizationInfo organizationInfo)
-    {
+
+    public boolean delete(String id){
+        RmtOrganizationInfo organizationInfo =get(id);
         organizationInfo.setDeletedflag((byte) 1);
         organizationInfo.setDeletedtime(new Date());
         update(organizationInfo);
-        return get(organizationInfo.getId());
+        return false;
     }
 
 }

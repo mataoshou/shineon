@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="添加" onclick="addItem()" />
+		<input type="button" value="编辑" onclick="editItem()" />
+		<input type="button" value="列表" onclick="listItem()" />
+		<input type="button" value="获取" onclick="getItem()" />
+		
+	</body>
+	<script>
+		
+	var config_url = "http://127.0.0.1:182/"
+	
+	
+	function editItem()
+	{
+		
+		var request= {};
+		request.id = "3E8A6789195644C1BD6317751DF49654";
+		request.operategroupname = "shineon";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/OperateGroup/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	function getItem()
+	{
+		
+		var request= {};
+		
+		request.id = "3E8A6789195644C1BD6317751DF49654";
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/OperateGroup/get",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	function listItem()
+	{
+		
+		var request= {};
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/OperateGroup/list",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	
+	function addItem()
+	{
+		
+		var request= {};
+		request.operategroupname = "shineon1231236";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/OperateGroup/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	</script>
+	
+	<script>
+		
+	var rootPath =".."
+		
+	</script>
+	<script src="../config/config.load.js"></script>
+	<script src="../js/include.js"></script>
+</html>

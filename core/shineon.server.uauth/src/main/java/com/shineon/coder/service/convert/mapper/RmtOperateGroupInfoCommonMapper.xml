@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <item pojoName="id" commonName="id" type="java.lang.String"/>
+  <item pojoName="operategroupname" commonName="parentCode1" type="java.lang.String"/>
+  <item pojoName="belongsystem" commonName="parentCode2" type="java.lang.String"/>
+  <item pojoName="description" commonName="createId" type="java.lang.String"/>
+  <item pojoName="reserved2" commonName="changerId" type="java.lang.String"/>
+  <item pojoName="opreateset" commonName="createName" type="java.lang.String"/>
+  <item pojoName="operategrouptype" commonName="" type="java.lang.Integer"/>
+  <item pojoName="showorder" commonName="" type="java.lang.Integer"/>
+  <item pojoName="reserved1" commonName="" type="java.lang.Integer"/>
+</root>

@@ -1,7 +1,8 @@
 package com.shineon.coder.kernel.common.convert;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
+import com.shineon.coder.kernel.util.ClassBuildUtil;
 import com.shineon.coder.kernel.util.DomUtil;
 import com.shineon.coder.kernel.util.FileStore;
 import com.shineon.coder.service.convert.CommonData;
@@ -13,19 +14,50 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateConvertMapper extends ICreateBase {
+public class CreateConvertMapper extends ICreate {
     public CreateConvertMapper(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
+
+
+        return null;
+    }
+
+    @Override
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
         try {
             List<MapperItem> mapperItems = getMapperList();
             buildMapper(mapperItems);
         } catch (DocumentException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
 
     }
 
@@ -34,12 +66,12 @@ public class CreateConvertMapper extends ICreateBase {
 
         ConvertTools tools = new ConvertTools();
 
-        if(this.classFile.exists())
+        if(this.getClassFile().exists())
         {
-            mapperList =tools.getMapper(this.classFile);
+            mapperList =tools.getMapper(this.getClassFile());
         }
 
-        List<PropertyItem> pojos =tools.getItems(this.pojoClass);
+        List<PropertyItem> pojos =tools.getItems(this.getItem().getPojoClass());
 
         List<PropertyItem> common = tools.getItems(CommonData.class);
 
@@ -127,17 +159,15 @@ public class CreateConvertMapper extends ICreateBase {
      * @throws DocumentException
      */
     private boolean buildMapper(List<MapperItem> items) throws IOException, DocumentException {
-
-
-        if(!this.classFile.exists())
+        if(!this.getClassFile().exists())
         {
             FileStore store = new FileStore();
             String content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <root></root>";
-            store.putString(this.classFile,content,"UTF-8");
+            store.putString(this.getClassFile(),content,"UTF-8");
         }
 
         DomUtil dom = new DomUtil();
-        Document doc = dom.getDocument(this.classFile);
+        Document doc = dom.getDocument(this.getClassFile());
 
         Element root =  doc.getRootElement();
         List<Element> eles = root.elements();
@@ -152,25 +182,15 @@ public class CreateConvertMapper extends ICreateBase {
             ele.addAttribute("commonName",mitem.commonName);
             ele.addAttribute("type",mitem.type);
         }
+        dom.writeDocument(doc,this.getClassFile());
 
-        dom.writeDocument(doc,this.classFile);
-
-        return  true;
-    }
-
-    @Override
-    protected void createConstant() throws IOException {
-
-    }
-
-    @Override
-    protected boolean checkBeforBuild() {
         return true;
     }
 
+
     @Override
     protected void classInit() {
-
+        this.setConver(true);
     }
 
     @Override
@@ -179,22 +199,21 @@ public class CreateConvertMapper extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
-
     @Override
     protected String getConstantPackageName() {
         return null;
     }
 
     @Override
-    protected String getClassName() {
-        return this.name +"CommonMapper";
+    protected String getClassNameLast() {
+        return "CommonMapper";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
 
@@ -203,8 +222,4 @@ public class CreateConvertMapper extends ICreateBase {
         return "xml";
     }
 
-    @Override
-    public void isRewrite(boolean rewrite) {
-        super.isRewrite(true);
-    }
 }

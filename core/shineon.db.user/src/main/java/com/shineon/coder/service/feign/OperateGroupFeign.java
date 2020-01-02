@@ -1,0 +1,5 @@
+package com.shineon.coder.service.feign ;import lombok.extern.slf4j.Slf4j;import com.shineon.coder.service.convert.CommonItem;import org.springframework.cloud.openfeign.FeignClient;import org.springframework.web.bind.annotation.RequestMapping;import com.shineon.coder.kernel.constant.feign.OperateGroupFeignConstant;@FeignClient(name = OperateGroupFeignConstant.FEIGN_SERVER_NAME,fallback = OperateGroupFeignFallBack.class)public interface OperateGroupFeign {	
+	@RequestMapping(OperateGroupFeignConstant. FEIGN_GET)	CommonItem get(CommonItem item);	
+	@RequestMapping(OperateGroupFeignConstant. FEIGN_EDIT)	CommonItem edit(CommonItem item);	
+	@RequestMapping(OperateGroupFeignConstant. FEIGN_LIST)	CommonItem list(CommonItem item);	
+	@RequestMapping(OperateGroupFeignConstant. FEIGN_DELETE)	CommonItem delete(CommonItem item);}

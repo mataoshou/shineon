@@ -1,60 +1,69 @@
 package com.shineon.coder.kernel.common.feign;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 
 import java.io.IOException;
 
-public class CreateFeign extends ICreateBase {
+public class CreateFeign extends ICreate {
     public CreateFeign(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil feignClassBuild = new ClassBuildUtil();
 
-        String fallbackName =this.name +"FeignFallBack";
+        String fallbackName =this.getName() +"FeignFallBack";
 
-        feignClassBuild.classInit(this.getClassName(),null,null, this.packageName
-                ,new String[]{String.format("FeignClient(name = %s.FEIGN_SERVER_NAME,fallback = %s.class)",this.getConstantName(),fallbackName),},
+        feignClassBuild.classInit(this.getClassName(),null,null, this.getPackageName()
+                ,new String[]{String.format("FeignClient(name = %s.FEIGN_SERVER_NAME,fallback = %s.class)",this.getConstantClassName(),fallbackName),},
                 false,"lombok.extern.slf4j.Slf4j",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.cloud.openfeign.FeignClient",
                 "org.springframework.web.bind.annotation.RequestMapping",
-                this.constantPackageName +"." +this.getConstantName());
+                this.getConstantClassFullName());
 
-        for(String method: methods)
-        {
-            feignClassBuild.addTabContent("\r\n");
-            feignClassBuild.addTabContent(String.format("@RequestMapping(%s. FEIGN_%s)",this.getConstantName(),method.toUpperCase()));
-            feignClassBuild.addTabContent(String.format("CommonItem %s(CommonItem item);",method.toLowerCase()));
-        }
-        feignClassBuild.finish(this.classFile);
+        return feignClassBuild;
+
     }
 
     @Override
-    protected void createConstant() throws IOException {
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+        classBuildUtil.addTabContent(String.format("@RequestMapping(%s.FEIGN_%s)",this.getConstantClassName(),methodName.toUpperCase()));
+        classBuildUtil.addTabContent(String.format("CommonItem %s(CommonItem item);",methodName.toLowerCase()));
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
         ClassBuildUtil constantClassBuild = new ClassBuildUtil();
 
-        constantClassBuild.classInit(this.getConstantName(),null,null, FeignConstant.FEIGN_CONSTANT_PACKAGE,null,true,null);
+        constantClassBuild.classInit(this.getConstantClassName(),null,null, FeignConstant.FEIGN_CONSTANT_PACKAGE,null,true,null);
 
-        constantClassBuild.addTabContent("\r\n");
-        constantClassBuild.addTabContent(String.format("public static final String FEIGN_SERVER_NAME =\"%s\";",this.sysName));
-        for(String method: methods)
-        {
-            constantClassBuild.addTabContent("\r\n");
-            constantClassBuild.addTabContent(String.format("public static final String FEIGN_%s =\"/%s/%s\";",
-                    method.toUpperCase(),this.name.toLowerCase(),method.toLowerCase()));
-        }
 
-        constantClassBuild.finish(constantFile);
+        return constantClassBuild;
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+        classBuildUtil.addTabContent(String.format("public static final String FEIGN_SERVER_NAME =\"%s\";",this.getItem().getSysName()));
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+        classBuildUtil.addTabContent(String.format("public static final String FEIGN_%s =\"/%s/%s\";",
+                methodName.toUpperCase(),this.getName(),methodName.toLowerCase()));
     }
 
     @Override
@@ -68,7 +77,7 @@ public class CreateFeign extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return true;
     }
 
@@ -78,12 +87,13 @@ public class CreateFeign extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return this.name+"Feign";
+    protected String getClassNameLast() {
+        return "Feign";
     }
 
     @Override
-    protected String getConstantName() {
-        return this.name+"FeignConstant";
+    protected String getConstantClassNameLast() {
+        return "FeignConstant";
     }
+
 }

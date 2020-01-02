@@ -33,7 +33,7 @@ public class SysClassListController {
 
         log.info(root.getPath());
 
-        List<SimpleItem> names = getFileNames(root,DTOConstant.DTO_PACKAGE);
+        List<SimpleItem> names = getFileNames(root, DTOConstant.DTO_PACKAGE);
 
         return commonUtil.toCommon(names);
     }

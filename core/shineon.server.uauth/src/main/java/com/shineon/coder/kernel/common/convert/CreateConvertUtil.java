@@ -1,38 +1,58 @@
 package com.shineon.coder.kernel.common.convert;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 
 import java.io.IOException;
 
-public class CreateConvertUtil extends ICreateBase {
+public class CreateConvertUtil extends ICreate {
     public CreateConvertUtil(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-        String baseName = this.name + "CommonBase";
+        String baseName = this.getName() + "CommonBase";
 
-        classBuildUtil.classInit(this.getClassName(),baseName, null, this.packageName ,new String[]{"Service"},true,
+        classBuildUtil.classInit(this.getClassName(),baseName, null, this.getPackageName() ,new String[]{"Service"},true,
                 String.format("%s.%s", ConvertsConstant.BASE_PACKAGE,baseName),"org.springframework.stereotype.Service");
 
-
-        classBuildUtil.finish(this.classFile);
+        return classBuildUtil;
     }
 
     @Override
-    protected void createConstant() throws IOException {
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
 
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
+    }
+
 
     @Override
     protected void classInit() {
@@ -45,22 +65,22 @@ public class CreateConvertUtil extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
-
     @Override
     protected String getConstantPackageName() {
         return null;
     }
 
     @Override
-    protected String getClassName() {
-        return this.name +"CommonUtil";
+    protected String getClassNameLast() {
+        return "CommonUtil";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
+
 }

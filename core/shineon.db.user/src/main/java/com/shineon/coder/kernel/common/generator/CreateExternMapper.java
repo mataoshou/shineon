@@ -1,7 +1,8 @@
 package com.shineon.coder.kernel.common.generator;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.db.DBConstant;
+import com.shineon.coder.kernel.util.ClassBuildUtil;
 import com.shineon.coder.kernel.util.DomUtil;
 import com.shineon.coder.kernel.util.FileStore;
 import org.dom4j.Document;
@@ -12,19 +13,23 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class CreateExternMapper extends ICreateBase {
+public class CreateExternMapper extends ICreate {
 
     public CreateExternMapper(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
+        return null;
+    }
 
-        String mergeFileName = "I" + this.name + "Mapper";
+    @Override
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+        String mergeFileName = "I" + this.getName() + "Mapper";
 
 
-        File baseMapperFile = new File(this.classFile.getParentFile(),this.name+"MapperBase.xml");
+        File baseMapperFile = new File(this.getClassFile().getParentFile(),this.getName()+"MapperBase.xml");
 
 
         String content = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
@@ -95,24 +100,37 @@ public class CreateExternMapper extends ICreateBase {
         content +=insertByCustomId;
         content +="</mapper>";
 
-        String tableName = GeneratorUtils.getTableName(this.name);
+        String tableName = GeneratorUtils.getTableName(this.getName());
 
 
         content = content.replace("##1", mergeFileName).replace("##2", tableName).replace("##3",itemName)
-                .replace("##4",String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, this.name)).replace("##5",insert_keys).replace("##6",insert_value);
-        FileStore.putString(this.classFile, content, "UTF-8");
+                .replace("##4",String.format("%s.%s",DBConstant.DB_POJO_PACKAGE, this.getName())).replace("##5",insert_keys).replace("##6",insert_value);
+        FileStore.putString(this.getClassFile(), content, "UTF-8");
     }
 
-
-
     @Override
-    protected void createConstant() throws IOException {
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
 
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
     @Override
@@ -126,7 +144,7 @@ public class CreateExternMapper extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
 
@@ -136,12 +154,12 @@ public class CreateExternMapper extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return this.name +"MapperExtern";
+    protected String getClassNameLast() {
+        return "MapperExtern";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
 

@@ -17,22 +17,22 @@ public abstract class IMakeUpBase {
 
     }
 
-    protected void add(ICreateBase item)
+    protected void add(ICreate item)
     {
         items.add(item);
     }
 
 
-    List<ICreateBase> items = new ArrayList<>();
+    List<ICreate> items = new ArrayList<>();
 
     /**
      * 重新生成对象
      * @throws IOException
      */
     public void rebuild() throws IOException{
-        for(ICreateBase item : items)
+        for(ICreate item : items)
         {
-            item.isRewrite(true);
+            item.setConver(true);
             item.startCreate();
         }
 
@@ -43,9 +43,16 @@ public abstract class IMakeUpBase {
      * @throws IOException
      */
     public void build() throws IOException{
-        for(ICreateBase item : items)
+        for(ICreate item : items)
         {
             item.startCreate();
+        }
+    }
+
+    public void edit() throws IOException {
+        for(ICreate item : items)
+        {
+            item.startEdit();
         }
     }
 
@@ -54,7 +61,7 @@ public abstract class IMakeUpBase {
      * 删除生成的对象
      */
     public void delete(){
-        for(ICreateBase item : items)
+        for(ICreate item : items)
         {
             item.deleteFile();
         }

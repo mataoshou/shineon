@@ -1,36 +1,57 @@
 package com.shineon.coder.kernel.common.generator;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.db.DBConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 
 import java.io.IOException;
 
-public class CreateMergeDao extends ICreateBase {
+public class CreateMergeDao extends ICreate {
     public CreateMergeDao(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil classBuildUtil = new ClassBuildUtil();
 
-        String mapperBaseFileName = this.name +"MapperBase";
-        String mapperExternFileName = this.name +"MapperExtern";
-        classBuildUtil.classInit(this.getClassName(), mapperBaseFileName + "," + mapperExternFileName,null, this.packageName, null, false,
+        String mapperBaseFileName = this.getName() +"MapperBase";
+        String mapperExternFileName = this.getName() +"MapperExtern";
+        classBuildUtil.classInit(this.getClassName(), mapperBaseFileName + "," + mapperExternFileName,null, this.getPackageName(), null, false,
                 DBConstant.DB_DAO_PACKAGE+"." + mapperBaseFileName, DBConstant.DB_DAO_PACKAGE+"." + mapperExternFileName);
 
-        classBuildUtil.finish(this.classFile);
+
+        return classBuildUtil;
     }
 
     @Override
-    protected void createConstant() throws IOException {
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
 
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
     @Override
@@ -44,7 +65,7 @@ public class CreateMergeDao extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
 
@@ -54,12 +75,18 @@ public class CreateMergeDao extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return "I"+this.name +"Mapper";
+    protected String getClassNamePre() {
+        return "I";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getClassNameLast() {
+        return "Mapper";
+    }
+
+    @Override
+    protected String getConstantClassNameLast() {
         return null;
     }
+
 }

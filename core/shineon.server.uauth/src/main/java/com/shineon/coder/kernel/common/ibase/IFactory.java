@@ -1,5 +1,7 @@
 package com.shineon.coder.kernel.common.ibase;
 
+import java.io.IOException;
+
 public abstract class IFactory<T extends IMakeUpBase> {
 
     T t;
@@ -26,6 +28,10 @@ public abstract class IFactory<T extends IMakeUpBase> {
 
     public void rebuild() throws Exception{
         t.rebuild();
+    }
+
+    public void edit() throws IOException {
+        t.edit();
     }
 
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="添加" onclick="addItem()" />
+		<input type="button" value="编辑" onclick="editItem()" />
+		<input type="button" value="列表" onclick="listItem()" />
+		<input type="button" value="获取" onclick="getItem()" />
+		
+	</body>
+	<script>
+		
+	var config_url = "http://127.0.0.1:182/"
+	
+	
+	function editItem()
+	{
+		
+		var request= {};
+		request.id = "80E56A65084B4690BD2182ACF36F3F15";
+		request.operatename = "shineon1231236";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/Operate/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	function getItem()
+	{
+		
+		var request= {};
+		
+		request.id = "80E56A65084B4690BD2182ACF36F3F15";
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/Operate/get",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	function listItem()
+	{
+		
+		var request= {};
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/Operate/list",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	
+	
+	function addItem()
+	{
+		
+		var request= {};
+		request.operatename = "1111";
+		
+		
+		$.ajax({
+           type: "post",
+           url: config_url +"/uauth/Operate/edit",
+           data : JSON.stringify(request),
+           contentType : "application/json",
+            success: function(result) {
+                alert("success");
+            },error:function(xmlcontent,reason,e)
+            {
+            	alert(reason)
+            }
+        });
+		
+		
+	}
+	</script>
+	
+	<script>
+		
+	var rootPath =".."
+		
+	</script>
+	<script src="../config/config.load.js"></script>
+	<script src="../js/include.js"></script>
+</html>

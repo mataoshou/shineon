@@ -1,1 +1,1 @@
-package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtUserActorInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtUserActorInfoMapperExtern;public interface IRmtUserActorInfoMapper extends RmtUserActorInfoMapperBase,RmtUserActorInfoMapperExtern {}
+package com.shineon.coder.db.sql.mergedao ;import com.shineon.coder.db.sql.dao.RmtUserActorInfoMapperBase;import com.shineon.coder.db.sql.dao.RmtUserActorInfoMapperExtern;public interface IRmtUserActorInfoMapper extends RmtUserActorInfoMapperBase,RmtUserActorInfoMapperExtern {	}

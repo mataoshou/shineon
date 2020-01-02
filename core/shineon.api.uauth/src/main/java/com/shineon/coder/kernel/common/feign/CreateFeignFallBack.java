@@ -1,49 +1,67 @@
 package com.shineon.coder.kernel.common.feign;
 
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.convert.ConvertsConstant;
 import com.shineon.coder.kernel.constant.feign.FeignConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 
 import java.io.IOException;
 
-public class CreateFeignFallBack extends ICreateBase {
+public class CreateFeignFallBack extends ICreate {
     public CreateFeignFallBack(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil backClassBuild = new ClassBuildUtil();
 
 
-        String feignName = this.name +"Feign";
+        String feignName = this.getName() +"Feign";
 
-        String feignConstant =this.name + "FeignConstant";
+        String feignConstant =this.getName() + "FeignConstant";
 
-        backClassBuild.classInit(this.getClassName(),null,new String[]{feignName,"BaseFallBack"}, this.packageName
+        backClassBuild.classInit(this.getClassName(),null,new String[]{feignName,"BaseFallBack"}, this.getPackageName()
                 ,new String[]{"Component","Slf4j"},
                 true,"lombok.extern.slf4j.Slf4j",
                 ConvertsConstant.CONVERT_PACKAGE+".CommonItem","org.springframework.stereotype.Component",
                 FeignConstant.FEIGN_CONSTANT_PACKAGE +"." +feignConstant);
 
-        for(String method: methods)
-        {
-            backClassBuild.addTabContent("\r\n");
-            backClassBuild.addTabContent(String.format("@Override"));
-            backClassBuild.addTabContent(String.format("public CommonItem %s(CommonItem item){return fail(%s.FEIGN_SERVER_NAME);}",method.toLowerCase(),feignConstant));
-        }
-        backClassBuild.finish(this.classFile);
+        return backClassBuild;
     }
 
     @Override
-    protected void createConstant() throws IOException {
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
 
     }
 
     @Override
-    protected boolean checkBeforBuild() {
-        return true;
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+        String feignConstant =this.getName() + "FeignConstant";
+
+        classBuildUtil.addTabContent(String.format("@Override"));
+        classBuildUtil.addTabContent(String.format("public CommonItem %s(CommonItem item){return fail(%s.FEIGN_SERVER_NAME);}",methodName.toLowerCase(),feignConstant));
+
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
     @Override
@@ -57,7 +75,7 @@ public class CreateFeignFallBack extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
 
@@ -67,12 +85,13 @@ public class CreateFeignFallBack extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return this.name +"FeignFallBack";
+    protected String getClassNameLast() {
+        return "FeignFallBack";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
+
 }

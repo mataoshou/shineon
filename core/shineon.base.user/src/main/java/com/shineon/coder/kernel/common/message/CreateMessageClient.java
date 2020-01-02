@@ -1,7 +1,7 @@
 package com.shineon.coder.kernel.common.message;
 
 import com.alibaba.fastjson.JSONObject;
-import com.shineon.coder.kernel.common.ibase.ICreateBase;
+import com.shineon.coder.kernel.common.ibase.ICreate;
 import com.shineon.coder.kernel.constant.message.MessageConstant;
 import com.shineon.coder.kernel.util.ClassBuildUtil;
 import com.shineon.coder.kernel.util.FileStore;
@@ -12,39 +12,72 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Map;
 
-public class CreateMessageClient extends ICreateBase {
+public class CreateMessageClient extends ICreate {
 
     public CreateMessageClient(String actionName, Class toolClass, Class pojoClass, String[] methods, String sysName) {
         super(actionName, toolClass, pojoClass, methods, sysName);
     }
 
     @Override
-    protected void createClass() throws IOException {
+    protected ClassBuildUtil createClass() throws IOException {
         ClassBuildUtil buildUtil = new ClassBuildUtil();
         buildUtil.classInit(this.getClassName(),"BaseMessage",null
-                ,packageName,null,false,
+                ,this.getPackageName(),null,false,
                 "org.springframework.cloud.stream.annotation.Input","org.springframework.cloud.stream.annotation.Output",
                 "org.springframework.messaging.MessageChannel","org.springframework.messaging.SubscribableChannel","com.shineon.coder.service.mq.BaseMessage");
 
+        return buildUtil;
 
-        buildUtil.addTabContent("\r");
-        buildUtil.addTabContent( String.format("String  INPUTNAME = \"%sMessageInput\";",this.name));
-        buildUtil.addTabContent("@Input(INPUTNAME)");
-        buildUtil.addTabContent( "@Override");
-        buildUtil.addTabContent("SubscribableChannel input();");
+
+
+
+
+    }
+
+    @Override
+    protected void createPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+
+        classBuildUtil.addTabContent("\r");
+        classBuildUtil.addTabContent( String.format("String  INPUTNAME = \"%sMessageInput\";",this.getName()));
+        classBuildUtil.addTabContent("@Input(INPUTNAME)");
+        classBuildUtil.addTabContent( "@Override");
+        classBuildUtil.addTabContent("SubscribableChannel input();");
 
 //        buildUtil.addContent("\r");
-        buildUtil.addTabContent("\r");
+        classBuildUtil.addTabContent("\r");
 
-        buildUtil.addTabContent(String.format("String  OUTPUTNAME = \"%sMessageOutput\";",this.name));
-        buildUtil.addTabContent("@Output(OUTPUTNAME)");
-        buildUtil.addTabContent("@Override");
-        buildUtil.addTabContent("MessageChannel output();");
+        classBuildUtil.addTabContent(String.format("String  OUTPUTNAME = \"%sMessageOutput\";",this.getName()));
+        classBuildUtil.addTabContent("@Output(OUTPUTNAME)");
+        classBuildUtil.addTabContent("@Override");
+        classBuildUtil.addTabContent("MessageChannel output();");
 
+        buildYML(this.getName());
+    }
 
-        buildUtil.finish(this.classFile);
+    @Override
+    protected void createMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
 
-        buildYML(this.name);
+    }
+
+    @Override
+    protected void createLastMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected ClassBuildUtil createConstantClass() throws IOException {
+        return null;
+    }
+
+    @Override
+    protected void createConstantPreMethod(ClassBuildUtil classBuildUtil) throws IOException {
+
+    }
+
+    @Override
+    protected void createConstantMethod(ClassBuildUtil classBuildUtil, String methodName) throws IOException {
+
     }
 
     private void buildYML(String messageName) throws IOException {
@@ -129,16 +162,6 @@ public class CreateMessageClient extends ICreateBase {
     }
 
     @Override
-    protected void createConstant() throws IOException {
-
-    }
-
-    @Override
-    protected boolean checkBeforBuild() {
-        return true;
-    }
-
-    @Override
     protected void classInit() {
 
     }
@@ -149,7 +172,7 @@ public class CreateMessageClient extends ICreateBase {
     }
 
     @Override
-    protected boolean isExitConstant() {
+    protected boolean isCreateConstant() {
         return false;
     }
 
@@ -159,12 +182,12 @@ public class CreateMessageClient extends ICreateBase {
     }
 
     @Override
-    protected String getClassName() {
-        return this.name+"Client";
+    protected String getClassNameLast() {
+        return "Client";
     }
 
     @Override
-    protected String getConstantName() {
+    protected String getConstantClassNameLast() {
         return null;
     }
 }

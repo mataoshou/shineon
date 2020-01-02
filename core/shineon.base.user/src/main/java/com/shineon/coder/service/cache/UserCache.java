@@ -86,7 +86,7 @@ public class UserCache extends IBaseCache<RmtUserInfo,RmtUserInfoCommonUtil> {
         }
 
         if(util.isUnEmpty(queryItem.getTitle())) {
-            return userFeign.getByName(queryItemCommonUtil.toCommon(queryItem));
+            return userFeign.getbyname(queryItemCommonUtil.toCommon(queryItem));
         }
 
         return null;
